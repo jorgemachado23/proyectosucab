@@ -3,12 +3,20 @@ package ajedrez;
 
 public abstract class Pieza {
 
-public void mover()
+   public String color;
+   public boolean estado;
+
+public void Mover()
 {
 
 }
 
-public void comer()
+public void Comer()
+{
+
+}
+
+public void ValidarEstado()
 {
 
 }
