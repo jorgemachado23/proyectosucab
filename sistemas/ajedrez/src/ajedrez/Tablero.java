@@ -19,126 +19,126 @@ public class Tablero {
                 {
                     Torre torre = new Torre();
                     torre.setColor("blanco");
-                    torre.setEstado(true);
+                    //torre.setEstado(true);
                     matriz[i][j] = torre;
                 }
                 if (i == 0 && j ==1)
                 {
                     Caballo caballo = new Caballo();
                     caballo.setColor("blanco");
-                    caballo.setEstado(true);
+                    //caballo.setEstado(true);
                     matriz[i][j] = caballo;
                 }
                 if (i == 0 && j ==2)
                 {
                     Alfil alfil = new Alfil();
                     alfil.setColor("blanco");
-                    alfil.setEstado(true);
+                    //alfil.setEstado(true);
                     matriz[i][j] = alfil;
                 }
                 if (i == 0 && j ==3)
                 {
                     Reina reina = new Reina();
                     reina.setColor("blanco");
-                    reina.setEstado(true);
+                    //reina.setEstado(true);
                     matriz[i][j] = reina;
                 }
                 if (i == 0 && j ==4)
                 {
                     Rey rey = new Rey();
                     rey.setColor("blanco");
-                    rey.setEstado(true);
+                    //rey.setEstado(true);
                     matriz[i][j] = rey;
                 }
                 if (i == 0 && j ==5)
                 {
                     Alfil alfil = new Alfil();
                     alfil.setColor("blanco");
-                    alfil.setEstado(true);
+                    //alfil.setEstado(true);
                     matriz[i][j] = alfil;
                 }
                 if (i == 0 && j == 6)
                 {
                     Caballo caballo = new Caballo();
                     caballo.setColor("blanco");
-                    caballo.setEstado(true);
+                    //caballo.setEstado(true);
                     matriz[i][j] = caballo;
                 }
                 if (i == 0 && j == 7)
                 {
                     Torre torre = new Torre();
                     torre.setColor("blanco");
-                    torre.setEstado(true);
+                    //torre.setEstado(true);
                     matriz[i][j] = torre;
                 }
                 if (i == 7 && j == 0)
                 {
                     Torre torre = new Torre();
                     torre.setColor("negro");
-                    torre.setEstado(true);
+                    //torre.setEstado(true);
                     matriz[i][j] = torre;
                 }
                 if (i == 7 && j ==1)
                 {
                     Caballo caballo = new Caballo();
                     caballo.setColor("negro");
-                    caballo.setEstado(true);
+                    //caballo.setEstado(true);
                     matriz[i][j] = caballo;
                 }
                 if (i == 7 && j ==2)
                 {
                     Alfil alfil = new Alfil();
                     alfil.setColor("negro");
-                    alfil.setEstado(true);
+                    //alfil.setEstado(true);
                     matriz[i][j] = alfil;
                 }
                 if (i == 7 && j ==3)
                 {
                     Reina reina = new Reina();
                     reina.setColor("negro");
-                    reina.setEstado(true);
+                    //reina.setEstado(true);
                     matriz[i][j] = reina;
                 }
                 if (i == 7 && j ==4)
                 {
                     Rey rey = new Rey();
                     rey.setColor("negro");
-                    rey.setEstado(true);
+                    //rey.setEstado(true);
                     matriz[i][j] = rey;
                 }
                 if (i == 7 && j ==5)
                 {
                     Alfil alfil = new Alfil();
                     alfil.setColor("negro");
-                    alfil.setEstado(true);
+                    //alfil.setEstado(true);
                     matriz[i][j] = alfil;
                 }
                 if (i == 7 && j == 6)
                 {
                     Caballo caballo = new Caballo();
                     caballo.setColor("negro");
-                    caballo.setEstado(true);
+                    //caballo.setEstado(true);
                     matriz[i][j] = caballo;
                 }
                 if (i == 7 && j == 7)
                 {
                     Torre torre = new Torre();
                     torre.setColor("negro");
-                    torre.setEstado(true);
+                    //torre.setEstado(true);
                     matriz[i][j] = torre;
                 }
                 if (i == 1)
                 {
                     Peon peon = new Peon();
                     peon.setColor("blanco");
-                    peon.setEstado(true);
+                    //peon.setEstado(true);
                     matriz[i][j] = peon;
                 }
                 if(i == 6)
                 {
                     Peon peon = new Peon();
                     peon.setColor("negro");
-                    peon.setEstado(true);
+                    //peon.setEstado(true);
                     matriz[i][j] = peon;
                 }
             }
