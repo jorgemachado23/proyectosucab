@@ -33,8 +33,7 @@ public class Main {
            }
            if (nombrePieza.equals("Reina"))
            {
-               boolean x = tablero.BloqueoVertical(matriz, inicial, inicial);
-               System.out.println(x);
+               
            }
            //&& nombrePieza.equals("Peon")
            /*String objeto = null;
