@@ -28,12 +28,12 @@ public abstract class Pieza {
     }
    
 
-public void Mover()
+public void MoverComer()
 {
 
 }
 
-public void Comer()
+/*public void Comer()
 {
 
 }
@@ -41,6 +41,6 @@ public void Comer()
 public void ValidarEstado()
 {
 
-}
+}*/
 
 }

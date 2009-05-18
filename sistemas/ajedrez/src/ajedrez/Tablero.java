@@ -198,6 +198,62 @@ public class Tablero {
 
     return arreglo;
     }
+    //Si hay una pieza 
+    public boolean BloqueoVertical(Pieza[][] matriz, int[] posicionInicial, int[] posicionFinal)
+    {
+        boolean x = true;
+        int posIF = posicionInicial[0];
+        int posIC = posicionInicial[1];
+        int posFF = posicionFinal[0];
+        //int posFC = posicionFinal[1];
+        
+        for (int i = posIF+1; i<posFF; i++)
+        {
+            if (matriz[i][posIC] != null)
+            {
+                x = false;
+            }
+        }
+        return x;
+    }
+    
+    public boolean BloqueoHorizontal(Pieza[][] matriz, int[] posicionInicial, int[] posicionFinal)
+    {
+        boolean x = true;
+        int posIF = posicionInicial[0];
+        int posIC = posicionInicial[1];
+        //int posFF = posicionFinal[0];
+        int posFC = posicionFinal[1];
+        
+        for (int i = posIC+1; i<posFC; i++)
+        {
+            if (matriz[posIF][i] != null)
+            {
+                x = false;
+            }
+        }
+        return x;
+    }
+    
+    public boolean BloqueoDiagonal(Pieza[][] matriz, int[] posicionInicial, int[] posicionFinal)
+    {
+        boolean x = true;
+        int posIF = posicionInicial[0];
+        int posIC = posicionInicial[1];
+        int posFF = posicionFinal[0];
+        //int posFC = posicionFinal[1];
+        int j = posIC;
+
+        for (int i = posIF+1; i<posFF; i++)
+        {
+            j++;
+            if (matriz[i][j] != null)
+            {
+                x = false;
+            }
+        }
+        return x;
+    }
 
     public void ImprimirTablero(Pieza[][] matriz)
     {
@@ -207,7 +263,7 @@ public class Tablero {
             {
                 if (matriz[i][j] != null){
 
-                    System.out.print(matriz[i][j].color+ " "+ matriz[i][j]);
+                    System.out.print(matriz[i][j].color+"/"+ matriz[i][j].getClass().getSimpleName()+" ");
 
                 }
                 else

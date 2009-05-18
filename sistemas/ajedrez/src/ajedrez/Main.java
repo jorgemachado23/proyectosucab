@@ -29,7 +29,12 @@ public class Main {
            if (nombrePieza.equals("Peon"))
            {
                Peon peon = new Peon();
-               matriz = peon.Mover(matriz,inicial,terminal);
+               matriz = peon.MoverComer(matriz,inicial,terminal);
+           }
+           if (nombrePieza.equals("Reina"))
+           {
+               boolean x = tablero.BloqueoVertical(matriz, inicial, inicial);
+               System.out.println(x);
            }
            //&& nombrePieza.equals("Peon")
            /*String objeto = null;
