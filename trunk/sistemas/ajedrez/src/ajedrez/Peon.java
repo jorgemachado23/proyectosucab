@@ -1,12 +1,60 @@
 package ajedrez;
 import java.math.*;
+import java.lang.String;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 public class Peon extends Pieza{
 
     //Transforma el peon en cualquier otro tipo de pieza al llegar al otro lado del tablero
-    public void Coronar()
+    public Pieza [][] Coronar(Pieza[][] tablero, int[] posicion)
     {
+        try
+        {
+            int posF = posicion[0];
+            int posC = posicion[1];
+            String colorPieza = tablero[posF][posC].getColor();
+            BufferedReader dato = new BufferedReader(new InputStreamReader(System.in) );
 
+            System.out.println("Escoja el tipo de pieza ");
+            System.out.println();
+            String tipoPieza = dato.readLine();
+            
+            if (tipoPieza.equalsIgnoreCase("torre"))
+            {
+                Torre torre = new Torre();
+                tablero[posF][posC] = torre;
+                tablero[posF][posC].setColor(colorPieza);
+            }
+            else if (tipoPieza.equalsIgnoreCase("caballo"))
+            {
+                Caballo caballo = new Caballo();
+                tablero[posF][posC] = caballo;
+                tablero[posF][posC].setColor(colorPieza);
+            }
+            else if (tipoPieza.equalsIgnoreCase("alfil"))
+            {
+                Alfil alfil = new Alfil();
+                tablero[posF][posC] = alfil;
+                tablero[posF][posC].setColor(colorPieza);
+            }
+            else if (tipoPieza.equalsIgnoreCase("reina"))
+            {
+                Reina reina = new Reina();
+                tablero[posF][posC] = reina;
+                tablero[posF][posC].setColor(colorPieza);
+            }
+            else
+            {
+                throw new Exception();
+            }
+        }
+        catch(Exception e)
+        {
+             System.out.println("Error!");
+        }
+        return tablero;
     }
 
     //Logica para mover una pieza de tipo peon dado su posicion inicial y posible
@@ -83,6 +131,10 @@ public class Peon extends Pieza{
                {
                    throw new Exception();
                }
+            }
+            if (posFF == 7 || posFF == 0)
+            {
+                Coronar(tablero, posicionFinal);
             }
         }
         catch(Exception e)
