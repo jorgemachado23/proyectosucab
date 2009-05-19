@@ -41,11 +41,24 @@ public boolean BloqueoVertical(Pieza[][] matriz, int[] posicionInicial, int[] po
         int posFF = posicionFinal[0];
         //int posFC = posicionFinal[1];
 
-        for (int i = posIF+1; i<posFF; i++)
+        if (posIF < posFF)
         {
-            if (matriz[i][posIC] != null)
+            for (int i = posIF+1; i<posFF; i++)
             {
-                x = false;
+                if (matriz[i][posIC] != null)
+                {
+                    x = false;
+                }
+            }
+        }
+        else if (posIF > posFF)
+        {
+            for (int i = posFF+1; i<posIF; i++)
+            {
+                if (matriz[i][posIC] != null)
+                {
+                    x = false;
+                }
             }
         }
         return x;
@@ -59,11 +72,24 @@ public boolean BloqueoVertical(Pieza[][] matriz, int[] posicionInicial, int[] po
         //int posFF = posicionFinal[0];
         int posFC = posicionFinal[1];
 
-        for (int i = posIC+1; i<posFC; i++)
+        if (posIC < posFC)
         {
-            if (matriz[posIF][i] != null)
+            for (int i = posIC+1; i<posFC; i++)
             {
-                x = false;
+                if (matriz[posIF][i] != null)
+                {
+                    x = false;
+                }
+            }
+        }
+        else if (posIC > posFC)
+        {
+            for (int i = posFC+1; i<posIC; i++)
+            {
+                if (matriz[posIF][i] != null)
+                {
+                    x = false;
+                }
             }
         }
         return x;
@@ -75,15 +101,54 @@ public boolean BloqueoVertical(Pieza[][] matriz, int[] posicionInicial, int[] po
         int posIF = posicionInicial[0];
         int posIC = posicionInicial[1];
         int posFF = posicionFinal[0];
-        //int posFC = posicionFinal[1];
-        int j = posIC;
+        int posFC = posicionFinal[1];
 
-        for (int i = posIF+1; i<posFF; i++)
+        if (posIF < posFF && posIC < posFC)
         {
-            j++;
-            if (matriz[i][j] != null)
+            int j = posIC;
+            for (int i = posIF+1; i<posFF; i++)
             {
-                x = false;
+                j++;
+                if (matriz[i][j] != null)
+                {
+                    x = false;
+                }
+            }
+        }
+        else if (posIF < posFF && posIC > posFC)
+        {
+            int j = posIC;
+            for (int i = posIF+1; i<posFF; i++)
+            {
+                j--;
+                if (matriz[i][j] != null)
+                {
+                    x = false;
+                }
+            }
+        }
+        else if (posIF > posFF && posIC < posFC)
+        {
+            int j = posFC;
+            for (int i = posFF + 1; i < posIF; i++)
+            {
+                j--;
+                if (matriz[i][j] != null)
+                {
+                    x = false;
+                }
+            }
+        }
+        else if (posIF > posFF && posIC > posFC)
+        {
+            int j = posFC;
+            for (int i = posFF + 1; i < posIF; i++)
+            {
+                j++;
+                if (matriz[i][j] != null)
+                {
+                    x = false;
+                }
             }
         }
         return x;
