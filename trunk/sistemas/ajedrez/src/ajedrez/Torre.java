@@ -1,9 +1,4 @@
 package ajedrez;
-import java.math.*;
-import java.lang.String;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
 
 public class Torre extends Pieza
 {
@@ -19,7 +14,7 @@ public class Torre extends Pieza
         String colorPieza = tablero[posIF][posIC].getColor();
         try
         {
-            if (posIC == posFC)
+            if (posIC == posFC && posIF != posFF)
             {
                 x = BloqueoVertical(tablero, posicionInicial, posicionFinal);
                 if (x)
@@ -39,7 +34,7 @@ public class Torre extends Pieza
                     throw new Exception();
                 }
             }
-            if (posIF == posFF)
+            else if (posIF == posFF && posIC != posFC)
             {
                 x = BloqueoHorizontal(tablero, posicionInicial, posicionFinal);
                 if (x)
@@ -58,6 +53,10 @@ public class Torre extends Pieza
                 {
                     throw new Exception();
                 }
+            }
+            else
+            {
+                throw new Exception();
             }
         }
         catch(Exception e)

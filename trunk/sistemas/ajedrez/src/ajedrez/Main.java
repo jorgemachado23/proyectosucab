@@ -33,7 +33,7 @@ public class Main {
            }
            if (nombrePieza.equals("Reina"))
            {
-               
+              
            }
            //&& nombrePieza.equals("Peon")
            /*String objeto = null;
