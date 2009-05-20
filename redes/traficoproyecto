@@ -1,0 +1,284 @@
+08:46:36.174356 IP (tos 0x0, ttl 63, id 44219, offset 0, flags [DF], proto TCP (6), length 423) israfel.ucab.edu.ve.3128 > redes-original.local.57831: P 979940109:979940480(371) ack 195189940 win 7788 <nop,nop,timestamp 915916276 55794>
+08:46:36.174586 IP (tos 0x0, ttl 63, id 44220, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57831: F, cksum 0xa465 (correct), 371:371(0) ack 1 win 7788 <nop,nop,timestamp 915916276 55794>
+08:46:36.174590 IP (tos 0x0, ttl 64, id 33459, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57831 > israfel.ucab.edu.ve.3128: ., cksum 0xbe95 (correct), 1:1(0) ack 371 win 1002 <nop,nop,timestamp 55877 915916276>
+08:46:36.174790 IP (tos 0x0, ttl 64, id 49849, offset 0, flags [DF], proto UDP (17), length 72) redes-original-4.local.44064 > 192.168.2.100.domain: [bad udp cksum 683a!] 17400+ PTR? 196.2.168.192.in-addr.arpa. (44)
+08:46:36.174898 IP (tos 0x0, ttl 64, id 33460, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57831 > israfel.ucab.edu.ve.3128: F, cksum 0xbe93 (correct), 1:1(0) ack 372 win 1002 <nop,nop,timestamp 55877 915916276>
+08:46:36.174901 IP (tos 0x0, ttl 64, id 3668, offset 0, flags [DF], proto TCP (6), length 60) redes-original.local.57842 > israfel.ucab.edu.ve.3128: S, cksum 0xec36 (correct), 275502097:275502097(0) win 5840 <mss 1460,sackOK,timestamp 55877 0,nop,wscale 6>
+08:46:36.175218 IP (tos 0x0, ttl 63, id 44221, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57831: ., cksum 0xa410 (correct), 372:372(0) ack 2 win 7788 <nop,nop,timestamp 915916277 55877>
+08:46:36.175221 IP (tos 0x0, ttl 63, id 0, offset 0, flags [DF], proto TCP (6), length 60) israfel.ucab.edu.ve.3128 > redes-original.local.57842: S, cksum 0x7137 (correct), 989545372:989545372(0) ack 275502098 win 5792 <mss 1460,sackOK,timestamp 915916277 55877,nop,wscale 0>
+08:46:36.175470 IP (tos 0x0, ttl 128, id 5410, offset 0, flags [none], proto UDP (17), length 149) 192.168.2.100.domain > redes-original-4.local.44064: 17400 NXDomain q: PTR? 196.2.168.192.in-addr.arpa. 0/1/0 ns: 168.192.in-addr.arpa. (121)
+08:46:36.175477 IP (tos 0x0, ttl 64, id 3669, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57842 > israfel.ucab.edu.ve.3128: ., cksum 0xb640 (correct), 1:1(0) ack 1 win 92 <nop,nop,timestamp 55877 915916277>
+08:46:36.175969 IP (tos 0x0, ttl 64, id 3670, offset 0, flags [DF], proto TCP (6), length 486) redes-original.local.57842 > israfel.ucab.edu.ve.3128: P 1:435(434) ack 1 win 92 <nop,nop,timestamp 55877 915916277>
+08:46:36.176585 IP (tos 0x0, ttl 63, id 34408, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57842: ., cksum 0x9bca (correct), 1:1(0) ack 435 win 6432 <nop,nop,timestamp 915916277 55877>
+08:46:36.201434 arp who-has 192.168.2.100 tell 192.168.2.13
+08:46:36.278041 IP (tos 0x0, ttl 255, id 0, offset 0, flags [DF], proto UDP (17), length 72) redes-original-4.local.mdns > 224.0.0.251.mdns: [bad udp cksum 5c6!] 0 PTR (QM)? 196.2.168.192.in-addr.arpa. (44)
+08:46:36.278629 IP (tos 0x0, ttl 255, id 0, offset 0, flags [DF], proto UDP (17), length 100) redes-original.local.mdns > 224.0.0.251.mdns: 0*- [0q] 1/0/0 196.2.168.192.in-addr.arpa. (Cache flush) PTR[|domain]
+08:46:36.278748 IP (tos 0x0, ttl 64, id 49875, offset 0, flags [DF], proto UDP (17), length 71) redes-original-4.local.56348 > 192.168.2.100.domain: [bad udp cksum b27f!] 18564+ PTR? 158.12.2.200.in-addr.arpa. (43)
+08:46:36.279378 IP (tos 0x0, ttl 128, id 5415, offset 0, flags [none], proto UDP (17), length 104) 192.168.2.100.domain > redes-original-4.local.56348: 18564 q: PTR? 158.12.2.200.in-addr.arpa. 1/0/0 158.12.2.200.in-addr.arpa. (76)
+08:46:36.279495 IP (tos 0x0, ttl 64, id 49875, offset 0, flags [DF], proto UDP (17), length 72) redes-original-4.local.51886 > 192.168.2.100.domain: [bad udp cksum 9be5!] 33596+ PTR? 100.2.168.192.in-addr.arpa. (44)
+08:46:36.280118 IP (tos 0x0, ttl 128, id 5416, offset 0, flags [none], proto UDP (17), length 149) 192.168.2.100.domain > redes-original-4.local.51886: 33596 NXDomain q: PTR? 100.2.168.192.in-addr.arpa. 0/1/0 ns: 168.192.in-addr.arpa. (121)
+08:46:36.294100 IP (tos 0x0, ttl 128, id 479, offset 0, flags [none], proto UDP (17), length 328) 192.168.3.120.bootpc > 255.255.255.255.bootps: BOOTP/DHCP, Request from 00:1e:37:37:9b:de (oui Unknown), length 300, xid 0x21c83abf, Flags [none] (0x0000)
+	  Client-IP 192.168.3.120
+	  Client-Ethernet-Address 00:1e:37:37:9b:de (oui Unknown) [|bootp]
+08:46:36.327524 IP (tos 0x0, ttl 63, id 62231, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original-2.local.37006: . 981878988:981880436(1448) ack 694638505 win 11584 <nop,nop,timestamp 915916354 1396422>
+08:46:36.328525 IP (tos 0x0, ttl 63, id 62232, offset 0, flags [DF], proto TCP (6), length 1407) israfel.ucab.edu.ve.3128 > redes-original-2.local.37006: P 1448:2803(1355) ack 1 win 11584 <nop,nop,timestamp 915916354 1396422>
+08:46:36.329007 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 40) redes-original-2.local.37006 > israfel.ucab.edu.ve.3128: R, cksum 0xfa80 (correct), 694638505:694638505(0) win 0
+08:46:36.329010 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 40) redes-original-2.local.37006 > israfel.ucab.edu.ve.3128: R, cksum 0xfa80 (correct), 694638505:694638505(0) win 0
+08:46:36.329257 IP (tos 0x0, ttl 63, id 62233, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original-2.local.37006: F, cksum 0xba21 (correct), 2803:2803(0) ack 1 win 11584 <nop,nop,timestamp 915916354 1396422>
+08:46:36.329260 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 40) redes-original-2.local.37006 > israfel.ucab.edu.ve.3128: R, cksum 0xfa80 (correct), 694638505:694638505(0) win 0
+08:46:36.382044 IP (tos 0x0, ttl 255, id 0, offset 0, flags [DF], proto UDP (17), length 72) redes-original-4.local.mdns > 224.0.0.251.mdns: [bad udp cksum bcf!] 0 PTR (QM)? 100.2.168.192.in-addr.arpa. (44)
+08:46:36.542660 STP 802.1d, Config, Flags [none], bridge-id 80c0.00:0f:23:52:16:40.802e, length 47
+	message-age 5.00s, max-age 20.00s, hello-time 2.00s, forwarding-delay 15.00s
+	root-id 8000.00:02:4b:40:bc:d3, root-pathcost 35
+08:46:36.599368 IP (tos 0x0, ttl 63, id 46123, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57826: . 972596539:972597987(1448) ack 70739189 win 8136 <nop,nop,timestamp 915916493 55509>
+08:46:36.600617 IP (tos 0x0, ttl 63, id 46124, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57826: . 1448:2896(1448) ack 1 win 8136 <nop,nop,timestamp 915916493 55509>
+08:46:36.600867 IP (tos 0x0, ttl 64, id 37493, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0xc68e (correct), 1:1(0) ack 1448 win 1002 <nop,nop,timestamp 55983 915916493>
+08:46:36.601867 IP (tos 0x0, ttl 63, id 46125, offset 0, flags [DF], proto TCP (6), length 1252) israfel.ucab.edu.ve.3128 > redes-original.local.57826: P 2896:4096(1200) ack 1 win 8136 <nop,nop,timestamp 915916493 55509>
+08:46:36.603118 IP (tos 0x0, ttl 63, id 46126, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57826: . 4096:5544(1448) ack 1 win 8136 <nop,nop,timestamp 915916495 55983>
+08:46:36.604384 IP (tos 0x0, ttl 63, id 46127, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57826: . 5544:6992(1448) ack 1 win 8136 <nop,nop,timestamp 915916495 55983>
+08:46:36.604635 IP (tos 0x0, ttl 64, id 37494, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0xc0e6 (correct), 1:1(0) ack 2896 win 1002 <nop,nop,timestamp 55983 915916493>
+08:46:36.604638 IP (tos 0x0, ttl 64, id 37495, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0xbc35 (correct), 1:1(0) ack 4096 win 1002 <nop,nop,timestamp 55984 915916493>
+08:46:36.604639 IP (tos 0x0, ttl 64, id 37496, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0xb68b (correct), 1:1(0) ack 5544 win 1002 <nop,nop,timestamp 55984 915916495>
+08:46:36.604885 IP (tos 0x0, ttl 64, id 37497, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0xb0e3 (correct), 1:1(0) ack 6992 win 1002 <nop,nop,timestamp 55984 915916495>
+08:46:36.605136 IP (tos 0x0, ttl 63, id 46128, offset 0, flags [DF], proto TCP (6), length 150) israfel.ucab.edu.ve.3128 > redes-original.local.57826: P 6992:7090(98) ack 1 win 8136 <nop,nop,timestamp 915916497 55983>
+08:46:36.605386 IP (tos 0x0, ttl 64, id 37498, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0xb07f (correct), 1:1(0) ack 7090 win 1002 <nop,nop,timestamp 55984 915916497>
+08:46:36.744626 IP (tos 0x0, ttl 63, id 47142, offset 0, flags [DF], proto TCP (6), length 377) israfel.ucab.edu.ve.3128 > redes-original.local.57839: P 973699288:973699613(325) ack 229631423 win 6456 <nop,nop,timestamp 915916568 55256>
+08:46:36.744877 IP (tos 0x0, ttl 63, id 47143, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57839: F, cksum 0x5a31 (correct), 325:325(0) ack 1 win 6456 <nop,nop,timestamp 915916568 55256>
+08:46:36.744880 IP (tos 0x0, ttl 64, id 13439, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57839 > israfel.ucab.edu.ve.3128: ., cksum 0x7003 (correct), 1:1(0) ack 325 win 108 <nop,nop,timestamp 56019 915916568>
+08:46:36.745125 IP (tos 0x0, ttl 64, id 13440, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57839 > israfel.ucab.edu.ve.3128: F, cksum 0x7001 (correct), 1:1(0) ack 326 win 108 <nop,nop,timestamp 56019 915916568>
+08:46:36.745140 IP (tos 0x0, ttl 64, id 33156, offset 0, flags [DF], proto TCP (6), length 60) redes-original.local.57843 > israfel.ucab.edu.ve.3128: S, cksum 0x6395 (correct), 288906071:288906071(0) win 5840 <mss 1460,sackOK,timestamp 56019 0,nop,wscale 6>
+08:46:36.746356 IP (tos 0x0, ttl 63, id 47144, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57839: ., cksum 0x5734 (correct), 326:326(0) ack 2 win 6456 <nop,nop,timestamp 915916569 56019>
+08:46:36.746358 IP (tos 0x0, ttl 63, id 0, offset 0, flags [DF], proto TCP (6), length 60) israfel.ucab.edu.ve.3128 > redes-original.local.57843: S, cksum 0x088b (correct), 981476094:981476094(0) ack 288906072 win 5792 <mss 1460,sackOK,timestamp 915916569 56019,nop,wscale 0>
+08:46:36.746835 IP (tos 0x0, ttl 64, id 33157, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57843 > israfel.ucab.edu.ve.3128: ., cksum 0x4d93 (correct), 1:1(0) ack 1 win 92 <nop,nop,timestamp 56020 915916569>
+08:46:36.748086 IP (tos 0x0, ttl 64, id 33158, offset 0, flags [DF], proto TCP (6), length 1500) redes-original.local.57843 > israfel.ucab.edu.ve.3128: . 1:1449(1448) ack 1 win 92 <nop,nop,timestamp 56020 915916569>
+08:46:36.748087 IP (tos 0x0, ttl 64, id 33159, offset 0, flags [DF], proto TCP (6), length 99) redes-original.local.57843 > israfel.ucab.edu.ve.3128: P 1449:1496(47) ack 1 win 92 <nop,nop,timestamp 56020 915916569>
+08:46:36.749167 IP (tos 0x0, ttl 63, id 58854, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57843: ., cksum 0x2656 (correct), 1:1(0) ack 1449 win 8688 <nop,nop,timestamp 915916570 56020>
+08:46:36.749168 IP (tos 0x0, ttl 63, id 58855, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57843: ., cksum 0x2627 (correct), 1:1(0) ack 1496 win 8688 <nop,nop,timestamp 915916570 56020>
+08:46:36.778319 IP (tos 0x0, ttl 63, id 62753, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57841: . 989279408:989280856(1448) ack 242786378 win 6432 <nop,nop,timestamp 915916585 55328>
+08:46:36.779569 IP (tos 0x0, ttl 63, id 62754, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57841: . 1448:2896(1448) ack 1 win 6432 <nop,nop,timestamp 915916585 55328>
+08:46:36.780569 IP (tos 0x0, ttl 63, id 62755, offset 0, flags [DF], proto TCP (6), length 1192) israfel.ucab.edu.ve.3128 > redes-original.local.57841: P 2896:4036(1140) ack 1 win 6432 <nop,nop,timestamp 915916585 55328>
+08:46:36.780819 IP (tos 0x0, ttl 64, id 18061, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: ., cksum 0xf34d (correct), 1:1(0) ack 1448 win 137 <nop,nop,timestamp 56028 915916585>
+08:46:36.780822 IP (tos 0x0, ttl 64, id 18062, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: ., cksum 0xed78 (correct), 1:1(0) ack 2896 win 182 <nop,nop,timestamp 56028 915916585>
+08:46:36.780823 IP (tos 0x0, ttl 64, id 18063, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: ., cksum 0xe8d7 (correct), 1:1(0) ack 4036 win 227 <nop,nop,timestamp 56028 915916585>
+08:46:36.790640 IP (tos 0x0, ttl 63, id 62756, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57841: . 4036:5484(1448) ack 1 win 6432 <nop,nop,timestamp 915916591 56028>
+08:46:36.791890 IP (tos 0x0, ttl 63, id 62757, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57841: . 5484:6932(1448) ack 1 win 6432 <nop,nop,timestamp 915916591 56028>
+08:46:36.793178 IP (tos 0x0, ttl 63, id 62758, offset 0, flags [DF], proto TCP (6), length 1252) israfel.ucab.edu.ve.3128 > redes-original.local.57841: P 6932:8132(1200) ack 1 win 6432 <nop,nop,timestamp 915916591 56028>
+08:46:36.793180 IP (tos 0x0, ttl 64, id 18064, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: ., cksum 0xe2f8 (correct), 1:1(0) ack 5484 win 273 <nop,nop,timestamp 56031 915916591>
+08:46:36.793183 IP (tos 0x0, ttl 64, id 15813, offset 0, flags [DF], proto TCP (6), length 60) redes-original.local.57840 > israfel.ucab.edu.ve.3128: S, cksum 0xd79a (correct), 239856181:239856181(0) win 5840 <mss 1460,sackOK,timestamp 56031 0,nop,wscale 6>
+08:46:36.793429 IP (tos 0x0, ttl 64, id 18065, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: ., cksum 0xdd23 (correct), 1:1(0) ack 6932 win 318 <nop,nop,timestamp 56031 915916591>
+08:46:36.793430 IP (tos 0x0, ttl 64, id 18066, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: ., cksum 0xd846 (correct), 1:1(0) ack 8132 win 363 <nop,nop,timestamp 56031 915916591>
+08:46:36.795249 IP (tos 0x0, ttl 63, id 62759, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57841: . 8132:9580(1448) ack 1 win 6432 <nop,nop,timestamp 915916593 56028>
+08:46:36.796500 IP (tos 0x0, ttl 63, id 62760, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57841: . 9580:11028(1448) ack 1 win 6432 <nop,nop,timestamp 915916593 56031>
+08:46:36.796860 IP (tos 0x0, ttl 64, id 18067, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: ., cksum 0xd26e (correct), 1:1(0) ack 9580 win 408 <nop,nop,timestamp 56032 915916593>
+08:46:36.796863 IP (tos 0x0, ttl 64, id 18068, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: ., cksum 0xcc98 (correct), 1:1(0) ack 11028 win 454 <nop,nop,timestamp 56032 915916593>
+08:46:36.798167 IP (tos 0x0, ttl 63, id 62761, offset 0, flags [DF], proto TCP (6), length 1252) israfel.ucab.edu.ve.3128 > redes-original.local.57841: P 11028:12228(1200) ack 1 win 6432 <nop,nop,timestamp 915916593 56031>
+08:46:36.798169 IP (tos 0x0, ttl 63, id 0, offset 0, flags [DF], proto TCP (6), length 60) israfel.ucab.edu.ve.3128 > redes-original.local.57840: S, cksum 0xf90f (correct), 982754899:982754899(0) ack 239856182 win 5792 <mss 1460,sackOK,timestamp 915916593 56031,nop,wscale 0>
+08:46:36.798418 IP (tos 0x0, ttl 63, id 62762, offset 0, flags [DF], proto TCP (6), length 236) israfel.ucab.edu.ve.3128 > redes-original.local.57841: P 12228:12412(184) ack 1 win 6432 <nop,nop,timestamp 915916594 56031>
+08:46:36.798421 IP (tos 0x0, ttl 63, id 62763, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57841: F, cksum 0xafd4 (correct), 12412:12412(0) ack 1 win 6432 <nop,nop,timestamp 915916595 56031>
+08:46:36.798688 IP (tos 0x0, ttl 64, id 18069, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: ., cksum 0xc7ba (correct), 1:1(0) ack 12228 win 499 <nop,nop,timestamp 56033 915916593>
+08:46:36.798690 IP (tos 0x0, ttl 64, id 15814, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57840 > israfel.ucab.edu.ve.3128: ., cksum 0x3e17 (correct), 1:1(0) ack 1 win 92 <nop,nop,timestamp 56033 915916593>
+08:46:36.799188 IP (tos 0x0, ttl 64, id 15815, offset 0, flags [DF], proto TCP (6), length 477) redes-original.local.57840 > israfel.ucab.edu.ve.3128: P 1:426(425) ack 1 win 92 <nop,nop,timestamp 56033 915916593>
+08:46:36.799190 IP (tos 0x0, ttl 64, id 18070, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: ., cksum 0xc6d4 (correct), 1:1(0) ack 12412 win 544 <nop,nop,timestamp 56033 915916594>
+08:46:36.799192 IP (tos 0x0, ttl 64, id 18071, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57841 > israfel.ucab.edu.ve.3128: F, cksum 0xc6d1 (correct), 1:1(0) ack 12413 win 544 <nop,nop,timestamp 56033 915916595>
+08:46:36.799439 IP (tos 0x0, ttl 64, id 59661, offset 0, flags [DF], proto TCP (6), length 60) redes-original.local.57844 > israfel.ucab.edu.ve.3128: S, cksum 0x8b38 (correct), 284242924:284242924(0) win 5840 <mss 1460,sackOK,timestamp 56033 0,nop,wscale 6>
+08:46:36.799844 IP (tos 0x0, ttl 63, id 24928, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57840: ., cksum 0x23a7 (correct), 1:1(0) ack 426 win 6432 <nop,nop,timestamp 915916596 56033>
+08:46:36.799846 IP (tos 0x0, ttl 63, id 62764, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57841: ., cksum 0xafd0 (correct), 12413:12413(0) ack 2 win 6432 <nop,nop,timestamp 915916596 56033>
+08:46:36.799847 IP (tos 0x0, ttl 63, id 0, offset 0, flags [DF], proto TCP (6), length 60) israfel.ucab.edu.ve.3128 > redes-original.local.57844: S, cksum 0xfe91 (correct), 978867367:978867367(0) ack 284242925 win 5792 <mss 1460,sackOK,timestamp 915916596 56033,nop,wscale 0>
+08:46:36.800333 IP (tos 0x0, ttl 64, id 59662, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57844 > israfel.ucab.edu.ve.3128: ., cksum 0x439b (correct), 1:1(0) ack 1 win 92 <nop,nop,timestamp 56033 915916596>
+08:46:36.800833 IP (tos 0x0, ttl 64, id 59663, offset 0, flags [DF], proto TCP (6), length 588) redes-original.local.57844 > israfel.ucab.edu.ve.3128: P 1:537(536) ack 1 win 92 <nop,nop,timestamp 56033 915916596>
+08:46:36.801412 IP (tos 0x0, ttl 63, id 37789, offset 0, flags [DF], proto TCP (6), length 52) israfel.ucab.edu.ve.3128 > redes-original.local.57844: ., cksum 0x28be (correct), 1:1(0) ack 537 win 6432 <nop,nop,timestamp 915916597 56033>
+08:46:36.895714 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-8.local: ICMP echo request, id 28475, seq 2, length 64
+08:46:36.896017 IP (tos 0x0, ttl 64, id 50359, offset 0, flags [none], proto ICMP (1), length 84) redes-original-8.local > redes-original-2.local: ICMP echo reply, id 28475, seq 2, length 64
+08:46:37.142823 IP (tos 0x0, ttl 128, id 3078, offset 0, flags [none], proto UDP (17), length 229) 192.168.2.222.netbios-dgm > 192.168.3.255.netbios-dgm: 
+>>> NBT UDP PACKET(138) Res=0x110E ID=0x8034 IP=192 (0xc0).168 (0xa8).2 (0x2).222 (0xde) Port=138 (0x8a) Length=187 (0xbb) Res2=0x0
+SourceName=COMUNICA-6      NameType=0x20 (Server)
+DestName=
+WARNING: Short packet. Try increasing the snap length
+
+
+08:46:37.153254 arp who-has 192.168.3.250 tell 192.168.3.194
+08:46:37.251787 arp who-has redes-original-4.local tell redes-original-5.local
+08:46:37.251804 arp reply redes-original-4.local is-at 00:1e:37:37:1e:a4 (oui Unknown)
+08:46:37.252346 IP (tos 0x0, ttl 64, id 6056, offset 0, flags [DF], proto TCP (6), length 60) redes-original-5.local.43652 > redes-original-4.local.ssh: S, cksum 0xe871 (correct), 798130078:798130078(0) win 5840 <mss 1460,sackOK,timestamp 1468470 0,nop,wscale 6>
+08:46:37.252365 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 60) redes-original-4.local.ssh > redes-original-5.local.43652: S, cksum 0x67d9 (correct), 856000986:856000986(0) ack 798130079 win 5792 <mss 1460,sackOK,timestamp 1164230 1468470,nop,wscale 6>
+08:46:37.252918 IP (tos 0x0, ttl 64, id 6057, offset 0, flags [DF], proto TCP (6), length 52) redes-original-5.local.43652 > redes-original-4.local.ssh: ., cksum 0xace7 (correct), 1:1(0) ack 1 win 92 <nop,nop,timestamp 1468471 1164230>
+08:46:37.258171 IP (tos 0x0, ttl 64, id 18973, offset 0, flags [DF], proto TCP (6), length 92) redes-original-4.local.ssh > redes-original-5.local.43652: P 1:41(40) ack 1 win 91 <nop,nop,timestamp 1164232 1468471>
+08:46:37.258742 IP (tos 0x0, ttl 64, id 6058, offset 0, flags [DF], proto TCP (6), length 52) redes-original-5.local.43652 > redes-original-4.local.ssh: ., cksum 0xacbc (correct), 1:1(0) ack 41 win 92 <nop,nop,timestamp 1468472 1164232>
+08:46:37.258749 IP (tos 0x0, ttl 64, id 6059, offset 0, flags [DF], proto TCP (6), length 92) redes-original-5.local.43652 > redes-original-4.local.ssh: P 1:41(40) ack 41 win 92 <nop,nop,timestamp 1468472 1164232>
+08:46:37.258760 IP (tos 0x0, ttl 64, id 18974, offset 0, flags [DF], proto TCP (6), length 52) redes-original-4.local.ssh > redes-original-5.local.43652: ., cksum 0xac95 (correct), 41:41(0) ack 41 win 91 <nop,nop,timestamp 1164232 1468472>
+08:46:37.259300 IP (tos 0x0, ttl 64, id 18975, offset 0, flags [DF], proto TCP (6), length 836) redes-original-4.local.ssh > redes-original-5.local.43652: P 41:825(784) ack 41 win 91 <nop,nop,timestamp 1164232 1468472>
+08:46:37.259804 IP (tos 0x0, ttl 64, id 6060, offset 0, flags [DF], proto TCP (6), length 844) redes-original-5.local.43652 > redes-original-4.local.ssh: P 41:833(792) ack 41 win 92 <nop,nop,timestamp 1468472 1164232>
+08:46:37.298024 IP (tos 0x0, ttl 64, id 18976, offset 0, flags [DF], proto TCP (6), length 52) redes-original-4.local.ssh > redes-original-5.local.43652: ., cksum 0xa64a (correct), 825:825(0) ack 833 win 116 <nop,nop,timestamp 1164242 1468472>
+08:46:37.298599 IP (tos 0x0, ttl 64, id 6061, offset 0, flags [DF], proto TCP (6), length 76) redes-original-5.local.43652 > redes-original-4.local.ssh: P, cksum 0x77f4 (correct), 833:857(24) ack 825 win 116 <nop,nop,timestamp 1468482 1164232>
+08:46:37.298611 IP (tos 0x0, ttl 64, id 18977, offset 0, flags [DF], proto TCP (6), length 52) redes-original-4.local.ssh > redes-original-5.local.43652: ., cksum 0xa628 (correct), 825:825(0) ack 857 win 116 <nop,nop,timestamp 1164242 1468482>
+08:46:37.300841 IP (tos 0x0, ttl 64, id 18978, offset 0, flags [DF], proto TCP (6), length 204) redes-original-4.local.ssh > redes-original-5.local.43652: P 825:977(152) ack 857 win 116 <nop,nop,timestamp 1164242 1468482>
+08:46:37.302775 IP (tos 0x0, ttl 64, id 6062, offset 0, flags [DF], proto TCP (6), length 196) redes-original-5.local.43652 > redes-original-4.local.ssh: P 857:1001(144) ack 977 win 141 <nop,nop,timestamp 1468483 1164242>
+08:46:37.318546 IP (tos 0x0, ttl 64, id 18979, offset 0, flags [DF], proto TCP (6), length 772) redes-original-4.local.ssh > redes-original-5.local.43652: P 977:1697(720) ack 1001 win 140 <nop,nop,timestamp 1164246 1468483>
+08:46:37.321248 IP (tos 0x0, ttl 64, id 6063, offset 0, flags [DF], proto TCP (6), length 68) redes-original-5.local.43652 > redes-original-4.local.ssh: P, cksum 0x97bc (correct), 1001:1017(16) ack 1697 win 165 <nop,nop,timestamp 1468488 1164246>
+08:46:37.358019 IP (tos 0x0, ttl 64, id 18980, offset 0, flags [DF], proto TCP (6), length 52) redes-original-4.local.ssh > redes-original-5.local.43652: ., cksum 0xa1f3 (correct), 1697:1697(0) ack 1017 win 140 <nop,nop,timestamp 1164257 1468488>
+08:46:37.358514 IP (tos 0x0, ttl 64, id 6064, offset 0, flags [DF], proto TCP (6), length 100) redes-original-5.local.43652 > redes-original-4.local.ssh: P 1017:1065(48) ack 1697 win 165 <nop,nop,timestamp 1468497 1164257>
+08:46:37.358526 IP (tos 0x0, ttl 64, id 18981, offset 0, flags [DF], proto TCP (6), length 52) redes-original-4.local.ssh > redes-original-5.local.43652: ., cksum 0xa1ba (correct), 1697:1697(0) ack 1065 win 140 <nop,nop,timestamp 1164257 1468497>
+08:46:37.358547 IP (tos 0x0, ttl 64, id 18982, offset 0, flags [DF], proto TCP (6), length 100) redes-original-4.local.ssh > redes-original-5.local.43652: P 1697:1745(48) ack 1065 win 140 <nop,nop,timestamp 1164257 1468497>
+08:46:37.359089 IP (tos 0x0, ttl 64, id 6065, offset 0, flags [DF], proto TCP (6), length 116) redes-original-5.local.43652 > redes-original-4.local.ssh: P 1065:1129(64) ack 1745 win 165 <nop,nop,timestamp 1468497 1164257>
+08:46:37.359473 IP (tos 0x0, ttl 64, id 50145, offset 0, flags [DF], proto UDP (17), length 72) redes-original-4.local.50082 > 192.168.2.100.domain: [bad udp cksum 7c67!] 616+ PTR? 160.2.168.192.in-addr.arpa. (44)
+08:46:37.360135 IP (tos 0x0, ttl 128, id 5429, offset 0, flags [none], proto UDP (17), length 149) 192.168.2.100.domain > redes-original-4.local.50082: 616 NXDomain q: PTR? 160.2.168.192.in-addr.arpa. 0/1/0 ns: 168.192.in-addr.arpa. (121)
+08:46:37.386041 IP (tos 0x0, ttl 255, id 0, offset 0, flags [DF], proto UDP (17), length 82) redes-original-4.local.mdns > 224.0.0.251.mdns: [bad udp cksum 6dd5!] 0 [2q] PTR (QM)? 100.2.168.192.in-addr.arpa. PTR (QM)? 160.2.168.192.in-addr.arpa. (54)
+08:46:37.386693 IP (tos 0x0, ttl 255, id 0, offset 0, flags [DF], proto UDP (17), length 102) redes-original-5.local.mdns > 224.0.0.251.mdns: 0*- [0q] 1/0/0 160.2.168.192.in-addr.arpa. (Cache flush) PTR[|domain]
+08:46:37.387961 IP (tos 0x0, ttl 64, id 18983, offset 0, flags [DF], proto TCP (6), length 116) redes-original-4.local.ssh > redes-original-5.local.43652: P 1745:1809(64) ack 1129 win 140 <nop,nop,timestamp 1164264 1468497>
+08:46:37.409635 arp who-has redes-original-5.local tell redes-original-2.local
+08:46:37.409914 arp reply redes-original-5.local is-at 00:1e:37:37:c5:8c (oui Unknown)
+08:46:37.410187 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-5.local: ICMP echo request, id 28731, seq 1, length 64
+08:46:37.410468 IP (tos 0x0, ttl 64, id 54642, offset 0, flags [none], proto ICMP (1), length 84) redes-original-5.local > redes-original-2.local: ICMP echo reply, id 28731, seq 1, length 64
+08:46:37.427795 IP (tos 0x0, ttl 64, id 6066, offset 0, flags [DF], proto TCP (6), length 52) redes-original-5.local.43652 > redes-original-4.local.ssh: ., cksum 0xa0d8 (correct), 1129:1129(0) ack 1809 win 165 <nop,nop,timestamp 1468515 1164264>
+08:46:37.452101 arp who-has 192.168.3.39 tell 192.168.3.194
+08:46:37.453056 arp who-has 192.168.3.122 tell 192.168.3.194
+08:46:37.473347 IP (tos 0x0, ttl 63, id 46129, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57826: . 7090:8538(1448) ack 1 win 8136 <nop,nop,timestamp 915916940 55984>
+08:46:37.474597 IP (tos 0x0, ttl 63, id 46130, offset 0, flags [DF], proto TCP (6), length 1440) israfel.ucab.edu.ve.3128 > redes-original.local.57826: P 8538:9926(1388) ack 1 win 8136 <nop,nop,timestamp 915916940 55984>
+08:46:37.474599 IP (tos 0x0, ttl 64, id 37499, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0xa843 (correct), 1:1(0) ack 8538 win 1002 <nop,nop,timestamp 56201 915916940>
+08:46:37.474850 IP (tos 0x0, ttl 64, id 37500, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0xa2d6 (correct), 1:1(0) ack 9926 win 1002 <nop,nop,timestamp 56202 915916940>
+08:46:37.542943 IP (tos 0x0, ttl 63, id 46131, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57826: . 9926:11374(1448) ack 1 win 8136 <nop,nop,timestamp 915916976 56202>
+08:46:37.544193 IP (tos 0x0, ttl 63, id 46132, offset 0, flags [DF], proto TCP (6), length 1500) israfel.ucab.edu.ve.3128 > redes-original.local.57826: . 11374:12822(1448) ack 1 win 8136 <nop,nop,timestamp 915916976 56202>
+08:46:37.544196 IP (tos 0x0, ttl 64, id 37501, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0x9cf9 (correct), 1:1(0) ack 11374 win 1002 <nop,nop,timestamp 56219 915916976>
+08:46:37.545193 IP (tos 0x0, ttl 63, id 46133, offset 0, flags [DF], proto TCP (6), length 1252) israfel.ucab.edu.ve.3128 > redes-original.local.57826: P 12822:14022(1200) ack 1 win 8136 <nop,nop,timestamp 915916976 56202>
+08:46:37.545443 IP (tos 0x0, ttl 63, id 46134, offset 0, flags [DF], proto TCP (6), length 210) israfel.ucab.edu.ve.3128 > redes-original.local.57826: P 14022:14180(158) ack 1 win 8136 <nop,nop,timestamp 915916978 56219>
+08:46:37.545693 IP (tos 0x0, ttl 64, id 37502, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0x9751 (correct), 1:1(0) ack 12822 win 1002 <nop,nop,timestamp 56219 915916976>
+08:46:37.545695 IP (tos 0x0, ttl 64, id 37503, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0x92a1 (correct), 1:1(0) ack 14022 win 1002 <nop,nop,timestamp 56219 915916976>
+08:46:37.545697 IP (tos 0x0, ttl 64, id 37504, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0x9201 (correct), 1:1(0) ack 14180 win 1002 <nop,nop,timestamp 56219 915916978>
+08:46:37.894864 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-8.local: ICMP echo request, id 28475, seq 3, length 64
+08:46:37.895118 IP (tos 0x0, ttl 64, id 50360, offset 0, flags [none], proto ICMP (1), length 84) redes-original-8.local > redes-original-2.local: ICMP echo reply, id 28475, seq 3, length 64
+08:46:38.059985 IP (tos 0x18, ttl 255, id 62557, offset 0, flags [none], proto UDP (17), length 158) Galancito.local.mdns > 224.0.0.251.mdns: 0 [7q] PTR (QM)? _airport._tcp.local. PTR (QM)? _adisk._tcp.local.[|domain]
+08:46:38.060235 IP6 (hlim 255, next-header UDP (17) payload length: 138) fe80::219:e3ff:fe39:f4a2.mdns > ff02::fb.mdns: 0 [7q][|domain]
+08:46:38.110996 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto UDP (17), length 56) redes-original-3.local.55225 > 192.168.2.100.domain: [udp sum ok] 44856+ A? www.ucv.ve. (28)
+08:46:38.111357 IP (tos 0x0, ttl 128, id 5487, offset 0, flags [none], proto UDP (17), length 106) 192.168.2.100.domain > redes-original-3.local.55225: 44856 q: A? www.ucv.ve. 3/0/0 www.ucv.ve. CNAME cei.ucv.ve., cei.ucv.ve.[|domain]
+08:46:38.397216 IP (tos 0x0, ttl 63, id 46135, offset 0, flags [DF], proto TCP (6), length 1470) israfel.ucab.edu.ve.3128 > redes-original.local.57826: P 14180:15598(1418) ack 1 win 8136 <nop,nop,timestamp 915917413 56219>
+08:46:38.397547 IP (tos 0x0, ttl 64, id 37505, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0x89ef (correct), 1:1(0) ack 15598 win 1002 <nop,nop,timestamp 56432 915917413>
+08:46:38.409660 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-5.local: ICMP echo request, id 28731, seq 2, length 64
+08:46:38.409933 IP (tos 0x0, ttl 64, id 54643, offset 0, flags [none], proto ICMP (1), length 84) redes-original-5.local > redes-original-2.local: ICMP echo reply, id 28731, seq 2, length 64
+08:46:38.422434 IP (tos 0x0, ttl 128, id 21162, offset 0, flags [none], proto UDP (17), length 241) 192.168.2.88.netbios-dgm > 192.168.3.255.netbios-dgm: 
+>>> NBT UDP PACKET(138) Res=0x110E ID=0x801F IP=192 (0xc0).168 (0xa8).2 (0x2).88 (0x58) Port=138 (0x8a) Length=199 (0xc7) Res2=0x0
+SourceName=A112-7          NameType=0x20 (Server)
+DestName=
+WARNING: Short packet. Try increasing the snap length
+
+
+08:46:38.544298 STP 802.1d, Config, Flags [none], bridge-id 80c0.00:0f:23:52:16:40.802e, length 47
+	message-age 5.00s, max-age 20.00s, hello-time 2.00s, forwarding-delay 15.00s
+	root-id 8000.00:02:4b:40:bc:d3, root-pathcost 35
+08:46:38.561551 arp who-has 192.168.3.9 tell 192.168.3.194
+08:46:38.757894 IP (tos 0x0, ttl 63, id 46136, offset 0, flags [DF], proto TCP (6), length 1470) israfel.ucab.edu.ve.3128 > redes-original.local.57826: P 15598:17016(1418) ack 1 win 8136 <nop,nop,timestamp 915917598 56432>
+08:46:38.758183 IP (tos 0x0, ttl 64, id 37506, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0x8351 (correct), 1:1(0) ack 17016 win 1002 <nop,nop,timestamp 56523 915917598>
+08:46:38.823315 IP (tos 0x0, ttl 63, id 46137, offset 0, flags [DF], proto TCP (6), length 1470) israfel.ucab.edu.ve.3128 > redes-original.local.57826: P 17016:18434(1418) ack 1 win 8136 <nop,nop,timestamp 915917631 56523>
+08:46:38.823319 IP (tos 0x0, ttl 64, id 37507, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57826 > israfel.ucab.edu.ve.3128: ., cksum 0x7d96 (correct), 1:1(0) ack 18434 win 1002 <nop,nop,timestamp 56539 915917631>
+08:46:38.842901 arp who-has 192.168.3.186 tell 192.168.3.79
+08:46:38.843762 arp who-has 192.168.3.88 tell 192.168.3.79
+08:46:38.864910 IP (tos 0x0, ttl 64, id 3671, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57842 > israfel.ucab.edu.ve.3128: ., cksum 0xa6ba (correct), 435:435(0) ack 1449 win 137 <nop,nop,timestamp 56549 915917652>
+08:46:38.864911 IP (tos 0x0, ttl 64, id 3672, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57842 > israfel.ucab.edu.ve.3128: ., cksum 0xa0e5 (correct), 435:435(0) ack 2897 win 182 <nop,nop,timestamp 56549 915917652>
+08:46:38.864913 IP (tos 0x0, ttl 64, id 3673, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57842 > israfel.ucab.edu.ve.3128: ., cksum 0x9c8b (correct), 435:435(0) ack 3966 win 227 <nop,nop,timestamp 56549 915917652>
+08:46:38.865161 IP (tos 0x0, ttl 64, id 3674, offset 0, flags [DF], proto TCP (6), length 52) redes-original.local.57842 > israfel.ucab.edu.ve.3128: F, cksum 0x9c8a (correct), 435:435(0) ack 3966 win 227 <nop,nop,timestamp 56549 915917652>
+08:46:38.865164 IP (tos 0x0, ttl 64, id 13524, offset 0, flags [DF], proto TCP (6), length 60) redes-original.local.57845 > israfel.ucab.edu.ve.3128: S, cksum 0xd2b6 (correct), 321447985:321447985(0) win 5840 <mss 1460,sackOK,timestamp 56549 0,nop,wscale 6>
+08:46:41.386353 IP (tos 0x0, ttl 64, id 51151, offset 0, flags [DF], proto UDP (17), length 71) redes-original-4.local.57798 > 192.168.2.100.domain: [bad udp cksum a1a!] 30121+ PTR? 13.2.168.192.in-addr.arpa. (43)
+08:46:41.388088 IP (tos 0x0, ttl 128, id 5550, offset 0, flags [none], proto UDP (17), length 148) 192.168.2.100.domain > redes-original-4.local.57798: 30121 NXDomain q: PTR? 13.2.168.192.in-addr.arpa. 0/1/0 ns: 168.192.in-addr.arpa. (120)
+08:46:41.410691 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-5.local: ICMP echo request, id 28731, seq 5, length 64
+08:46:41.411001 IP (tos 0x0, ttl 64, id 54646, offset 0, flags [none], proto ICMP (1), length 84) redes-original-5.local > redes-original-2.local: ICMP echo reply, id 28731, seq 5, length 64
+08:46:41.417063 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-6.local: ICMP echo request, id 29499, seq 1, length 64
+08:46:41.417314 IP (tos 0x0, ttl 64, id 64755, offset 0, flags [none], proto ICMP (1), length 84) redes-original-6.local > redes-original-2.local: ICMP echo reply, id 29499, seq 1, length 64
+08:46:41.433636 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-4.local: ICMP echo request, id 29243, seq 2, length 64
+08:46:41.433644 IP (tos 0x0, ttl 64, id 57988, offset 0, flags [none], proto ICMP (1), length 84) redes-original-4.local > redes-original-2.local: ICMP echo reply, id 29243, seq 2, length 64
+08:46:41.446416 IP (tos 0x0, ttl 128, id 6, offset 0, flags [none], proto UDP (17), length 96) 192.168.2.13.netbios-ns > 192.168.3.255.netbios-ns: 
+>>> NBT UDP PACKET(137): REGISTRATION; REQUEST; BROADCAST
+TrnID=0x8000
+OpCode=5
+NmFlags=0x11
+Rcode=0
+QueryCount=1
+AnswerCount=0
+AuthorityCount=0
+AddressRecCount=1
+QuestionRecords:
+Name=A112-3          NameType=0x00 (Workstation)
+QuestionType=0x20
+QuestionClass=0x1
+
+ResourceRecords:
+Name=A112-3          NameType=0x00 (Workstation)
+ResType=0x20
+ResClass=
+WARNING: Short packet. Try increasing the snap length
+
+
+08:46:41.491040 IP (tos 0x0, ttl 255, id 0, offset 0, flags [DF], proto UDP (17), length 71) redes-original-4.local.mdns > 224.0.0.251.mdns: [bad udp cksum ff0c!] 0 PTR (QM)? 13.2.168.192.in-addr.arpa. (43)
+08:46:41.630856 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto UDP (17), length 57) redes-original-3.local.39947 > 192.168.2.100.domain: [udp sum ok] 30997+ A? www.cia.gov. (29)
+08:46:41.631531 IP (tos 0x0, ttl 128, id 5555, offset 0, flags [none], proto UDP (17), length 73) 192.168.2.100.domain > redes-original-3.local.39947: [udp sum ok] 30997 q: A? www.cia.gov. 1/0/0 www.cia.gov. A 198.81.129.136 (45)
+08:46:41.631897 IP (tos 0x0, ttl 64, id 43971, offset 0, flags [DF], proto UDP (17), length 73) redes-original-3.local.38151 > 192.168.2.100.domain: [udp sum ok] 2370+ PTR? 136.129.81.198.in-addr.arpa. (45)
+08:46:46.390176 IP (tos 0x0, ttl 64, id 52403, offset 0, flags [DF], proto UDP (17), length 70) redes-original-4.local.37051 > 192.168.2.100.domain: [bad udp cksum b53c!] 41042+ PTR? 251.0.0.224.in-addr.arpa. (42)
+08:46:51.394301 IP (tos 0x0, ttl 64, id 53654, offset 0, flags [DF], proto UDP (17), length 74) redes-original-4.local.57925 > 192.168.2.100.domain: [bad udp cksum a8a7!] 29269+ PTR? 255.255.255.255.in-addr.arpa. (46)
+08:46:51.394976 IP (tos 0x0, ttl 128, id 5978, offset 0, flags [none], proto UDP (17), length 165) 192.168.2.100.domain > redes-original-4.local.57925: 29269 NXDomain* q: PTR? 255.255.255.255.in-addr.arpa. 0/1/0 ns: 255.in-[|domain]
+08:46:51.409823 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-5.local: ICMP echo request, id 28731, seq 15, length 64
+08:46:51.410073 IP (tos 0x0, ttl 64, id 54656, offset 0, flags [none], proto ICMP (1), length 84) redes-original-5.local > redes-original-2.local: ICMP echo reply, id 28731, seq 15, length 64
+08:46:51.417820 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-6.local: ICMP echo request, id 29499, seq 11, length 64
+08:46:51.418072 IP (tos 0x0, ttl 64, id 64765, offset 0, flags [none], proto ICMP (1), length 84) redes-original-6.local > redes-original-2.local: ICMP echo reply, id 29499, seq 11, length 64
+08:46:51.433822 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-4.local: ICMP echo request, id 29243, seq 12, length 64
+08:46:51.433831 IP (tos 0x0, ttl 64, id 57998, offset 0, flags [none], proto ICMP (1), length 84) redes-original-4.local > redes-original-2.local: ICMP echo reply, id 29243, seq 12, length 64
+08:46:51.498056 IP (tos 0x0, ttl 255, id 0, offset 0, flags [DF], proto UDP (17), length 74) redes-original-4.local.mdns > 224.0.0.251.mdns: [bad udp cksum c897!] 0 PTR (QM)? 255.255.255.255.in-addr.arpa. (46)
+08:46:51.547196 arp who-has redes-original-3.local tell Galancito.local
+08:46:51.547445 arp reply redes-original-3.local is-at 00:1e:37:37:ce:52 (oui Unknown)
+08:46:51.558628 IP (tos 0x10, ttl 64, id 6086, offset 0, flags [DF], proto TCP (6), length 100) redes-original-5.local.43652 > redes-original-4.local.ssh: P 2025:2073(48) ack 3121 win 214 <nop,nop,timestamp 1472047 1167729>
+08:47:01.403211 IP (tos 0x0, ttl 64, id 56156, offset 0, flags [DF], proto UDP (17), length 71) redes-original-4.local.56782 > 192.168.2.100.domain: [bad udp cksum 283d!] 21886+ PTR? 64.2.168.192.in-addr.arpa. (43)
+08:47:01.403924 IP (tos 0x0, ttl 128, id 8829, offset 0, flags [none], proto UDP (17), length 148) 192.168.2.100.domain > redes-original-4.local.56782: 21886 NXDomain q: PTR? 64.2.168.192.in-addr.arpa. 0/1/0 ns: 168.192.in-addr.arpa. (120)
+08:47:01.404804 IP (tos 0x0, ttl 64, id 56156, offset 0, flags [DF], proto UDP (17), length 72) redes-original-4.local.36099 > 192.168.2.100.domain: [bad udp cksum f8e6!] 46722+ PTR? 197.3.168.192.in-addr.arpa. (44)
+08:47:01.405598 IP (tos 0x0, ttl 128, id 8830, offset 0, flags [none], proto UDP (17), length 149) 192.168.2.100.domain > redes-original-4.local.36099: 46722 NXDomain q: PTR? 197.3.168.192.in-addr.arpa. 0/1/0 ns: 168.192.in-addr.arpa. (121)
+08:47:01.405742 IP (tos 0x0, ttl 64, id 56156, offset 0, flags [DF], proto UDP (17), length 72) redes-original-4.local.60081 > 192.168.2.100.domain: [bad udp cksum 69ad!] 38500+ PTR? 255.3.168.192.in-addr.arpa. (44)
+08:47:01.407420 IP (tos 0x0, ttl 128, id 8832, offset 0, flags [none], proto UDP (17), length 149) 192.168.2.100.domain > redes-original-4.local.60081: 38500 NXDomain q: PTR? 255.3.168.192.in-addr.arpa. 0/1/0 ns: 168.192.in-addr.arpa. (121)
+08:47:01.409965 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-5.local: ICMP echo request, id 28731, seq 25, length 64
+08:47:01.410302 IP (tos 0x0, ttl 64, id 54666, offset 0, flags [none], proto ICMP (1), length 84) redes-original-5.local > redes-original-2.local: ICMP echo reply, id 28731, seq 25, length 64
+08:47:01.417957 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-6.local: ICMP echo request, id 29499, seq 21, length 64
+08:47:01.418207 IP (tos 0x0, ttl 64, id 64775, offset 0, flags [none], proto ICMP (1), length 84) redes-original-6.local > redes-original-2.local: ICMP echo reply, id 29499, seq 21, length 64
+08:47:01.433956 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-4.local: ICMP echo request, id 29243, seq 22, length 64
+08:47:01.433963 IP (tos 0x0, ttl 64, id 58008, offset 0, flags [none], proto ICMP (1), length 84) redes-original-4.local > redes-original-2.local: ICMP echo reply, id 29243, seq 22, length 64
+08:47:01.510043 IP (tos 0x0, ttl 255, id 0, offset 0, flags [DF], proto UDP (17), length 72) redes-original-4.local.mdns > 224.0.0.251.mdns: [bad udp cksum 4ca!] 0 PTR (QM)? 255.3.168.192.in-addr.arpa. (44)
+08:47:01.591177 IP (tos 0x0, ttl 128, id 422, offset 0, flags [none], proto UDP (17), length 328) 192.168.3.143.bootpc > 255.255.255.255.bootps: BOOTP/DHCP, Request from 00:11:25:0d:dc:35 (oui Unknown), length 300, xid 0x1146d46b, Flags [none] (0x0000)
+	  Client-IP 192.168.3.143
+	  Client-Ethernet-Address 00:11:25:0d:dc:35 (oui Unknown) [|bootp]
+08:47:01.665968 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > 192.168.0.8: ICMP echo request, id 30011, seq 2, length 64
+08:47:01.794733 IP (tos 0x0, ttl 128, id 643, offset 0, flags [none], proto UDP (17), length 328) 192.168.3.119.bootpc > 255.255.255.255.bootps: BOOTP/DHCP, Request from 00:1e:37:37:77:b6 (oui Unknown), length 300, xid 0x4d060fe5, Flags [none] (0x0000)
+	  Client-IP 192.168.3.119
+	  Client-Ethernet-Address 00:1e:37:37:77:b6 (oui Unknown) [|bootp]
+08:47:01.863505 IP (tos 0x0, ttl 128, id 458, offset 0, flags [none], proto UDP (17), length 328) 192.168.2.70.bootpc > 255.255.255.255.bootps: BOOTP/DHCP, Request from 00:1e:37:37:9b:30 (oui Unknown), length 300, xid 0x7ef5477d, secs 768, Flags [none] (0x0000)
+	  Client-IP 192.168.2.70
+	  Client-Ethernet-Address 00:1e:37:37:9b:30 (oui Unknown) [|bootp]
+08:47:01.893910 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-8.local: ICMP echo request, id 28475, seq 27, length 64
+08:47:01.894242 IP (tos 0x0, ttl 64, id 50384, offset 0, flags [none], proto ICMP (1), length 84) redes-original-8.local > redes-original-2.local: ICMP echo reply, id 28475, seq 27, length 64
+08:47:02.076159 IP (tos 0x0, ttl 1, id 23515, offset 0, flags [none], proto UDP (17), length 161) 192.168.2.109.2197 > 239.255.255.250.1900: UDP, length 133
+08:47:02.173839 IP (tos 0x0, ttl 128, id 23518, offset 0, flags [none], proto UDP (17), length 298) 192.168.2.109.netbios-dgm > 192.168.3.255.netbios-dgm: 
+>>> NBT UDP PACKET(138) Res=0x110E ID=0x82B7 IP=192 (0xc0).168 (0xa8).2 (0x2).109 (0x6d) Port=138 (0x8a) Length=256 (0x100) Res2=0x0
+SourceName=CIRCUITOS-10    NameType=0x00 (Workstation)
+DestName=
+WARNING: Short packet. Try increasing the snap length
+
+
+08:47:02.209923 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original.local: ICMP echo request, id 29755, seq 21, length 64
+08:47:02.210201 IP (tos 0x0, ttl 64, id 31604, offset 0, flags [none], proto ICMP (1), length 84) redes-original.local > redes-original-2.local: ICMP echo reply, id 29755, seq 21, length 64
+08:47:02.247884 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto UDP (17), length 60) redes-original-3.local.59010 > 192.168.2.100.domain: [udp sum ok] 26965+ A? www.usm.edu.ve. (32)
+08:47:02.248224 IP (tos 0x0, ttl 128, id 8881, offset 0, flags [none], proto UDP (17), length 90) 192.168.2.100.domain > redes-original-3.local.59010: 26965 q: A? www.usm.edu.ve. 2/0/0 www.usm.edu.ve. CNAME usm.edu.ve., usm.edu.ve. (62)
+08:47:02.309144 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-7.local > redes-original-4.local: ICMP echo request, id 4120, seq 7, length 64
+08:47:02.309162 IP (tos 0x0, ttl 64, id 31358, offset 0, flags [none], proto ICMP (1), length 84) redes-original-4.local > redes-original-7.local: ICMP echo reply, id 4120, seq 7, length 64
+08:47:02.409934 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-5.local: ICMP echo request, id 28731, seq 26, length 64
+08:47:02.410207 IP (tos 0x0, ttl 64, id 54667, offset 0, flags [none], proto ICMP (1), length 84) redes-original-5.local > redes-original-2.local: ICMP echo reply, id 28731, seq 26, length 64
+08:47:02.417964 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-6.local: ICMP echo request, id 29499, seq 22, length 64
+08:47:02.418214 IP (tos 0x0, ttl 64, id 64776, offset 0, flags [none], proto ICMP (1), length 84) redes-original-6.local > redes-original-2.local: ICMP echo reply, id 29499, seq 22, length 64
+08:47:02.433969 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-4.local: ICMP echo request, id 29243, seq 23, length 64
+08:47:02.433982 IP (tos 0x0, ttl 64, id 58009, offset 0, flags [none], proto ICMP (1), length 84) redes-original-4.local > redes-original-2.local: ICMP echo reply, id 29243, seq 23, length 64
+08:47:02.511054 IP (tos 0x0, ttl 255, id 0, offset 0, flags [DF], proto UDP (17), length 72) redes-original-4.local.mdns > 224.0.0.251.mdns: [bad udp cksum 4ca!] 0 PTR (QM)? 255.3.168.192.in-addr.arpa. (44)
+08:47:02.547371 STP 802.1d, Config, Flags [none], bridge-id 80c0.00:0f:23:52:16:40.802e, length 47
+	message-age 5.00s, max-age 20.00s, hello-time 2.00s, forwarding-delay 15.00s
+	root-id 8000.00:02:4b:40:bc:d3, root-pathcost 35
+08:47:02.665929 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > 192.168.0.8: ICMP echo request, id 30011, seq 3, length 64
+08:47:02.801745 IP (tos 0x0, ttl 1, id 3203, offset 0, flags [none], proto UDP (17), length 161) 192.168.2.215.1164 > 239.255.255.250.1900: UDP, length 133
+08:47:02.893923 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84) redes-original-2.local > redes-original-8.local: ICMP echo request, id 28475, seq 28, length 64
+08:47:02.894292 IP (tos 0x0, ttl 64, id 50385, offset 0, flags [none], proto ICMP (1), length 84) redes-original-8.local > redes-original-2.local: ICMP echo reply, id 28475, seq 28, length 64
+08:47:02.902608 arp who-has redes-original-4.local tell 192.168.2.1
+08:47:02.902617 arp reply redes-original-4.local is-at 00:1e:37:37:1e:a4 (oui Unknown)
+08:47:03.038859 IP (tos 0x0, ttl 17, id 16698, offset 0, flags [none], proto UDP (17), length 68) redes-original-3.local.59245 > 208.46.17.18.33482: [udp sum ok] UDP, length 40
+08:47:03.043770 IP (tos 0x0, ttl 255, id 0, offset 0, flags [DF], proto UDP (17), length 74) redes-original.local.mdns > 224.0.0.251.mdns: [udp sum ok] 0 PTR (QM)? 255.255.255.255.in-addr.arpa. (46)
+08:47:03.203579 arp who-has 192.168.3.62 tell 192.168.3.194
+
