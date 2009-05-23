@@ -158,45 +158,91 @@ public class Tablero {
     String columna = posicion.substring(0,1);
     String fila = posicion.substring(1);
     int [] arreglo = new int[2];
+    boolean x = false;
+    try
+    {
+        if (columna.toUpperCase().equals("A"))
+        {
+            numero=0;
+            x = true;
+        }
+        else if(columna.toUpperCase().equals("B"))
+        {
+            numero=1;
+            x = true;
+        }
+        else if(columna.toUpperCase().equals("C"))
+        {
+            numero=2;
+            x = true;
+        }
+        else if(columna.toUpperCase().equals("D"))
+        {
+            numero=3;
+            x = true;
+        }
+        else if(columna.toUpperCase().equals("E"))
+        {
+            numero=4;
+            x = true;
+        }
+        else if(columna.toUpperCase().equals("F"))
+        {
+            numero=5;
+            x = true;
+        }
+        else if(columna.toUpperCase().equals("G"))
+        {
+            numero=6;
+            x = true;
+        }
+        else if(columna.toUpperCase().equals("H"))
+        {
+            numero=7;
+            x = true;
+        }
+        else
+        {
+            throw new Exception();
+        }
+    }
+    catch(Exception e)
+    {
+        System.out.println("Error!");
+    }
 
-    if (columna.toUpperCase().equals("A"))
+    if (x)
     {
-        numero=0;
+        arreglo[0]= Integer.parseInt(fila)-1;
+        arreglo[1]= numero;
     }
-    if(columna.toUpperCase().equals("B"))
-    {
-        numero=1;
-    }
-    if(columna.toUpperCase().equals("C"))
-    {
-        numero=2;
-    }
-    if(columna.toUpperCase().equals("D"))
-    {
-        numero=3;
-    }
-    if(columna.toUpperCase().equals("E"))
-    {
-        numero=4;
-    }
-    if(columna.toUpperCase().equals("F"))
-    {
-        numero=5;
-    }
-    if(columna.toUpperCase().equals("G"))
-    {
-        numero=6;
-    }
-    if(columna.toUpperCase().equals("H"))
-    {
-        numero=7;
-    }
-    
-    arreglo[0]= Integer.parseInt(fila)-1;
-
-    arreglo[1]= numero;
 
     return arreglo;
+    }
+
+    public boolean ValidarPosicion(int [] posicion)
+    {
+        boolean x = false;
+        try
+            {
+            for (int i = 0; i < 2; i++)
+            {
+                if (posicion[i] >= 0 || posicion[i] <= 7)
+                {
+                    x = true;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error!");
+        }
+
+        return x;
     }
     //Si hay una pieza 
     

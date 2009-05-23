@@ -15,37 +15,46 @@ public class Main {
 
            matriz = tablero.InicializarTablero();
 
-           System.out.print("posicion inicial");
+           System.out.println("posicion inicial: (Ej. A2)");
            System.out.println();
            String posicioninicial = dato.readLine();
-           System.out.print("posicion final");
+           System.out.println("posicion final: (Ej. A2)");
            System.out.println();
            String posicionfinal = dato2.readLine();
 
            int [] inicial = tablero.Posicion(posicioninicial);
            int [] terminal = tablero.Posicion(posicionfinal);
-           String nombrePieza = matriz[inicial[0]][inicial[1]].getClass().getSimpleName();
-           
-           if (nombrePieza.equals("Peon"))
+           boolean x = tablero.ValidarPosicion(inicial);
+           boolean y = tablero.ValidarPosicion(terminal);
+
+           if (!x || !y)
            {
-               Peon peon = new Peon();
-               matriz = peon.MoverComer(matriz,inicial,terminal);
+               throw new Exception();
            }
-           if (nombrePieza.equals("Reina"))
+           else
            {
-              
+               String nombrePieza = matriz[inicial[0]][inicial[1]].getClass().getSimpleName();
+
+               if (nombrePieza.equals("Peon"))
+               {
+                   Peon peon = new Peon();
+                   matriz = peon.MoverComer(matriz,inicial,terminal);
+               }
+               if (nombrePieza.equals("Reina"))
+               {
+
+               }
+               //&& nombrePieza.equals("Peon")
+               /*String objeto = null;
+               objeto = matriz[inicial[0]][inicial[1]].getClass().getSimpleName();*/
+
+               //System.out.println(matriz[inicial[0]][inicial[1]].getColor());
+               //System.out.println(objeto);
+
+               //System.out.println("tablero");
+               //System.out.println();
+               tablero.ImprimirTablero(matriz);
            }
-           //&& nombrePieza.equals("Peon")
-           /*String objeto = null;
-           objeto = matriz[inicial[0]][inicial[1]].getClass().getSimpleName();*/
-
-           //System.out.println(matriz[inicial[0]][inicial[1]].getColor());
-           //System.out.println(objeto);
-
-           //System.out.println("tablero");
-           //System.out.println();
-           tablero.ImprimirTablero(matriz);
-
        }
        catch(Exception e)
        {

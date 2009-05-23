@@ -41,13 +41,34 @@ public class Rey extends Pieza
         return tablero;
     }
 
-    public void Jaque()
+    public int[] getPosicion(String colorPieza, Pieza [][] tablero)
     {
+        int[] posicionRey = new int[2];
 
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                if (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("rey") &&
+                   !tablero[i][j].getColor().equals("colorPieza"))
+                {
+                    posicionRey[0] = i;
+                    posicionRey[1] = j;
+                }
+            }
+        }
+        return posicionRey;
     }
 
-    public void JaqueMate()
+    public boolean Jaque(int[] posicionRey)
     {
-        
+        boolean x = false;
+        return x;
+    }
+
+    public boolean JaqueMate()
+    {
+        boolean x = false;
+        return x;
     }
 }
