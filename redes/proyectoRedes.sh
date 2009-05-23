@@ -2,29 +2,28 @@
 sum=0
 sum2=0
 echo "Haga telnet"
-tcpdump -vvvv tcp and host 192.168.56.1 -c2 >>paqTCP 
-sleep 2
+#tcpdump -vvvv tcp and host 192.168.56.1 -c2 >>paqTCP 
+echo "Paquetes IP"
 echo "ttl 64"
-awk '/ttl 64/ { sum += 1 } END { print sum }' /home/dory/paqTCP
+awk '/IP/ { print $0 }' /home/caracol/traficoproyecto >paqIP
+awk '/ttl 64/ { sum += 1 } END { print sum }' /home/caracol/paqIP
 echo "ttl 128"
-awk '/ttl 128/ { sum2 += 1 } END { print sum2 }' /home/dory/paqTCP
-echo "blah"
-read a
+awk '/ttl 128/ { sum2 += 1 } END { print sum2 }' /home/caracol/paqIP
 sum=0
 sum2=0
-tcpdump -vvvv ether host 08:00:27:00:C8:B9 -c10 >>paqETH
-sleep 2
+#tcpdump -vvvv ether host 08:00:27:00:C8:B9 -c10 >>paqETH
+echo "Paquetes ETHE"
 echo "ttl 64"
-awk '/ttl 64/ { sum += 1 } END { print sum }' /home/dory/paqETH
+awk '/proto TCP/ { print $0 }' /home/caracol/traficoproyecto >paqETH
+awk '/ttl 64/ { sum += 1 } END { print sum }' /home/caracol/paqETH
 echo "ttl 128"
-awk '/ttl 128/ { sum2 += 1 } END { print sum2 }' /home/dory/paqETH
-echo "Escriba la IP"
-read a
+awk '/ttl 128/ { sum2 += 1 } END { print sum2 }' /home/caracol/paqETH
 sum=0
 sum2=0
-tcpdump -vvvv host 192.168.56.1 -c10 >>paqIP 
-sleep 2
+#tcpdump -vvvv host 192.168.56.1 -c10 >>paqIP 
+echo "Paquetes TCP"
 echo "ttl 64"
-awk '/ttl 64/ { sum += 1 } END { print sum }' /home/dory/paqIP
+awk '/proto TCP/ { print $0 }' /home/caracol/traficoproyecto >paqTCP
+awk '/ttl 64/ { sum += 1 } END { print sum }' /home/caracol/paqTCP
 echo "ttl 128"
-awk '/ttl 128/ { sum2 += 1 } END { print sum2 }' /home/dory/paqIP
+awk '/ttl 128/ { sum2 += 1 } END { print sum2 }' /home/caracol/paqTCP
