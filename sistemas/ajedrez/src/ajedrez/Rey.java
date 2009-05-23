@@ -60,15 +60,99 @@ public class Rey extends Pieza
         return posicionRey;
     }
 
-    public boolean Jaque(int[] posicionRey)
+    public boolean Jaque(int[] posicionRey, Pieza[][] tablero)
     {
         boolean x = false;
+        int fila = posicionRey[0];
+        int columna = posicionRey[1];
+        int i = fila;
+        int j = columna;
+        String colorPieza = tablero[fila][columna].getColor();
+
+        for (i = fila + 1; i < 8; i++)
+        {
+            if (tablero[i][columna] != null && !tablero[i][columna].getColor().equalsIgnoreCase(colorPieza))
+            {
+                x = true;
+                return x;
+            }
+            j++;
+            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza))
+            {
+                x = true;
+                return x;
+            }
+        }
+        j = columna;
+        for (i = fila - 1; i > -1; i--)
+        {
+            if (tablero[i][columna] != null && !tablero[i][columna].getColor().equalsIgnoreCase(colorPieza))
+            {
+                x = true;
+                return x;
+            }
+            j--;
+            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza))
+            {
+                x = true;
+                return x;
+            }
+        }
+        i = fila;
+        for (j = columna + 1; j < 8; j++)
+        {
+            if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza))
+            {
+                x = true;
+                return x;
+            }
+            i--;
+            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza))
+            {
+                x = true;
+                return x;
+            }
+        }
+        i = fila;
+        for (j = columna - 1; j > -1; j--)
+        {
+            if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza))
+            {
+                x = true;
+                return x;
+            }
+            i++;
+            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza))
+            {
+                x = true;
+                return x;
+            }
+        }
+        i = fila;
+        j = columna;
+        int i2;
+        int j2;
+        if ((tablero[i2 = i + 2][j2 = j + 1] != null) || (tablero[i2 = i + 2][j2 = j - 1] != null) ||
+            (tablero[i2 = i - 2][j2 = j + 1] != null) || (tablero[i2 = i - 2][j2 = j - 1] != null) ||
+            (tablero[i2 = i + 1][j2 = j + 2] != null) || (tablero[i2 = i + 1][j2 = j - 2] != null) ||
+            (tablero[i2 = i - 1][j2 = j + 2] != null) || (tablero[i2 = i - 1][j2 = j - 2] != null))
+            {
+                if (!tablero[i2][j2].getColor().equals(colorPieza))
+                {
+                    x = true;
+                    return x;
+                }
+            }
         return x;
     }
 
-    public boolean JaqueMate()
+    public boolean JaqueMate(int[] posicionRey, Pieza[][] tablero)
     {
         boolean x = false;
+        int fila = posicionRey[0];
+        int columna = posicionRey[1];
+        int[] jaqueRey = posicionRey;
+       
         return x;
     }
 }
