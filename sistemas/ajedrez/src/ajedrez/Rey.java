@@ -60,11 +60,11 @@ public class Rey extends Pieza
         return posicionRey;
     }
 
-    public boolean Jaque(int[] posicionRey, Pieza[][] tablero)
+    public boolean Jaque(int fila, int columna, Pieza[][] tablero)
     {
         boolean x = false;
-        int fila = posicionRey[0];
-        int columna = posicionRey[1];
+        //int fila = posicionRey[0];
+        //int columna = posicionRey[1];
         int i = fila;
         int j = columna;
         String colorPieza = tablero[fila][columna].getColor();
