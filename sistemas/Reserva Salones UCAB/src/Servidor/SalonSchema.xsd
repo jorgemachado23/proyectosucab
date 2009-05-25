@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://xml.netbeans.org/schema/SalonSchema"
+    xmlns:tns="http://xml.netbeans.org/schema/SalonSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="nombre" type="xsd:string"></xsd:element>
+    <xsd:element name="aireAcondicionado" type="xsd:boolean"></xsd:element>
+    <xsd:element name="videoBeam" type="xsd:boolean"></xsd:element>
+    <xsd:element name="computador" type="xsd:boolean"></xsd:element>
+    <xsd:element name="capacidad" type="xsd:int"></xsd:element>
+</xsd:schema>
