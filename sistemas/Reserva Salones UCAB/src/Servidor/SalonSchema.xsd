@@ -4,9 +4,16 @@
     targetNamespace="http://xml.netbeans.org/schema/SalonSchema"
     xmlns:tns="http://xml.netbeans.org/schema/SalonSchema"
     elementFormDefault="qualified">
-    <xsd:element name="nombre" type="xsd:string"></xsd:element>
-    <xsd:element name="aireAcondicionado" type="xsd:boolean"></xsd:element>
-    <xsd:element name="videoBeam" type="xsd:boolean"></xsd:element>
-    <xsd:element name="computador" type="xsd:boolean"></xsd:element>
-    <xsd:element name="capacidad" type="xsd:int"></xsd:element>
+    <xsd:complexType name="DatosSalon">
+        <xsd:sequence>
+            <xsd:element name="AireAcondicionado" type="xsd:boolean"></xsd:element>
+            <xsd:element name="Capacidad" type="xsd:int"></xsd:element>
+            <xsd:element name="VideoBeam" type="xsd:string"></xsd:element>
+            <xsd:element name="Computador" type="xsd:boolean"></xsd:element>
+            <xsd:element name="Nombre" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="SalonLaboratorio" type="tns:DatosSalon"></xsd:element>
+    <xsd:element name="SalonPostgrado" type="tns:DatosSalon"></xsd:element>
+    <xsd:element name="SalonModulo" type="tns:DatosSalon"></xsd:element>
 </xsd:schema>
