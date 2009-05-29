@@ -4,15 +4,17 @@
     targetNamespace="http://xml.netbeans.org/schema/alumnoSchema"
     xmlns:tns="http://xml.netbeans.org/schema/alumnoSchema"
     elementFormDefault="qualified">
-    <xsd:element name="nombre" type="xsd:string"></xsd:element>
-    <xsd:element name="apellido" type="xsd:string"></xsd:element>
-    <xsd:element name="ci" type="xsd:string"></xsd:element>
-    <xsd:element name="escDepFac" type="xsd:string"></xsd:element>
-    <xsd:element name="usuario" type="xsd:string">
-        <xsd:unique name="Unico">
-            <xsd:selector xpath=""/>
-            <xsd:field xpath=""/>
-        </xsd:unique>
-    </xsd:element>
-    <xsd:element name="password" type="xsd:string"></xsd:element>
+    <xsd:element name="alumno" type="tns:datosUsuario"></xsd:element>
+    <xsd:element name="profesor" type="tns:datosUsuario"></xsd:element>
+    <xsd:element name="encargado" type="tns:datosUsuario"></xsd:element>
+    <xsd:complexType name="datosUsuario">
+        <xsd:sequence>
+                <xsd:element name="nombre" type="xsd:string"></xsd:element>
+                <xsd:element name="apellido" type="xsd:string"></xsd:element>
+                <xsd:element name="ci" type="xsd:string"></xsd:element>
+                <xsd:element name="escDepFac" type="xsd:string"></xsd:element>
+                <xsd:element name="usuario" type="xsd:string"></xsd:element>
+                <xsd:element name="password" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
 </xsd:schema>
