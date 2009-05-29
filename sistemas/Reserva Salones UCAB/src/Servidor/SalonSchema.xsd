@@ -3,7 +3,8 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://xml.netbeans.org/schema/SalonSchema"
     xmlns:tns="http://xml.netbeans.org/schema/SalonSchema"
-    elementFormDefault="qualified">
+    elementFormDefault="qualified" xmlns:ns1="http://xml.netbeans.org/schema/horarioSchema">
+    <xsd:import schemaLocation="../Servidor/horarioSchema.xsd" namespace="http://xml.netbeans.org/schema/horarioSchema"/>
     <xsd:complexType name="DatosSalon">
         <xsd:sequence>
             <xsd:element name="AireAcondicionado" type="xsd:boolean"></xsd:element>
@@ -11,9 +12,17 @@
             <xsd:element name="VideoBeam" type="xsd:string"></xsd:element>
             <xsd:element name="Computador" type="xsd:boolean"></xsd:element>
             <xsd:element name="Nombre" type="xsd:string"></xsd:element>
+            <xsd:element ref="ns1:horas"/>
         </xsd:sequence>
     </xsd:complexType>
-    <xsd:element name="SalonLaboratorio" type="tns:DatosSalon"></xsd:element>
-    <xsd:element name="SalonPostgrado" type="tns:DatosSalon"></xsd:element>
-    <xsd:element name="SalonModulo" type="tns:DatosSalon"></xsd:element>
+    <xsd:element name="Salon">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="SalonCincuentenario" type="tns:DatosSalon"></xsd:element>
+                <xsd:element name="SalonLaboratorio" type="tns:DatosSalon"></xsd:element>
+                <xsd:element name="SalonModulo" type="tns:DatosSalon"></xsd:element>
+                <xsd:element name="SalonPostgrado" type="tns:DatosSalon"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
 </xsd:schema>
