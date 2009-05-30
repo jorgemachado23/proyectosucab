@@ -18,11 +18,19 @@
     <xsd:element name="Salon">
         <xsd:complexType>
             <xsd:sequence>
+            <xsd:sequence>
                 <xsd:element name="SalonCincuentenario" type="tns:DatosSalon"></xsd:element>
-                <xsd:element name="SalonLaboratorio" type="tns:DatosSalon"></xsd:element>
+            </xsd:sequence>
+            <xsd:sequence>
+            <xsd:element name="SalonLaboratorio" type="tns:DatosSalon"></xsd:element>
+            </xsd:sequence>
+            <xsd:sequence>
                 <xsd:element name="SalonModulo" type="tns:DatosSalon"></xsd:element>
+            </xsd:sequence>
+            <xsd:sequence>
                 <xsd:element name="SalonPostgrado" type="tns:DatosSalon"></xsd:element>
             </xsd:sequence>
+          </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 </xsd:schema>
