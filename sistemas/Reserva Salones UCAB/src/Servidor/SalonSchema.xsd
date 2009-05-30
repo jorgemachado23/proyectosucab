@@ -12,7 +12,10 @@
             <xsd:element name="VideoBeam" type="xsd:string"></xsd:element>
             <xsd:element name="Computador" type="xsd:boolean"></xsd:element>
             <xsd:element name="Nombre" type="xsd:string"></xsd:element>
-            <xsd:element ref="ns1:horas"/>
+            <xsd:element name="dia" type="xsd:string"></xsd:element>
+            <xsd:sequence>
+                <xsd:element ref="ns1:horas"/>
+            </xsd:sequence>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:element name="Salon">
