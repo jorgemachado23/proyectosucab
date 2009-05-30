@@ -10,6 +10,9 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element ref="ns1:horas"/>
+                <xsd:element ref="ns0:Salon"/>
+                <xsd:element name="dia" type="xsd:string"></xsd:element>
+                <xsd:element name="estado" type="xsd:string"></xsd:element>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
