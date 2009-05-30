@@ -3,6 +3,17 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://xml.netbeans.org/schema/logSchema"
     xmlns:tns="http://xml.netbeans.org/schema/logSchema"
-    elementFormDefault="qualified">
-
+    elementFormDefault="qualified" xmlns:ns4="http://xml.netbeans.org/schema/alumnoSchema" xmlns:ns3="http://xml.netbeans.org/schema/reservacionlSchema">
+    <xsd:import schemaLocation="../Servidor/usuarioSchema.xsd" namespace="http://xml.netbeans.org/schema/alumnoSchema"/>
+    <xsd:import schemaLocation="../Servidor/reservacionlSchema.xsd" namespace="http://xml.netbeans.org/schema/reservacionlSchema"/>
+    <xsd:element name="log">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="fechaLogin" type="xsd:dateTime"></xsd:element>
+                <xsd:element name="fechaLogout" type="xsd:dateTime"></xsd:element>
+                <xsd:element ref="ns3:reservacion"/>
+                <xsd:element ref="ns4:usuario"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
 </xsd:schema>
