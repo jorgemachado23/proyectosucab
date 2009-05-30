@@ -17,9 +17,15 @@
     <xsd:element name="usuario">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="alumno" type="tns:datosUsuario"></xsd:element>
-                <xsd:element name="profesor" type="tns:datosUsuario"></xsd:element>
-                <xsd:element name="encargado" type="tns:datosUsuario"></xsd:element>
+                <xsd:sequence>
+                    <xsd:element name="alumno" type="tns:datosUsuario"></xsd:element>
+                </xsd:sequence>
+                <xsd:sequence>
+                    <xsd:element name="profesor" type="tns:datosUsuario"></xsd:element>
+                </xsd:sequence>
+                <xsd:sequence>
+                    <xsd:element name="encargado" type="tns:datosUsuario"></xsd:element>
+                </xsd:sequence>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
