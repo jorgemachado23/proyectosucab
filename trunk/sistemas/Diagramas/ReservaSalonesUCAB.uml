@@ -780,7 +780,7 @@
 <XPD:ATTR name="Left" type="integer">475</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">770</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">120</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">73</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">95</XPD:ATTR>
 <XPD:REF name="Model">biUQpOxx10iI8b/Onk5/MwAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="QXiUIkGQ/0aI0ElqJjlwcgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="ohdhHAEFgkeeGIcrR5pHhwAA">
@@ -808,7 +808,7 @@
 <XPD:OBJ name="OwnedViews[16]" type="UMLAssociationView" guid="HI2R9hoxBEmtqFzs2I6HMwAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">594,806;710,805</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">594,814;710,808</XPD:ATTR>
 <XPD:REF name="Model">ttVmcn+400SVx2lerITkTAAA</XPD:REF>
 <XPD:REF name="Head">55H1h9UPrE+cFJG0KAX/AgAA</XPD:REF>
 <XPD:REF name="Tail">4oD1DIMrCkaBz0WApy+q8gAA</XPD:REF>
@@ -892,7 +892,7 @@
 <XPD:OBJ name="OwnedViews[17]" type="UMLAssociationView" guid="ESRvzn4VCk6Y7epY+xl83AAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">575,770;708,653</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">585,770;708,656</XPD:ATTR>
 <XPD:REF name="Model">VCKOsEUJk0qNqURjvC5GUAAA</XPD:REF>
 <XPD:REF name="Head">zlwp87RfEEWBuMEXHhqa3AAA</XPD:REF>
 <XPD:REF name="Tail">4oD1DIMrCkaBz0WApy+q8gAA</XPD:REF>
@@ -2080,7 +2080,7 @@
 <XPD:REF name="Associations[0]">p1FYvV3SwUOlIC7G84GdtwAA</XPD:REF>
 <XPD:REF name="Associations[1]">j53Yh4JZc0mD15Hyv0qR2gAA</XPD:REF>
 <XPD:REF name="Associations[2]">U3LAoosRpkWiyXfRZnOIvQAA</XPD:REF>
-<XPD:ATTR name="#Attributes" type="integer">2</XPD:ATTR>
+<XPD:ATTR name="#Attributes" type="integer">4</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="vk6qx9cP70+jiBDeagm27gAA">
 <XPD:ATTR name="Name" type="string">salon</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
@@ -2088,7 +2088,19 @@
 <XPD:REF name="Type_">RGFg5IelfEmX1E5oXZsbzAAA</XPD:REF>
 <XPD:REF name="Owner">biUQpOxx10iI8b/Onk5/MwAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="UF2irZztcUicpnxT+u+LpQAA">
+<XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="LYtDXA2JMUeWi7v0AiYcHwAA">
+<XPD:ATTR name="Name" type="string">estado</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
+<XPD:REF name="Owner">biUQpOxx10iI8b/Onk5/MwAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="55qu1AROvUuUUUC/p1VNmAAA">
+<XPD:ATTR name="Name" type="string">dia</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
+<XPD:REF name="Owner">biUQpOxx10iI8b/Onk5/MwAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[3]" type="UMLAttribute" guid="UF2irZztcUicpnxT+u+LpQAA">
 <XPD:ATTR name="Name" type="string">horarios</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">Horario</XPD:ATTR>
