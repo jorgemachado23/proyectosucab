@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : SalonSchema.xml
+    Created on : May 31, 2009, 8:23 PM
+    Author     : Jorge
+    Description:
+        Purpose of the document follows.
+-->
+
+<ns0:Salon  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns:ns1='http://xml.netbeans.org/schema/horarioSchema'
+   xmlns:ns0='http://xml.netbeans.org/schema/SalonSchema'
+   xsi:schemaLocation='http://xml.netbeans.org/schema/SalonSchema SalonSchema.xsd'>
+    <ns0:SalonCincuentenario>
+        <ns0:AireAcondicionado>0</ns0:AireAcondicionado>
+        <ns0:Capacidad>60</ns0:Capacidad>
+        <ns0:VideoBeam>0</ns0:VideoBeam>
+        <ns0:Computador>0</ns0:Computador>
+        <ns0:Nombre>EC-41</ns0:Nombre>
+        <ns0:dia>Lunes</ns0:dia>
+        <ns1:horas>
+            <ns1:horaInicial>07:00:00</ns1:horaInicial>
+            <ns1:horaFinal>09:00:00</ns1:horaFinal>
+        </ns1:horas>
+    </ns0:SalonCincuentenario>
+    <ns0:SalonLaboratorio>
+        <ns0:AireAcondicionado>1</ns0:AireAcondicionado>
+        <ns0:Capacidad>30</ns0:Capacidad>
+        <ns0:VideoBeam>0</ns0:VideoBeam>
+        <ns0:Computador>0</ns0:Computador>
+        <ns0:Nombre>L-2311</ns0:Nombre>
+        <ns0:dia>Lunes</ns0:dia>
+        <ns1:horas>
+            <ns1:horaInicial>07:00:00</ns1:horaInicial>
+            <ns1:horaFinal>09:00:00</ns1:horaFinal>
+        </ns1:horas>
+    </ns0:SalonLaboratorio>
+    <ns0:SalonModulo>
+        <ns0:AireAcondicionado>0</ns0:AireAcondicionado>
+        <ns0:Capacidad>60</ns0:Capacidad>
+        <ns0:VideoBeam>0</ns0:VideoBeam>
+        <ns0:Computador>0</ns0:Computador>
+        <ns0:Nombre>A-232</ns0:Nombre>
+        <ns0:dia>Lunes</ns0:dia>
+        <ns1:horas>
+            <ns1:horaInicial>07:00:00</ns1:horaInicial>
+            <ns1:horaInicial>10:00:00</ns1:horaInicial>
+        </ns1:horas>
+    </ns0:SalonModulo>
+    <ns0:SalonPostgrado>
+        <ns0:AireAcondicionado>0</ns0:AireAcondicionado>
+        <ns0:Capacidad>20</ns0:Capacidad>
+        <ns0:VideoBeam>1</ns0:VideoBeam>
+        <ns0:Computador>0</ns0:Computador>
+        <ns0:Nombre>P-12</ns0:Nombre>
+        <ns0:dia>Lunes</ns0:dia>
+        <ns1:horas>
+            <ns1:horaInicial>17:00:00</ns1:horaInicial>
+            <ns1:horaFinal>19:00:00</ns1:horaFinal>
+        </ns1:horas>
+    </ns0:SalonPostgrado>
+
+</ns0:Salon>
