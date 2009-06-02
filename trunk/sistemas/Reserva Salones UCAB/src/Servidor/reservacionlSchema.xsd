@@ -9,10 +9,10 @@
     <xsd:element name="reservacion">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="ns1:horas"/>
-                <xsd:element ref="ns0:Salon"/>
-                <xsd:element name="dia" type="xsd:string"></xsd:element>
-                <xsd:element name="estado" type="xsd:string"></xsd:element>
+                <xsd:element ref="ns1:horas" maxOccurs="unbounded"/>
+                <xsd:element ref="ns0:Salon" maxOccurs="unbounded"/>
+                <xsd:element name="dia" type="xsd:string" maxOccurs="unbounded"></xsd:element>
+                <xsd:element name="estado" type="xsd:string" maxOccurs="unbounded"></xsd:element>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

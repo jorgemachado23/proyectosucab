@@ -9,10 +9,10 @@
     <xsd:element name="log">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="fechaLogin" type="xsd:dateTime"></xsd:element>
-                <xsd:element name="fechaLogout" type="xsd:dateTime"></xsd:element>
-                <xsd:element ref="ns3:reservacion"/>
-                <xsd:element ref="ns4:usuario"/>
+                <xsd:element name="fechaLogin" type="xsd:dateTime" maxOccurs="unbounded"></xsd:element>
+                <xsd:element name="fechaLogout" type="xsd:dateTime" maxOccurs="unbounded"></xsd:element>
+                <xsd:element ref="ns3:reservacion" maxOccurs="unbounded"/>
+                <xsd:element ref="ns4:usuario" maxOccurs="unbounded"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

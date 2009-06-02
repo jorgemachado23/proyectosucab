@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : usuarioSchema.xml
+    Created on : June 2, 2009, 5:20 PM
+    Author     : Alejandro
+    Description:
+        Purpose of the document follows.
+-->
+
+<ns0:usuario  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns:ns0='http://xml.netbeans.org/schema/alumnoSchema'
+   xsi:schemaLocation='http://xml.netbeans.org/schema/alumnoSchema usuarioSchema.xsd'>
+    <ns0:alumno>
+        <ns0:nombre></ns0:nombre>
+        <ns0:apellido></ns0:apellido>
+        <ns0:ci></ns0:ci>
+        <ns0:escDepFac></ns0:escDepFac>
+        <ns0:usuario></ns0:usuario>
+        <ns0:password></ns0:password>
+    </ns0:alumno>
+    <ns0:alumno>
+        <ns0:nombre></ns0:nombre>
+        <ns0:apellido></ns0:apellido>
+        <ns0:ci></ns0:ci>
+        <ns0:escDepFac></ns0:escDepFac>
+        <ns0:usuario></ns0:usuario>
+        <ns0:password></ns0:password>
+    </ns0:alumno>
+    <ns0:alumno>
+        <ns0:nombre></ns0:nombre>
+        <ns0:apellido></ns0:apellido>
+        <ns0:ci></ns0:ci>
+        <ns0:escDepFac></ns0:escDepFac>
+        <ns0:usuario></ns0:usuario>
+        <ns0:password></ns0:password>
+    </ns0:alumno>
+    <ns0:profesor>
+        <ns0:nombre></ns0:nombre>
+        <ns0:apellido></ns0:apellido>
+        <ns0:ci></ns0:ci>
+        <ns0:escDepFac></ns0:escDepFac>
+        <ns0:usuario></ns0:usuario>
+        <ns0:password></ns0:password>
+    </ns0:profesor>
+    <ns0:profesor>
+        <ns0:nombre></ns0:nombre>
+        <ns0:apellido></ns0:apellido>
+        <ns0:ci></ns0:ci>
+        <ns0:escDepFac></ns0:escDepFac>
+        <ns0:usuario></ns0:usuario>
+        <ns0:password></ns0:password>
+    </ns0:profesor>
+    <ns0:profesor>
+        <ns0:nombre></ns0:nombre>
+        <ns0:apellido></ns0:apellido>
+        <ns0:ci></ns0:ci>
+        <ns0:escDepFac></ns0:escDepFac>
+        <ns0:usuario></ns0:usuario>
+        <ns0:password></ns0:password>
+    </ns0:profesor>
+    <ns0:encargado>
+        <ns0:nombre></ns0:nombre>
+        <ns0:apellido></ns0:apellido>
+        <ns0:ci></ns0:ci>
+        <ns0:escDepFac></ns0:escDepFac>
+        <ns0:usuario></ns0:usuario>
+        <ns0:password></ns0:password>
+    </ns0:encargado>
+    <ns0:encargado>
+        <ns0:nombre></ns0:nombre>
+        <ns0:apellido></ns0:apellido>
+        <ns0:ci></ns0:ci>
+        <ns0:escDepFac></ns0:escDepFac>
+        <ns0:usuario></ns0:usuario>
+        <ns0:password></ns0:password>
+    </ns0:encargado>
+    <ns0:encargado>
+        <ns0:nombre></ns0:nombre>
+        <ns0:apellido></ns0:apellido>
+        <ns0:ci></ns0:ci>
+        <ns0:escDepFac></ns0:escDepFac>
+        <ns0:usuario></ns0:usuario>
+        <ns0:password></ns0:password>
+    </ns0:encargado>
+
+</ns0:usuario>
