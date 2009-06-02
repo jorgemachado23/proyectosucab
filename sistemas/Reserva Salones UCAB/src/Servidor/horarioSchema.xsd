@@ -7,8 +7,18 @@
     <xsd:element name="horas">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="horaInicial" type="xsd:time" maxOccurs="14"></xsd:element>
-                <xsd:element name="horaFinal" type="xsd:time" maxOccurs="14"></xsd:element>
+                <xsd:element name="horaInicial" type="xsd:time" maxOccurs="14">
+                    <xsd:unique name="horaI">
+                        <xsd:selector xpath=""/>
+                        <xsd:field xpath=""/>
+                    </xsd:unique>
+                </xsd:element>
+                <xsd:element name="horaFinal" type="xsd:time" maxOccurs="14">
+                    <xsd:unique name="horaF">
+                        <xsd:selector xpath=""/>
+                        <xsd:field xpath=""/>
+                    </xsd:unique>
+                </xsd:element>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
