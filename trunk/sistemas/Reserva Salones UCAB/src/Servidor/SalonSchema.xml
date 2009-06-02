@@ -14,7 +14,7 @@
    xsi:schemaLocation='http://xml.netbeans.org/schema/SalonSchema SalonSchema.xsd'>
     <ns0:SalonCincuentenario>
         <ns0:AireAcondicionado></ns0:AireAcondicionado>
-        <ns0:Capacidad></ns0:Capacidad>
+        <ns0:Capacidad>8</ns0:Capacidad>
         <ns0:VideoBeam></ns0:VideoBeam>
         <ns0:Computador></ns0:Computador>
         <ns0:Nombre></ns0:Nombre>
