@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : SalonSchema.xml
+    Created on : June 2, 2009, 4:13 PM
+    Author     : Alejandro
+    Description:
+        Purpose of the document follows.
+-->
+
+<ns0:Salon  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns:ns1='http://xml.netbeans.org/schema/horarioSchema'
+   xmlns:ns0='http://xml.netbeans.org/schema/SalonSchema'
+   xsi:schemaLocation='http://xml.netbeans.org/schema/SalonSchema SalonSchema.xsd'>
+    <ns0:SalonCincuentenario>
+        <ns0:AireAcondicionado></ns0:AireAcondicionado>
+        <ns0:Capacidad></ns0:Capacidad>
+        <ns0:VideoBeam></ns0:VideoBeam>
+        <ns0:Computador></ns0:Computador>
+        <ns0:Nombre></ns0:Nombre>
+        <ns0:dia></ns0:dia>
+        <ns1:horas>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaFinal></ns1:horaFinal>
+            <ns1:horaFinal></ns1:horaFinal>
+            <ns1:horaFinal></ns1:horaFinal>
+        </ns1:horas>
+    </ns0:SalonCincuentenario>
+    <ns0:SalonLaboratorio>
+        <ns0:AireAcondicionado></ns0:AireAcondicionado>
+        <ns0:Capacidad></ns0:Capacidad>
+        <ns0:VideoBeam></ns0:VideoBeam>
+        <ns0:Computador></ns0:Computador>
+        <ns0:Nombre></ns0:Nombre>
+        <ns0:dia></ns0:dia>
+        <ns1:horas>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaFinal></ns1:horaFinal>
+            <ns1:horaFinal></ns1:horaFinal>
+            <ns1:horaFinal></ns1:horaFinal>
+        </ns1:horas>
+    </ns0:SalonLaboratorio>
+    <ns0:SalonModulo>
+        <ns0:AireAcondicionado></ns0:AireAcondicionado>
+        <ns0:Capacidad></ns0:Capacidad>
+        <ns0:VideoBeam></ns0:VideoBeam>
+        <ns0:Computador></ns0:Computador>
+        <ns0:Nombre></ns0:Nombre>
+        <ns0:dia></ns0:dia>
+        <ns1:horas>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaFinal></ns1:horaFinal>
+            <ns1:horaFinal></ns1:horaFinal>
+            <ns1:horaFinal></ns1:horaFinal>
+        </ns1:horas>
+    </ns0:SalonModulo>
+    <ns0:SalonPostgrado>
+        <ns0:AireAcondicionado></ns0:AireAcondicionado>
+        <ns0:Capacidad></ns0:Capacidad>
+        <ns0:VideoBeam></ns0:VideoBeam>
+        <ns0:Computador></ns0:Computador>
+        <ns0:Nombre></ns0:Nombre>
+        <ns0:dia></ns0:dia>
+        <ns1:horas>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaInicial></ns1:horaInicial>
+            <ns1:horaFinal></ns1:horaFinal>
+            <ns1:horaFinal></ns1:horaFinal>
+            <ns1:horaFinal></ns1:horaFinal>
+        </ns1:horas>
+    </ns0:SalonPostgrado>
+
+</ns0:Salon>
