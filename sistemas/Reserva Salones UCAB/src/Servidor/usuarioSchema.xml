@@ -12,76 +12,76 @@
    xmlns:ns0='http://xml.netbeans.org/schema/alumnoSchema'
    xsi:schemaLocation='http://xml.netbeans.org/schema/alumnoSchema usuarioSchema.xsd'>
     <ns0:alumno>
-        <ns0:nombre></ns0:nombre>
-        <ns0:apellido></ns0:apellido>
-        <ns0:ci></ns0:ci>
-        <ns0:escDepFac></ns0:escDepFac>
-        <ns0:usuario></ns0:usuario>
-        <ns0:password></ns0:password>
+        <ns0:nombre>Jorge</ns0:nombre>
+        <ns0:apellido>Machado</ns0:apellido>
+        <ns0:ci>12345332</ns0:ci>
+        <ns0:escDepFac>informatica</ns0:escDepFac>
+        <ns0:usuario>jorgem</ns0:usuario>
+        <ns0:password>1234</ns0:password>
     </ns0:alumno>
     <ns0:alumno>
-        <ns0:nombre></ns0:nombre>
-        <ns0:apellido></ns0:apellido>
-        <ns0:ci></ns0:ci>
-        <ns0:escDepFac></ns0:escDepFac>
-        <ns0:usuario></ns0:usuario>
-        <ns0:password></ns0:password>
+        <ns0:nombre>Alejandro</ns0:nombre>
+        <ns0:apellido>Blanco-Uribe</ns0:apellido>
+        <ns0:ci>17752613</ns0:ci>
+        <ns0:escDepFac>informatica</ns0:escDepFac>
+        <ns0:usuario>alejandrob</ns0:usuario>
+        <ns0:password>12345</ns0:password>
     </ns0:alumno>
     <ns0:alumno>
-        <ns0:nombre></ns0:nombre>
-        <ns0:apellido></ns0:apellido>
-        <ns0:ci></ns0:ci>
-        <ns0:escDepFac></ns0:escDepFac>
-        <ns0:usuario></ns0:usuario>
-        <ns0:password></ns0:password>
+        <ns0:nombre>Eduardo</ns0:nombre>
+        <ns0:apellido>Makverga</ns0:apellido>
+        <ns0:ci>38837483</ns0:ci>
+        <ns0:escDepFac>informatica</ns0:escDepFac>
+        <ns0:usuario>eduardom</ns0:usuario>
+        <ns0:password>2345</ns0:password>
     </ns0:alumno>
     <ns0:profesor>
-        <ns0:nombre></ns0:nombre>
-        <ns0:apellido></ns0:apellido>
-        <ns0:ci></ns0:ci>
-        <ns0:escDepFac></ns0:escDepFac>
-        <ns0:usuario></ns0:usuario>
-        <ns0:password></ns0:password>
+        <ns0:nombre>Wilmer</ns0:nombre>
+        <ns0:apellido>Pereira</ns0:apellido>
+        <ns0:ci>9838834</ns0:ci>
+        <ns0:escDepFac>informatica</ns0:escDepFac>
+        <ns0:usuario>wilmerp</ns0:usuario>
+        <ns0:password>7364</ns0:password>
     </ns0:profesor>
     <ns0:profesor>
-        <ns0:nombre></ns0:nombre>
-        <ns0:apellido></ns0:apellido>
-        <ns0:ci></ns0:ci>
-        <ns0:escDepFac></ns0:escDepFac>
-        <ns0:usuario></ns0:usuario>
-        <ns0:password></ns0:password>
+        <ns0:nombre>Lucia</ns0:nombre>
+        <ns0:apellido>Cardoso</ns0:apellido>
+        <ns0:ci>1223323</ns0:ci>
+        <ns0:escDepFac>informatica</ns0:escDepFac>
+        <ns0:usuario>luciac</ns0:usuario>
+        <ns0:password>2341</ns0:password>
     </ns0:profesor>
     <ns0:profesor>
-        <ns0:nombre></ns0:nombre>
-        <ns0:apellido></ns0:apellido>
-        <ns0:ci></ns0:ci>
-        <ns0:escDepFac></ns0:escDepFac>
-        <ns0:usuario></ns0:usuario>
-        <ns0:password></ns0:password>
+        <ns0:nombre>Guillermo</ns0:nombre>
+        <ns0:apellido>Garcia</ns0:apellido>
+        <ns0:ci>8848594</ns0:ci>
+        <ns0:escDepFac>informatica</ns0:escDepFac>
+        <ns0:usuario>guillermog</ns0:usuario>
+        <ns0:password>23132</ns0:password>
     </ns0:profesor>
     <ns0:encargado>
-        <ns0:nombre></ns0:nombre>
-        <ns0:apellido></ns0:apellido>
-        <ns0:ci></ns0:ci>
-        <ns0:escDepFac></ns0:escDepFac>
-        <ns0:usuario></ns0:usuario>
-        <ns0:password></ns0:password>
+        <ns0:nombre>leonardo</ns0:nombre>
+        <ns0:apellido>puga</ns0:apellido>
+        <ns0:ci>2323</ns0:ci>
+        <ns0:escDepFac>informatica</ns0:escDepFac>
+        <ns0:usuario>leonardop</ns0:usuario>
+        <ns0:password>4533</ns0:password>
     </ns0:encargado>
     <ns0:encargado>
-        <ns0:nombre></ns0:nombre>
-        <ns0:apellido></ns0:apellido>
-        <ns0:ci></ns0:ci>
-        <ns0:escDepFac></ns0:escDepFac>
-        <ns0:usuario></ns0:usuario>
-        <ns0:password></ns0:password>
+        <ns0:nombre>Jose</ns0:nombre>
+        <ns0:apellido>Jove</ns0:apellido>
+        <ns0:ci>45323524</ns0:ci>
+        <ns0:escDepFac>informatica</ns0:escDepFac>
+        <ns0:usuario>josej</ns0:usuario>
+        <ns0:password>1223</ns0:password>
     </ns0:encargado>
     <ns0:encargado>
-        <ns0:nombre></ns0:nombre>
-        <ns0:apellido></ns0:apellido>
-        <ns0:ci></ns0:ci>
-        <ns0:escDepFac></ns0:escDepFac>
-        <ns0:usuario></ns0:usuario>
-        <ns0:password></ns0:password>
+        <ns0:nombre>Eliseth</ns0:nombre>
+        <ns0:apellido>Perez</ns0:apellido>
+        <ns0:ci>34234234</ns0:ci>
+        <ns0:escDepFac>informatica</ns0:escDepFac>
+        <ns0:usuario>elisethp</ns0:usuario>
+        <ns0:password>342423</ns0:password>
     </ns0:encargado>
 
 </ns0:usuario>
