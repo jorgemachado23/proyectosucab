@@ -32,6 +32,8 @@ class Profesor extends Cliente
             entrada = new ObjectInputStream(socket.getInputStream());
             ventanaLogin = new GUISesion();
             ventanaSolicitud = new GUISolicitud();
+            ventanaLogin.setLocationRelativeTo(null);
+            ventanaLogin.setVisible(true);
         }
         catch (Exception e)
         {
@@ -55,8 +57,7 @@ class Profesor extends Cliente
     @Override
     public void Login(String usuario, String password)
     {
-        ventanaLogin.setLocationRelativeTo(null);
-        ventanaLogin.setVisible(true);
+        
     }
     @Override
     public void Logout()
