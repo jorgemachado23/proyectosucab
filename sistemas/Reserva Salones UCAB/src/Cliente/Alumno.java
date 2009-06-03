@@ -1,13 +1,13 @@
 package Cliente;
 
-//import java.rmi.Naming;
-//import Servidor.InterfaceRMI;
+import java.rmi.Naming;
+import Servidor.InterfaceRMI;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 //import java.net.UnknownHostException;
-import ReservaSalonesUCAB.GUIUsuario;
+import ReservaSalonesUCAB.GUISesion;
 import ReservaSalonesUCAB.GUISolicitud;
 import ReservaSalonesUCAB.Notificaciones;
 //import org.jdom.Document;
@@ -21,7 +21,7 @@ class Alumno extends Cliente
     private final Integer puerto = 7869;
     private ObjectInputStream entrada = null;
     private ObjectOutputStream salida = null;
-    private GUIUsuario ventanaLogin;
+    private GUISesion ventanaLogin;
     private GUISolicitud ventanaSolicitud;
     
     public Alumno()
@@ -31,9 +31,8 @@ class Alumno extends Cliente
             socket = new Socket("localhost",puerto); 
             salida = new ObjectOutputStream(socket.getOutputStream());
             entrada = new ObjectInputStream(socket.getInputStream());     
-            ventanaLogin = new GUIUsuario();
+            ventanaLogin = new GUISesion();
             ventanaSolicitud = new GUISolicitud();
-
         }
         catch (Exception e)
         {
@@ -47,10 +46,10 @@ class Alumno extends Cliente
 		try
         {
             controlAlumno = new Alumno();
-			//InterfaceRMI h = (InterfaceRMI) Naming.lookup("rmi://localhost:1099/reserva");
+			InterfaceRMI h = (InterfaceRMI) Naming.lookup("rmi://localhost:1099/reserva");
 		} catch (Exception e)
         {
-			//e.printStackTrace();
+			e.printStackTrace();
 		}
 
 	}
