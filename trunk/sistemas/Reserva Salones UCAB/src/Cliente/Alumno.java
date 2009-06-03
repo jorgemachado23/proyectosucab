@@ -7,7 +7,6 @@ import java.io.ObjectOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 //import java.net.UnknownHostException;
-import java.sql.Date;
 import ReservaSalonesUCAB.GUIUsuario;
 import ReservaSalonesUCAB.GUISolicitud;
 import ReservaSalonesUCAB.Notificaciones;
@@ -89,10 +88,9 @@ class Alumno extends Cliente
            System.exit(salida);
        }
     }
-    @Override
-    public boolean SolicitarSalon(Date horaInicio, Date horaFin, char Tipo)
+   
+    public void SolicitarSalon(String horaInicio, String horaFin, String salon, String dia)
     {
-        boolean x = false;
-        return x;
+        
 	}
 }

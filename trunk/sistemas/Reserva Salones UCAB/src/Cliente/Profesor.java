@@ -88,10 +88,9 @@ class Profesor extends Cliente
            System.exit(salida);
        }
     }
-    @Override
-    public boolean SolicitarSalon(Date horaInicio, Date horaFin, char Tipo)
+
+    public void SolicitarSalon(String horaInicio, String horaFin, String salon, String dia)
     {
-        boolean x = false;
-        return x;
+        
 	}
 }
