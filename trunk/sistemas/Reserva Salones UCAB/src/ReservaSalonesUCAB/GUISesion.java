@@ -4,7 +4,7 @@
  */
 
 /*
- * GUIUsuario.java
+ * GUISesion.java
  *
  * Created on May 31, 2009, 3:25:46 PM
  */
@@ -15,10 +15,10 @@ package ReservaSalonesUCAB;
  *
  * @author Alejandro
  */
-public class GUIUsuario extends javax.swing.JFrame {
+public class GUISesion extends javax.swing.JFrame {
 
-    /** Creates new form GUIUsuario */
-    public GUIUsuario() {
+    /** Creates new form GUISesion */
+    public GUISesion() {
         initComponents();
     }
 
@@ -112,7 +112,7 @@ public class GUIUsuario extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUIUsuario().setVisible(true);
+                new GUISesion().setVisible(true);
             }
         });
     }
