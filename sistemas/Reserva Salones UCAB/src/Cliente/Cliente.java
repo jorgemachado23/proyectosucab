@@ -15,15 +15,13 @@ abstract class Cliente {
         return x;
 	}
 	
-	public boolean Login(String usuario, String password)
+	public void Login(String usuario, String password)
     {
-        boolean x = false;
-        return x;
+        
 	}
 	
-	public boolean Logout()
+	public void Logout()
     {
-        boolean x = false;
-        return x;
+        
 	}
 }
