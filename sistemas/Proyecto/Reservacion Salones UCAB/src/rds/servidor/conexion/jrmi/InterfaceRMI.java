@@ -16,5 +16,5 @@ public interface InterfaceRMI extends Remote
     public void Loguot() throws RemoteException;
     public void SolicitarSalon() throws RemoteException;
     public void AsignarSalon() throws RemoteException;
-    public void Prueba() throws RemoteException;
+    public void recibirMensaje(String mensajes) throws RemoteException;
 }

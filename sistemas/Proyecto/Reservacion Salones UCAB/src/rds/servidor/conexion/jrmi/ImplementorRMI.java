@@ -42,9 +42,9 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
     {
 
     }
-    public void Prueba() throws RemoteException
+    public void recibirMensaje(String mensaje) throws RemoteException
     {
-        
+        Servidor.ventana.ImprimirTexto(mensaje);
     }
 }
 
