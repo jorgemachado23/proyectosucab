@@ -14,6 +14,7 @@ import rds.general.vista.Notificar;
 import rds.servidor.vista.GUIServidor;
 import rds.servidor.xml.ManejoXML;
 import rds.servidor.conexion.jrmi.ImplementorRMI;
+import rds.cliente.vista.*;
 
 /**
  *
@@ -21,11 +22,15 @@ import rds.servidor.conexion.jrmi.ImplementorRMI;
  */
 public class Servidor extends UnicastRemoteObject
 {
+    public static Servidor control;
     public static GUIServidor ventana;
+    public static GUISesion ventanaSesion;
+    public static GUILog ventanaLog;
+    public static GUISolicitud ventanaSolicitud;
     ImplementorRMI imp = new ImplementorRMI();
     private int puerto;
     private String IP;
-    private Registry registro;
+    //private Registry registro;
 
     public Servidor() throws RemoteException
     {
@@ -50,7 +55,12 @@ public class Servidor extends UnicastRemoteObject
 
         }
     }
-    
+
+    public void InicioSesion()
+    {
+        ventanaSesion = new GUISesion();
+        ventanaSesion.setVisible(true);
+    }
 
     public static void main(String[] args)
     {
@@ -58,7 +68,7 @@ public class Servidor extends UnicastRemoteObject
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         try
         {
-            new Servidor();
+            control = new Servidor();
         }
         catch(Exception e)
         {
