@@ -8,6 +8,7 @@ package rds.servidor.conexion.jrmi;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import rds.servidor.control.Servidor;
+//import rds.cliente.vista.*;
 /**
  *
  * @author Alejandro
@@ -28,7 +29,7 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
 
     public void Login() throws RemoteException
     {
-
+        Servidor.control.InicioSesion();
     }
     public void Loguot() throws RemoteException
     {
