@@ -4,6 +4,7 @@
  */
 
 package rds.cliente.control;
+import java.io.IOException;
 import java.rmi.*;
 //import java.rmi.registry.*;
 import rds.servidor.conexion.jrmi.InterfaceRMI;
@@ -15,7 +16,7 @@ import rds.general.vista.Notificar;
  */
 public class Cliente 
 {
-    public static Cliente control;
+    public static Cliente control = new Cliente();
     private static GUISesion ventanaSesion;
     private static GUISolicitud ventanaSolicitud;
     private static GUILog ventanaLog;
@@ -26,16 +27,7 @@ public class Cliente
 
     public Cliente()
     {
-        try
-        {
-            ventanaSesion = new GUISesion();
-            ventanaSesion = rmiServidor.Login();
-            ventanaSesion.setVisible(true);
-        }
-        catch(RemoteException e)
-        {
-            e.printStackTrace();
-        }
+        
     }
 
     private static void conectarAlServidor()
@@ -54,7 +46,7 @@ public class Cliente
         }
     }
 
-
+   
     /*private void enviarMensaje(String mensaje)
     {
         estado.setText("Enviando "+ mensaje + " a "+ direccionServidor+":"+ puertoServidor);
@@ -74,7 +66,7 @@ public class Cliente
         conectarAlServidor();
         try
         {
-            control = new Cliente();
+           
         }
         catch(Exception e)
         {
