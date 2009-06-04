@@ -4,7 +4,7 @@
  */
 
 package rds.servidor.conexion.jrmi;
-import rds.cliente.vista.*;
+
 
 import java.rmi.*;
 /**
@@ -13,7 +13,7 @@ import java.rmi.*;
  */
 public interface InterfaceRMI extends Remote
 {
-    public GUISesion Login() throws RemoteException;
+    public boolean AutenticarUsuario() throws RemoteException;
     public void Loguot() throws RemoteException;
     public void SolicitarSalon() throws RemoteException;
     public void AsignarSalon() throws RemoteException;
