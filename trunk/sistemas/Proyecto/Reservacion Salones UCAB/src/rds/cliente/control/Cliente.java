@@ -4,12 +4,12 @@
  */
 
 package rds.cliente.control;
-import java.io.IOException;
+//import java.io.IOException;
 import java.rmi.*;
 //import java.rmi.registry.*;
 import rds.servidor.conexion.jrmi.InterfaceRMI;
 import rds.cliente.vista.*;
-import rds.general.vista.Notificar;
+//import rds.general.vista.Notificar;
 /**
  *
  * @author Alejandro
@@ -17,10 +17,10 @@ import rds.general.vista.Notificar;
 public class Cliente 
 {
     public static Cliente control;
-    private static GUISesion ventanaSesion;
-    private static GUISolicitud ventanaSolicitud;
-    private static GUILog ventanaLog;
-    private static InterfaceRMI rmiServidor;
+    public static GUISesion ventanaSesion;
+    public static GUISolicitud ventanaSolicitud;
+    public static GUILog ventanaLog;
+    public static InterfaceRMI rmiServidor;
     //private static Registry registro;
     //private static String direccionServidor = "127.0.0.1";
     //private static String puertoServidor = "3232";
@@ -29,10 +29,12 @@ public class Cliente
     {
         try
         {
-            boolean x = rmiServidor.AutenticarUsuario();
-            System.out.println(x);
+            ventanaSesion = new GUISesion();
+            ventanaSesion.setVisible(true);
+            //boolean x = rmiServidor.AutenticarUsuario();
+            //System.out.println(x);
         }
-        catch(RemoteException e)
+        catch(Exception e)
         {
             e.printStackTrace();
         }
