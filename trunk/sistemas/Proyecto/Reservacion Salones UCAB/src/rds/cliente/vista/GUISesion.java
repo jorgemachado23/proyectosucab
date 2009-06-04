@@ -10,7 +10,7 @@
  */
 
 package rds.cliente.vista;
-
+import rds.servidor.control.Servidor;
 /**
  *
  * @author Alejandro
@@ -45,6 +45,11 @@ public class GUISesion extends javax.swing.JFrame {
         lblTitulo.setText("Inicio de sesion");
 
         iniSesion.setText("Iniciar sesion");
+        iniSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniSesionActionPerformed(evt);
+            }
+        });
 
         lblUsuario.setFont(new java.awt.Font("Tahoma", 0, 12));
         lblUsuario.setText("Usuario:");
@@ -62,7 +67,6 @@ public class GUISesion extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(95, 95, 95)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
@@ -82,7 +86,6 @@ public class GUISesion extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 191, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -105,6 +108,10 @@ public class GUISesion extends javax.swing.JFrame {
     private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
         // TODO add your handling code here:
 }//GEN-LAST:event_txtUsuarioActionPerformed
+
+    private void iniSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniSesionActionPerformed
+        Servidor.control.AutenticarUsuario(txtUsuario.getText(), txtContrasena.getSelectedText());
+    }//GEN-LAST:event_iniSesionActionPerformed
 
     /**
     * @param args the command line arguments
