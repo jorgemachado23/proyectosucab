@@ -10,12 +10,16 @@
  */
 
 package rds.cliente.vista;
-import rds.servidor.control.Servidor;
+import rds.cliente.control.Cliente;
+import java.util.*;
+//import java.awt.*;
+//import java.awt.event.*;
+
 /**
  *
  * @author Alejandro
  */
-public class GUISesion extends javax.swing.JFrame {
+public class GUISesion extends javax.swing.JFrame{
 
     /** Creates new form GUISesion */
     public GUISesion() {
@@ -56,12 +60,6 @@ public class GUISesion extends javax.swing.JFrame {
 
         lblContrasena.setFont(new java.awt.Font("Tahoma", 0, 12));
         lblContrasena.setText("Contraseña:");
-
-        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsuarioActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,12 +103,32 @@ public class GUISesion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_txtUsuarioActionPerformed
-
     private void iniSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniSesionActionPerformed
-        
+        try
+        {
+           boolean autenticado = Cliente.control.rmiServidor.AutenticarUsuario(txtUsuario.getText(),txtContrasena.getSelectedText());
+           if (autenticado)
+           {
+               List<String> tipo = Cliente.control.rmiServidor.DatosUsuario(txtUsuario.getText(),txtContrasena.getSelectedText());
+               String tipoUsuario = tipo.get(3);
+               if (tipoUsuario.equalsIgnoreCase("alumno") || tipoUsuario.equalsIgnoreCase("profesor"))
+               {
+                   Cliente.control.ventanaSolicitud = new GUISolicitud();
+                   Cliente.control.ventanaSolicitud.setVisible(true);
+               }
+               else if (tipoUsuario.equalsIgnoreCase("encargado"))
+               {
+                   Cliente.control.ventanaLog = new GUILog();
+                   Cliente.control.ventanaLog.setVisible(true);
+               }
+               else
+                   throw new Exception();
+           }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_iniSesionActionPerformed
 
     /**
