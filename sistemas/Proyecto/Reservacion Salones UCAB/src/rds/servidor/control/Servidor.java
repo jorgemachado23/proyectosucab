@@ -56,10 +56,17 @@ public class Servidor extends UnicastRemoteObject
         }
     }
 
-    public void InicioSesion()
+    public GUISesion InicioSesion()
     {
         ventanaSesion = new GUISesion();
-        ventanaSesion.setVisible(true);
+        return ventanaSesion;
+    }
+
+    public boolean AutenticarUsuario(String usuario, String password)
+    {
+        boolean x = false;
+
+        return x;
     }
 
     public static void main(String[] args)
