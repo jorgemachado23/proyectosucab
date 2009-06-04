@@ -26,6 +26,7 @@ public class Servidor extends UnicastRemoteObject
     public static GUIServidor ventana;
     public static GUISesion ventanaSesion;
     public static GUILog ventanaLog;
+    private Registry registro;
     public static GUISolicitud ventanaSolicitud;
     ImplementorRMI imp = new ImplementorRMI();
     private int puerto;
@@ -47,26 +48,14 @@ public class Servidor extends UnicastRemoteObject
 
         try
         {
+            registro = LocateRegistry.createRegistry(3232);
             ImplementorRMI irmi = new ImplementorRMI();
             Naming.rebind("rmi://localhost:3232/Servidor", irmi);
         }
         catch(Exception e)
         {
-
+            e.printStackTrace();
         }
-    }
-
-    public GUISesion InicioSesion()
-    {
-        ventanaSesion = new GUISesion();
-        return ventanaSesion;
-    }
-
-    public boolean AutenticarUsuario(String usuario, String password)
-    {
-        boolean x = false;
-
-        return x;
     }
 
     public static void main(String[] args)

@@ -110,7 +110,7 @@ public class GUISesion extends javax.swing.JFrame {
 }//GEN-LAST:event_txtUsuarioActionPerformed
 
     private void iniSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniSesionActionPerformed
-        Servidor.control.AutenticarUsuario(txtUsuario.getText(), txtContrasena.getSelectedText());
+        
     }//GEN-LAST:event_iniSesionActionPerformed
 
     /**

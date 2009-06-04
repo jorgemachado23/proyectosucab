@@ -28,9 +28,11 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
 
     }
 
-    public GUISesion Login() throws RemoteException
+    public boolean AutenticarUsuario() throws RemoteException
     {
-        return Servidor.control.InicioSesion();
+        boolean x = false;
+
+        return x;
     }
     public void Loguot() throws RemoteException
     {
