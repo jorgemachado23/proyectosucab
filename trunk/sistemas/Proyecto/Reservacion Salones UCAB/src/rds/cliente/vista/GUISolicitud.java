@@ -58,7 +58,7 @@ public class GUISolicitud extends javax.swing.JFrame {
 
         jLabel1.setText("Lugar:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Laboratorios", "Modulos", "Cincuentenario", "Postgrado" }));
 
         jLabel2.setText("Dia:");
 
