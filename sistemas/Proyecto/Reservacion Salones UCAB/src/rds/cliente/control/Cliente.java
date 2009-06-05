@@ -35,8 +35,8 @@ public class Cliente
             ventanaSesion.setLocationRelativeTo(null);
             ventanaSesion.setVisible(true);
             //boolean x = rmiServidor.AutenticarUsuario();
-            List<String> prueba = rmiServidor.BuscarSalonDisponible("SalonCincuentenario","MON","20:00:00","22:00:00","0","0","0");
-            System.out.println(prueba);
+           // List<String> prueba = rmiServidor.BuscarSalonDisponible("SalonCincuentenario","MON","20:00:00","22:00:00","0","0","0");
+            //System.out.println(prueba);
             //System.out.println(x);
         }
         catch(Exception e)
