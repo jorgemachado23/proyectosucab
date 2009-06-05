@@ -92,8 +92,9 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
     //Procedimiento que busca el salon y el dia
     //Y devuelve las horas asociadas al dia
     @SuppressWarnings("static-access")
-    public void BuscarSalonDisponible(String salon,String dia,String pedidoInicial,String pedidoFinal)
+public String BuscarSalonDisponible(String salon,String dia,String pedidoInicial,String pedidoFinal,String videoBeam,String aa,String computadora)
     {
+        String inventando = new String () ;
         try{
 
             int bandera = 0;
@@ -112,6 +113,8 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
 
             int numeroDia = this.NumeroDiaSemana(dia);
 
+            int contador2 = 0;
+
             Integer hpedidoI = this.StringEntero(pedidoInicial.substring(0,2));
 
             Integer mpedidoI = this.StringEntero(pedidoInicial.substring(3,5));
@@ -123,12 +126,25 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
                 while(contador.hasNext())
                 {
                   System.out.println("Horario de clases del "+dia);
+
                   Element elemento = (Element)contador.next();
+
                   List<Element> horas = elemento.getChildren("horas",Namespace.getNamespace("http://xml.netbeans.org/schema/horarioSchema"));
+
+                  String videobeams = elemento.getChildText("VideoBeam",Namespace.getNamespace("http://xml.netbeans.org/schema/SalonSchema"));
+
+                  String aires = elemento.getChildText("AireAcondicionado",Namespace.getNamespace("http://xml.netbeans.org/schema/SalonSchema"));
+
+                  String computadores = elemento.getChildText("Computador",Namespace.getNamespace("http://xml.netbeans.org/schema/SalonSchema"));
+
                   int flag = 0;
+
+                  if ( (computadores.equals(computadora)) && (aires.equals(aa))  && (videobeams.equals(videoBeam))){
+
                   for( Element hora : horas )
                   {
-                      if(numeroDia == flag)
+
+                   if(numeroDia == flag)
                       {
 
                           //busco todas las horas que inician clases en la semana
@@ -177,11 +193,13 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
                            if ( (bandera == 1) && (contenido==0) )
 
                             {
-                                 System.out.println("Disponible");
-
+                                 //System.out.println("Disponible");
+                                 inventando = "Disponible";
                             }
                       }
                       flag++;
+                 // contador2++;
+                  }
                   }
 
                 }
@@ -190,7 +208,7 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
         {
             e.printStackTrace();
         }
-
+     return inventando;
     }
     //Funcion que devuelve true si el usuario existe
     //y false en caso contrario
