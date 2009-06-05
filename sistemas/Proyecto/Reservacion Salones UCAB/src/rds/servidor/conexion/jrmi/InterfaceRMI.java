@@ -19,6 +19,6 @@ public interface InterfaceRMI extends Remote
     public void AsignarSalon() throws RemoteException;
     public void recibirMensaje(String mensajes) throws RemoteException;
     public List<String> DatosUsuario(String nombreusuario,String clave) throws RemoteException;
-    public String BuscarSalonDisponible(String salon,String dia,String pedidoInicial,String pedidoFinal,String videoBeam,String aa,String computadora) throws RemoteException;
+    public List<String> BuscarSalonDisponible(String salon,String dia,String pedidoInicial,String pedidoFinal,String videoBeam,String aa,String computadora) throws RemoteException;
     
 }
