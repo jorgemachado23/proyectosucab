@@ -102,7 +102,7 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
 
             int contenido = 0;
 
-            SAXBuilder builder = new SAXBuilder(true);
+            SAXBuilder builder = new SAXBuilder(false);
 
             Document doc = builder.build("C:/SalonSchema.xml");
 
