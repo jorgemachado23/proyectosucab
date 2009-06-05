@@ -29,6 +29,7 @@ public class Cliente
     {
         try
         {
+            //String prueba = rmiServidor.getTipoUsuario("jorgem");
             ventanaSesion = new GUISesion();
             ventanaSesion.setLocationRelativeTo(null);
             ventanaSesion.setVisible(true);
