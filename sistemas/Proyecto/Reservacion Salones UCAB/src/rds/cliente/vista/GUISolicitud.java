@@ -294,15 +294,19 @@ public class GUISolicitud extends javax.swing.JFrame {
                 //System.out.println(pc);
             }
             java.util.List<String> datosSalon = Cliente.rmiServidor.BuscarSalonDisponible(location, day, hourI, hourF, air, video, pc);
-            for(int i = 0; i < datosSalon.size()/2 ; i++)
+            for(Integer i = 0; i < datosSalon.size()/2 ; i++)
             {
-                table.setValueAt(datosSalon.get(i), i, i);
-                table.setValueAt(datosSalon.get(i++), i, i++);
+                table.setValueAt(datosSalon.get(2*i), i, 0);
+                table.setValueAt(datosSalon.get(2*i+1), i, 1);
             }
+            
+        }
+        catch(RemoteException e)
+        {
+            e.printStackTrace();
         }
         catch(Exception e)
         {
-            e.printStackTrace();
             Notificar.error("Los campos de fecha y de horarios deben ser llenados", "Error");
         }
     }//GEN-LAST:event_btnBuscarActionPerformed
