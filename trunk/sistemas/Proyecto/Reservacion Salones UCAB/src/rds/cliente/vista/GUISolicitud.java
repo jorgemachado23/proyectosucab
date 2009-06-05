@@ -18,6 +18,7 @@ import java.util.*;
 import java.rmi.Naming;
 import rds.general.vista.Notificar;
 import rds.servidor.conexion.jrmi.InterfaceRMI;
+import java.rmi.*;
 /**
  *
  * @author Alejandro
@@ -248,39 +249,56 @@ public class GUISolicitud extends javax.swing.JFrame {
         try
         {
             String location = cmbLocacion.getSelectedItem().toString();
+            if (location.equalsIgnoreCase("laboratorios"))
+                location = "SalonLaboratorio";
+            else if (location.equalsIgnoreCase("modulos"))
+                location = "SalonModulo";
+            else if (location.equalsIgnoreCase("cincuentenario"))
+                location = "SalonCincuentenario";
+            else if (location.equalsIgnoreCase("postgrado"))
+                location = "SalonPostgrado";
+
             String date = calendario.getDate().toString();
+            System.out.println(date);
             String hourI = txtHoraI.getText();
             String hourF = txtHoraF.getText();
+            String fecha = new String();
+            String day = new String();
             if (!date.isEmpty() && !hourI.isEmpty() && !hourF.isEmpty())
             {
-                String day = date.substring(0, 3);
+                day = date.substring(0, 3);
                 String month = date.substring(4, 7);
                 String diaNum = date.substring(8, 10);
                 String year = date.substring(date.length()-4, date.length());
+                fecha = month.concat(", "+diaNum).concat("/"+year);
             }
             else
                 throw new Exception();
 
-            String air = "false";
+            String air = "0";
             if (ckbAire.isSelected())
             {
-                air = "true";
+                air = "1";
                 //System.out.println(air);
             }
-            String video = "false";
+            String video = "0";
             if (ckbVideo.isSelected())
             {
-                video = "true";
+                video = "1";
                 //System.out.println(video);
             }
-            String pc = "false";
+            String pc = "0";
             if (ckbComputador.isSelected())
             {
-                pc = "true";
+                pc = "1";
                 //System.out.println(pc);
             }
-
-
+            java.util.List<String> datosSalon = Cliente.rmiServidor.BuscarSalonDisponible(location, day, hourI, hourF, air, video, pc);
+            for(int i = 0; i < datosSalon.size()/2 ; i++)
+            {
+                table.setValueAt(datosSalon.get(i), i, i);
+                table.setValueAt(datosSalon.get(i++), i, i++);
+            }
         }
         catch(Exception e)
         {
