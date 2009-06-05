@@ -33,6 +33,8 @@ public class GUISolicitud extends javax.swing.JFrame {
         {
             e.printStackTrace();
         }
+        table.getColumnModel().getColumn(0).setHeaderValue("Salon");
+        table.getColumnModel().getColumn(1).setHeaderValue("Capacidad");
     }
 
     /** This method is called from within the constructor to
@@ -72,6 +74,11 @@ public class GUISolicitud extends javax.swing.JFrame {
         });
 
         btnSolicitar.setText("Solicitar");
+        btnSolicitar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSolicitarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Lugar:");
 
@@ -261,6 +268,8 @@ public class GUISolicitud extends javax.swing.JFrame {
                 pc = "true";
                 //System.out.println(pc);
             }
+
+
         }
         catch(Exception e)
         {
@@ -273,6 +282,10 @@ public class GUISolicitud extends javax.swing.JFrame {
         this.dispose();
         Cliente.ventanaSesion.setVisible(true);
     }//GEN-LAST:event_btnCerrarActionPerformed
+
+    private void btnSolicitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolicitarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSolicitarActionPerformed
 
     /**
     * @param args the command line arguments

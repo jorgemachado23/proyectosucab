@@ -9,7 +9,7 @@ import java.rmi.*;
 //import java.rmi.registry.*;
 import rds.servidor.conexion.jrmi.InterfaceRMI;
 import rds.cliente.vista.*;
-//import rds.general.vista.Notificar;
+import rds.general.vista.Notificar;
 /**
  *
  * @author Alejandro
@@ -21,6 +21,7 @@ public class Cliente
     public static GUISolicitud ventanaSolicitud;
     public static GUILog ventanaLog;
     public static InterfaceRMI rmiServidor;
+    public static Notificar notify;
     //private static Registry registro;
     //private static String direccionServidor = "127.0.0.1";
     //private static String puertoServidor = "3232";
