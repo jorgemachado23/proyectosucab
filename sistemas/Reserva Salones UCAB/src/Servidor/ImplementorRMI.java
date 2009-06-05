@@ -18,24 +18,24 @@ public class ImplementorRMI extends UnicastRemoteObject
     {
         super();
     }
-    public boolean Conectar() throws RemoteException
+    public void Conectar() throws RemoteException
     {
-        boolean x = false;
-        return x;
+        
     }
-    public boolean Desconectar() throws RemoteException
+    public void Desconectar() throws RemoteException
     {
-        boolean x = false;
-        return x;
+        
     }
-    public boolean AsignarSalon() throws RemoteException
+    public void AsignarSalon() throws RemoteException
     {
-        boolean x = false;
-        return x;
+        
     }
-    public boolean SolicitarSalon() throws RemoteException
+    public void SolicitarSalon() throws RemoteException
     {
-        boolean x = false;
-        return x;
+        
+    }
+    public void Negro() throws RemoteException
+    {
+        System.out.println("NEGRO PATO!!! XD");
     }
 }

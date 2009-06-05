@@ -29,7 +29,7 @@ public class GUISolicitud extends javax.swing.JFrame {
         initComponents();
         try
         {
-           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:1099/Servidor");
+           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://192.168.22.74:1099/Servidor");
         }
         catch(Exception e)
         {
@@ -37,6 +37,7 @@ public class GUISolicitud extends javax.swing.JFrame {
         }
         table.getColumnModel().getColumn(0).setHeaderValue("Salon");
         table.getColumnModel().getColumn(1).setHeaderValue("Capacidad");
+
     }
 
     /** This method is called from within the constructor to
@@ -288,7 +289,8 @@ public class GUISolicitud extends javax.swing.JFrame {
                 pc = "1";
                 //System.out.println(pc);
             }
-            java.util.List<String> datosSalon = Cliente.rmiServidor.BuscarSalonDisponible(location, day, hourI, hourF, air, video, pc);
+            java.util.List<String> datosSalon = Cliente.rmiServidor.BuscarSalonDisponible(location, day, hourI, hourF, video, air, pc);
+            System.out.println(datosSalon);
             for(Integer i = 0; i < datosSalon.size()/2 ; i++)
             {
                 table.setValueAt(datosSalon.get(2*i), i, 0);
@@ -318,7 +320,7 @@ public class GUISolicitud extends javax.swing.JFrame {
     private void btnSolicitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolicitarActionPerformed
         int indice = table.getSelectedRow();
         String nombreSalon = table.getValueAt(indice, 0).toString();
-        String capacidad = table.getValueAt(indice, 1).toString();
+        //String capacidad = table.getValueAt(indice, 1).toString();
         String date = calendario.getDate().toString();
         //System.out.println(date);
         String hour = txtHoraI.getText().concat(" - "+txtHoraF.getText());
@@ -326,6 +328,15 @@ public class GUISolicitud extends javax.swing.JFrame {
         String diaNum = date.substring(8, 10);
         String year = date.substring(date.length()-4, date.length());
         String fecha = month.concat(", "+diaNum).concat("/"+year);
+        String usuario = this.getTitle().substring(18);
+        try
+        {
+            Cliente.rmiServidor.SolicitarSalon(usuario, fecha, hour, nombreSalon, Cliente.rmiServidor.getTipoUsuario(usuario));
+        }
+        catch(RemoteException e)
+        {
+            e.printStackTrace();
+        }
 
     }//GEN-LAST:event_btnSolicitarActionPerformed
 

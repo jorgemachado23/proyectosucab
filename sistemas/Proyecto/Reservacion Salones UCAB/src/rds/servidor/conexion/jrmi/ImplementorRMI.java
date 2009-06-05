@@ -102,7 +102,7 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
 
             int contenido = 0;
 
-            SAXBuilder builder = new SAXBuilder(false);
+            SAXBuilder builder = new SAXBuilder(true);
 
             Document doc = builder.build("C:/SalonSchema.xml");
 
@@ -324,7 +324,36 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
     {
 
     }
-    public void SolicitarSalon() throws RemoteException
+
+    public String getTipoUsuario(String usuario)
+    {
+        String tipoUsuario = new String();
+        try
+        {
+            SAXBuilder builder = new SAXBuilder(false);
+            Document doc = builder.build("C:/usuarioSchema.xml");
+            Element raiz=doc.getRootElement();
+            List<Element> hijos = raiz.getChildren(usuario,Namespace.getNamespace("http://xml.netbeans.org/schema/usuarioSchema"));
+            System.out.println(hijos);
+            Iterator contador = hijos.iterator();
+            while(contador.hasNext())
+            {
+                Element elemento = (Element)contador.next();
+                List<Element> usuarios = elemento.getChildren();
+
+            }
+
+
+
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return tipoUsuario;
+    }
+
+    public void SolicitarSalon(String usuario, String fecha, String hora, String salon, String tipoUsuario) throws RemoteException
     {
 
     }

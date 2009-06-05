@@ -13,8 +13,9 @@ import java.rmi.RemoteException;
  */
 public interface InterfaceRMI extends Remote
 {
-    boolean Conectar() throws RemoteException;
-    boolean Desconectar() throws RemoteException;
-    boolean AsignarSalon() throws RemoteException;
-    boolean SolicitarSalon() throws RemoteException;
+    void Conectar() throws RemoteException;
+    void Desconectar() throws RemoteException;
+    void AsignarSalon() throws RemoteException;
+    void SolicitarSalon() throws RemoteException;
+    void Negro() throws RemoteException;
 }
