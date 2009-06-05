@@ -48,9 +48,10 @@ public class Servidor extends UnicastRemoteObject
 
         try
         {
-            registro = LocateRegistry.createRegistry(3232);
+            registro = LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
+            //registro = LocateRegistry.createRegistry(3232);
             ImplementorRMI irmi = new ImplementorRMI();
-            Naming.rebind("rmi://localhost:3232/Servidor", irmi);
+            Naming.rebind("rmi://192.168.0.155:1099/Servidor", irmi);
         }
         catch(Exception e)
         {
