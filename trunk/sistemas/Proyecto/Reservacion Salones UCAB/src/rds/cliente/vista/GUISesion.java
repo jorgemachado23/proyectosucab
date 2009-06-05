@@ -133,7 +133,11 @@ public class GUISesion extends javax.swing.JFrame{
         catch(Exception e)
         {
             e.printStackTrace();
-      }        // TODO add your handling code here:
+      }
+      this.setVisible(false);
+      txtUsuario.setText(null);
+      txtContrasena.setText(null);
+      this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
