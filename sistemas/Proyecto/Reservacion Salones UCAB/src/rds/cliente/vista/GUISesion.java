@@ -12,6 +12,8 @@
 package rds.cliente.vista;
 import rds.cliente.control.Cliente;
 import java.util.*;
+import java.rmi.Naming;
+import rds.servidor.conexion.jrmi.InterfaceRMI;
 //import java.awt.*;
 //import java.awt.event.*;
 
@@ -36,11 +38,11 @@ public class GUISesion extends javax.swing.JFrame{
     private void initComponents() {
 
         lblTitulo = new javax.swing.JLabel();
-        iniSesion = new javax.swing.JButton();
         lblUsuario = new javax.swing.JLabel();
         lblContrasena = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
         txtContrasena = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Iniciar Sesion Usuario");
@@ -48,18 +50,18 @@ public class GUISesion extends javax.swing.JFrame{
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 14));
         lblTitulo.setText("Inicio de sesion");
 
-        iniSesion.setText("Iniciar sesion");
-        iniSesion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iniSesionActionPerformed(evt);
-            }
-        });
-
         lblUsuario.setFont(new java.awt.Font("Tahoma", 0, 12));
         lblUsuario.setText("Usuario:");
 
         lblContrasena.setFont(new java.awt.Font("Tahoma", 0, 12));
         lblContrasena.setText("Contraseña:");
+
+        jButton1.setText("Iniciar Sesion");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,9 +69,7 @@ public class GUISesion extends javax.swing.JFrame{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(95, 95, 95)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(iniSesion, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE))
+                .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(99, 99, 99))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -81,6 +81,10 @@ public class GUISesion extends javax.swing.JFrame{
                     .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
                     .addComponent(txtContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
                 .addGap(46, 46, 46))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(120, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(85, 85, 85))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,41 +99,42 @@ public class GUISesion extends javax.swing.JFrame{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(txtContrasena)
                     .addComponent(lblContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(iniSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(43, 43, 43))
+                .addGap(31, 31, 31)
+                .addComponent(jButton1)
+                .addGap(30, 30, 30))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void iniSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniSesionActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try
-        {
-           boolean autenticado = Cliente.control.rmiServidor.AutenticarUsuario(txtUsuario.getText(),txtContrasena.getSelectedText());
-           if (autenticado)
-           {
-               List<String> tipo = Cliente.control.rmiServidor.DatosUsuario(txtUsuario.getText(),txtContrasena.getSelectedText());
-               String tipoUsuario = tipo.get(3);
+            {
+            Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:3232/Servidor");
+            boolean autenticado = Cliente.rmiServidor.AutenticarUsuario(txtUsuario.getText(),txtContrasena.getText());
+            if (autenticado)
+            {
+               List<String> tipo = Cliente.rmiServidor.DatosUsuario(txtUsuario.getText(),txtContrasena.getText());
+               String tipoUsuario = tipo.get(4);
                if (tipoUsuario.equalsIgnoreCase("alumno") || tipoUsuario.equalsIgnoreCase("profesor"))
                {
-                   Cliente.control.ventanaSolicitud = new GUISolicitud();
-                   Cliente.control.ventanaSolicitud.setVisible(true);
+                    Cliente.ventanaSolicitud = new GUISolicitud();
+                    Cliente.ventanaSolicitud.setVisible(true);
                }
                else if (tipoUsuario.equalsIgnoreCase("encargado"))
                {
-                   Cliente.control.ventanaLog = new GUILog();
-                   Cliente.control.ventanaLog.setVisible(true);
+                    Cliente.ventanaLog = new GUILog();
+                    Cliente.ventanaLog.setVisible(true);
                }
                else
                    throw new Exception();
-           }
+            }
         }
         catch(Exception e)
         {
             e.printStackTrace();
-        }
-    }//GEN-LAST:event_iniSesionActionPerformed
+      }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
     * @param args the command line arguments
@@ -143,7 +148,7 @@ public class GUISesion extends javax.swing.JFrame{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton iniSesion;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel lblContrasena;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblUsuario;
