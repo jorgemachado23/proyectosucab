@@ -58,31 +58,31 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
     public int NumeroDiaSemana(String dia)
     {
       int numerodia = 10;
-        if ((dia.toUpperCase()).equals("LUNES"))
+        if ((dia.toUpperCase()).equals("MON"))
         {
             numerodia=0;
         }
-        if ((dia.toUpperCase()).equals("MARTES"))
+        if ((dia.toUpperCase()).equals("TUE"))
         {
             numerodia=1;
         }
-        if ((dia.toUpperCase()).equals("MIERCOLES"))
+        if ((dia.toUpperCase()).equals("WED"))
         {
             numerodia=2;
         }
-        if ((dia.toUpperCase()).equals("JUEVES"))
+        if ((dia.toUpperCase()).equals("THU"))
         {
             numerodia=3;
         }
-        if ((dia.toUpperCase()).equals("VIERNES"))
+        if ((dia.toUpperCase()).equals("FRI"))
         {
             numerodia=4;
         }
-        if ((dia.toUpperCase()).equals("SABADO"))
+        if ((dia.toUpperCase()).equals("SAT"))
         {
             numerodia=5;
         }
-        if ((dia.toUpperCase()).equals("DOMINGO"))
+        if ((dia.toUpperCase()).equals("SUN"))
         {
             numerodia=6;
         }
