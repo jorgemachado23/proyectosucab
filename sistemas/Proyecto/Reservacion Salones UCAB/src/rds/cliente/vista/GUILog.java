@@ -10,7 +10,12 @@
  */
 
 package rds.cliente.vista;
-
+import java.text.*;
+import rds.cliente.control.Cliente;
+import java.util.*;
+import java.rmi.Naming;
+import rds.general.vista.Notificar;
+import rds.servidor.conexion.jrmi.InterfaceRMI;
 /**
  *
  * @author Alejandro
@@ -20,6 +25,24 @@ public class GUILog extends javax.swing.JFrame {
     /** Creates new form GUILog */
     public GUILog() {
         initComponents();
+        try
+        {
+           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:3232/Servidor");
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        tableA.getColumnModel().getColumn(0).setHeaderValue("Salon");
+        tableA.getColumnModel().getColumn(1).setHeaderValue("Fecha");
+        tableA.getColumnModel().getColumn(2).setHeaderValue("Horario");
+        tableA.getColumnModel().getColumn(3).setHeaderValue("Usuario");
+        tableA.getColumnModel().getColumn(4).setHeaderValue("Tipo de Usuario");
+        tableB.getColumnModel().getColumn(0).setHeaderValue("Salon");
+        tableB.getColumnModel().getColumn(1).setHeaderValue("Fecha");
+        tableB.getColumnModel().getColumn(2).setHeaderValue("Horario");
+        tableB.getColumnModel().getColumn(3).setHeaderValue("Usuario");
+        tableB.getColumnModel().getColumn(4).setHeaderValue("Tipo de Usuario");
     }
 
     /** This method is called from within the constructor to
@@ -33,12 +56,12 @@ public class GUILog extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tableA = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         btnAsignar = new javax.swing.JButton();
         btnAsignar1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableB = new javax.swing.JTable();
         btnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,8 +69,8 @@ public class GUILog extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Salones Asignados"));
 
-        jTable2.setAutoCreateRowSorter(true);
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tableA.setAutoCreateRowSorter(true);
+        tableA.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -66,7 +89,7 @@ public class GUILog extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
             }
         ));
-        jScrollPane1.setViewportView(jTable2);
+        jScrollPane1.setViewportView(tableA);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -84,11 +107,21 @@ public class GUILog extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Salones Por Asignar"));
 
         btnAsignar.setText("Asignar");
+        btnAsignar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAsignarActionPerformed(evt);
+            }
+        });
 
         btnAsignar1.setText("Refrescar");
+        btnAsignar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAsignar1ActionPerformed(evt);
+            }
+        });
 
-        jTable1.setAutoCreateRowSorter(true);
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableB.setAutoCreateRowSorter(true);
+        tableB.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -110,7 +143,7 @@ public class GUILog extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(tableB);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -137,6 +170,11 @@ public class GUILog extends javax.swing.JFrame {
 
         btnLogout.setText("Cerrar Sesion");
         btnLogout.setMinimumSize(new java.awt.Dimension(73, 23));
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -164,6 +202,20 @@ public class GUILog extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        this.setVisible(false);
+        this.dispose();
+        Cliente.ventanaSesion.setVisible(true);
+    }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnAsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsignarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAsignarActionPerformed
+
+    private void btnAsignar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsignar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAsignar1ActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -183,8 +235,8 @@ public class GUILog extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JTable tableA;
+    private javax.swing.JTable tableB;
     // End of variables declaration//GEN-END:variables
 
 }
