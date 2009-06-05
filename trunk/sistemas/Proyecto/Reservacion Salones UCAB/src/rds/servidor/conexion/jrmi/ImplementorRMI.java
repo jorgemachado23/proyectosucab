@@ -92,9 +92,10 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
     //Procedimiento que busca el salon y el dia
     //Y devuelve las horas asociadas al dia
     @SuppressWarnings("static-access")
-public String BuscarSalonDisponible(String salon,String dia,String pedidoInicial,String pedidoFinal,String videoBeam,String aa,String computadora)
+    public List<String> BuscarSalonDisponible(String salon,String dia,String pedidoInicial,String pedidoFinal,String videoBeam,String aa,String computadora)
     {
-        String inventando = new String () ;
+        List inventando = new ArrayList();
+        //String inventando = new String () ;
         try{
 
             int bandera = 0;
@@ -176,6 +177,7 @@ public String BuscarSalonDisponible(String salon,String dia,String pedidoInicial
                             {
                                 if( ( hpedidoF >= horaI ) && ( hpedidoF >= horaF ) )
                                 {
+                                   // posicion = contador2;
                                     bandera = 1;
                                   //  break;
                                 }
@@ -194,14 +196,15 @@ public String BuscarSalonDisponible(String salon,String dia,String pedidoInicial
 
                             {
                                  //System.out.println("Disponible");
-                                 inventando = "Disponible";
-                            }
+                                 //inventando = "Disponible";
+                                 inventando.add(elemento.getChildText("Nombre",Namespace.getNamespace("http://xml.netbeans.org/schema/SalonSchema")));
+                            }    inventando.add(elemento.getChildText("Capacidad",Namespace.getNamespace("http://xml.netbeans.org/schema/SalonSchema")));
                       }
                       flag++;
                  // contador2++;
                   }
                   }
-
+                  contador2++;
                 }
         }
         catch(Exception e)
