@@ -10,6 +10,7 @@ import java.rmi.*;
 import rds.servidor.conexion.jrmi.InterfaceRMI;
 import rds.cliente.vista.*;
 import rds.general.vista.Notificar;
+import java.util.*;
 /**
  *
  * @author Alejandro
@@ -32,8 +33,10 @@ public class Cliente
         {
             ventanaSesion = new GUISesion();
             ventanaSesion.setLocationRelativeTo(null);
-            ventanaSesion.setVisible(true);            
+            ventanaSesion.setVisible(true);
             //boolean x = rmiServidor.AutenticarUsuario();
+            List<String> prueba = rmiServidor.BuscarSalonDisponible("SalonCincuentenario","MON","20:00:00","22:00:00","0","0","0");
+            System.out.println(prueba);
             //System.out.println(x);
         }
         catch(Exception e)
