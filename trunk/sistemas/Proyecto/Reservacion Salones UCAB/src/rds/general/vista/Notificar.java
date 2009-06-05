@@ -44,7 +44,7 @@ public class Notificar
     }
 
     /**
-     * Muesta una ventana de confirmacion con los botones "Si" o "No"
+     * Muestra una ventana de confirmacion con los botones "Si" o "No"
      * @param mensaje Mensaje que se quiere mostrar
      * @param titulo  Titulo que se quiere mostrar
      * @return retorna true si es "Si" y retorna false si es "No"
