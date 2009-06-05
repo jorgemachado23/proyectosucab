@@ -379,6 +379,7 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
         Element horaI = new Element("horaI");
         Element horaF = new Element("horaF");
         Element salonE = new Element("salon");
+        Element estado = new Element("estado");
         Element tipoUsuarioE = new Element("tipoUsuario");
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
         Date date = new Date();
@@ -391,6 +392,7 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
         horaI.addContent(hora.substring(0, 8));
         horaF.addContent(hora.substring(hora.length()-8, hora.length()));
         salonE.addContent(salon);
+        estado.addContent("Solicitado");
         tipoUsuarioE.addContent(tipoUsuario);
 
         root.addContent(0,usuarioE);
@@ -399,13 +401,15 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
         root.addContent(3, horaI);
         root.addContent(4, horaF);
         root.addContent(5, salonE);
-        root.addContent(6, tipoUsuarioE);
+        root.addContent(6, estado);
+        root.addContent(7, tipoUsuarioE);
+
 
         Document doc = new Document(root);
 
         try
         {
-          XMLOutputter out = new XMLOutputter();
+          XMLOutputter out = new XMLOutputter(Format.getPrettyFormat());
           FileOutputStream file=new FileOutputStream("C:/reservacionSchema.xml");
           out.output(doc,file);
           file.flush();
