@@ -51,7 +51,7 @@ public class Servidor extends UnicastRemoteObject
             registro = LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
             //registro = LocateRegistry.createRegistry(3232);
             ImplementorRMI irmi = new ImplementorRMI();
-            Naming.rebind("rmi://192.168.0.155:1099/Servidor", irmi);
+            Naming.rebind("rmi://localhost:1099/Servidor", irmi);
         }
         catch(Exception e)
         {
@@ -62,6 +62,7 @@ public class Servidor extends UnicastRemoteObject
     public static void main(String[] args)
     {
         ventana = new GUIServidor();
+        ventana.setLocationRelativeTo(null);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         try
         {

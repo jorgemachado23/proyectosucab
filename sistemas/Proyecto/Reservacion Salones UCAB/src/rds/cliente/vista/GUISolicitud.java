@@ -15,7 +15,6 @@ import javax.swing.*;
 import java.awt.*;
 import rds.cliente.control.Cliente;
 import java.util.*;
-import java.rmi.Naming;
 import rds.general.vista.Notificar;
 import rds.servidor.conexion.jrmi.InterfaceRMI;
 import java.rmi.*;
@@ -30,7 +29,7 @@ public class GUISolicitud extends javax.swing.JFrame {
         initComponents();
         try
         {
-           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://192.168.0.155:1099/Servidor");
+           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:1099/Servidor");
         }
         catch(Exception e)
         {
@@ -168,12 +167,12 @@ public class GUISolicitud extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnSolicitar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 462, Short.MAX_VALUE)
-                                .addComponent(btnCerrar))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 628, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 676, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnSolicitar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 510, Short.MAX_VALUE)
+                        .addComponent(btnCerrar)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -196,7 +195,7 @@ public class GUISolicitud extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(txtHoraF, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtHoraI, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ckbAire)
                             .addComponent(ckbVideo)
@@ -248,6 +247,7 @@ public class GUISolicitud extends javax.swing.JFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         try
         {
+            table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             String location = cmbLocacion.getSelectedItem().toString();
             if (location.equalsIgnoreCase("laboratorios"))
                 location = "SalonLaboratorio";
@@ -259,18 +259,13 @@ public class GUISolicitud extends javax.swing.JFrame {
                 location = "SalonPostgrado";
 
             String date = calendario.getDate().toString();
-            System.out.println(date);
+            //System.out.println(date);
             String hourI = txtHoraI.getText();
             String hourF = txtHoraF.getText();
-            String fecha = new String();
             String day = new String();
             if (!date.isEmpty() && !hourI.isEmpty() && !hourF.isEmpty())
             {
                 day = date.substring(0, 3);
-                String month = date.substring(4, 7);
-                String diaNum = date.substring(8, 10);
-                String year = date.substring(date.length()-4, date.length());
-                fecha = month.concat(", "+diaNum).concat("/"+year);
             }
             else
                 throw new Exception();
@@ -321,7 +316,17 @@ public class GUISolicitud extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     private void btnSolicitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolicitarActionPerformed
-        // TODO add your handling code here:
+        int indice = table.getSelectedRow();
+        String nombreSalon = table.getValueAt(indice, 0).toString();
+        String capacidad = table.getValueAt(indice, 1).toString();
+        String date = calendario.getDate().toString();
+        //System.out.println(date);
+        String hour = txtHoraI.getText().concat(" - "+txtHoraF.getText());
+        String month = date.substring(4, 7);
+        String diaNum = date.substring(8, 10);
+        String year = date.substring(date.length()-4, date.length());
+        String fecha = month.concat(", "+diaNum).concat("/"+year);
+
     }//GEN-LAST:event_btnSolicitarActionPerformed
 
     /**
