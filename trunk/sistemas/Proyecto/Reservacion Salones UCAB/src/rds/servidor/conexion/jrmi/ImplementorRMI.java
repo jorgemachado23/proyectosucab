@@ -23,7 +23,7 @@ import java.sql.Time;
  */
 public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
 {
-    private Integer puerto = 3232;
+    private Integer puerto = 1099;
 
     public Integer getPuerto()
     {
