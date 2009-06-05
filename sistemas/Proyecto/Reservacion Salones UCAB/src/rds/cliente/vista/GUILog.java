@@ -27,7 +27,7 @@ public class GUILog extends javax.swing.JFrame {
         initComponents();
         try
         {
-           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:3232/Servidor");
+           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://192.168.0.155:1099/Servidor");
         }
         catch(Exception e)
         {
@@ -203,9 +203,12 @@ public class GUILog extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        this.setVisible(false);
-        this.dispose();
-        Cliente.ventanaSesion.setVisible(true);
+        if (Notificar.confirmacionSiNo("Seguro que quiere cerrar la sesion?", "Cerrar Sesion"))
+        {
+            this.setVisible(false);
+            this.dispose();
+            Cliente.ventanaSesion.setVisible(true);
+        }
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnAsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsignarActionPerformed
