@@ -26,7 +26,16 @@ public class GUISesion extends javax.swing.JFrame{
     /** Creates new form GUISesion */
     public GUISesion() {
         initComponents();
+        try
+        {
+        Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://192.168.0.155:1099/Servidor");
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
+
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -110,7 +119,6 @@ public class GUISesion extends javax.swing.JFrame{
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try
             {
-            Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:3232/Servidor");
             boolean autenticado = Cliente.rmiServidor.AutenticarUsuario(txtUsuario.getText(),txtContrasena.getText());
             if (autenticado)
             {
@@ -119,11 +127,13 @@ public class GUISesion extends javax.swing.JFrame{
                if (tipoUsuario.equalsIgnoreCase("alumno") || tipoUsuario.equalsIgnoreCase("profesor"))
                {
                     Cliente.ventanaSolicitud = new GUISolicitud();
+                    Cliente.ventanaSolicitud.setLocationRelativeTo(null);
                     Cliente.ventanaSolicitud.setVisible(true);
                }
                else if (tipoUsuario.equalsIgnoreCase("encargado"))
                {
                     Cliente.ventanaLog = new GUILog();
+                    Cliente.ventanaLog.setLocationRelativeTo(null);
                     Cliente.ventanaLog.setVisible(true);
                }
                else

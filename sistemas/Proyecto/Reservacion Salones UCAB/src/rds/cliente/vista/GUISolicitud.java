@@ -11,6 +11,8 @@
 
 package rds.cliente.vista;
 import java.text.*;
+import javax.swing.*;
+import java.awt.*;
 import rds.cliente.control.Cliente;
 import java.util.*;
 import java.rmi.Naming;
@@ -27,7 +29,7 @@ public class GUISolicitud extends javax.swing.JFrame {
         initComponents();
         try
         {
-           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:3232/Servidor"); 
+           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://192.168.0.155:1099/Servidor");
         }
         catch(Exception e)
         {
@@ -46,6 +48,8 @@ public class GUISolicitud extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jSpinField1 = new com.toedter.components.JSpinField();
         btnCerrar = new javax.swing.JButton();
         btnSolicitar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -62,6 +66,8 @@ public class GUISolicitud extends javax.swing.JFrame {
         txtHoraF = new javax.swing.JTextField();
         txtHoraI = new javax.swing.JTextField();
         calendario = new com.toedter.calendar.JDateChooser();
+
+        jFormattedTextField1.setText("jFormattedTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Solicitar Salon");
@@ -243,13 +249,18 @@ public class GUISolicitud extends javax.swing.JFrame {
         {
             String location = cmbLocacion.getSelectedItem().toString();
             String date = calendario.getDate().toString();
-            if (!date.isEmpty())
+            String hourI = txtHoraI.getText();
+            String hourF = txtHoraF.getText();
+            if (!date.isEmpty() && !hourI.isEmpty() && !hourF.isEmpty())
             {
                 String day = date.substring(0, 3);
                 String month = date.substring(4, 7);
                 String diaNum = date.substring(8, 10);
                 String year = date.substring(date.length()-4, date.length());
             }
+            else
+                throw new Exception();
+
             String air = "false";
             if (ckbAire.isSelected())
             {
@@ -274,13 +285,17 @@ public class GUISolicitud extends javax.swing.JFrame {
         catch(Exception e)
         {
             e.printStackTrace();
+            Notificar.error("Los campos de fecha y de horarios deben ser llenados", "Error");
         }
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-        this.setVisible(false);
-        this.dispose();
-        Cliente.ventanaSesion.setVisible(true);
+        if (Notificar.confirmacionSiNo("Seguro que quiere cerrar la sesion?", "Cerrar Sesion"))
+        {
+            this.setVisible(false);
+            this.dispose();
+            Cliente.ventanaSesion.setVisible(true);
+        }
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     private void btnSolicitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolicitarActionPerformed
@@ -307,11 +322,13 @@ public class GUISolicitud extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbComputador;
     private javax.swing.JCheckBox ckbVideo;
     private javax.swing.JComboBox cmbLocacion;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private com.toedter.components.JSpinField jSpinField1;
     private javax.swing.JTable table;
     private javax.swing.JTextField txtHoraF;
     private javax.swing.JTextField txtHoraI;
