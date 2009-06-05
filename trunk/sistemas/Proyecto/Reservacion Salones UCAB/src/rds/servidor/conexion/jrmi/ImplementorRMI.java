@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.*;
 import org.xml.sax.*;
 import org.jdom.*;
+import org.jdom.Content;
 import org.jdom.output.*;
 import org.jdom.input.*;
 import org.jdom.Element;
@@ -251,7 +252,6 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
                     {
                         autenticado = true;
                     }
-
                 }
             }
           }
@@ -328,26 +328,43 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
     public String getTipoUsuario(String usuario)
     {
         String tipoUsuario = new String();
-        try
-        {
+
+            try{
+
             SAXBuilder builder = new SAXBuilder(false);
+
             Document doc = builder.build("C:/usuarioSchema.xml");
+
             Element raiz=doc.getRootElement();
-            List<Element> hijos = raiz.getChildren(usuario,Namespace.getNamespace("http://xml.netbeans.org/schema/usuarioSchema"));
-            System.out.println(hijos);
-            Iterator contador = hijos.iterator();
+
+            List<Element> tipousuarios = raiz.getChildren();
+
+            Iterator contador = tipousuarios.iterator();
+
             while(contador.hasNext())
             {
+
                 Element elemento = (Element)contador.next();
-                List<Element> usuarios = elemento.getChildren();
 
+                //System.out.println(elemento.getName());
+
+                List<Element> logins = elemento.getChildren("usuario",Namespace.getNamespace("http://xml.netbeans.org/schema/alumnoSchema"));
+
+                for( int i = 0 ; i < logins.size() ; i++ )
+                {
+                    Element login = (Element)logins.get(i);
+
+                    if (login.getText().equals(usuario)){
+
+                        tipoUsuario = elemento.getName();
+
+                    }
+
+                }
             }
+          }
+        catch(Exception e){
 
-
-
-        }
-        catch(Exception e)
-        {
             e.printStackTrace();
         }
         return tipoUsuario;
@@ -355,7 +372,50 @@ public class ImplementorRMI extends UnicastRemoteObject implements InterfaceRMI
 
     public void SolicitarSalon(String usuario, String fecha, String hora, String salon, String tipoUsuario) throws RemoteException
     {
+        Element root = new Element("reservacion");
+        Element usuarioE = new Element("usuario");
+        Element fechaE = new Element("fecha");
+        Element fechaReservacion = new Element("fechaReservacion");
+        Element horaI = new Element("horaI");
+        Element horaF = new Element("horaF");
+        Element salonE = new Element("salon");
+        Element tipoUsuarioE = new Element("tipoUsuario");
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+        Date date = new Date();
 
+
+
+        usuarioE.addContent(usuario);
+        fechaE.addContent(dateFormat.format(date).toString());
+        fechaReservacion.addContent(fecha);
+        horaI.addContent(hora.substring(0, 8));
+        horaF.addContent(hora.substring(hora.length()-8, hora.length()));
+        salonE.addContent(salon);
+        tipoUsuarioE.addContent(tipoUsuario);
+
+        root.addContent(0,usuarioE);
+        root.addContent(1, fechaE);
+        root.addContent(2, fechaReservacion);
+        root.addContent(3, horaI);
+        root.addContent(4, horaF);
+        root.addContent(5, salonE);
+        root.addContent(6, tipoUsuarioE);
+
+        Document doc = new Document(root);
+
+        try
+        {
+          XMLOutputter out = new XMLOutputter();
+          FileOutputStream file=new FileOutputStream("C:/reservacionSchema.xml");
+          out.output(doc,file);
+          file.flush();
+          file.close();
+          //out.output(doc,System.out);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
     public void AsignarSalon() throws RemoteException
     {
