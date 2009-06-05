@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://xml.netbeans.org/schema/reservacionlSchema"
+    xmlns:tns="http://xml.netbeans.org/schema/reservacionlSchema"
+    elementFormDefault="qualified" xmlns:ns1="http://xml.netbeans.org/schema/horarioSchema" xmlns:ns0="http://xml.netbeans.org/schema/SalonSchema">
+    <xsd:import schemaLocation="../Servidor/horarioSchema.xsd" namespace="http://xml.netbeans.org/schema/horarioSchema"/>
+    <xsd:import schemaLocation="../Servidor/SalonSchema.xsd" namespace="http://xml.netbeans.org/schema/SalonSchema"/>
+    <xsd:complexType name="datosReservacion">
+        <xsd:sequence>
+            <xsd:element name="usuario" type="xsd:string" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name="fecha" maxOccurs="unbounded" type="xsd:dateTime"></xsd:element>
+            <xsd:element name="fechaReservacion" type="xsd:dateTime" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name="horaInicial" type="xsd:time" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name="horaFinal" type="xsd:time" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name="salon" type="xsd:string" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name="estado" type="xsd:string" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name="tipoUsuario" type="xsd:string" maxOccurs="unbounded"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="reservacion" type="tns:datosReservacion"></xsd:element>
+</xsd:schema>
