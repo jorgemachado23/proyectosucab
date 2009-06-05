@@ -28,7 +28,7 @@ public class GUISesion extends javax.swing.JFrame{
         initComponents();
         try
         {
-        Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:1099/Servidor");
+        Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://192.168.22.74:1099/Servidor");
         }
         catch(Exception e)
         {
@@ -128,6 +128,7 @@ public class GUISesion extends javax.swing.JFrame{
                {
                     Cliente.ventanaSolicitud = new GUISolicitud();
                     Cliente.ventanaSolicitud.setLocationRelativeTo(null);
+                    Cliente.ventanaSolicitud.setTitle("Solicitar Salon - "+txtUsuario.getText());
                     Cliente.ventanaSolicitud.setVisible(true);
                }
                else if (tipoUsuario.equalsIgnoreCase("encargado"))

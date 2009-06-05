@@ -18,7 +18,7 @@ class Alumno extends Cliente
 {
     public static Alumno controlAlumno;
     private Socket socket;
-    private final Integer puerto = 7869;
+    private final Integer puerto = 1099;
     private ObjectInputStream entrada = null;
     private ObjectOutputStream salida = null;
     private GUISesion ventanaLogin;
@@ -48,8 +48,9 @@ class Alumno extends Cliente
     public static void main(String[] args) {
 		try
         {
-            controlAlumno = new Alumno();
+            //controlAlumno = new Alumno();
 			InterfaceRMI h = (InterfaceRMI) Naming.lookup("rmi://localhost:1099/reserva");
+            h.Negro();
 		} catch (Exception e)
         {
 			e.printStackTrace();

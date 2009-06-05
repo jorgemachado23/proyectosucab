@@ -10,16 +10,6 @@ import org.jdom.Element;
 class Servidor
 {
 
-	public void Conectar()
-    {
-	
-	}
-	
-	public void Desconectar()
-    {
-	
-	}
-
     public static void main(String[] args)
     {
         try{
@@ -42,7 +32,5 @@ class Servidor
         {
             e.printStackTrace();
         }
-
-
     }
 }

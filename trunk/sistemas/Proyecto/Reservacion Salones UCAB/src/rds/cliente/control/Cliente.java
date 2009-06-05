@@ -24,8 +24,6 @@ public class Cliente
     public static InterfaceRMI rmiServidor;
     //public static Notificar notify;
     //private static Registry registro;
-    //private static String direccionServidor = "127.0.0.1";
-    //private static String puertoServidor = "3232";
 
     public Cliente()
     {
@@ -35,7 +33,7 @@ public class Cliente
             ventanaSesion.setLocationRelativeTo(null);
             ventanaSesion.setVisible(true);
             //boolean x = rmiServidor.AutenticarUsuario();
-           // List<String> prueba = rmiServidor.BuscarSalonDisponible("SalonCincuentenario","MON","20:00:00","22:00:00","0","0","0");
+            //List<String> prueba = rmiServidor.BuscarSalonDisponible("SalonCincuentenario","MON","20:00:00","22:00:00","0","0","0");
             //System.out.println(prueba);
             //System.out.println(x);
         }
@@ -50,7 +48,7 @@ public class Cliente
     {
         try
         {
-            rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:1099/Servidor");
+            rmiServidor = (InterfaceRMI)Naming.lookup("rmi://192.168.22.74:1099/Servidor");
         }
         catch(RemoteException e)
         {
