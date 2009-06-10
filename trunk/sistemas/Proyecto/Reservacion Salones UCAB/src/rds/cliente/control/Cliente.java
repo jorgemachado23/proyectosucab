@@ -49,7 +49,7 @@ public class Cliente
     {
         try
         {
-            rmiServidor = (InterfaceRMI)Naming.lookup("rmi://192.168.22.74:1099/Servidor");
+            rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:3232/Servidor");
         }
         catch(RemoteException e)
         {

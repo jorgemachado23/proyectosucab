@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://xml.netbeans.org/schema/horarioSchema"
+    xmlns:tns="http://xml.netbeans.org/schema/horarioSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="horas">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="horaInicial" type="xsd:time" maxOccurs="14">                    
+                </xsd:element>
+                <xsd:element name="horaFinal" type="xsd:time" maxOccurs="14">
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

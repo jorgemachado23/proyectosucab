@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reservacion>
+  <usuario>jorgem</usuario>
+  <fecha>05-06-2009 18:27</fecha>
+  <fechaReservacion>Jun, 15/2009</fechaReservacion>
+  <horaI>20:00:00</horaI>
+  <horaF>22:00:00</horaF>
+  <salon>EC-14</salon>
+  <estado>Solicitado</estado>
+  <tipoUsuario>alumno</tipoUsuario>
+</reservacion>
+
