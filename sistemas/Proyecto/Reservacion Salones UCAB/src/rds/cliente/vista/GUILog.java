@@ -27,7 +27,7 @@ public class GUILog extends javax.swing.JFrame {
         initComponents();
         try
         {
-           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://192.168.22.74:1099/Servidor");
+           Cliente.rmiServidor = (InterfaceRMI)Naming.lookup("rmi://localhost:3232/Servidor");
         }
         catch(Exception e)
         {
