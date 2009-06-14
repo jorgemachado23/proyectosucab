@@ -19,12 +19,13 @@ public class Alfil extends Pieza
                 x = BloqueoDiagonal(tablero, posicionInicial, posicionFinal);
                 if (x)
                 {
-                     if(tablero[posFF][posFC] == null)
+                    if(tablero[posFF][posFC] == null)
                     {
                             tablero[posFF][posFC] = tablero[posIF][posIC];
                             tablero[posIF][posIC] = null;
 
-                    }else if (!tablero[posFF][posFC].getColor().equals(colorPieza))
+                    }
+                    else if (!tablero[posFF][posFC].getColor().equals(colorPieza))
                     {
                             tablero[posFF][posFC] = tablero[posIF][posIC];
                             tablero[posIF][posIC] = null;
@@ -34,6 +35,10 @@ public class Alfil extends Pieza
                 {
                     throw new Exception();
                 }
+            }
+            else
+            {
+                throw new Exception();
             }
         }
         catch(Exception e)
