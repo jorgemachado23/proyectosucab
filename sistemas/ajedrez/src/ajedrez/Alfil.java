@@ -14,19 +14,20 @@ public class Alfil extends Pieza
         String colorPieza = tablero[posIF][posIC].getColor();
         try
         {
-            if (posIC != posFC && posIF != posFF)
+            if (posIC != posFC && posIF != posFF && Math.abs(posIC - posFC) == Math.abs(posIF - posFF))
             {
                 x = BloqueoDiagonal(tablero, posicionInicial, posicionFinal);
                 if (x)
                 {
-                    if (!tablero[posFF][posFC].getColor().equals(colorPieza))
+                     if(tablero[posFF][posFC] == null)
                     {
-                        tablero[posFF][posFC] = tablero[posIF][posIC];
-                        tablero[posIF][posIC] = null;
-                    }
-                    else
+                            tablero[posFF][posFC] = tablero[posIF][posIC];
+                            tablero[posIF][posIC] = null;
+
+                    }else if (!tablero[posFF][posFC].getColor().equals(colorPieza))
                     {
-                        throw new Exception();
+                            tablero[posFF][posFC] = tablero[posIF][posIC];
+                            tablero[posIF][posIC] = null;
                     }
                 }
                 else

@@ -11,14 +11,14 @@ public class Caballo extends Pieza
         String colorPieza = tablero[posIF][posIC].getColor();
         try
         {
-            if ((posIC + 1 == posFC & posIF + 2 == posFF) ||
-                (posIC - 1 == posFC & posIF + 2 == posFF) ||
-                (posIC + 1 == posFC & posIF - 2 == posFF) ||
-                (posIC - 1 == posFC & posIF - 2 == posFF) ||
-                (posIC + 2 == posFC & posIF + 1 == posFF) ||
-                (posIC - 2 == posFC & posIF + 1 == posFF) ||
-                (posIC + 2 == posFC & posIF - 1 == posFF) ||
-                (posIC - 2 == posFC & posIF - 1 == posFF))
+            if ((posIC + 1 == posFC && posIF + 2 == posFF) ||
+                (posIC - 1 == posFC && posIF + 2 == posFF) ||
+                (posIC + 1 == posFC && posIF - 2 == posFF) ||
+                (posIC - 1 == posFC && posIF - 2 == posFF) ||
+                (posIC + 2 == posFC && posIF + 1 == posFF) ||
+                (posIC - 2 == posFC && posIF + 1 == posFF) ||
+                (posIC + 2 == posFC && posIF - 1 == posFF) ||
+                (posIC - 2 == posFC && posIF - 1 == posFF))
             {
                 if (tablero[posFF][posFC] == null)
                 {
