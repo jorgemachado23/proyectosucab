@@ -19,7 +19,7 @@ public class Rey extends Pieza
                 (Math.abs(posIC - posFC) != 1 && posIF == posFF) ||
                 (Math.abs(posIF - posFF) != 1 && Math.abs(posIC - posFC) != 1))
             {
-                if (!tablero[posIF][posIC].getColor().equals(colorPieza))
+                if (tablero[posFF][posFC] == null || !tablero[posIF][posIC].getColor().equals(colorPieza))
                 {
                     tablero[posFF][posFC] = tablero[posIF][posIC];
                     tablero[posIF][posIC] = null;
