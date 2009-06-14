@@ -19,14 +19,15 @@ public class Torre extends Pieza
                 x = BloqueoVertical(tablero, posicionInicial, posicionFinal);
                 if (x)
                 {
-                    if (!tablero[posFF][posFC].getColor().equals(colorPieza))
+                    if(tablero[posFF][posFC] == null)
                     {
-                        tablero[posFF][posFC] = tablero[posIF][posIC];
-                        tablero[posIF][posIC] = null;
-                    }
-                    else
+                            tablero[posFF][posFC] = tablero[posIF][posIC];
+                            tablero[posIF][posIC] = null;
+
+                    }else if (!tablero[posFF][posFC].getColor().equals(colorPieza))
                     {
-                        throw new Exception();
+                            tablero[posFF][posFC] = tablero[posIF][posIC];
+                            tablero[posIF][posIC] = null;
                     }
                 }
                 else
@@ -39,14 +40,15 @@ public class Torre extends Pieza
                 x = BloqueoHorizontal(tablero, posicionInicial, posicionFinal);
                 if (x)
                 {
-                    if (!tablero[posFF][posFC].getColor().equals(colorPieza))
+                    if(tablero[posFF][posFC] == null)
                     {
-                        tablero[posFF][posFC] = tablero[posIF][posIC];
-                        tablero[posIF][posIC] = null;
-                    }
-                    else
+                            tablero[posFF][posFC] = tablero[posIF][posIC];
+                            tablero[posIF][posIC] = null;
+
+                    }else if (!tablero[posFF][posFC].getColor().equals(colorPieza))
                     {
-                        throw new Exception();
+                            tablero[posFF][posFC] = tablero[posIF][posIC];
+                            tablero[posIF][posIC] = null;
                     }
                 }
                 else
