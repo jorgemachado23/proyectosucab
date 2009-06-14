@@ -1,7 +1,7 @@
 package ajedrez;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.io.IOException;
+//import java.io.IOException;
 
 public class Main {
 
@@ -9,7 +9,9 @@ public class Main {
 
        BufferedReader dato = new BufferedReader(new InputStreamReader(System.in) );
        BufferedReader dato2 = new BufferedReader(new InputStreamReader(System.in) );
+       BufferedReader salir = new BufferedReader(new InputStreamReader(System.in) );
        try{
+
            Tablero tablero = new Tablero();
            Pieza[][] matriz = new Pieza[8][8];
 
@@ -26,35 +28,60 @@ public class Main {
            int [] terminal = tablero.Posicion(posicionfinal);
            boolean x = tablero.ValidarPosicion(inicial);
            boolean y = tablero.ValidarPosicion(terminal);
+           Integer juego = 1;
 
-           if (!x || !y)
+           while (juego!=0)
            {
-               throw new Exception();
-           }
-           else
-           {
-               String nombrePieza = matriz[inicial[0]][inicial[1]].getClass().getSimpleName();
-
-               if (nombrePieza.equals("Peon"))
+               if (!x || !y)
                {
-                   Peon peon = new Peon();
-                   matriz = peon.MoverComer(matriz,inicial,terminal);
+                   throw new Exception();
                }
-               if (nombrePieza.equals("Reina"))
+               else
                {
+                   String nombrePieza = matriz[inicial[0]][inicial[1]].getClass().getSimpleName();
 
+                   if (nombrePieza.equals("Peon"))
+                   {
+                       Peon peon = new Peon();
+                       matriz = peon.MoverComer(matriz,inicial,terminal);
+                   }
+                   if (nombrePieza.equals("Caballo"))
+                   {
+                       Caballo caballo = new Caballo();
+                       matriz = caballo.MoverComer(matriz, inicial, terminal);
+                   }
+                   if (nombrePieza.equals("Alfil"))
+                   {
+                        Alfil alfil = new Alfil();
+                        matriz = alfil.MoverComer(matriz, inicial, terminal);
+                   }
+                   if (nombrePieza.equals("Torre"))
+                   {
+                        Torre torre = new Torre();
+                        matriz = torre.MoverComer(matriz, inicial, terminal);
+                   }
+                   if (nombrePieza.equals("Reina"))
+                   {
+                       Reina reina = new Reina();
+                       matriz = reina.MoverComer(matriz, inicial, terminal);
+                   }
+                   if (nombrePieza.equals("Rey"))
+                   {
+                        Rey rey = new Rey();
+                        matriz = rey.MoverComer(matriz, inicial, terminal);
+                   }
+
+                   tablero.ImprimirTablero(matriz);
+                   System.out.println();
+                   System.out.println();
+                   System.out.println("Para salir presione 0");
+                   String salida = salir.readLine();
+                   juego.parseInt(salida);
+                   System.out.println();
                }
-               //&& nombrePieza.equals("Peon")
-               /*String objeto = null;
-               objeto = matriz[inicial[0]][inicial[1]].getClass().getSimpleName();*/
-
-               //System.out.println(matriz[inicial[0]][inicial[1]].getColor());
-               //System.out.println(objeto);
-
-               //System.out.println("tablero");
-               //System.out.println();
-               tablero.ImprimirTablero(matriz);
            }
+
+
        }
        catch(Exception e)
        {
