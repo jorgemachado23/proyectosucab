@@ -20,7 +20,7 @@ public class Reina extends Pieza
                 x = BloqueoVertical(tablero, posicionInicial, posicionFinal);
                 if (x)
                 {
-                    if (!tablero[posFF][posFC].getColor().equals(colorPieza))
+                    if (tablero[posFF][posFC] == null || !tablero[posFF][posFC].getColor().equals(colorPieza))
                     {
                         tablero[posFF][posFC] = tablero[posIF][posIC];
                         tablero[posIF][posIC] = null;
@@ -40,7 +40,7 @@ public class Reina extends Pieza
                 x = BloqueoHorizontal(tablero, posicionInicial, posicionFinal);
                 if (x)
                 {
-                    if (!tablero[posFF][posFC].getColor().equals(colorPieza))
+                    if (tablero[posFF][posFC] == null || !tablero[posFF][posFC].getColor().equals(colorPieza))
                     {
                         tablero[posFF][posFC] = tablero[posIF][posIC];
                         tablero[posIF][posIC] = null;
@@ -55,12 +55,12 @@ public class Reina extends Pieza
                     throw new Exception();
                 }
             }
-            else if (posIC != posFC && posIF != posFF)
+            else if (posIC != posFC && posIF != posFF && Math.abs(posIC - posFC) == Math.abs(posIF - posFF))
             {
                 x = BloqueoDiagonal(tablero, posicionInicial, posicionFinal);
                 if (x)
                 {
-                    if (!tablero[posFF][posFC].getColor().equals(colorPieza))
+                    if (tablero[posFF][posFC] == null || !tablero[posFF][posFC].getColor().equals(colorPieza))
                     {
                         tablero[posFF][posFC] = tablero[posIF][posIC];
                         tablero[posIF][posIC] = null;
