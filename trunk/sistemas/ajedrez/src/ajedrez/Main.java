@@ -77,7 +77,7 @@ public class Main {
                    System.out.println();
                    System.out.println("Para salir presione 0");
                    String salida = salir.readLine();
-                   juego.parseInt(salida);
+                   juego = juego.parseInt(salida);
                    System.out.println();
                }
            }
