@@ -69,7 +69,8 @@ public class Main {
                    if (nombrePieza.equals("Rey"))
                    {
                         Rey rey = new Rey();
-                        matriz = rey.MoverComer(matriz, inicial, terminal);
+                        if (!rey.Jaque(terminal[0], terminal[1], matriz))
+                            matriz = rey.MoverComer(matriz, inicial, terminal);
                    }
 
                    tablero.ImprimirTablero(matriz);
