@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 
 public class Main {
 
+    @SuppressWarnings("static-access")
     public static void main(String[] args) {
 
        BufferedReader dato = new BufferedReader(new InputStreamReader(System.in) );
@@ -16,7 +17,10 @@ public class Main {
            Pieza[][] matriz = new Pieza[8][8];
 
            matriz = tablero.InicializarTablero();
-
+           Integer juego = 1;
+           matriz[1][0] = null;
+           while (juego!=0)
+           {
            System.out.println("posicion inicial: (Ej. A2)");
            System.out.println();
            String posicioninicial = dato.readLine();
@@ -28,10 +32,7 @@ public class Main {
            int [] terminal = tablero.Posicion(posicionfinal);
            boolean x = tablero.ValidarPosicion(inicial);
            boolean y = tablero.ValidarPosicion(terminal);
-           Integer juego = 1;
 
-           while (juego!=0)
-           {
                if (!x || !y)
                {
                    throw new Exception();
