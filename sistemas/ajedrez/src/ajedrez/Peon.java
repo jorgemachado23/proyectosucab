@@ -106,8 +106,7 @@ public class Peon extends Pieza{
                     tablero[posIF][posIC] = null;
                 }
             }
-            
-            if (Math.abs(posIF - posFF) == 1)
+            else if (Math.abs(posIF - posFF) == 1)
             {
                if (posIC == posFC && tablero[posFF][posFC] == null)
                {
@@ -131,6 +130,11 @@ public class Peon extends Pieza{
                    throw new Exception();
                }
             }
+            else
+            {
+                throw new Exception();
+            }
+            
             if (posFF == 7 || posFF == 0)
             {
                 Coronar(tablero, posicionFinal);
