@@ -18,6 +18,7 @@ public class Main {
            matriz = tablero.InicializarTablero();
            tablero.ImprimirTablero(matriz);
            Integer juego = 1;
+           boolean juegaRey = false;
            //matriz[1][0] = null;
            while (juego!=0)
            {
@@ -41,11 +42,49 @@ public class Main {
                {
                    String nombrePieza = matriz[inicial[0]][inicial[1]].getClass().getSimpleName();
 
-                   if (nombrePieza.equals("Peon"))
+                   if (juegaRey = false)//valido que la pieza que se vaya jugar no se el rey
                    {
-                       Peon peon = new Peon();
-                       matriz = peon.MoverComer(matriz,inicial,terminal);
-                   }
+                       if (nombrePieza.equals("Peon"))
+                       {
+                           Peon peon = new Peon();
+
+                           matriz = peon.MoverComer(matriz,inicial,terminal);
+
+                           String color = matriz[inicial[0]][inicial[1]].getColor();
+
+                           Rey reyAtaque = new Rey();
+
+                           Rey reyAtacado = new Rey();
+
+                           int[] posicion1 = reyAtaque.getPosicion(color, matriz);
+
+                           int[] posicion2 = new int[2];
+
+                           if (!reyAtaque.Jaque(posicion1[0], posicion1[1], matriz)) //si el rey del equipo que ataca
+                           {                                                         //no esta en jaque entonces mueve
+                                matriz = peon.MoverComer(matriz,inicial,terminal);  //la pieza
+
+                                if (color.equals("blanco"))
+                                {
+                                    posicion2 = reyAtacado.getPosicion("negro", matriz); //posicion del rey atacado
+                                }
+                                else
+                                {
+                                    posicion2 = reyAtacado.getPosicion("blanco", matriz);//posicion del rey atacado
+                                }
+
+                                if (reyAtacado.Jaque(posicion2[0], posicion2[1], matriz))//si el rey atacado esta en jaque
+                                {                                                        //el siguiente movimiento tiene que
+                                    juegaRey = true;                                    //obligar a jugar el rey
+                                }
+                                else
+                                {
+                                    juegaRey = false;   //sino entonces puede jugarse cualquiera pieza
+                                }
+
+                           }
+                       }
+                    }
                    if (nombrePieza.equals("Caballo"))
                    {
                        Caballo caballo = new Caballo();
