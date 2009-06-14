@@ -15,8 +15,8 @@ public class Main {
 
            Tablero tablero = new Tablero();
            Pieza[][] matriz = new Pieza[8][8];
-
            matriz = tablero.InicializarTablero();
+           tablero.ImprimirTablero(matriz);
            Integer juego = 1;
            //matriz[1][0] = null;
            while (juego!=0)
