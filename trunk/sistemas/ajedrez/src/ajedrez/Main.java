@@ -60,7 +60,7 @@ public class Main {
 
                            int[] posicion2 = new int[2];
 
-                           if (!reyAtaque.Jaque(posicion1[0], posicion1[1], matriz)) //si el rey del equipo que ataca
+                           if (!reyAtaque.JaqueMate(posicion1, matriz)) //si el rey del equipo que ataca
                            {                                                         //no esta en jaque entonces mueve
                                 matriz = peon.MoverComer(matriz,inicial,terminal);  //la pieza
 
@@ -73,7 +73,7 @@ public class Main {
                                     posicion2 = reyAtacado.getPosicion("blanco", matriz);//posicion del rey atacado
                                 }
 
-                                if (reyAtacado.Jaque(posicion2[0], posicion2[1], matriz))//si el rey atacado esta en jaque
+                                if (reyAtacado.JaqueMate(posicion2, matriz))//si el rey atacado esta en jaque
                                 {                                                        //el siguiente movimiento tiene que
                                     juegaRey = true;                                    //obligar a jugar el rey
                                 }
@@ -102,7 +102,7 @@ public class Main {
 
                            int[] posicion2 = new int[2];
 
-                           if (!reyAtaque.Jaque(posicion1[0], posicion1[1], matriz)) //si el rey del equipo que ataca
+                           if (!reyAtaque.JaqueMate(posicion1, matriz)) //si el rey del equipo que ataca
                            {                                                         //no esta en jaque entonces mueve
                                 matriz = caballo.MoverComer(matriz,inicial,terminal);  //la pieza
 
@@ -115,7 +115,7 @@ public class Main {
                                     posicion2 = reyAtacado.getPosicion("blanco", matriz);//posicion del rey atacado
                                 }
 
-                                if (reyAtacado.Jaque(posicion2[0], posicion2[1], matriz))//si el rey atacado esta en jaque
+                                if (reyAtacado.JaqueMate(posicion2, matriz))//si el rey atacado esta en jaque
                                 {                                                        //el siguiente movimiento tiene que
                                     juegaRey = true;                                    //obligar a jugar el rey
                                 }
@@ -145,7 +145,7 @@ public class Main {
 
                            int[] posicion2 = new int[2];
 
-                           if (!reyAtaque.Jaque(posicion1[0], posicion1[1], matriz)) //si el rey del equipo que ataca
+                           if (!reyAtaque.JaqueMate(posicion1, matriz)) //si el rey del equipo que ataca
                            {                                                         //no esta en jaque entonces mueve
                                 matriz = alfil.MoverComer(matriz,inicial,terminal);  //la pieza
 
@@ -158,7 +158,7 @@ public class Main {
                                     posicion2 = reyAtacado.getPosicion("blanco", matriz);//posicion del rey atacado
                                 }
 
-                                if (reyAtacado.Jaque(posicion2[0], posicion2[1], matriz))//si el rey atacado esta en jaque
+                                if (reyAtacado.JaqueMate(posicion2, matriz))//si el rey atacado esta en jaque
                                 {                                                        //el siguiente movimiento tiene que
                                     juegaRey = true;                                    //obligar a jugar el rey
                                 }
@@ -201,7 +201,7 @@ public class Main {
                                     posicion2 = reyAtacado.getPosicion("blanco", matriz);//posicion del rey atacado
                                 }
 
-                                if (reyAtacado.Jaque(posicion2[0], posicion2[1], matriz))//si el rey atacado esta en jaque
+                                if (reyAtacado.JaqueMate(posicion2, matriz))//si el rey atacado esta en jaque
                                 {                                                        //el siguiente movimiento tiene que
                                     juegaRey = true;                                    //obligar a jugar el rey
                                 }
@@ -244,7 +244,7 @@ public class Main {
                                     posicion2 = reyAtacado.getPosicion("blanco", matriz);//posicion del rey atacado
                                 }
 
-                                if (reyAtacado.Jaque(posicion2[0], posicion2[1], matriz))//si el rey atacado esta en jaque
+                                if (reyAtacado.JaqueMate(posicion2, matriz))//si el rey atacado esta en jaque
                                 {                                                        //el siguiente movimiento tiene que
                                     juegaRey = true;                                    //obligar a jugar el rey
                                 }
