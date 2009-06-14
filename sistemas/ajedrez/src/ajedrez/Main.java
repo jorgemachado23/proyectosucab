@@ -83,6 +83,11 @@ public class Main {
                                 }
 
                            }
+                           else
+                           {
+
+                                    juegaRey = true;
+                           }
                        }
                     }
                    if (nombrePieza.equals("Caballo"))
