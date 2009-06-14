@@ -18,7 +18,7 @@ public class Main {
 
            matriz = tablero.InicializarTablero();
            Integer juego = 1;
-           matriz[1][0] = null;
+           //matriz[1][0] = null;
            while (juego!=0)
            {
            System.out.println("posicion inicial: (Ej. A2)");
