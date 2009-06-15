@@ -69,15 +69,39 @@ public class Rey extends Pieza
         int j = columna;
         String colorPieza = tablero[fila][columna].getColor();
 
+        if ((tablero[i + 1][j + 1].getClass().getSimpleName().equalsIgnoreCase("peon")
+            && !tablero[i + 1][j + 1].getColor().equalsIgnoreCase(colorPieza))
+            || (tablero[i + 1][j - 1].getClass().getSimpleName().equalsIgnoreCase("peon")
+            && !tablero[i + 1][j - 1].getColor().equalsIgnoreCase(colorPieza))
+            && colorPieza.equalsIgnoreCase("blanco"))
+        {
+            x = true;
+            return x;
+        }
+        else if ((tablero[i - 1][j + 1].getClass().getSimpleName().equalsIgnoreCase("peon")
+                && !tablero[i - 1][j + 1].getColor().equalsIgnoreCase(colorPieza))
+                || (tablero[i - 1][j - 1].getClass().getSimpleName().equalsIgnoreCase("peon")            
+                && !tablero[i - 1][j - 1].getColor().equalsIgnoreCase(colorPieza))
+                && colorPieza.equalsIgnoreCase("negro"))
+        {
+            x = true;
+            return x;
+        }
+
+
         for (i = fila + 1; i < 8; i++)
         {
-            if (tablero[i][columna] != null && !tablero[i][columna].getColor().equalsIgnoreCase(colorPieza))
+            if (tablero[i][columna] != null && !tablero[i][columna].getColor().equalsIgnoreCase(colorPieza)
+                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("torre")
+                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
             }
             j++;
-            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza))
+            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
+                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
@@ -86,13 +110,17 @@ public class Rey extends Pieza
         j = columna;
         for (i = fila - 1; i > -1; i--)
         {
-            if (tablero[i][columna] != null && !tablero[i][columna].getColor().equalsIgnoreCase(colorPieza))
+            if (tablero[i][columna] != null && !tablero[i][columna].getColor().equalsIgnoreCase(colorPieza)
+                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("torre")
+                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
             }
             j--;
-            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza))
+            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
+                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
@@ -101,13 +129,17 @@ public class Rey extends Pieza
         i = fila;
         for (j = columna + 1; j < 8; j++)
         {
-            if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza))
+            if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza)
+                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("torre")
+                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
             }
             i--;
-            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza))
+            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
+                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
@@ -116,18 +148,23 @@ public class Rey extends Pieza
         i = fila;
         for (j = columna - 1; j > -1; j--)
         {
-            if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza))
+            if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza)
+                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("torre")
+                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
             }
             i++;
-            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza))
+            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
+                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
             }
         }
+
         i = fila;
         j = columna;
         int i2;
@@ -137,7 +174,8 @@ public class Rey extends Pieza
             (tablero[i2 = i + 1][j2 = j + 2] != null) || (tablero[i2 = i + 1][j2 = j - 2] != null) ||
             (tablero[i2 = i - 1][j2 = j + 2] != null) || (tablero[i2 = i - 1][j2 = j - 2] != null))
             {
-                if (!tablero[i2][j2].getColor().equals(colorPieza))
+                if (!tablero[i2][j2].getColor().equals(colorPieza)
+                    && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
                 {
                     x = true;
                     return x;
@@ -151,8 +189,23 @@ public class Rey extends Pieza
         boolean x = false;
         int fila = posicionRey[0];
         int columna = posicionRey[1];
-        int[] jaqueRey = posicionRey;
+        String colorPieza = tablero[fila][columna].getColor();
 
+        if (this.Jaque(fila, columna, tablero))
+        {
+            if ((this.Jaque(fila + 1, columna, tablero) || tablero[fila + 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                && (this.Jaque(fila + 1, columna + 1, tablero) || tablero[fila + 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                && (this.Jaque(fila + 1, columna - 1, tablero) || tablero[fila + 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                && (this.Jaque(fila - 1, columna, tablero) || tablero[fila - 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                && (this.Jaque(fila - 1, columna + 1, tablero) || tablero[fila - 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                && (this.Jaque(fila - 1, columna - 1, tablero) || tablero[fila - 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                && (this.Jaque(fila, columna + 1, tablero) || tablero[fila][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                && (this.Jaque(fila, columna - 1, tablero) || tablero[fila][columna - 1].getColor().equalsIgnoreCase(colorPieza)))
+            {
+                x = true;
+                return x;
+            }
+        }
         return x;
     }
 }
