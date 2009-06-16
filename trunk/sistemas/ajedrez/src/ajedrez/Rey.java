@@ -126,13 +126,20 @@ public class Rey extends Pieza
                 x = true;
                 return x;
             }
+        }
+        for (i = fila + 1; i < 8; i++)
+        {
             j++;
             if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
-                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
+            }
+            if(j == 7)
+            {
+                i = 8;
             }
         }
         j = columna;
@@ -145,51 +152,72 @@ public class Rey extends Pieza
                 x = true;
                 return x;
             }
+        }
+        for (i = fila - 1; i > -1; i--)
+        {
             j--;
             if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
-                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
+            }
+            if (j == 1)
+            {
+                i = -1;
             }
         }
         i = fila;
         for (j = columna + 1; j < 8; j++)
         {
-            if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza)
-                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("torre")
-                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
+            if (tablero[fila][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
+                && (tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("torre")
+                || tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
             }
+        }
+        for (j = columna + 1; j < 8; j++)
+        {
             i--;
             if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
-                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
+            }
+            if (i == -1)
+            {
+                j = 8;
             }
         }
         i = fila;
         for (j = columna - 1; j > -1; j--)
         {
             if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza)
-                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("torre")
-                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                && (tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("torre")
+                || tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
             }
+        }
+        for (j = columna - 1; j > -1; j--)
+        {
             i++;
             if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
-                && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
                 x = true;
                 return x;
+            }
+            if (i == 7)
+            {
+                j = -1;
             }
         }
 
