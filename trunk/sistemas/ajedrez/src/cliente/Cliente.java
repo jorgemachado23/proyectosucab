@@ -9,19 +9,19 @@ public class Cliente {
 
     static final int PUERTO=5000;
 
+    static Socket skCliente = new Socket();
+
         public Cliente( ) {
 
                     try{
 
-                    Socket skCliente = new Socket( HOST , PUERTO );
+                    skCliente = new Socket( HOST , PUERTO );
 
                     InputStream aux = skCliente.getInputStream();
 
                     DataInputStream flujo = new DataInputStream( aux );
 
                     System.out.println( flujo.readUTF() );
-
-                    skCliente.close();
 
                     }
 
@@ -33,9 +33,43 @@ public class Cliente {
 
         }
 
+public void CerrarConexion()
+{
+    try
+    {
+            skCliente.close();
+            System.out.println("Se ha cerrado la conexion con exito");
+    }
+    catch(Exception e)
+    {
+
+            System.out.println( e.getMessage() );
+    }
+
+}
+public void EnviarComando()
+{
+    try{
+            OutputStream aux = skCliente.getOutputStream();
+
+            DataOutputStream flujo = new DataOutputStream( aux );
+
+            flujo.writeUTF("verga que ladilla");
+
+        }
+    catch(Exception e)
+    {
+    System.out.println( e.getMessage() );
+    }
+
+}
+
         public static void main( String[] arg ) {
 
-        new Cliente();
-
+        Cliente cliente = new Cliente();
+        cliente.EnviarComando();
+        cliente.CerrarConexion();
+        
+        //cliente.CerrarConexion();
         }
     }
