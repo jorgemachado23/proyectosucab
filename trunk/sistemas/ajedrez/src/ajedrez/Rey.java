@@ -333,48 +333,9 @@ public class Rey extends Pieza
         }
         else if (j == 6 && i > 1 && i < 6)
         {
-
-        }
-        else if (i == 0 && j == 0)
-        {
-
-        }
-        else if (i == 0 && j == 7)
-        {
-
-        }
-        else if (i == 7 && j == 0)
-        {
-
-        }
-        else if (i == 7 && j == 7)
-        {
-
-        }
-        else if (i == 1 && j == 1)
-        {
-
-        }
-        else if (i == 1 && j == 6)
-        {
-
-        }
-        else if (i == 6 && j == 0)
-        {
-
-        }
-        else if (i == 6 && j == 6)
-        {
-
-        }
-        else
-        {
-
-        }
-        if ((tablero[i2 = i + 2][j2 = j + 1] != null) || (tablero[i2 = i + 2][j2 = j - 1] != null) ||
-            (tablero[i2 = i - 2][j2 = j + 1] != null) || (tablero[i2 = i - 2][j2 = j - 1] != null) ||
-            (tablero[i2 = i + 1][j2 = j + 2] != null) || (tablero[i2 = i + 1][j2 = j - 2] != null) ||
-            (tablero[i2 = i - 1][j2 = j + 2] != null) || (tablero[i2 = i - 1][j2 = j - 2] != null))
+            if (tablero[i2 = i + 1][j2 = j - 2] != null || tablero[i2 = i - 1][j2 = j - 2] != null
+                || tablero[i2 = i + 2][j2 = j - 1] != null || tablero[i2 = i - 2][j2 = j - 1] != null
+                || tablero[i2 = i + 2][j2 = j + 1] != null || tablero[i2 = i - 2][j2 = j - 1] != null)
             {
                 if (!tablero[i2][j2].getColor().equals(colorPieza)
                     && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
@@ -383,6 +344,124 @@ public class Rey extends Pieza
                     return x;
                 }
             }
+        }
+        else if (i == 0 && j == 0)
+        {
+            if (tablero[i2 = i + 1][j2 = j + 2] != null || tablero[i2 = i + 2][j2 = j + 1] != null)
+            {
+                if (!tablero[i2][j2].getColor().equals(colorPieza)
+                    && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+        }
+        else if (i == 0 && j == 7)
+        {
+            if (tablero[i2 = i + 1][j2 = j - 2] != null || tablero[i2 = i + 2][j2 = j - 1] != null)
+            {
+                if (!tablero[i2][j2].getColor().equals(colorPieza)
+                    && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+        }
+        else if (i == 7 && j == 0)
+        {
+            if (tablero[i2 = i - 1][j2 = j + 2] != null || tablero[i2 = i - 2][j2 = j + 1] != null)
+            {
+                if (!tablero[i2][j2].getColor().equals(colorPieza)
+                    && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+        }
+        else if (i == 7 && j == 7)
+        {
+            if (tablero[i2 = i - 1][j2 = j - 2] != null || tablero[i2 = i - 2][j2 = j - 1] != null)
+            {
+                if (!tablero[i2][j2].getColor().equals(colorPieza)
+                    && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+        }
+        else if (i == 1 && j == 1)
+        {
+            if (tablero[i2 = i + 1][j2 = j + 2] != null || tablero[i2 = i + 2][j2 = j + 1] != null
+                || tablero[i2 = i - 1][j2 = j + 2] != null || tablero[i2 = i + 2][j2 = j - 1] != null)
+            {
+                if (!tablero[i2][j2].getColor().equals(colorPieza)
+                    && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+        }
+        else if (i == 1 && j == 6)
+        {
+            if (tablero[i2 = i + 1][j2 = j - 2] != null || tablero[i2 = i + 2][j2 = j - 1] != null
+                || tablero[i2 = i - 1][j2 = j - 2] != null || tablero[i2 = i + 2][j2 = j + 1] != null)
+
+            {
+                if (!tablero[i2][j2].getColor().equals(colorPieza)
+                    && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+        }
+        else if (i == 6 && j == 1)
+        {
+            if (tablero[i2 = i + 1][j2 = j + 2] != null || tablero[i2 = i - 2][j2 = j + 1] != null
+                || tablero[i2 = i - 1][j2 = j + 2] != null || tablero[i2 = i - 2][j2 = j - 1] != null)
+            {
+                if (!tablero[i2][j2].getColor().equals(colorPieza)
+                    && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+        }
+        else if (i == 6 && j == 6)
+        {
+            if (tablero[i2 = i + 1][j2 = j - 2] != null || tablero[i2 = i - 2][j2 = j - 1] != null
+                || tablero[i2 = i - 1][j2 = j - 2] != null || tablero[i2 = i - 2][j2 = j + 1] != null)
+            {
+                if (!tablero[i2][j2].getColor().equals(colorPieza)
+                    && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+        }
+        else
+        {
+            if ((tablero[i2 = i + 2][j2 = j + 1] != null) || (tablero[i2 = i + 2][j2 = j - 1] != null)
+                || (tablero[i2 = i - 2][j2 = j + 1] != null) || (tablero[i2 = i - 2][j2 = j - 1] != null)
+                || (tablero[i2 = i + 1][j2 = j + 2] != null) || (tablero[i2 = i + 1][j2 = j - 2] != null)
+                || (tablero[i2 = i - 1][j2 = j + 2] != null) || (tablero[i2 = i - 1][j2 = j - 2] != null))
+            {
+                if (!tablero[i2][j2].getColor().equals(colorPieza)
+                    && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+        }
+        
         return x;
     }
 
