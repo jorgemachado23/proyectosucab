@@ -1,9 +1,9 @@
 
 package ajedrez;
 
-public class Reina extends Pieza
+public class Dama extends Pieza
 {
-    //Logica para mover una pieza de tipo reina dado su posicion inicial y posible
+    //Logica para mover una pieza de tipo dama dado su posicion inicial y posible
     //posicion final
     public Pieza [][] MoverComer(Pieza [][] tablero, int[] posicionInicial, int[] posicionFinal)
     {
