@@ -48,9 +48,9 @@ public class Main {
                        {
                            Peon peon = new Peon();
 
-                           matriz = peon.MoverComer(matriz,inicial,terminal);
-
                            String color = matriz[inicial[0]][inicial[1]].getColor();
+
+                           //matriz = peon.MoverComer(matriz,inicial,terminal);
 
                            Rey reyAtaque = new Rey();
 
@@ -286,7 +286,6 @@ public class Main {
                    System.out.println();
                }
            }
-
 
        }
        catch(Exception e)
