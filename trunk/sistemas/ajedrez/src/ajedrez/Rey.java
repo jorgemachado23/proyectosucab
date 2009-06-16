@@ -49,11 +49,16 @@ public class Rey extends Pieza
         {
             for (int j = 0; j < 8; j++)
             {
-                if (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("rey") &&
-                   !tablero[i][j].getColor().equals("colorPieza"))
+                if (tablero[i][j] !=null)
                 {
-                    posicionRey[0] = i;
-                    posicionRey[1] = j;
+
+                    if (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("rey") &&
+                       tablero[i][j].getColor().equals(colorPieza))
+                    {
+                        posicionRey[0] = i;
+                        posicionRey[1] = j;
+                    }
+                    
                 }
             }
         }
