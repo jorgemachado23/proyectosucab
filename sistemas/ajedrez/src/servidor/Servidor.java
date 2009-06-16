@@ -13,9 +13,11 @@ import java.net.*;
  */
 public class Servidor
 {
-    static final int PUERTO=5000;
+    static final int PUERTO = 5000;
 
-        public Servidor( ) {
+    static Socket skCliente = new Socket();
+
+    public Servidor( ) {
 
                 try {
 
@@ -23,26 +25,21 @@ public class Servidor
 
                 System.out.println("Escucho el puerto " + PUERTO );
 
-                for ( int numCli = 0; numCli < 3; numCli++ )
+                   if (true){
 
-                {
+                            skCliente = skServidor.accept(); // Crea objeto
 
-                Socket skCliente = skServidor.accept(); // Crea objeto
+                            System.out.println("Sirvo al cliente " + skCliente);
 
-                System.out.println("Sirvo al cliente " +numCli);
+                            OutputStream aux = skCliente.getOutputStream();
 
-                OutputStream aux = skCliente.getOutputStream();
+                            DataOutputStream flujo= new DataOutputStream( aux );
 
-                DataOutputStream flujo= new DataOutputStream( aux );
+                            flujo.writeUTF( "Establecida la conexion con el cliente " + skServidor );
 
-                flujo.writeUTF( "Hola cliente " + numCli );
-
-                skCliente.close();
-
-                }
-
-                System.out.println("Demasiados clientes por hoy");
-
+                            //this.RecibirComando();
+                         
+                                }
                 }
                 catch( Exception e ) {
 
@@ -52,9 +49,30 @@ public class Servidor
 
         }
 
+public void RecibirComando()
+{
+    try{
+
+        InputStream aux = skCliente.getInputStream();
+
+        DataInputStream flujo = new DataInputStream( aux );
+
+        System.out.println( flujo.readUTF() );
+
+        skCliente.close();
+
+    }
+    catch(Exception e)
+    {
+
+    System.out.println( e.getMessage() );
+
+    }
+}
     public static void main( String[] arg ) {
 
-    new Servidor();
+    Servidor servidor = new Servidor();
+    servidor.RecibirComando();
 
     }
 
