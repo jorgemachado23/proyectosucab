@@ -14,18 +14,23 @@ import java.util.*;
  */
 public class HiloServidor extends Thread
 {
-     Socket scli = null;
-     Socket scli2 = null;
-     Servidor server;
+    String jugador;
 
-     public HiloServidor(Socket scliente,Socket scliente2,Servidor server)
+     public HiloServidor(String jugador)
      {
-        
+         this.jugador = jugador;
      }
 
      @Override
      public void run()
      {
-
+            try
+            {
+                System.out.println(jugador);
+            }
+            catch(Exception e)
+            {
+                System.out.println(e);
+            }
      }
 }
