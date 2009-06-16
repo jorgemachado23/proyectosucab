@@ -121,7 +121,7 @@ public class Rey extends Pieza
         {
             if (tablero[i][columna] != null && !tablero[i][columna].getColor().equalsIgnoreCase(colorPieza)
                 && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("torre")
-                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("dama")))
             {
                 x = true;
                 return x;
@@ -134,7 +134,7 @@ public class Rey extends Pieza
             {
                 if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
                     && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("dama")))
                 {
                     x = true;
                     return x;
@@ -150,7 +150,7 @@ public class Rey extends Pieza
         {
             if (tablero[i][columna] != null && !tablero[i][columna].getColor().equalsIgnoreCase(colorPieza)
                 && (tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("torre")
-                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                || tablero[i][columna].getClass().getSimpleName().equalsIgnoreCase("dama")))
             {
                 x = true;
                 return x;
@@ -163,7 +163,7 @@ public class Rey extends Pieza
             {
                 if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
                     && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("dama")))
                 {
                     x = true;
                     return x;
@@ -179,7 +179,7 @@ public class Rey extends Pieza
         {
             if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza)
                 && (tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("torre")
-                || tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                || tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("dama")))
             {
                 x = true;
                 return x;
@@ -192,7 +192,7 @@ public class Rey extends Pieza
             {
                 if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
                     && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("dama")))
                 {
                     x = true;
                     return x;
@@ -208,7 +208,7 @@ public class Rey extends Pieza
         {
             if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza)
                 && (tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("torre")
-                || tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                || tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("dama")))
             {
                 x = true;
                 return x;
@@ -221,7 +221,7 @@ public class Rey extends Pieza
             {
                 if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
                     && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("dama")))
                 {
                     x = true;
                     return x;

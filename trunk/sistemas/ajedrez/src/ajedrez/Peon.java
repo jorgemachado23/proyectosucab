@@ -38,10 +38,10 @@ public class Peon extends Pieza{
                 tablero[posF][posC] = alfil;
                 tablero[posF][posC].setColor(colorPieza);
             }
-            else if (tipoPieza.equalsIgnoreCase("reina"))
+            else if (tipoPieza.equalsIgnoreCase("dama"))
             {
-                Reina reina = new Reina();
-                tablero[posF][posC] = reina;
+                Dama dama = new Dama();
+                tablero[posF][posC] = dama;
                 tablero[posF][posC].setColor(colorPieza);
             }
             else

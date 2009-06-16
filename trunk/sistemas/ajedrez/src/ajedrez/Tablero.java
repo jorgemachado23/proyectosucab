@@ -38,10 +38,10 @@ public class Tablero {
                 }
                 if (i == 0 && j ==3)
                 {
-                    Reina reina = new Reina();
-                    reina.setColor("blanco");
-                    //reina.setEstado(true);
-                    matriz[i][j] = reina;
+                    Dama dama = new Dama();
+                    dama.setColor("blanco");
+                    //dama.setEstado(true);
+                    matriz[i][j] = dama;
                 }
                 if (i == 0 && j ==4)
                 {
@@ -94,10 +94,10 @@ public class Tablero {
                 }
                 if (i == 7 && j ==3)
                 {
-                    Reina reina = new Reina();
-                    reina.setColor("negro");
-                    //reina.setEstado(true);
-                    matriz[i][j] = reina;
+                    Dama dama = new Dama();
+                    dama.setColor("negro");
+                    //dama.setEstado(true);
+                    matriz[i][j] = dama;
                 }
                 if (i == 7 && j ==4)
                 {

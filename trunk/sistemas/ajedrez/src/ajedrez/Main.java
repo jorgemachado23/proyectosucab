@@ -217,9 +217,9 @@ public class Main {
                            }
 
                    }
-                   if (nombrePieza.equals("Reina"))
+                   if (nombrePieza.equals("Dama"))
                    {
-                           Reina reina = new Reina();
+                           Dama dama = new Dama();
 
                            String color = matriz[inicial[0]][inicial[1]].getColor();
 
@@ -233,7 +233,7 @@ public class Main {
 
                            if (!reyAtaque.Jaque(posicion1[0], posicion1[1], matriz)) //si el rey del equipo que ataca
                            {                                                         //no esta en jaque entonces mueve
-                                matriz = reina.MoverComer(matriz,inicial,terminal);  //la pieza
+                                matriz = dama.MoverComer(matriz,inicial,terminal);  //la pieza
 
                                 if (color.equals("blanco"))
                                 {
