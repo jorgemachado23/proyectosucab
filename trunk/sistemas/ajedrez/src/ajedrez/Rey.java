@@ -130,12 +130,15 @@ public class Rey extends Pieza
         for (i = fila + 1; i < 8; i++)
         {
             j++;
-            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
-                && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+            if (j < 8)
             {
-                x = true;
-                return x;
+                if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
+                    && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                {
+                    x = true;
+                    return x;
+                }
             }
             if(j == 7)
             {
@@ -156,12 +159,15 @@ public class Rey extends Pieza
         for (i = fila - 1; i > -1; i--)
         {
             j--;
-            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
-                && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+            if (j > 0)
             {
-                x = true;
-                return x;
+                if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
+                    && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                {
+                    x = true;
+                    return x;
+                }
             }
             if (j == 1)
             {
@@ -171,7 +177,7 @@ public class Rey extends Pieza
         i = fila;
         for (j = columna + 1; j < 8; j++)
         {
-            if (tablero[fila][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
+            if (tablero[fila][j] != null && !tablero[fila][j].getColor().equalsIgnoreCase(colorPieza)
                 && (tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("torre")
                 || tablero[fila][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
             {
@@ -182,12 +188,15 @@ public class Rey extends Pieza
         for (j = columna + 1; j < 8; j++)
         {
             i--;
-            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
-                && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+            if (i > 0)
             {
-                x = true;
-                return x;
+                if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
+                    && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                {
+                    x = true;
+                    return x;
+                }
             }
             if (i == -1)
             {
@@ -208,12 +217,15 @@ public class Rey extends Pieza
         for (j = columna - 1; j > -1; j--)
         {
             i++;
-            if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
-                && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
-                || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+            if (i < 8)
             {
-                x = true;
-                return x;
+                if (tablero[i][j] != null && !tablero[i][j].getColor().equalsIgnoreCase(colorPieza)
+                    && (tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("alfil")
+                    || tablero[i][j].getClass().getSimpleName().equalsIgnoreCase("reina")))
+                {
+                    x = true;
+                    return x;
+                }
             }
             if (i == 7)
             {
