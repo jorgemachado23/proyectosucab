@@ -1,16 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package servidor;
 
 import java.io.*;
 import java.net.*;
-/**
- *
- * @author Alejandro
- */
+
 public class Servidor
 {
     static final int PUERTO = 5000;
@@ -69,10 +61,14 @@ public void RecibirComando()
 
     }
 }
+
+
     public static void main( String[] arg ) {
 
     Servidor servidor = new Servidor();
     servidor.RecibirComando();
+    HiloServidor jugador = new HiloServidor("blanco");
+    jugador.start();
 
     }
 
