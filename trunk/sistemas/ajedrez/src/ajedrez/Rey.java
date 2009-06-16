@@ -321,7 +321,7 @@ public class Rey extends Pieza
         {
             if (tablero[i2 = i + 1][j2 = j + 2] != null || tablero[i2 = i - 1][j2 = j + 2] != null
                 || tablero[i2 = i + 2][j2 = j + 1] != null || tablero[i2 = i - 2][j2 = j + 1] != null
-                || tablero[])
+                || tablero[i2 = i + 2][j2 = j - 1] != null || tablero[i2 = i - 2][j2 = j - 1] != null)
             {
                 if (!tablero[i2][j2].getColor().equals(colorPieza)
                     && tablero[i2][j2].getClass().getSimpleName().equalsIgnoreCase("caballo"))
