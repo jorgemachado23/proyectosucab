@@ -13,44 +13,49 @@ import java.net.*;
  */
 public class Servidor
 {
-    public Servidor()
-    {
+    static final int PUERTO=5000;
 
-    }
+        public Servidor( ) {
 
-    public void runServer()
-    {
-      ServerSocket serv = null;//para comunicacion
-      ServerSocket serv2 = null;//para enviar mensajes
-      boolean listening = true;
-      try
-      {
-         serv = new ServerSocket(8081);
-         serv2 = new ServerSocket(8082);
-         while(listening)
-         {
-            Socket sock = null, sock2 = null;
-            try
-            {
-               sock = serv.accept();
-               sock2 = serv2.accept();
-            }
-            catch (IOException e)
-            {
-               continue;
-            }
-        HiloServidor user = new HiloServidor(sock, sock2, this);
-        user.start();
+                try {
+
+                ServerSocket skServidor = new ServerSocket( PUERTO );
+
+                System.out.println("Escucho el puerto " + PUERTO );
+
+                for ( int numCli = 0; numCli < 3; numCli++ )
+
+                {
+
+                Socket skCliente = skServidor.accept(); // Crea objeto
+
+                System.out.println("Sirvo al cliente " +numCli);
+
+                OutputStream aux = skCliente.getOutputStream();
+
+                DataOutputStream flujo= new DataOutputStream( aux );
+
+                flujo.writeUTF( "Hola cliente " + numCli );
+
+                skCliente.close();
+
+                }
+
+                System.out.println("Demasiados clientes por hoy");
+
+                }
+                catch( Exception e ) {
+
+                System.out.println( e.getMessage() );
+
+                }
+
         }
-      }
-      catch(IOException e)
-      {
-         e.printStackTrace();
-      }
+
+    public static void main( String[] arg ) {
+
+    new Servidor();
+
     }
-    public static void main(String[] args) throws IOException
-    {
-        Servidor server = new Servidor();
-        server.runServer();
-    }
+
 }
