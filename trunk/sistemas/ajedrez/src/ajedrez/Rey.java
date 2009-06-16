@@ -69,26 +69,49 @@ public class Rey extends Pieza
         int j = columna;
         String colorPieza = tablero[fila][columna].getColor();
 
-        if ((tablero[i + 1][j + 1].getClass().getSimpleName().equalsIgnoreCase("peon")
-            && !tablero[i + 1][j + 1].getColor().equalsIgnoreCase(colorPieza))
-            || (tablero[i + 1][j - 1].getClass().getSimpleName().equalsIgnoreCase("peon")
-            && !tablero[i + 1][j - 1].getColor().equalsIgnoreCase(colorPieza))
-            && colorPieza.equalsIgnoreCase("blanco"))
+        if (colorPieza.equalsIgnoreCase("blanco"))
         {
-            x = true;
-            return x;
+            if (tablero[i + 1][j + 1] != null)
+            {
+                if ((tablero[i + 1][j + 1].getClass().getSimpleName().equalsIgnoreCase("peon")
+                    && !tablero[i + 1][j + 1].getColor().equalsIgnoreCase(colorPieza)))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+            if (tablero[i + 1][j - 1] != null)
+            {
+                if ((tablero[i + 1][j - 1].getClass().getSimpleName().equalsIgnoreCase("peon")
+                    && !tablero[i + 1][j - 1].getColor().equalsIgnoreCase(colorPieza)))
+                {
+                    x = true;
+                    return x;
+                }
+            }
         }
-        else if ((tablero[i - 1][j + 1].getClass().getSimpleName().equalsIgnoreCase("peon")
-                && !tablero[i - 1][j + 1].getColor().equalsIgnoreCase(colorPieza))
-                || (tablero[i - 1][j - 1].getClass().getSimpleName().equalsIgnoreCase("peon")            
-                && !tablero[i - 1][j - 1].getColor().equalsIgnoreCase(colorPieza))
-                && colorPieza.equalsIgnoreCase("negro"))
+        else if (colorPieza.equalsIgnoreCase("negro"))
         {
-            x = true;
-            return x;
+            if (tablero[i - 1][j + 1] != null)
+            {
+                if ((tablero[i - 1][j + 1].getClass().getSimpleName().equalsIgnoreCase("peon")
+                    && !tablero[i - 1][j + 1].getColor().equalsIgnoreCase(colorPieza)))
+                {
+                    x = true;
+                    return x;
+                }
+            }
+            if (tablero[i - 1][j - 1] != null)
+            {
+                if ((tablero[i - 1][j - 1].getClass().getSimpleName().equalsIgnoreCase("peon")
+                    && !tablero[i - 1][j - 1].getColor().equalsIgnoreCase(colorPieza)))
+                {
+                    x = true;
+                    return x;
+                }
+            }
         }
-
-
+           
         for (i = fila + 1; i < 8; i++)
         {
             if (tablero[i][columna] != null && !tablero[i][columna].getColor().equalsIgnoreCase(colorPieza)
