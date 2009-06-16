@@ -255,12 +255,12 @@ public class Tablero {
             {
                 if (matriz[i][j] != null){
 
-                    System.out.print(matriz[i][j].color+"/"+ matriz[i][j].getClass().getSimpleName()+" ");
+                    System.out.print("    "+matriz[i][j].getClass().getSimpleName().substring(0, 1)+matriz[i][j].getColor().substring(0, 1).toUpperCase()+"    ");
 
                 }
                 else
                 {
-                    System.out.print(matriz[i][j]);
+                    System.out.print("   "+matriz[i][j]+"   ");
                 }
 
                 if (j==7)
