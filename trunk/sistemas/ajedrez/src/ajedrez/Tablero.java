@@ -249,28 +249,86 @@ public class Tablero {
 
     public void ImprimirTablero(Pieza[][] matriz)
     {
+        System.out.print("          _______________________________________________________________________________");
+        System.out.println();
         for (int i=0; i<matriz.length;i++)
         {
+            if (i == 0)
+            {
+                System.out.print("         |         |         |         |         |         |         |         |         |");
+                System.out.println();
+                System.out.print("     1   |");
+            }
+            else if (i == 1)
+            {
+                System.out.print("         |         |         |         |         |         |         |         |         |");
+                System.out.println();
+                System.out.print("     2   |");
+            }
+            else if (i == 2)
+            {
+                System.out.print("         |         |         |         |         |         |         |         |         |");
+                System.out.println();
+                System.out.print("     3   |");
+            }
+            else if (i == 3)
+            {
+                System.out.print("         |         |         |         |         |         |         |         |         |");
+                System.out.println();
+                System.out.print("     4   |");
+            }
+            else if (i == 4)
+            {
+                System.out.print("         |         |         |         |         |         |         |         |         |");
+                System.out.println();
+                System.out.print("     5   |");
+            }
+            else if (i == 5)
+            {
+                System.out.print("         |         |         |         |         |         |         |         |         |");
+                System.out.println();
+                System.out.print("     6   |");
+            }
+            else if (i == 6)
+            {
+                System.out.print("         |         |         |         |         |         |         |         |         |");
+                System.out.println();
+                System.out.print("     7   |");
+            }
+            else if (i == 7)
+            {
+                System.out.print("         |         |         |         |         |         |         |         |         |");
+                System.out.println();
+                System.out.print("     8   |");
+            }
             for (int j=0; j<matriz.length;j++)
             {
-                if (matriz[i][j] != null){
-
-                    System.out.print("    "+matriz[i][j].getClass().getSimpleName().substring(0, 1)+matriz[i][j].getColor().substring(0, 1).toUpperCase()+"    ");
-
+                if (matriz[i][j] != null)
+                {
+                    System.out.print("    "+matriz[i][j].getClass().getSimpleName().substring(0, 1)+matriz[i][j].getColor().substring(0, 1).toUpperCase()+"   |");
+                    if (j == 7)
+                    {
+                        System.out.println("\n         |_________|_________|_________|_________|_________|_________|_________|_________|");
+                    }
                 }
                 else
                 {
-                    System.out.print("   "+matriz[i][j]+"   ");
+                    System.out.print("         |");
+                    if (j == 7)
+                    {
+                        System.out.println("\n         |_________|_________|_________|_________|_________|_________|_________|_________|");
+                    }
                 }
-
-                if (j==7)
+                if (j == 7)
                 {
-                System.out.println();
+                   
                 }
-
             }
-
         }
-
+        //System.out.print("          _______________________________________________________________________________");
+        //System.out.println("\n");
+        System.out.print("              A         B         C         D         E         F         G         H");
+        System.out.println();
+        System.out.println();
     }
 }
