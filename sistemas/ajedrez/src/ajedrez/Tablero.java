@@ -38,17 +38,17 @@ public class Tablero {
                 }
                 if (i == 0 && j ==3)
                 {
-                    Dama dama = new Dama();
-                    dama.setColor("blanco");
-                    //dama.setEstado(true);
-                    matriz[i][j] = dama;
-                }
-                if (i == 0 && j ==4)
-                {
                     Rey rey = new Rey();
                     rey.setColor("blanco");
                     //rey.setEstado(true);
                     matriz[i][j] = rey;
+                }
+                if (i == 0 && j ==4)
+                {
+                    Dama dama = new Dama();
+                    dama.setColor("blanco");
+                    //dama.setEstado(true);
+                    matriz[i][j] = dama;
                 }
                 if (i == 0 && j ==5)
                 {
@@ -94,17 +94,17 @@ public class Tablero {
                 }
                 if (i == 7 && j ==3)
                 {
-                    Dama dama = new Dama();
-                    dama.setColor("negro");
-                    //dama.setEstado(true);
-                    matriz[i][j] = dama;
-                }
-                if (i == 7 && j ==4)
-                {
                     Rey rey = new Rey();
                     rey.setColor("negro");
                     //rey.setEstado(true);
                     matriz[i][j] = rey;
+                }
+                if (i == 7 && j ==4)
+                {
+                    Dama dama = new Dama();
+                    dama.setColor("negro");
+                    //dama.setEstado(true);
+                    matriz[i][j] = dama;
                 }
                 if (i == 7 && j ==5)
                 {
@@ -251,7 +251,7 @@ public class Tablero {
     {
         System.out.print("          _______________________________________________________________________________");
         System.out.println();
-        for (int i=0; i<matriz.length;i++)
+        for (int i=7; i>-1;i--)
         {
             if (i == 0)
             {
@@ -301,12 +301,12 @@ public class Tablero {
                 System.out.println();
                 System.out.print("     8   |");
             }
-            for (int j=0; j<matriz.length;j++)
+            for (int j=7; j>-1;j--)
             {
                 if (matriz[i][j] != null)
                 {
                     System.out.print("    "+matriz[i][j].getClass().getSimpleName().substring(0, 1)+matriz[i][j].getColor().substring(0, 1).toUpperCase()+"   |");
-                    if (j == 7)
+                    if (j == 0)
                     {
                         System.out.println("\n         |_________|_________|_________|_________|_________|_________|_________|_________|");
                     }
@@ -314,19 +314,14 @@ public class Tablero {
                 else
                 {
                     System.out.print("         |");
-                    if (j == 7)
+                    if (j == 0)
                     {
                         System.out.println("\n         |_________|_________|_________|_________|_________|_________|_________|_________|");
                     }
-                }
-                if (j == 7)
-                {
-                   
-                }
+                }              
             }
         }
-        //System.out.print("          _______________________________________________________________________________");
-        //System.out.println("\n");
+        System.out.println();
         System.out.print("              A         B         C         D         E         F         G         H");
         System.out.println();
         System.out.println();
