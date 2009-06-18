@@ -92,3 +92,9 @@ class doComms implements Runnable {
       }
     }
 }
+
+
+
+
+
+http://java.sun.com/developer/onlineTraining/Programming/BasicJava2/socket.html#server
