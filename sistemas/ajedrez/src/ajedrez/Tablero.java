@@ -163,42 +163,42 @@ public class Tablero {
     {
         if (columna.toUpperCase().equals("A"))
         {
-            numero=0;
+            numero=7;
             x = true;
         }
         else if(columna.toUpperCase().equals("B"))
         {
-            numero=1;
+            numero=6;
             x = true;
         }
         else if(columna.toUpperCase().equals("C"))
         {
-            numero=2;
+            numero=5;
             x = true;
         }
         else if(columna.toUpperCase().equals("D"))
         {
-            numero=3;
+            numero=4;
             x = true;
         }
         else if(columna.toUpperCase().equals("E"))
         {
-            numero=4;
+            numero=3;
             x = true;
         }
         else if(columna.toUpperCase().equals("F"))
         {
-            numero=5;
+            numero=2;
             x = true;
         }
         else if(columna.toUpperCase().equals("G"))
         {
-            numero=6;
+            numero=1;
             x = true;
         }
         else if(columna.toUpperCase().equals("H"))
         {
-            numero=7;
+            numero=0;
             x = true;
         }
         else
