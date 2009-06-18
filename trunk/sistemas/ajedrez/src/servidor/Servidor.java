@@ -2,74 +2,79 @@ package servidor;
 
 import java.io.*;
 import java.net.*;
+import java.util.*;
 
-public class Servidor
+public class Servidor implements Runnable
 {
-    static final int PUERTO = 5000;
+     public static int puerto = 5000;
+     public static String ruta;
+     //private static VentanaServidor pantalla = new VentanaServidor();
+     //private static DefaultListModel listModelVacio;
+     // private static DefaultListModel listModelCanciones;
+     public static Vector usuariosConectados = new Vector();
+     public static Vector usuarios = new Vector();
 
-    static Socket skCliente = new Socket();
 
     public Servidor( ) {
 
-                try {
+              
+        }
 
-                ServerSocket skServidor = new ServerSocket( PUERTO );
+   public void procesarConexion(Socket canal)
+   {
+//      iniciar el Gestor de Servicios en un nuevo hilo
+        new Thread(new HiloServidor (canal)).start();
+   }
 
-                System.out.println("Escucho el puerto " + PUERTO );
 
-                   if (true){
+public void iniciarServidor()
+{
+      new Thread(this).start();
+}
 
-                            skCliente = skServidor.accept(); // Crea objeto
+public void run()
+   {
+        ServerSocket serverSocket = null;
 
-                            System.out.println("Sirvo al cliente " + skCliente);
+        Socket communicationSocket = null;
 
-                            OutputStream aux = skCliente.getOutputStream();
+        try {
+            serverSocket = new ServerSocket(puerto);
 
-                            DataOutputStream flujo= new DataOutputStream( aux );
+            System.out.println("Servidor iniciado");
 
-                            flujo.writeUTF( "Establecida la conexion con el cliente " + skServidor );
+            System.out.println("Esperando Coneccion...");
+             }
+            catch (IOException e) {
+            System.out.println("\nEl servidor no pudo ser iniciado, causa: " +
+                    e.getMessage());
 
-                            //this.RecibirComando();
-                         
-                                }
+            return;
+        }
+
+        //  escucha la peticion de conexion y la acepta
+
+       while (true) {
+            try {
+
+                communicationSocket = serverSocket.accept();
+                procesarConexion(communicationSocket);
+
+
                 }
-                catch( Exception e ) {
+            catch (IOException ex) {
 
-                System.out.println( e.getMessage() );
+                System.out.println(ex.getMessage());
 
                 }
 
         }
-
-public void RecibirComando()
-{
-    try{
-
-        InputStream aux = skCliente.getInputStream();
-
-        DataInputStream flujo = new DataInputStream( aux );
-
-        System.out.println( flujo.readUTF() );
-
-        skCliente.close();
-
     }
-    catch(Exception e)
-    {
-
-    System.out.println( e.getMessage() );
-
-    }
-}
-
 
     public static void main( String[] arg ) {
 
     Servidor servidor = new Servidor();
-    servidor.RecibirComando();
-    HiloServidor jugador = new HiloServidor("blanco");
-    jugador.start();
-
+    servidor.iniciarServidor();
     }
 
 }
