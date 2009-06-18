@@ -474,19 +474,111 @@ public class Rey extends Pieza
 
         if (this.Jaque(fila, columna, tablero))
         {
-            if ((this.Jaque(fila + 1, columna, tablero) || tablero[fila + 1][columna].getColor().equalsIgnoreCase(colorPieza))
-                && (this.Jaque(fila + 1, columna + 1, tablero) || tablero[fila + 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
-                && (this.Jaque(fila + 1, columna - 1, tablero) || tablero[fila + 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
-                && (this.Jaque(fila - 1, columna, tablero) || tablero[fila - 1][columna].getColor().equalsIgnoreCase(colorPieza))
-                && (this.Jaque(fila - 1, columna + 1, tablero) || tablero[fila - 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
-                && (this.Jaque(fila - 1, columna - 1, tablero) || tablero[fila - 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
-                && (this.Jaque(fila, columna + 1, tablero) || tablero[fila][columna + 1].getColor().equalsIgnoreCase(colorPieza))
-                && (this.Jaque(fila, columna - 1, tablero) || tablero[fila][columna - 1].getColor().equalsIgnoreCase(colorPieza)))
+            if (fila == 0 && columna > 0 && columna < 7)
             {
-                x = true;
-                return x;
+                if (this.Jaque(fila + 1, columna, tablero) || tablero[fila + 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                    if (this.Jaque(fila + 1, columna + 1, tablero) || tablero[fila + 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                        if (this.Jaque(fila + 1, columna - 1, tablero) || tablero[fila + 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                            if (this.Jaque(fila, columna + 1, tablero) || tablero[fila][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                                if (this.Jaque(fila, columna - 1, tablero) || tablero[fila][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                                {
+                                    x = true;
+                                    return x;
+                                }
+            }
+            else if (fila == 0 && columna == 0)
+            {
+                if (this.Jaque(fila + 1, columna, tablero) || tablero[fila + 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                    if (this.Jaque(fila + 1, columna + 1, tablero) || tablero[fila + 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                        if (this.Jaque(fila, columna + 1, tablero) || tablero[fila][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                        {
+                            x = true;
+                            return x;
+                        }
+            }
+            else if (fila == 0 && columna == 7)
+            {
+                if (this.Jaque(fila + 1, columna, tablero) || tablero[fila + 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                    if (this.Jaque(fila + 1, columna - 1, tablero) || tablero[fila + 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                        if (this.Jaque(fila, columna - 1, tablero) || tablero[fila][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                        {
+                            x = true;
+                            return x;
+                        }
+            }
+            else if (fila == 7 && columna > 0 && columna < 7)
+            {
+                if (this.Jaque(fila - 1, columna, tablero) || tablero[fila - 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                    if (this.Jaque(fila - 1, columna + 1, tablero) || tablero[fila - 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                        if (this.Jaque(fila - 1, columna - 1, tablero) || tablero[fila - 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                            if (this.Jaque(fila, columna + 1, tablero) || tablero[fila][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                                if (this.Jaque(fila, columna - 1, tablero) || tablero[fila][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                                {
+                                    x = true;
+                                    return x;
+                                }
+            }
+            else if (fila == 7 && columna == 0)
+            {
+                if (this.Jaque(fila, columna - 1, tablero) || tablero[fila][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                    if (this.Jaque(fila - 1, columna + 1, tablero) || tablero[fila - 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                        if (this.Jaque(fila - 1, columna, tablero) || tablero[fila - 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                        {
+                            x = true;
+                            return x;
+                        }
+            }
+            else if (fila == 7 && columna == 0)
+            {
+                if (this.Jaque(fila - 1, columna, tablero) || tablero[fila - 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                    if (this.Jaque(fila, columna - 1, tablero) || tablero[fila][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                        if (this.Jaque(fila - 1, columna - 1, tablero) || tablero[fila - 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                        {
+                            x = true;
+                            return x;
+                        }
+            }
+            else if (fila > 0 && fila < 7 && columna == 0)
+            {
+                if (this.Jaque(fila, columna + 1, tablero) || tablero[fila][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                    if (this.Jaque(fila + 1, columna, tablero) || tablero[fila + 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                        if (this.Jaque(fila - 1, columna, tablero) || tablero[fila - 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                            if (this.Jaque(fila + 1, columna + 1, tablero) || tablero[fila + 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                                if (this.Jaque(fila - 1, columna + 1, tablero) || tablero[fila - 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                                {
+                                    x = true;
+                                    return x;
+                                }
+            }
+            else if (fila > 0 && fila < 7 && columna == 7)
+            {
+                if (this.Jaque(fila - 1, columna, tablero) || tablero[fila - 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                    if (this.Jaque(fila + 1, columna, tablero) || tablero[fila + 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                        if (this.Jaque(fila + 1, columna - 1, tablero) || tablero[fila + 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                            if (this.Jaque(fila - 1, columna - 1, tablero) || tablero[fila - 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                                if (this.Jaque(fila, columna - 1, tablero) || tablero[fila][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                                {
+                                    x = true;
+                                    return x;
+                                }
+            }
+            else
+            {
+            if (this.Jaque(fila + 1, columna, tablero) || tablero[fila + 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                if (this.Jaque(fila + 1, columna + 1, tablero) || tablero[fila + 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                    if (this.Jaque(fila + 1, columna - 1, tablero) || tablero[fila + 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                        if (this.Jaque(fila - 1, columna, tablero) || tablero[fila - 1][columna].getColor().equalsIgnoreCase(colorPieza))
+                            if (this.Jaque(fila - 1, columna + 1, tablero) || tablero[fila - 1][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                                if (this.Jaque(fila - 1, columna - 1, tablero) || tablero[fila - 1][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                                    if (this.Jaque(fila, columna + 1, tablero) || tablero[fila][columna + 1].getColor().equalsIgnoreCase(colorPieza))
+                                        if (this.Jaque(fila, columna - 1, tablero) || tablero[fila][columna - 1].getColor().equalsIgnoreCase(colorPieza))
+                                        {
+                                            x = true;
+                                            return x;
+                                        }
             }
         }
         return x;
     }
 }
+
