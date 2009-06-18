@@ -1,0 +1,94 @@
+The problem is old - How to implement a multi-threaded, socket-based server that will let you read and write to the client (for example a telnet terminal.
+
+There are several problems with constructing such a server:
+
+   1. You have to use threads because otherwise clients will be queued up waiting for a connection.
+   2. Many of the publically available examples (even some in some books) do not work for I/O servers. They are mostly developed around reading from a socket not writing to the socket as well. In our example we give a working read/write code example.
+   3. You need to avoid race conditions when starting up a thread at times when connections are coming through thick and fast.
+
+The code below will implement just such a server. It is intended for a head start, so is a template rather than a tutorial on how to write a server in Java. We have decided on port 4444 to listen on in the example, but you need to decide on a suitable port yourself.
+
+The server will run, establishing connections from the port and echoing input received until it receives a line of input that is a full stop only ".".
+
+Have fun!
+
+The Kieser.net team.
+Honeypot: spam@kieser.net
+
+package sample_server;
+
+import java.io.*;
+import java.net.*;
+import java.security.*;
+
+/**
+ * Title:        Sample Server
+ * Description:  This utility will accept input from a socket, posting back to the socket before closing the link.
+ * It is intended as a template for coders to base servers on. Please report bugs to brad at kieser.net
+ * Copyright:    Copyright (c) 2002
+ * Company:      Kieser.net
+ * @author B. Kieser
+ * @version 1.0
+ */
+
+public class sample_server {
+
+  private static int port=4444, maxConnections=0;
+  // Listen for incoming connections and handle them
+  public static void main(String[] args) {
+    int i=0;
+
+    try{
+      ServerSocket listener = new ServerSocket(port);
+      Socket server;
+
+      while((i++ < maxConnections) || (maxConnections == 0)){
+        doComms connection;
+
+        server = listener.accept();
+        doComms conn_c= new doComms(server);
+        Thread t = new Thread(conn_c);
+        t.start();
+      }
+    } catch (IOException ioe) {
+      System.out.println("IOException on socket listen: " + ioe);
+      ioe.printStackTrace();
+    }
+  }
+
+}
+
+class doComms implements Runnable {
+    private Socket server;
+    private String line,input;
+
+    doComms(Socket server) {
+      this.server=server;
+    }
+
+    public void run () {
+
+      input="";
+
+      try {
+        // Get input from the client
+        DataInputStream in = new DataInputStream (server.getInputStream());
+        PrintStream out = new PrintStream(server.getOutputStream());
+
+        while((line = in.readLine()) != null && !line.equals(".")) {
+          input=input + line;
+          out.println("I got:" + line);
+        }
+
+        // Now write to the client
+
+        System.out.println("Overall message is:" + input);
+        out.println("Overall message is:" + input);
+
+        server.close();
+      } catch (IOException ioe) {
+        System.out.println("IOException on socket listen: " + ioe);
+        ioe.printStackTrace();
+      }
+    }
+}
