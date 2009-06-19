@@ -13,8 +13,8 @@ public class Servidor implements Runnable
      // private static DefaultListModel listModelCanciones;
      public static Vector usuariosConectados = new Vector();
      public static Vector usuarios = new Vector();
-
-
+     public static DataInputStream entrada = null;
+     public static DataOutputStream salida = null;
     public Servidor( ) {
 
               
@@ -23,7 +23,17 @@ public class Servidor implements Runnable
    public void procesarConexion(Socket canal)
    {
 //      iniciar el Gestor de Servicios en un nuevo hilo
-        new Thread(new HiloServidor (canal)).start();
+       try{
+        entrada = new DataInputStream(canal.getInputStream());
+		salida = new DataOutputStream(canal.getOutputStream());
+        new Thread(new HiloServidor (canal,entrada,salida)).start();
+       }
+       catch(Exception e)
+       {
+
+           e.printStackTrace();
+
+       }
    }
 
 
@@ -46,8 +56,10 @@ public void run()
             System.out.println("Esperando Coneccion...");
              }
             catch (IOException e) {
+
             System.out.println("\nEl servidor no pudo ser iniciado, causa: " +
-                    e.getMessage());
+
+            e.getMessage());
 
             return;
         }
@@ -58,8 +70,8 @@ public void run()
             try {
 
                 communicationSocket = serverSocket.accept();
-                procesarConexion(communicationSocket);
 
+                procesarConexion(communicationSocket);
 
                 }
             catch (IOException ex) {
