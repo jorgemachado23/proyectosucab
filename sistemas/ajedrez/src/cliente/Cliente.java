@@ -6,7 +6,7 @@ import java.net.*;
 
 public class Cliente {
 
-    static final String HOST = "localhost";
+    static final String HOST = "192.168.23.176";
 
     static final int PUERTO = 5000;
     
@@ -45,17 +45,12 @@ public void EnviarComando()
 
 
       }
-public boolean SeleccionarColor(String color)
+public void SeleccionarColor()
 {
     boolean flag = false;
 
         try
         {
-            OutputStream aux = skCliente.getOutputStream();
-
-            DataOutputStream flujosalida = new DataOutputStream(aux);
-
-            flujosalida.writeUTF(color);
 
             InputStream entrada = skCliente.getInputStream();
 
@@ -63,17 +58,7 @@ public boolean SeleccionarColor(String color)
 
             String respuesta = flujollegada.readUTF();
 
-
-            if (!respuesta.equals("Este color ya fue tomado"))
-            {
-                System.out.println(respuesta);
-
-                flag = true;
-            }
-            else
-            {
-                System.out.println(respuesta);
-            }
+            System.out.println(respuesta);
 
         }
         catch(Exception e)
@@ -83,11 +68,13 @@ public boolean SeleccionarColor(String color)
 
         }
 
-        return flag;
+        
 }
 public void jugar(String enviarjuego)
 {
     try{
+            //skCliente = new Socket( HOST , PUERTO );
+
             OutputStream aux = skCliente.getOutputStream();
 
             DataOutputStream flujosalida = new DataOutputStream(aux);
@@ -99,6 +86,8 @@ public void jugar(String enviarjuego)
             DataInputStream flujollegada = new DataInputStream(entrada);
 
             String respuesta = flujollegada.readUTF();
+
+            System.out.println(respuesta);
 
     }
     catch(Exception e)
@@ -115,17 +104,14 @@ public void jugar(String enviarjuego)
         
         cliente.EnviarComando();
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
 
         BufferedReader br3 = new BufferedReader(new InputStreamReader(System.in));
         try
         {
-            String color = br.readLine();
 
-            if (cliente.SeleccionarColor(color))
-            {
+                cliente.SeleccionarColor();
 
                 System.out.println("Coloque la posicion inicial");
 
@@ -139,11 +125,6 @@ public void jugar(String enviarjuego)
 
                 cliente.jugar(enviarJuego);
 
-            }
-            else
-            {
-
-            }
 
         }
         catch(Exception e)
