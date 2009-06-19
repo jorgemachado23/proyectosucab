@@ -6,10 +6,12 @@ public class Jugador {
 
     public String nombre;
 
-    public Jugador(String direccionIp)
+    public String color;
+
+    public Jugador(String direccionIp, String color)
     {
         nombre = direccionIp;
-
+        this.color = color;
     }
 
 

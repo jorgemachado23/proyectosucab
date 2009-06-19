@@ -16,11 +16,20 @@ public  class  HiloServidor  implements  Runnable
 {
      public Socket jugador;
      public ServerSocket SocketCliente;
+     public static DataInputStream entrada = null;
+     public static DataOutputStream salida = null;
 
-
-     public HiloServidor(Socket jugador)
+     public HiloServidor(Socket jugador,DataInputStream entrada,DataOutputStream salida)
      {
+         try{
         this.jugador = jugador;
+        this.entrada =  new DataInputStream(entrada);
+        this.salida = new DataOutputStream(salida);
+         }
+         catch(Exception e)
+         {
+            e.getStackTrace();
+         }
      }
 
      @Override
@@ -28,72 +37,81 @@ public  class  HiloServidor  implements  Runnable
      {
             try
             {
-//              if (!Servidor.usuariosConectados.contains(jugador.getInetAddress().getHostName()))
-//                 enviarConexion();
-//             else
-//                 recibirConexion();
-                enviarConexion();
+                System.out.println(Servidor.usuariosConectados);
 
+              if (Servidor.usuariosConectados.size() < 2)
+              {
+                 enviarConexion();
+                 SeleccionarColor();
+              }
+              else
+              {
+                jugar();
+              }
+                
             }
             catch(Exception e)
             {
-                System.out.println(e);
+                e.printStackTrace();
             }
 
      }
-     public void recibirConexion() throws IOException
+     public void SeleccionarColor() throws IOException
      {
+         String color = entrada.readUTF();
 
-            Socket sock = jugador;
+         int flag = 0;
+         
+         System.out.println(color);
 
-            InputStream is = sock.getInputStream();
+         for (int i = 0 ; i < Servidor.usuariosConectados.size() ; i++)
+         {
+            Jugador player = (Jugador)Servidor.usuariosConectados.elementAt(i);
 
-            DataInputStream entrada = new DataInputStream( is );
+            if (player.color.equals(color))
+             {
+                flag = 1;
+             }
+         }
+         if (flag == 0)
+         {
+            Jugador player = new Jugador(jugador.getInetAddress().toString(),color);
+            Servidor.usuariosConectados.add(player);
+            salida.writeUTF("\nSe recibio la respuesta del cliente " + jugador.getInetAddress().getHostName() + " Escogio el color " + color);
+         }
+         else
+         {
+            salida.writeUTF("Este color ya fue tomado");
+         }
 
-            System.out.println(entrada.readUTF());
-            
-            OutputStream fos = sock.getOutputStream();
+         Jugador player = new Jugador(jugador.getInetAddress().toString(),color);
 
-            DataOutputStream salida = new DataOutputStream( fos );
-
-            salida.writeUTF("\nSe recibio la respuesta del cliente " + sock.getInetAddress().getHostName());
-
-            is.close();
-
-            salida.close();
-
-            sock.close();
+         Servidor.usuariosConectados.add(player);
 
      }
 public void enviarConexion() throws FileNotFoundException, IOException
      {
-            Socket sock = jugador;
-
-            int puerto = Servidor.puerto;
             
-            System.out.println("Coneccion de : " + sock.getInetAddress().getHostName() + " por el puerto " + puerto);
+            System.out.println("Conexion de : " + jugador.getInetAddress().getHostName());
 
-            Servidor.usuariosConectados.add(sock.getInetAddress().getHostName());
+            salida.writeUTF("conectado: Elija un color");
 
-            InputStream fis =  jugador.getInputStream();
+            System.out.println("Enviando respuesta al cliente" + jugador.getInetAddress().getHostName());
+           
+            System.out.println("Esperando respuesta del cliente" + jugador.getInetAddress().getHostName());
 
-            BufferedInputStream bis = new BufferedInputStream(fis);
-
-            OutputStream os = sock.getOutputStream();
-            
-            DataOutputStream salida = new DataOutputStream (os);
-
-            System.out.println("Enviando respuesta al cliente" + sock.getInetAddress().getHostName());
-
-            salida.writeUTF("conetado");
-
-            System.out.println("Esperando respuesta del cliente" + sock.getInetAddress().getHostName());
-
-            os.flush();
-
-            os.close();
-
-            jugador.close();
      }
+
+public void jugar() throws IOException
+{
+      String jugada = entrada.readUTF();
+
+      String posicioninicial = jugada.substring(0, 1);
+
+      String posicionfinal = jugada.substring(2,3);
+
+      System.out.println( posicioninicial + posicionfinal);
+
+}
 
 }
