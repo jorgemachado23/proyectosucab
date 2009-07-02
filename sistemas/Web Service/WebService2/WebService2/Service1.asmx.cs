@@ -22,9 +22,12 @@ namespace WebService2
     {
 
         [WebMethod]
-        public string Hola(string nombre)
+        public ArrayList Hola(string hola)
         {
-            return "Hola "+nombre;
+            ArrayList prueba = new ArrayList();
+            prueba.Add(hola);
+            
+            return prueba;
         }
     }
 }

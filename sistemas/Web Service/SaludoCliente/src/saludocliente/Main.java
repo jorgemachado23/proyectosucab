@@ -4,6 +4,7 @@
  */
 
 package saludocliente;
+import java.util.*;
 
 /**
  *
@@ -16,17 +17,23 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        try { // Call Web Service Operation
+        try
+        { // Call Web Service Operation
             localhost.Service1 service = new localhost.Service1();
             localhost.Service1Soap port = service.getService1Soap12();
-            // TODO initialize WS operation arguments here
-            java.lang.String nombre = "gaby";
-
-            java.lang.String result = port.hola(nombre);
-            System.out.println("Result = "+result);
-        } catch (Exception ex) {
+            java.lang.String hola = "pato";
+            localhost.ArrayOfAnyType result = port.hola(hola);
+            List prueba = result.getAnyType();
+            for (int i = 0;i < prueba.size(); i++)
+            {
+                 System.out.println(prueba.get(i));
+            }
+        } 
+        catch (Exception ex)
+        {
             ex.getStackTrace();
         }
+
     }
 
 }
