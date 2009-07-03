@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<reservacion>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<reservaciones>
+  <reservacion>
     <usuario>jorgem</usuario>
     <fecha>05-06-2009 15:00</fecha>
     <fechaReservacion>Mon, 06/15/2009</fechaReservacion>
@@ -8,4 +9,25 @@
     <salon>EC-14</salon>
     <estado>Solicitado</estado>
     <tipoUsuario>Alumno</tipoUsuario>
-</reservacion>
+  </reservacion>
+  <reservacion>
+    <usuario>alejandrob</usuario>
+    <fecha>05-06-2009 15:00</fecha>
+    <fechaReservacion>Fri, 07/03/2009</fechaReservacion>
+    <horaInicial>20:00:00</horaInicial>
+    <horaFinal>22:00:00</horaFinal>
+    <salon>L-2314</salon>
+    <estado>Reservado</estado>
+    <tipoUsuario>Alumno</tipoUsuario>
+  </reservacion>
+  <reservacion>
+    <usuario>eduardom</usuario>
+    <fecha>05-06-2009 15:00</fecha>
+    <fechaReservacion>Fri, 07/10/2009</fechaReservacion>
+    <horaInicial>20:00:00</horaInicial>
+    <horaFinal>22:00:00</horaFinal>
+    <salon>L-2314</salon>
+    <estado>Reservado</estado>
+    <tipoUsuario>Alumno</tipoUsuario>
+  </reservacion>
+</reservaciones>
