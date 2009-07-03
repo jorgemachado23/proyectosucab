@@ -16,7 +16,7 @@
     <fechaReservacion>Fri, 07/03/2009</fechaReservacion>
     <horaInicial>20:00:00</horaInicial>
     <horaFinal>22:00:00</horaFinal>
-    <salon>L-2314</salon>
+    <salon>L-2315</salon>
     <estado>Reservado</estado>
     <tipoUsuario>Alumno</tipoUsuario>
   </reservacion>
@@ -26,7 +26,7 @@
     <fechaReservacion>Fri, 07/10/2009</fechaReservacion>
     <horaInicial>20:00:00</horaInicial>
     <horaFinal>22:00:00</horaFinal>
-    <salon>L-2314</salon>
+    <salon>L-2315</salon>
     <estado>Reservado</estado>
     <tipoUsuario>Alumno</tipoUsuario>
   </reservacion>

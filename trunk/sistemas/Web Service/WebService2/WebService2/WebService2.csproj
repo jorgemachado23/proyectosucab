@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="GestionSalones.cs" />
     <Compile Include="Login.cs" />
+    <Compile Include="Reservacion.cs" />
     <Compile Include="Service1.asmx.cs">
       <DependentUpon>Service1.asmx</DependentUpon>
       <SubType>Component</SubType>
