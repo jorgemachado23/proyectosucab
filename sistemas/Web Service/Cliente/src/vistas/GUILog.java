@@ -29,6 +29,7 @@ public class GUILog extends javax.swing.JFrame {
         tableA.getColumnModel().getColumn(2).setHeaderValue("Horario");
         tableA.getColumnModel().getColumn(3).setHeaderValue("Usuario");
         tableA.getColumnModel().getColumn(4).setHeaderValue("Tipo de Usuario");
+        tableA.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         tableB.getColumnModel().getColumn(0).setHeaderValue("Salon");
         tableB.getColumnModel().getColumn(1).setHeaderValue("Fecha");
         tableB.getColumnModel().getColumn(2).setHeaderValue("Horario");
@@ -103,6 +104,7 @@ public class GUILog extends javax.swing.JFrame {
         btnRefrescar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableB = new javax.swing.JTable();
+        btnBorrar = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -186,6 +188,13 @@ public class GUILog extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tableB);
 
+        btnBorrar.setText("Borrar");
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -193,7 +202,9 @@ public class GUILog extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnAsignar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 540, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
+                .addComponent(btnBorrar)
+                .addGap(233, 233, 233)
                 .addComponent(btnRefrescar)
                 .addContainerGap())
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 708, Short.MAX_VALUE)
@@ -205,7 +216,8 @@ public class GUILog extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAsignar)
-                    .addComponent(btnRefrescar))
+                    .addComponent(btnRefrescar)
+                    .addComponent(btnBorrar))
                 .addContainerGap())
         );
 
@@ -260,18 +272,20 @@ public class GUILog extends javax.swing.JFrame {
             localhost.service1.Service1Soap port = service.getService1Soap12();
 
             int i = tableB.getSelectedRow();
-
-            String salon = tableB.getValueAt(i, 0).toString();
-            String fecha = tableB.getValueAt(i, 1).toString();
-            String horaInicial = tableB.getValueAt(i, 2).toString().substring(0, 8);
-            String horaFinal = tableB.getValueAt(i, 2).toString().substring(11, 19);
-            String usuario = tableB.getValueAt(i, 3).toString();
-            port.asignarSalon(salon, fecha, horaInicial, horaFinal, usuario);
-            for (int j = 0; j < 5; j++)
+            if (i != -1)
             {
-                tableB.setValueAt(null, i, j);
+                String salon = tableB.getValueAt(i, 0).toString();
+                String fecha = tableB.getValueAt(i, 1).toString();
+                String horaInicial = tableB.getValueAt(i, 2).toString().substring(0, 8);
+                String horaFinal = tableB.getValueAt(i, 2).toString().substring(11, 19);
+                String usuario = tableB.getValueAt(i, 3).toString();
+                port.asignarSalon(salon, fecha, horaInicial, horaFinal, usuario);
+                for (int j = 0; j < 5; j++)
+                {
+                    tableB.setValueAt(null, i, j);
+                }
+                LlenarLog();
             }
-            LlenarLog();
         } 
         catch (Exception ex)
         {
@@ -283,6 +297,52 @@ public class GUILog extends javax.swing.JFrame {
     private void btnRefrescarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefrescarActionPerformed
         LlenarLog();
 }//GEN-LAST:event_btnRefrescarActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+
+        try
+        { // Call Web Service Operation
+            localhost.service1.Service1 service = new localhost.service1.Service1();
+            localhost.service1.Service1Soap port = service.getService1Soap12();
+            
+            int Ai = tableA.getSelectedRow();
+            if (Ai != -1)
+            {
+                String salon = tableA.getValueAt(Ai, 0).toString();
+                String fecha = tableA.getValueAt(Ai, 1).toString();
+                String horaInicial = tableA.getValueAt(Ai, 2).toString().substring(0, 8);
+                String horaFinal = tableA.getValueAt(Ai, 2).toString().substring(11, 19);
+                String usuario = tableA.getValueAt(Ai, 3).toString();
+                port.asignarSalon(salon, fecha, horaInicial, horaFinal, usuario);
+                for (int j = 0; j < 5; j++)
+                {
+                    tableA.setValueAt(null, Ai, j);
+                }
+                LlenarLog();
+                port.eliminarReservacion(salon, fecha, horaInicial, horaFinal, usuario);
+            }
+            int Bi = tableB.getSelectedRow();
+            if (Bi != -1)
+            {
+               String salon = tableB.getValueAt(Bi, 0).toString();
+                String fecha = tableB.getValueAt(Bi, 1).toString();
+                String horaInicial = tableB.getValueAt(Bi, 2).toString().substring(0, 8);
+                String horaFinal = tableB.getValueAt(Bi, 2).toString().substring(11, 19);
+                String usuario = tableB.getValueAt(Bi, 3).toString();
+                port.asignarSalon(salon, fecha, horaInicial, horaFinal, usuario);
+                for (int j = 0; j < 5; j++)
+                {
+                    tableB.setValueAt(null, Bi, j);
+                }
+                LlenarLog();
+                port.eliminarReservacion(salon, fecha, horaInicial, horaFinal, usuario);
+            }
+        }
+        catch (Exception ex)
+        {
+            ex.getStackTrace();
+        }
+}//GEN-LAST:event_btnBorrarActionPerformed
 
     /**
     * @param args the command line arguments
@@ -297,6 +357,7 @@ public class GUILog extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAsignar;
+    private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnRefrescar;
     private javax.swing.JPanel jPanel1;
