@@ -76,6 +76,35 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GenerarReservacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaReservacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="salon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaInicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaFinal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerarReservacionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EliminarReservacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="salon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaInicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaFinal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarReservacionResponse">
+        <s:complexType />
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="VerificarLoginSoapIn">
@@ -108,6 +137,18 @@
   <wsdl:message name="SalonesDisponiblesSoapOut">
     <wsdl:part name="parameters" element="tns:SalonesDisponiblesResponse" />
   </wsdl:message>
+  <wsdl:message name="GenerarReservacionSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerarReservacion" />
+  </wsdl:message>
+  <wsdl:message name="GenerarReservacionSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerarReservacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarReservacionSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarReservacion" />
+  </wsdl:message>
+  <wsdl:message name="EliminarReservacionSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarReservacionResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service1Soap">
     <wsdl:operation name="VerificarLogin">
       <wsdl:input message="tns:VerificarLoginSoapIn" />
@@ -128,6 +169,14 @@
     <wsdl:operation name="SalonesDisponibles">
       <wsdl:input message="tns:SalonesDisponiblesSoapIn" />
       <wsdl:output message="tns:SalonesDisponiblesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReservacion">
+      <wsdl:input message="tns:GenerarReservacionSoapIn" />
+      <wsdl:output message="tns:GenerarReservacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReservacion">
+      <wsdl:input message="tns:EliminarReservacionSoapIn" />
+      <wsdl:output message="tns:EliminarReservacionSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
@@ -177,6 +226,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GenerarReservacion">
+      <soap:operation soapAction="http://localhost/Service1.asmx/GenerarReservacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReservacion">
+      <soap:operation soapAction="http://localhost/Service1.asmx/EliminarReservacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -218,6 +285,24 @@
     </wsdl:operation>
     <wsdl:operation name="SalonesDisponibles">
       <soap12:operation soapAction="http://localhost/Service1.asmx/SalonesDisponibles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReservacion">
+      <soap12:operation soapAction="http://localhost/Service1.asmx/GenerarReservacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReservacion">
+      <soap12:operation soapAction="http://localhost/Service1.asmx/EliminarReservacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
