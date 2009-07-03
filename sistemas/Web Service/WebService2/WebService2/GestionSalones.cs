@@ -116,8 +116,6 @@ namespace WebService2
 
         public void AsignarSalon(string salon, string fecha, string horaInicial, string horaFinal, string usuario)
         {
-            List<String> classrooms = new List<string>();
-
             try
             {
                 XDocument reservacionXML = XDocument.Load(@"C:\Documents and Settings\Alejandro\Desktop\sistemas\Web Service\WebService2\WebService2\App_Data\reservacion.xml");
@@ -164,336 +162,2228 @@ namespace WebService2
                 
                 if (salon.Equals("Cincuentenario"))
                 {
-                    var Salones = from Salon in xmlDoc.Descendants("SalonCincuentenario")
-                                  where Salon.Element("dia").Element("nombre").Value.Equals(dia)
-                                  select new
-                                  {
-                                      computador = Salon.Element("Computador").Value,
-                                      videoBeam = Salon.Element("VideoBeam").Value,
-                                      dia = Salon.Element("dia").Element("nombre").Value,
-                                      horaInicial = Salon.Element("dia").Element("horas").Elements("horaInicial"),
-                                      horaFinal = Salon.Element("dia").Element("horas").Elements("horaFinal"),
-                                      aireacondicionado = Salon.Element("AireAcondicionado").Value,
-                                      nombre = Salon.Element("Nombre").Value,
-                                      Capacidad = Salon.Element("Capacidad").Value
-
-                                  };
-                    foreach (var Salon in Salones)
+                    if (dia.Equals("Lunes"))
                     {
-                        System.Console.WriteLine(Salon.videoBeam);
+                        var Salones = from Salon in xmlDoc.Descendants("SalonCincuentenario")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Lunes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Lunes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
 
-                        foreach (var hora in Salon.horaInicial)
+                                      };
+
+                        foreach (var Salon in Salones)
                         {
-
-                            horasIniciales.Add(hora.Value);
-
-                        }
-                        foreach (var hora in Salon.horaFinal)
-                        {
-
-                            horasFinales.Add(hora.Value);
-
-                        }
-
-                        if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
-                        {
-                            for (int i = 0; i < horasIniciales.Count; i++)
+                            foreach (var hora in Salon.horaInicial)
                             {
 
-                                String horaInicial = horasIniciales.ElementAt(i);
-                                String horaFinal = horasFinales.ElementAt(i);
-                                Int32 horaI = 0;
-                                Int32 horaF = 0;
-                                Int32 minutoI = 0;
-                                Int32 minutoF = 0;
-                                String auxiliar = null;
+                                horasIniciales.Add(hora.Value);
 
-                                auxiliar = horaInicial.Substring(0, 2);
-                                horaI = this.StringEntero(auxiliar);
-                                auxiliar = horaInicial.Substring(3, 5);
-                                minutoI = this.StringEntero(auxiliar);
-                                auxiliar = horaFinal.Substring(0, 2);
-                                horaF = this.StringEntero(auxiliar);
-                                auxiliar = horaFinal.Substring(3, 5);
-                                minutoF = this.StringEntero(auxiliar);
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
 
-                                if ((hpedidoI > horaI) && (hpedidoI >= horaF))
-                                {
-                                    if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
-                                    {
-                                        // posicion = contador2;
-                                        bandera = 1;
-                                        //  break;
-                                    }
-                                }
-                                else
-                                {
-                                    if ((hpedidoI >= horaI) && (bandera == 1))
-                                    {
-                                        contenido = 1;
-                                    }
-                                }
+                                horasFinales.Add(hora.Value);
 
                             }
 
-                            if ((bandera == 1) && (contenido == 0))
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
                             {
-                                salonesDisponibles.Add(Salon.nombre);
-                                salonesDisponibles.Add(Salon.Capacidad);
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
                             }
                         }
-
                     }
+                    else if (dia.Equals("Martes"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonCincuentenario")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Martes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Martes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Miercoles"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonCincuentenario")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Miercoles").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Miercoles").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Jueves"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonCincuentenario")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Jueves").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Jueves").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Viernes"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonCincuentenario")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Viernes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Viernes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Sabado"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonCincuentenario")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Sabado").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Sabado").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Domingo"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonCincuentenario")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Domingo").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Domingo").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }                
                 }
                 else if(salon.Equals("Modulos"))
                 {
-                    var Salones = from Salon in xmlDoc.Descendants("SalonModulo")
-                                  where Salon.Element("dia").Element("nombre").Value.Equals(dia)
-                                  select new
-                                  {
-                                      computador = Salon.Element("Computador").Value,
-                                      videoBeam = Salon.Element("VideoBeam").Value,
-                                      dia = Salon.Element("dia").Element("nombre").Value,
-                                      horaInicial = Salon.Element("dia").Element("horas").Elements("horaInicial"),
-                                      horaFinal = Salon.Element("dia").Element("horas").Elements("horaFinal"),
-                                      aireacondicionado = Salon.Element("AireAcondicionado").Value,
-                                      nombre = Salon.Element("Nombre").Value,
-                                      Capacidad = Salon.Element("Capacidad").Value
-
-                                  };
-                    foreach (var Salon in Salones)
+                    if (dia.Equals("Lunes"))
                     {
-                        System.Console.WriteLine(Salon.videoBeam);
+                        var Salones = from Salon in xmlDoc.Descendants("SalonModulo")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Lunes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Lunes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
 
-                        foreach (var hora in Salon.horaInicial)
+                                      };
+
+                        foreach (var Salon in Salones)
                         {
-
-                            horasIniciales.Add(hora.Value);
-
-                        }
-                        foreach (var hora in Salon.horaFinal)
-                        {
-
-                            horasFinales.Add(hora.Value);
-
-                        }
-
-                        if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
-                        {
-                            for (int i = 0; i < horasIniciales.Count; i++)
+                            foreach (var hora in Salon.horaInicial)
                             {
 
-                                String horaInicial = horasIniciales.ElementAt(i);
-                                String horaFinal = horasFinales.ElementAt(i);
-                                Int32 horaI = 0;
-                                Int32 horaF = 0;
-                                Int32 minutoI = 0;
-                                Int32 minutoF = 0;
-                                String auxiliar = null;
+                                horasIniciales.Add(hora.Value);
 
-                                auxiliar = horaInicial.Substring(0, 2);
-                                horaI = this.StringEntero(auxiliar);
-                                auxiliar = horaInicial.Substring(3, 5);
-                                minutoI = this.StringEntero(auxiliar);
-                                auxiliar = horaFinal.Substring(0, 2);
-                                horaF = this.StringEntero(auxiliar);
-                                auxiliar = horaFinal.Substring(3, 5);
-                                minutoF = this.StringEntero(auxiliar);
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
 
-                                if ((hpedidoI > horaI) && (hpedidoI >= horaF))
-                                {
-                                    if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
-                                    {
-                                        // posicion = contador2;
-                                        bandera = 1;
-                                        //  break;
-                                    }
-                                }
-                                else
-                                {
-                                    if ((hpedidoI >= horaI) && (bandera == 1))
-                                    {
-                                        contenido = 1;
-                                    }
-                                }
+                                horasFinales.Add(hora.Value);
 
                             }
 
-                            if ((bandera == 1) && (contenido == 0))
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
                             {
-                                salonesDisponibles.Add(Salon.nombre);
-                                salonesDisponibles.Add(Salon.Capacidad);
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
                             }
                         }
+                    }
+                    else if (dia.Equals("Martes"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonModulo")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Martes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Martes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
 
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Miercoles"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonModulo")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Miercoles").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Miercoles").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Jueves"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonModulo")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Jueves").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Jueves").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Viernes"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonModulo")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Viernes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Viernes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Sabado"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonModulo")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Sabado").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Sabado").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Domingo"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonModulo")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Domingo").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Domingo").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
                     }
                 }
                 else if(salon.Equals("Laboratorios"))
                 {
-                    var Salones = from Salon in xmlDoc.Descendants("SalonLaboratorio")
-                                  where Salon.Element("dia").Element("nombre").Value.Equals(dia)
-                                  select new
-                                  {
-                                      computador = Salon.Element("Computador").Value,
-                                      videoBeam = Salon.Element("VideoBeam").Value,
-                                      dia = Salon.Element("dia").Element("nombre").Value,
-                                      horaInicial = Salon.Element("dia").Element("horas").Elements("horaInicial"),
-                                      horaFinal = Salon.Element("dia").Element("horas").Elements("horaFinal"),
-                                      aireacondicionado = Salon.Element("AireAcondicionado").Value,
-                                      nombre = Salon.Element("Nombre").Value,
-                                      Capacidad = Salon.Element("Capacidad").Value
-
-                                  };
-                    foreach (var Salon in Salones)
+                    if (dia.Equals("Lunes"))
                     {
-                        System.Console.WriteLine(Salon.videoBeam);
+                        var Salones = from Salon in xmlDoc.Descendants("SalonLaboratorio")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Lunes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Lunes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
 
-                        foreach (var hora in Salon.horaInicial)
+                                      };
+
+                        foreach (var Salon in Salones)
                         {
-
-                            horasIniciales.Add(hora.Value);
-
-                        }
-                        foreach (var hora in Salon.horaFinal)
-                        {
-
-                            horasFinales.Add(hora.Value);
-
-                        }
-
-                        if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
-                        {
-                            for (int i = 0; i < horasIniciales.Count; i++)
+                            foreach (var hora in Salon.horaInicial)
                             {
 
-                                String horaInicial = horasIniciales.ElementAt(i);
-                                String horaFinal = horasFinales.ElementAt(i);
-                                Int32 horaI = 0;
-                                Int32 horaF = 0;
-                                Int32 minutoI = 0;
-                                Int32 minutoF = 0;
-                                String auxiliar = null;
+                                horasIniciales.Add(hora.Value);
 
-                                auxiliar = horaInicial.Substring(0, 2);
-                                horaI = this.StringEntero(auxiliar);
-                                auxiliar = horaInicial.Substring(3, 5);
-                                minutoI = this.StringEntero(auxiliar);
-                                auxiliar = horaFinal.Substring(0, 2);
-                                horaF = this.StringEntero(auxiliar);
-                                auxiliar = horaFinal.Substring(3, 5);
-                                minutoF = this.StringEntero(auxiliar);
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
 
-                                if ((hpedidoI > horaI) && (hpedidoI >= horaF))
-                                {
-                                    if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
-                                    {
-                                        // posicion = contador2;
-                                        bandera = 1;
-                                        //  break;
-                                    }
-                                }
-                                else
-                                {
-                                    if ((hpedidoI >= horaI) && (bandera == 1))
-                                    {
-                                        contenido = 1;
-                                    }
-                                }
+                                horasFinales.Add(hora.Value);
 
                             }
 
-                            if ((bandera == 1) && (contenido == 0))
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
                             {
-                                salonesDisponibles.Add(Salon.nombre);
-                                salonesDisponibles.Add(Salon.Capacidad);
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
                             }
                         }
+                    }
+                    else if (dia.Equals("Martes"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonLaboratorio")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Martes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Martes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
 
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Miercoles"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonLaboratorio")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Miercoles").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Miercoles").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Jueves"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonLaboratorio")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Jueves").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Jueves").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Viernes"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonLaboratorio")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Viernes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Viernes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Sabado"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonLaboratorio")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Sabado").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Sabado").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Domingo"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonLaboratorio")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Domingo").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Domingo").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
                     }
                 }
-                else if(salon.Equals("Postgrado"))
+                else if (salon.Equals("Postgrado"))
                 {
-                    var Salones = from Salon in xmlDoc.Descendants("SalonPostgrado")
-                                  where Salon.Element("dia").Element("nombre").Value.Equals(dia)
-                                  select new
-                                  {
-                                      computador = Salon.Element("Computador").Value,
-                                      videoBeam = Salon.Element("VideoBeam").Value,
-                                      dia = Salon.Element("dia").Element("nombre").Value,
-                                      horaInicial = Salon.Element("dia").Element("horas").Elements("horaInicial"),
-                                      horaFinal = Salon.Element("dia").Element("horas").Elements("horaFinal"),
-                                      aireacondicionado = Salon.Element("AireAcondicionado").Value,
-                                      nombre = Salon.Element("Nombre").Value,
-                                      Capacidad = Salon.Element("Capacidad").Value
-
-                                  };
-                    foreach (var Salon in Salones)
+                    if (dia.Equals("Lunes"))
                     {
-                        System.Console.WriteLine(Salon.videoBeam);
+                        var Salones = from Salon in xmlDoc.Descendants("SalonPostgrado")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Lunes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Lunes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
 
-                        foreach (var hora in Salon.horaInicial)
+                                      };
+
+                        foreach (var Salon in Salones)
                         {
-
-                            horasIniciales.Add(hora.Value);
-
-                        }
-                        foreach (var hora in Salon.horaFinal)
-                        {
-
-                            horasFinales.Add(hora.Value);
-
-                        }
-
-                        if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
-                        {
-                            for (int i = 0; i < horasIniciales.Count; i++)
+                            foreach (var hora in Salon.horaInicial)
                             {
 
-                                String horaInicial = horasIniciales.ElementAt(i);
-                                String horaFinal = horasFinales.ElementAt(i);
-                                Int32 horaI = 0;
-                                Int32 horaF = 0;
-                                Int32 minutoI = 0;
-                                Int32 minutoF = 0;
-                                String auxiliar = null;
+                                horasIniciales.Add(hora.Value);
 
-                                auxiliar = horaInicial.Substring(0, 2);
-                                horaI = this.StringEntero(auxiliar);
-                                auxiliar = horaInicial.Substring(3, 5);
-                                minutoI = this.StringEntero(auxiliar);
-                                auxiliar = horaFinal.Substring(0, 2);
-                                horaF = this.StringEntero(auxiliar);
-                                auxiliar = horaFinal.Substring(3, 5);
-                                minutoF = this.StringEntero(auxiliar);
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
 
-                                if ((hpedidoI > horaI) && (hpedidoI >= horaF))
-                                {
-                                    if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
-                                    {
-                                        // posicion = contador2;
-                                        bandera = 1;
-                                        //  break;
-                                    }
-                                }
-                                else
-                                {
-                                    if ((hpedidoI >= horaI) && (bandera == 1))
-                                    {
-                                        contenido = 1;
-                                    }
-                                }
+                                horasFinales.Add(hora.Value);
 
                             }
 
-                            if ((bandera == 1) && (contenido == 0))
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
                             {
-                                salonesDisponibles.Add(Salon.nombre);
-                                salonesDisponibles.Add(Salon.Capacidad);
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
                             }
                         }
-
                     }
-                }              
+                    else if (dia.Equals("Martes"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonPostgrado")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Martes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Martes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Miercoles"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonPostgrado")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Miercoles").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Miercoles").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Jueves"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonPostgrado")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Jueves").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Jueves").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Viernes"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonPostgrado")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Viernes").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Viernes").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Sabado"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonPostgrado")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Sabado").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Sabado").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                    else if (dia.Equals("Domingo"))
+                    {
+                        var Salones = from Salon in xmlDoc.Descendants("SalonPostgrado")
+                                      select new
+                                      {
+                                          computador = Salon.Element("Computador").Value,
+                                          videoBeam = Salon.Element("VideoBeam").Value,
+                                          horaInicial = Salon.Element("Domingo").Element("horas").Elements("horaFinal"),
+                                          horaFinal = Salon.Element("Domingo").Element("horas").Elements("horaInicial"),
+                                          aireacondicionado = Salon.Element("AireAcondicionado").Value,
+                                          nombre = Salon.Element("Nombre").Value,
+                                          Capacidad = Salon.Element("Capacidad").Value
+
+                                      };
+
+                        foreach (var Salon in Salones)
+                        {
+                            foreach (var hora in Salon.horaInicial)
+                            {
+
+                                horasIniciales.Add(hora.Value);
+
+                            }
+                            foreach (var hora in Salon.horaFinal)
+                            {
+
+                                horasFinales.Add(hora.Value);
+
+                            }
+
+                            if ((Salon.computador.Equals(computadora)) && (Salon.aireacondicionado.Equals(aa)) && (Salon.videoBeam.Equals(videoBeam)))
+                            {
+                                for (int i = 0; i < horasIniciales.Count; i++)
+                                {
+
+                                    String horaInicial = horasIniciales.ElementAt(i);
+                                    String horaFinal = horasFinales.ElementAt(i);
+                                    Int32 horaI = 0;
+                                    Int32 horaF = 0;
+                                    Int32 minutoI = 0;
+                                    Int32 minutoF = 0;
+                                    String auxiliar = null;
+
+                                    auxiliar = horaInicial.Substring(0, 2);
+                                    horaI = this.StringEntero(auxiliar);
+                                    auxiliar = horaInicial.Substring(3, 5);
+                                    minutoI = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(0, 2);
+                                    horaF = this.StringEntero(auxiliar);
+                                    auxiliar = horaFinal.Substring(3, 5);
+                                    minutoF = this.StringEntero(auxiliar);
+
+                                    if ((hpedidoI > horaI) && (hpedidoI >= horaF))
+                                    {
+                                        if ((hpedidoF >= horaI) && (hpedidoF >= horaF))
+                                        {
+                                            // posicion = contador2;
+                                            bandera = 1;
+                                            //  break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((hpedidoI >= horaI) && (bandera == 1))
+                                        {
+                                            contenido = 1;
+                                        }
+                                    }
+
+                                }
+
+                                if ((bandera == 1) && (contenido == 0))
+                                {
+                                    salonesDisponibles.Add(Salon.nombre);
+                                    salonesDisponibles.Add(Salon.Capacidad);
+                                }
+                            }
+                        }
+                    }
+                }
             }
             catch (Exception e)
             {

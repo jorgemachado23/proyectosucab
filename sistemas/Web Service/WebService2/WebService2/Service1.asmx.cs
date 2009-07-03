@@ -59,5 +59,19 @@ namespace WebService2
             List<String> datos = salonDisponible.SalonesDisponibles(salon, dia, horaInicial, horaFinal, videoBeam, aA, computadora);
             return datos;
         }
+
+        [WebMethod]
+        public void GenerarReservacion(string usuario, string tipoUsuario, string fechaReservacion, string salon, string horaInicial, string horaFinal)
+        {
+            Reservacion reservacion = new Reservacion();
+            reservacion.GenerarReservacion(usuario, tipoUsuario, fechaReservacion, salon, horaInicial, horaFinal);
+        }
+
+        [WebMethod]
+        public void EliminarReservacion(string salon, string fecha, string horaInicial, string horaFinal, string usuario)
+        {
+            Reservacion reservacion = new Reservacion();
+            reservacion.EliminarReservacion(salon, fecha, horaInicial, horaFinal, usuario);
+        }
     }
 }
