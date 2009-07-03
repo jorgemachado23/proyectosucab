@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost/Service1.asmx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://localhost/Service1.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/Service1.asmx">
+      <s:element name="VerificarLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificarLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerificarLoginResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SalonesAsignados">
+        <s:complexType />
+      </s:element>
+      <s:element name="SalonesAsignadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SalonesAsignadosResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalonesPorAsignar">
+        <s:complexType />
+      </s:element>
+      <s:element name="SalonesPorAsignarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SalonesPorAsignarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignarSalon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="salon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaInicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaFinal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignarSalonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SalonesDisponibles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="salon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaInicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaFinal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="videoBeam" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="computadora" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalonesDisponiblesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SalonesDisponiblesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="VerificarLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarLogin" />
+  </wsdl:message>
+  <wsdl:message name="VerificarLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalonesAsignadosSoapIn">
+    <wsdl:part name="parameters" element="tns:SalonesAsignados" />
+  </wsdl:message>
+  <wsdl:message name="SalonesAsignadosSoapOut">
+    <wsdl:part name="parameters" element="tns:SalonesAsignadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalonesPorAsignarSoapIn">
+    <wsdl:part name="parameters" element="tns:SalonesPorAsignar" />
+  </wsdl:message>
+  <wsdl:message name="SalonesPorAsignarSoapOut">
+    <wsdl:part name="parameters" element="tns:SalonesPorAsignarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AsignarSalonSoapIn">
+    <wsdl:part name="parameters" element="tns:AsignarSalon" />
+  </wsdl:message>
+  <wsdl:message name="AsignarSalonSoapOut">
+    <wsdl:part name="parameters" element="tns:AsignarSalonResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalonesDisponiblesSoapIn">
+    <wsdl:part name="parameters" element="tns:SalonesDisponibles" />
+  </wsdl:message>
+  <wsdl:message name="SalonesDisponiblesSoapOut">
+    <wsdl:part name="parameters" element="tns:SalonesDisponiblesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="VerificarLogin">
+      <wsdl:input message="tns:VerificarLoginSoapIn" />
+      <wsdl:output message="tns:VerificarLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalonesAsignados">
+      <wsdl:input message="tns:SalonesAsignadosSoapIn" />
+      <wsdl:output message="tns:SalonesAsignadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalonesPorAsignar">
+      <wsdl:input message="tns:SalonesPorAsignarSoapIn" />
+      <wsdl:output message="tns:SalonesPorAsignarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignarSalon">
+      <wsdl:input message="tns:AsignarSalonSoapIn" />
+      <wsdl:output message="tns:AsignarSalonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalonesDisponibles">
+      <wsdl:input message="tns:SalonesDisponiblesSoapIn" />
+      <wsdl:output message="tns:SalonesDisponiblesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerificarLogin">
+      <soap:operation soapAction="http://localhost/Service1.asmx/VerificarLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalonesAsignados">
+      <soap:operation soapAction="http://localhost/Service1.asmx/SalonesAsignados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalonesPorAsignar">
+      <soap:operation soapAction="http://localhost/Service1.asmx/SalonesPorAsignar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignarSalon">
+      <soap:operation soapAction="http://localhost/Service1.asmx/AsignarSalon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalonesDisponibles">
+      <soap:operation soapAction="http://localhost/Service1.asmx/SalonesDisponibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerificarLogin">
+      <soap12:operation soapAction="http://localhost/Service1.asmx/VerificarLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalonesAsignados">
+      <soap12:operation soapAction="http://localhost/Service1.asmx/SalonesAsignados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalonesPorAsignar">
+      <soap12:operation soapAction="http://localhost/Service1.asmx/SalonesPorAsignar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignarSalon">
+      <soap12:operation soapAction="http://localhost/Service1.asmx/AsignarSalon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalonesDisponibles">
+      <soap12:operation soapAction="http://localhost/Service1.asmx/SalonesDisponibles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:2911/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:2911/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
