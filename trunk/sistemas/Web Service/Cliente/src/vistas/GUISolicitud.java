@@ -299,17 +299,18 @@ public class GUISolicitud extends javax.swing.JFrame {
             localhost.service1.Service1 service = new localhost.service1.Service1();
             localhost.service1.Service1Soap port = service.getService1Soap12();
             
-            java.lang.String salon = location;
-            java.lang.String dia = day;
-            java.lang.String horaInicial = hourI;
-            java.lang.String horaFinal = hourF;
-            java.lang.String videoBeam = video;
-            java.lang.String aA = air;
-            java.lang.String computadora = pc;
+            String salon = location;
+            String dia = day;
+            String horaInicial = hourI;
+            String horaFinal = hourF;
+            String videoBeam = video;
+            String aA = air;
+            String computadora = pc;
             
             localhost.service1.ArrayOfString result = port.salonesDisponibles(salon, dia, horaInicial, horaFinal, videoBeam, aA, computadora);
 
             List<String> datosSalon = result.getString();
+
             for(Integer i = 0; i < datosSalon.size()/2 ; i++)
             {
                 table.setValueAt(datosSalon.get(2*i), i, 0);
@@ -334,7 +335,26 @@ public class GUISolicitud extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     private void btnSolicitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolicitarActionPerformed
-        
+        try
+        { // Call Web Service Operation
+            localhost.service1.Service1 service = new localhost.service1.Service1();
+            localhost.service1.Service1Soap port = service.getService1Soap12();
+            int i = table.getSelectedRow();
+            String titulo = this.getTitle();
+            String[] tituloDatos = titulo.split(" ");
+            String usuario = tituloDatos[0];
+            String tipoUsuario = tituloDatos[2];
+            String fechaReservacion = calendario.getDateFormatString();
+            String salon = table.getValueAt(i, 0).toString();
+            String horaInicial = txtHoraI.getText();
+            String horaFinal = txtHoraF.getText();
+            port.generarReservacion(usuario, tipoUsuario, fechaReservacion, salon, horaInicial, horaFinal);
+        }
+        catch (Exception ex)
+        {
+            ex.getStackTrace();
+        }
+
     }//GEN-LAST:event_btnSolicitarActionPerformed
 
     /**
