@@ -13,6 +13,7 @@ package vistas;
 import cliente.Main;
 import javax.swing.*;
 import java.util.*;
+
 /**
  *
  * @author Alejandro
@@ -235,6 +236,11 @@ public class GUISolicitud extends javax.swing.JFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         try
         {
+            for (int j = 0; j < table.getRowCount(); j++)
+            {
+                table.setValueAt(null, j, 0);
+                table.setValueAt(null, j, 1);
+            }
             table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             String location = cmbLocacion.getSelectedItem().toString();
             String date = calendario.getDate().toString();           
@@ -342,13 +348,20 @@ public class GUISolicitud extends javax.swing.JFrame {
             int i = table.getSelectedRow();
             String titulo = this.getTitle();
             String[] tituloDatos = titulo.split(" ");
-            String usuario = tituloDatos[0];
-            String tipoUsuario = tituloDatos[2];
-            String fechaReservacion = calendario.getDateFormatString();
+            String[] fecha = calendario.getDate().toString().split(" ");
+            String mes = fecha[1];
+            String usuario = tituloDatos[2];
+            String tipoUsuario = tituloDatos[0];
+            String fechaReservacion = fecha[0]+", "+mes+"/"+fecha[2]+"/"+fecha[5];
             String salon = table.getValueAt(i, 0).toString();
             String horaInicial = txtHoraI.getText();
             String horaFinal = txtHoraF.getText();
             port.generarReservacion(usuario, tipoUsuario, fechaReservacion, salon, horaInicial, horaFinal);
+            for (int j = 0; j < table.getRowCount(); j++)
+            {
+                table.setValueAt(null, j, 0);
+                table.setValueAt(null, j, 1);
+            }
         }
         catch (Exception ex)
         {
