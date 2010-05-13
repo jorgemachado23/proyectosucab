@@ -1,0 +1,8 @@
+## YAML Template.
+Lapso:
+  lapso1:
+    idLapso: 1
+  lapso2:
+    idLapso: 2
+  lapso3:
+    idLapso: 3
