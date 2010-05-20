@@ -295,7 +295,6 @@ form, input, textarea{
 	background:url(../images/content_extender.png) 0 0;
 	background-repeat: repeat-y;
 	margin: 0px 0 0 1px;
-
 }
 
 .post{ 
@@ -451,7 +450,9 @@ entry-content h6{
 	width: 309px;
 	height: 200px;
 	margin-left: 599px;
-	margin-top: -255px;
+	margin-top: -249px;
+	left: 175px;
+	top: 566px;
 }
 
 #sidebarInicioSesion2{
