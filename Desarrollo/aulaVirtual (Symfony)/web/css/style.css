@@ -251,6 +251,7 @@ form, input, textarea{
 	width: 909px;
 	margin-top: 0px;
 	height: auto;
+    left: -5px;
 }
 
 
@@ -269,12 +270,10 @@ form, input, textarea{
 
 #contentPagPpal{ 
 	
+	float: left;
 	background:url(../images/content_extender.png) 0 0;
 	background-repeat: repeat-y;
-	
-	width:600px;
-	height: 755px;
-	vertical-align:top;
+	margin: 0px 0 0 1px;
 }
 
 #contentPagPpalforo{
@@ -294,7 +293,6 @@ form, input, textarea{
 	background-repeat: repeat-y;
 	margin: 0px 0 0 1px;
 	width:615px;
-	height: 353px;
 }
 
 #contentPagPpal3{ 
@@ -308,12 +306,11 @@ form, input, textarea{
 
 #content_top { background:url(../images/content_top.jpg) no-repeat left top;}
 
-#contentInicioSesion{ 
+#contentInicioSesion{
 	float: left;
 	background:url(../images/content_extender.png) 0 0;
 	background-repeat: repeat-y;
 	margin: 0px 0 0 1px;
-
 }
 
 .post{ 
@@ -422,6 +419,14 @@ entry-content h6{
 	margin: 290px 0 0 562px;
 }
 
+.paperclip5{
+	background: url(../images/paperclip.png) no-repeat 0 0;
+	position: relative;
+	width: 62px;
+	height: 35px;
+	margin: 290px 0 0 562px;
+}
+
 .paperclip2{
 	background: url(../images/paperclip2.png) no-repeat 0 0;
 	position: relative;
@@ -471,7 +476,7 @@ entry-content h6{
 	width: 309px;
 	height: 200px;
 	margin-left: 599px;
-	margin-top: -255px;
+	margin-top: -249px;
 }
 
 #sidebarInicioSesion2{
@@ -595,8 +600,15 @@ h1.logo a{
 	float: left;
 	background:url(../images/footer.jpg) no-repeat;
 	margin-left: 1px;
-	left: -14px;
-	top: 705px;
+	left: 171px;
+	top: 1065px;
+}
+#footer3{
+	float: left;
+	background:url(../images/footer3.jpg) no-repeat;
+	margin-left: 1px;
+	left: 171px;
+	top: 1065px;
 }
 
 #footer a{
