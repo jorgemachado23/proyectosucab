@@ -10,6 +10,28 @@
  */
 class temasActions extends sfActions
 {
+
+  public function executeDeleteForo(sfWebRequest $request)
+  {
+    $request->checkCSRFProtection();
+
+    $this->forward404Unless($tema = ComentariosPeer::doSelect(new Criteria()));
+    $tema->delete();
+
+    $this->redirect('temas/index');
+  }
+
+
+  public function executeDeleteComen(sfWebRequest $request)
+  {
+    $request->checkCSRFProtection();
+
+    $this->forward404Unless($comentarios = ComentariosPeer::retrieveByPk($request->getParameter('idcomentarios')), sprintf('Object comentarios does not exist (%s).', $request->getParameter('idcomentarios')));
+    $comentarios->delete();
+
+    $this->redirect('temas/index');
+  }
+
   public function executeIndex(sfWebRequest $request)
   {
     $this->tema_list = TemaPeer::doSelect(new Criteria());
@@ -19,6 +41,9 @@ class temasActions extends sfActions
   {
     $this->tema = TemaPeer::retrieveByPk($request->getParameter('idtema'));
     $this->forward404Unless($this->tema);
+    $this->comentarios_list = ComentariosPeer::doSelect(new Criteria());
+    $this->persona_list = PersonaPeer::doSelect(new Criteria());
+    $this->persona = PersonaPeer::retrieveByPk($request->getParameter('idpersona'));
   }
 
   public function executeNew(sfWebRequest $request)

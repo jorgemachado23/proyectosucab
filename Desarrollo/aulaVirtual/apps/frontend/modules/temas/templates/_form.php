@@ -11,7 +11,7 @@
         <td colspan="2">
           &nbsp;<a href="<?php echo url_for('temas/index') ?>">Cancel</a>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'temas/delete?idtema='.$form->getObject()->getIdtema(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
+            &nbsp;<?php echo link_to('Delete', 'temas/delete?idtema='.$form->getObject()->getIdtema(), array('method' => 'delete', 'confirm' => '¿Está seguro de que desea Eliminar el Tema?, Se eliminarán todos los comentarios asociados a el')) ?>
           <?php endif; ?>
           <input type="submit" value="Save" />
         </td>

@@ -14,7 +14,7 @@ foreach ($persona_list as $persona)
 }
 if ($exist_user == false)
 {
-	echo "<script language='JavaScript' type='text/JavaScript'>alert('El nombre de usuario $cuenta o contraseña es inválido por favor intente de nuevo');</script>";
+	echo "<script language='JavaScript' type='text/JavaScript'>alert('El nombre de usuario o contraseña es inválido por favor intente de nuevo');</script>";
 	echo "<script language='JavaScript'>document.location.href='/nuevo_dev.php/usuario';</script>";
 }
 ?>

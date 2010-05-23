@@ -9687,1237 +9687,351 @@ May 20 18:02:21 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:m
 May 20 18:02:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
 May 20 18:02:21 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
 May 20 18:02:21 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 20:25:33 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:25:33 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:25:33 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:25:33 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
-May 20 20:25:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:25:33 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:25:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:25:33 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
-May 20 20:25:33 symfony [info] {sfPHPView} Render "C:\symfony-1.2.0\lib/controller/default/templates/indexSuccess.php"
-May 20 20:25:33 symfony [info] {sfPHPView} Decorate content with "C:\symfony-1.2.0\lib\controller\default\templates/defaultLayout.php"
-May 20 20:25:33 symfony [info] {sfPHPView} Render "C:\symfony-1.2.0\lib\controller\default\templates/defaultLayout.php"
-May 20 20:25:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:25:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:25:33 symfony [info] {sfWebDebugLogger} Configuration 123.34 ms (10)
-May 20 20:25:33 symfony [info] {sfWebDebugLogger} Action "default/index" 0.26 ms (1)
-May 20 20:25:33 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 68.40 ms (1)
-May 20 20:25:33 symfony [info] {sfWebResponse} Send content (27594 o)
-May 20 20:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:25:41 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 20 20:25:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:25:41 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:25:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:25:41 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 20 20:25:41 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:25:41 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:25:41 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 20 20:25:41 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:25:41 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:25:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:25:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:25:41 symfony [info] {sfWebDebugLogger} Configuration 20.95 ms (9)
-May 20 20:25:41 symfony [info] {sfWebDebugLogger} Action "usuario/index" 267.00 ms (1)
-May 20 20:25:41 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 61.10 ms (1)
-May 20 20:25:41 symfony [info] {sfWebResponse} Send content (29057 o)
-May 20 20:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:25:41 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 20 20:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:25:41 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:25:41 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 20 20:27:53 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:27:53 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:27:53 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:27:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 20 20:27:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:27:53 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:27:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:27:53 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 20 20:27:54 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:27:54 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:27:54 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 20 20:27:54 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:27:54 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:27:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:27:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:27:54 symfony [info] {sfWebDebugLogger} Configuration 16.18 ms (9)
-May 20 20:27:54 symfony [info] {sfWebDebugLogger} Action "usuario/login" 32.75 ms (1)
-May 20 20:27:54 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 22.85 ms (1)
-May 20 20:27:54 symfony [info] {sfWebResponse} Send content (29698 o)
-May 20 20:27:54 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:27:54 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:27:54 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:27:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:27:54 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:27:54 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:27:54 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:27:54 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:27:54 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:27:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:27:54 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:27:54 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:27:54 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:27:54 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:27:54 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:27:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 20:27:54 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 20:27:54 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 20:28:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:28:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:28:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:28:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:28:40 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:28:40 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:28:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:28:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:28:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:28:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:28:40 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:28:40 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:28:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:28:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:28:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:28:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 20:28:40 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 20:28:40 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 20:29:00 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:29:00 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:29:00 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:29:00 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 20 20:29:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:29:00 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:29:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:29:00 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 20 20:29:00 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:29:00 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:29:00 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 20 20:29:00 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:29:00 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:29:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:29:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:29:00 symfony [info] {sfWebDebugLogger} Configuration 15.09 ms (9)
-May 20 20:29:00 symfony [info] {sfWebDebugLogger} Action "usuario/index" 30.76 ms (1)
-May 20 20:29:00 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 20.65 ms (1)
-May 20 20:29:00 symfony [info] {sfWebResponse} Send content (29056 o)
-May 20 20:29:00 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:29:00 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:29:00 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:29:00 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 20 20:29:00 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:29:00 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:29:00 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:29:00 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 20 20:29:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:29:09 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:29:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:29:09 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 20 20:29:09 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:29:09 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:29:09 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 20 20:29:09 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:29:09 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:29:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:29:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:29:09 symfony [info] {sfWebDebugLogger} Configuration 16.14 ms (9)
-May 20 20:29:09 symfony [info] {sfWebDebugLogger} Action "usuario/login" 36.15 ms (1)
-May 20 20:29:09 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 25.25 ms (1)
-May 20 20:29:09 symfony [info] {sfWebResponse} Send content (29708 o)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:29:09 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:29:09 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:29:09 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:29:09 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:29:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 20:29:09 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 20:29:09 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 20:30:39 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:30:39 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:30:39 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:30:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:30:39 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:30:39 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:30:39 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:30:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:30:39 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:30:39 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:30:39 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:30:39 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:30:39 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:30:39 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:30:39 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:30:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 20:30:39 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 20:30:39 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:30:44 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:30:44 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:30:44 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:30:44 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:30:44 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:30:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:30:44 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 20 20:34:30 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:34:30 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:34:30 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:34:30 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 20 20:34:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:34:30 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:34:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:34:30 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 20 20:34:30 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:34:30 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:34:30 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 20 20:34:30 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:34:30 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:34:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:34:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:34:30 symfony [info] {sfWebDebugLogger} Configuration 20.54 ms (9)
-May 20 20:34:30 symfony [info] {sfWebDebugLogger} Action "usuario/index" 32.92 ms (1)
-May 20 20:34:30 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 22.45 ms (1)
-May 20 20:34:30 symfony [info] {sfWebResponse} Send content (28788 o)
-May 20 20:34:30 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:34:30 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:34:30 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:34:30 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:34:30 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:34:30 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:34:30 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 20 20:34:30 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 20 20:34:38 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 20 20:34:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:34:38 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:34:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:34:38 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 20 20:34:38 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:34:38 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:34:38 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 20 20:34:38 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:34:38 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:34:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:34:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:34:38 symfony [info] {sfWebDebugLogger} Configuration 17.01 ms (9)
-May 20 20:34:38 symfony [info] {sfWebDebugLogger} Action "usuario/login" 36.35 ms (1)
-May 20 20:34:38 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 29.04 ms (1)
-May 20 20:34:38 symfony [info] {sfWebResponse} Send content (29698 o)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:34:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:34:38 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:34:38 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:34:38 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:34:38 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:34:39 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:34:39 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:34:39 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:34:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 20:34:39 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 20:34:39 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:36:40 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:36:40 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:36:40 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:36:40 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:36:40 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:36:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:36:40 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 20 20:39:01 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:01 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:01 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:01 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 20 20:39:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:39:01 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:39:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:39:01 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 20 20:39:01 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:39:01 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:39:01 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 20 20:39:01 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:39:01 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:39:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:39:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:39:01 symfony [info] {sfWebDebugLogger} Configuration 26.13 ms (9)
-May 20 20:39:01 symfony [info] {sfWebDebugLogger} Action "usuario/index" 81.80 ms (1)
-May 20 20:39:01 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 22.88 ms (1)
-May 20 20:39:01 symfony [info] {sfWebResponse} Send content (29055 o)
-May 20 20:39:01 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:01 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:01 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:01 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:01 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:01 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:01 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 20 20:39:01 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 20 20:39:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 20 20:39:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:39:09 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:39:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:39:09 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 20 20:39:09 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:39:09 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:39:09 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 20 20:39:09 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:39:09 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:39:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:39:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:39:09 symfony [info] {sfWebDebugLogger} Configuration 16.17 ms (9)
-May 20 20:39:09 symfony [info] {sfWebDebugLogger} Action "usuario/login" 27.29 ms (1)
-May 20 20:39:09 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 24.04 ms (1)
-May 20 20:39:09 symfony [info] {sfWebResponse} Send content (29698 o)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:39:09 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:39:09 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:39:09 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:39:09 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:39:10 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:10 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:10 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 20:39:10 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 20:39:10 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 20:39:24 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:24 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:24 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:39:24 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:24 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:24 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:39:24 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:39:24 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:39:24 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:39:24 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:39:24 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:24 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:24 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:25 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:25 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:25 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:25 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 20 20:39:25 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 20 20:39:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:39:30 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:39:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:39:30 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 20 20:39:30 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:39:30 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:39:30 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 20 20:39:30 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:39:30 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:39:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:39:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:39:30 symfony [info] {sfWebDebugLogger} Configuration 28.50 ms (9)
-May 20 20:39:30 symfony [info] {sfWebDebugLogger} Action "usuario/login" 37.95 ms (1)
-May 20 20:39:30 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 28.90 ms (1)
-May 20 20:39:30 symfony [info] {sfWebResponse} Send content (29699 o)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:39:30 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:39:30 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:39:30 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:39:30 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:39:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 20:39:30 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 20:39:30 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 20:42:16 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:42:16 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:42:16 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:42:16 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 20 20:42:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:42:16 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:42:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:42:16 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 20 20:42:16 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:42:16 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:42:16 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 20 20:42:16 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:42:16 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:42:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:42:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:42:16 symfony [info] {sfWebDebugLogger} Configuration 23.45 ms (9)
-May 20 20:42:16 symfony [info] {sfWebDebugLogger} Action "usuario/index" 66.50 ms (1)
-May 20 20:42:16 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 21.09 ms (1)
-May 20 20:42:16 symfony [info] {sfWebResponse} Send content (28775 o)
-May 20 20:42:16 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:42:16 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:42:16 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:42:16 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 20 20:42:16 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:42:16 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:42:16 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:42:16 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 20 20:42:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:42:49 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:42:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:42:49 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 20 20:42:49 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:42:49 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:42:49 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 20 20:42:49 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:42:49 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:42:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:42:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:42:49 symfony [info] {sfWebDebugLogger} Configuration 14.10 ms (9)
-May 20 20:42:49 symfony [info] {sfWebDebugLogger} Action "usuario/login" 21.48 ms (1)
-May 20 20:42:49 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 21.38 ms (1)
-May 20 20:42:49 symfony [info] {sfWebResponse} Send content (29723 o)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:42:49 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:42:49 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:42:49 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:42:49 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:42:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 20:42:49 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 20:42:49 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 20:42:54 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:42:54 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:42:54 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:42:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/aulavirtual/web/nuevo_dev.php/usuario with parameters array (  'web' => 'nuevo_dev.php',  'usuario' => true,  'module' => 'usuario',  'action' => 'aulavirtual',)
-May 20 20:42:54 symfony [info] {sfFrontWebController} Action "usuario/aulavirtual" does not exist
-May 20 20:42:54 symfony [err] {sfError404Exception} Action "usuario/aulavirtual" does not exist.
-May 20 20:43:48 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:43:48 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:43:48 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:43:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:43:48 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:43:48 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:43:48 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:43:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:43:48 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:43:48 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:43:48 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:43:48 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:43:48 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:43:48 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:43:48 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:43:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 20:43:48 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 20:43:49 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 20:43:52 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:43:52 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:43:52 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:43:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/aulavirtual/web/nuevo_dev.php/usuario with parameters array (  'web' => 'nuevo_dev.php',  'usuario' => true,  'module' => 'usuario',  'action' => 'aulavirtual',)
-May 20 20:43:52 symfony [info] {sfFrontWebController} Action "usuario/aulavirtual" does not exist
-May 20 20:43:52 symfony [err] {sfError404Exception} Action "usuario/aulavirtual" does not exist.
-May 20 20:43:53 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:43:53 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:43:53 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:43:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:43:53 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:43:53 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:43:53 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:43:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:43:53 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:43:53 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:43:53 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:43:53 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:43:53 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:43:53 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:43:53 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:43:54 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:43:54 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:43:54 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:43:54 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 20 20:43:54 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 20 20:44:05 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 20 20:44:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 20:44:05 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 20:44:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 20:44:05 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 20 20:44:05 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 20:44:05 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 20:44:05 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 20 20:44:05 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:44:05 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 20:44:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 20:44:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 20:44:05 symfony [info] {sfWebDebugLogger} Configuration 11.81 ms (9)
-May 20 20:44:05 symfony [info] {sfWebDebugLogger} Action "usuario/login" 35.02 ms (1)
-May 20 20:44:05 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 22.43 ms (1)
-May 20 20:44:05 symfony [info] {sfWebResponse} Send content (29594 o)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:44:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 20:44:05 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:44:05 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:44:05 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 20:44:05 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 20:44:06 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 20:44:06 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 20:44:06 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 20:44:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 20:44:06 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 20:44:06 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 20 21:02:19 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 21:02:19 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 21:02:19 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 21:02:19 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 20 21:02:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 21:02:19 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 21:02:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 21:02:19 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 20 21:02:19 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 21:02:19 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 21:02:19 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 20 21:02:19 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 21:02:19 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 21:02:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 21:02:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 21:02:19 symfony [info] {sfWebDebugLogger} Configuration 16.21 ms (9)
-May 20 21:02:19 symfony [info] {sfWebDebugLogger} Action "usuario/index" 220.52 ms (1)
-May 20 21:02:19 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 33.96 ms (1)
-May 20 21:02:19 symfony [info] {sfWebResponse} Send content (28776 o)
-May 20 21:02:19 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 21:02:19 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 21:02:19 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 21:02:19 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 21:02:19 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 21:02:19 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 21:02:20 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 20 21:02:20 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 20 21:02:39 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 21:02:39 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 21:02:39 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 21:02:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 20 21:02:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 20 21:02:39 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 20 21:02:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 20 21:02:39 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 20 21:02:39 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 20 21:02:39 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 20 21:02:39 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 20 21:02:39 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 21:02:39 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 20 21:02:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 20 21:02:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 20 21:02:39 symfony [info] {sfWebDebugLogger} Configuration 18.17 ms (9)
-May 20 21:02:39 symfony [info] {sfWebDebugLogger} Action "usuario/login" 26.73 ms (1)
-May 20 21:02:39 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 25.83 ms (1)
-May 20 21:02:39 symfony [info] {sfWebResponse} Send content (29594 o)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 20 21:02:40 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 21:02:40 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 21:02:40 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 20 21:02:40 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 20 21:02:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 20 21:02:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 20 21:02:40 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 20 21:02:40 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 22 20:58:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:26 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:26 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 22 20:58:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 22 20:58:26 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 22 20:58:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 22 20:58:26 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 22 20:58:26 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 22 20:58:26 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 22 20:58:26 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 22 20:58:26 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 22 20:58:26 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 22 20:58:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 22 20:58:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 22 20:58:26 symfony [info] {sfWebDebugLogger} Configuration 16.48 ms (9)
-May 22 20:58:26 symfony [info] {sfWebDebugLogger} Action "usuario/index" 442.75 ms (1)
-May 22 20:58:26 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 107.17 ms (1)
-May 22 20:58:27 symfony [info] {sfWebResponse} Send content (28778 o)
-May 22 20:58:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:27 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 22 20:58:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:27 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 22 20:58:37 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 22 20:58:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 22 20:58:37 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 22 20:58:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 22 20:58:37 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 22 20:58:37 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 22 20:58:37 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 22 20:58:37 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 22 20:58:37 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 22 20:58:37 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 22 20:58:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 22 20:58:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 22 20:58:37 symfony [info] {sfWebDebugLogger} Configuration 20.01 ms (9)
-May 22 20:58:37 symfony [info] {sfWebDebugLogger} Action "usuario/login" 46.01 ms (1)
-May 22 20:58:37 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 53.11 ms (1)
-May 22 20:58:37 symfony [info] {sfWebResponse} Send content (29594 o)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 22 20:58:37 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 22 20:58:37 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 22 20:58:37 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 22 20:58:37 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 22 20:58:38 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:38 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:38 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 22 20:58:38 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 22 20:58:38 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 22 20:58:42 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:42 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:42 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 22 20:58:42 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:42 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:42 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 22 20:58:42 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 22 20:58:42 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 22 20:58:42 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 22 20:58:42 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 22 20:58:42 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:42 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:42 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 22 20:58:42 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 22 20:58:42 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 22 20:58:43 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 22 20:58:43 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 22 20:58:43 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 22 20:58:43 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 22 20:58:43 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 22 20:58:43 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:43 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:43 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 22 20:58:48 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 22 20:58:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 22 20:58:49 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 22 20:58:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 22 20:58:49 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 22 20:58:49 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 22 20:58:49 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 22 20:58:49 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 22 20:58:49 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 22 20:58:49 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 22 20:58:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 22 20:58:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 22 20:58:49 symfony [info] {sfWebDebugLogger} Configuration 13.71 ms (9)
-May 22 20:58:49 symfony [info] {sfWebDebugLogger} Action "usuario/login" 23.66 ms (1)
-May 22 20:58:49 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 22.25 ms (1)
-May 22 20:58:49 symfony [info] {sfWebResponse} Send content (29594 o)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 22 20:58:49 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 22 20:58:49 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 22 20:58:49 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 22 20:58:49 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 22 20:58:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 22 20:58:49 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 22 20:58:49 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 23 00:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 00:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 00:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 00:54:09 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 23 00:54:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 00:54:09 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 00:54:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 00:54:09 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 23 00:54:09 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 00:54:09 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 00:54:09 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 23 00:54:09 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 00:54:09 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 00:54:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 00:54:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 00:54:09 symfony [info] {sfWebDebugLogger} Configuration 27.33 ms (9)
-May 23 00:54:09 symfony [info] {sfWebDebugLogger} Action "usuario/index" 27.32 ms (1)
-May 23 00:54:09 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 29.04 ms (1)
-May 23 00:54:09 symfony [info] {sfWebResponse} Send content (28510 o)
-May 23 00:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 00:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 00:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 00:54:09 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 23 00:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 00:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 00:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 00:54:09 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 23 00:54:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 00:54:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 00:54:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 00:54:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 23 00:54:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 00:54:15 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 00:54:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 00:54:15 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 23 00:54:15 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 00:54:15 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 00:54:15 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 23 00:54:15 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 00:54:15 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 00:54:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 00:54:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 00:54:15 symfony [info] {sfWebDebugLogger} Configuration 21.62 ms (9)
-May 23 00:54:15 symfony [info] {sfWebDebugLogger} Action "usuario/login" 32.86 ms (1)
-May 23 00:54:15 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 24.19 ms (1)
-May 23 00:54:15 symfony [info] {sfWebResponse} Send content (28996 o)
-May 23 00:54:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 00:54:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 00:54:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 00:54:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 23 00:54:15 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 23 00:54:15 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 23 00:54:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 00:54:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 00:54:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 00:54:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 23 00:54:16 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 23 00:54:16 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 23 00:54:16 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 00:54:16 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 00:54:16 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 00:54:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 23 00:54:16 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 23 00:54:16 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 23 01:08:23 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 01:08:23 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 01:08:23 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 01:08:23 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 01:08:23 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 01:08:23 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 01:08:23 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
-May 23 01:08:23 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 23 02:10:00 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:10:01 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:10:01 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:10:01 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 23 02:10:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:10:01 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:10:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:10:01 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 23 02:10:01 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)]
-May 23 02:10:03 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:10:03 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:10:03 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:10:03 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 23 02:10:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:10:03 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:10:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:10:03 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 23 02:10:03 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)]
-May 23 02:11:05 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:05 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:05 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:05 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 23 02:11:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:11:05 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:11:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:11:05 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 23 02:11:05 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:11:05 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:11:06 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 23 02:11:06 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:06 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:11:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:11:06 symfony [info] {sfWebDebugLogger} Configuration 80.17 ms (10)
-May 23 02:11:06 symfony [info] {sfWebDebugLogger} Action "usuario/index" 56.08 ms (1)
-May 23 02:11:06 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 52.95 ms (1)
-May 23 02:11:06 symfony [info] {sfWebResponse} Send content (28325 o)
-May 23 02:11:06 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:06 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:06 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:06 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 23 02:11:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 23 02:11:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:11:15 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:11:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:11:15 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 23 02:11:15 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:11:15 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:11:15 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 23 02:11:15 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:15 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:11:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:11:15 symfony [info] {sfWebDebugLogger} Configuration 29.85 ms (9)
-May 23 02:11:15 symfony [info] {sfWebDebugLogger} Action "usuario/login" 53.74 ms (1)
-May 23 02:11:15 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 44.11 ms (1)
-May 23 02:11:15 symfony [info] {sfWebResponse} Send content (28809 o)
-May 23 02:11:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 23 02:11:15 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 23 02:11:15 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 23 02:11:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 23 02:11:15 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 23 02:11:15 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 23 02:11:21 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:21 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:21 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:21 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 23 02:11:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:11:21 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:11:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:11:21 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 23 02:11:21 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:11:21 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:11:21 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 23 02:11:21 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:21 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:11:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:11:21 symfony [info] {sfWebDebugLogger} Configuration 48.16 ms (9)
-May 23 02:11:21 symfony [info] {sfWebDebugLogger} Action "usuario/index" 62.91 ms (1)
-May 23 02:11:21 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 59.01 ms (1)
-May 23 02:11:21 symfony [info] {sfWebResponse} Send content (28283 o)
-May 23 02:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:22 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:22 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 23 02:11:31 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:31 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:31 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 23 02:11:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:11:31 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:11:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:11:31 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 23 02:11:31 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:11:31 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:11:32 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 23 02:11:32 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:32 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:11:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:11:32 symfony [info] {sfWebDebugLogger} Configuration 28.15 ms (9)
-May 23 02:11:32 symfony [info] {sfWebDebugLogger} Action "usuario/login" 56.68 ms (1)
-May 23 02:11:32 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 50.55 ms (1)
-May 23 02:11:32 symfony [info] {sfWebResponse} Send content (28809 o)
-May 23 02:11:32 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:32 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:32 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 23 02:11:32 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 23 02:11:32 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 23 02:11:32 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:32 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:32 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 23 02:11:32 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 23 02:11:32 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 23 02:11:38 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:38 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:38 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:38 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 23 02:11:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:11:38 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:11:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:11:38 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 23 02:11:38 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:11:38 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:11:38 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 23 02:11:38 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:38 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:11:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:11:38 symfony [info] {sfWebDebugLogger} Configuration 51.96 ms (9)
-May 23 02:11:38 symfony [info] {sfWebDebugLogger} Action "usuario/index" 52.90 ms (1)
-May 23 02:11:38 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 53.31 ms (1)
-May 23 02:11:38 symfony [info] {sfWebResponse} Send content (28283 o)
-May 23 02:11:38 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:38 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:38 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:38 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 23 02:11:52 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:52 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:52 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 23 02:11:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:11:52 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:11:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:11:52 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 23 02:11:52 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:11:52 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:11:52 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 23 02:11:52 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:52 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:11:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:11:52 symfony [info] {sfWebDebugLogger} Configuration 34.30 ms (9)
-May 23 02:11:52 symfony [info] {sfWebDebugLogger} Action "usuario/login" 59.05 ms (1)
-May 23 02:11:52 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 52.37 ms (1)
-May 23 02:11:52 symfony [info] {sfWebResponse} Send content (28932 o)
-May 23 02:11:52 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:52 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:52 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 23 02:11:52 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 23 02:11:52 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 23 02:11:53 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:53 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:53 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 23 02:11:53 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 23 02:11:53 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 23 02:11:55 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:55 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:55 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:55 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 23 02:11:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:11:55 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:11:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:11:55 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 23 02:11:55 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:11:55 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:11:55 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 23 02:11:55 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:55 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:11:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:11:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:11:55 symfony [info] {sfWebDebugLogger} Configuration 32.87 ms (9)
-May 23 02:11:55 symfony [info] {sfWebDebugLogger} Action "usuario/index" 56.55 ms (1)
-May 23 02:11:55 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 50.04 ms (1)
-May 23 02:11:55 symfony [info] {sfWebResponse} Send content (28282 o)
-May 23 02:11:56 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:11:56 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:11:56 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:11:56 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 23 02:12:11 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:12:11 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:12:11 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:12:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 23 02:12:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:12:11 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:12:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:12:11 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 23 02:12:11 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:12:11 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:12:11 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 23 02:12:11 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:12:11 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:12:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:12:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:12:11 symfony [info] {sfWebDebugLogger} Configuration 36.56 ms (9)
-May 23 02:12:11 symfony [info] {sfWebDebugLogger} Action "usuario/login" 53.25 ms (1)
-May 23 02:12:11 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 51.83 ms (1)
-May 23 02:12:11 symfony [info] {sfWebResponse} Send content (28932 o)
-May 23 02:12:11 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:12:11 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:12:11 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:12:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 23 02:12:11 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 23 02:12:11 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 23 02:12:12 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:12:12 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:12:12 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:12:12 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 23 02:12:12 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 23 02:12:12 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 23 02:12:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:12:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:12:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:12:15 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 23 02:12:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:12:15 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:12:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:12:15 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 23 02:12:15 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:12:15 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:12:15 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 23 02:12:15 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:12:15 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:12:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:12:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:12:15 symfony [info] {sfWebDebugLogger} Configuration 29.33 ms (9)
-May 23 02:12:15 symfony [info] {sfWebDebugLogger} Action "usuario/index" 63.39 ms (1)
-May 23 02:12:15 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 42.72 ms (1)
-May 23 02:12:15 symfony [info] {sfWebResponse} Send content (28282 o)
-May 23 02:12:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:12:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:12:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:12:15 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 23 02:12:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:12:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:12:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:12:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 23 02:12:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:12:40 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:12:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:12:40 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 23 02:12:40 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:12:40 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:12:40 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 23 02:12:40 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:12:40 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:12:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:12:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:12:40 symfony [info] {sfWebDebugLogger} Configuration 32.05 ms (9)
-May 23 02:12:40 symfony [info] {sfWebDebugLogger} Action "usuario/login" 56.44 ms (1)
-May 23 02:12:40 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 50.41 ms (1)
-May 23 02:12:40 symfony [info] {sfWebResponse} Send content (28932 o)
-May 23 02:12:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:12:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:12:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:12:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 23 02:12:40 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 23 02:12:40 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 23 02:12:41 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:12:41 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:12:41 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:12:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 23 02:12:41 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 23 02:12:41 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 23 02:12:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:12:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:12:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:12:43 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 23 02:12:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:12:43 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:12:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:12:43 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 23 02:12:43 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:12:43 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:12:43 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 23 02:12:43 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:12:43 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:12:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:12:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:12:43 symfony [info] {sfWebDebugLogger} Configuration 31.15 ms (9)
-May 23 02:12:43 symfony [info] {sfWebDebugLogger} Action "usuario/index" 52.98 ms (1)
-May 23 02:12:43 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 55.41 ms (1)
-May 23 02:12:43 symfony [info] {sfWebResponse} Send content (28282 o)
-May 23 02:12:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:12:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:12:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:12:43 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 23 02:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:14:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 23 02:14:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:14:52 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:14:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:14:52 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 23 02:14:52 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:14:52 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:14:52 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 23 02:14:52 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:14:52 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:14:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:14:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:14:52 symfony [info] {sfWebDebugLogger} Configuration 32.36 ms (9)
-May 23 02:14:52 symfony [info] {sfWebDebugLogger} Action "usuario/login" 50.03 ms (1)
-May 23 02:14:52 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 49.09 ms (1)
-May 23 02:14:52 symfony [info] {sfWebResponse} Send content (28817 o)
-May 23 02:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:14:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 23 02:14:52 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 23 02:14:52 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 23 02:14:53 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:14:53 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:14:53 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:14:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 23 02:14:53 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 23 02:14:53 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
-May 23 02:22:19 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:22:19 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:22:19 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:22:19 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
-May 23 02:22:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:22:19 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:22:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:22:19 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
-May 23 02:22:19 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:22:19 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:22:19 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
-May 23 02:22:19 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:22:19 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:22:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:22:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:22:19 symfony [info] {sfWebDebugLogger} Configuration 35.29 ms (9)
-May 23 02:22:19 symfony [info] {sfWebDebugLogger} Action "usuario/index" 71.85 ms (1)
-May 23 02:22:19 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 48.42 ms (1)
-May 23 02:22:20 symfony [info] {sfWebResponse} Send content (28282 o)
-May 23 02:22:20 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:22:20 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:22:20 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:22:20 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
-May 23 02:22:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:22:26 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:22:26 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:22:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
-May 23 02:22:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-May 23 02:22:26 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
-May 23 02:22:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-May 23 02:22:26 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
-May 23 02:22:26 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
-May 23 02:22:26 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
-May 23 02:22:27 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
-May 23 02:22:27 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:22:27 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
-May 23 02:22:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-May 23 02:22:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-May 23 02:22:27 symfony [info] {sfWebDebugLogger} Configuration 30.99 ms (9)
-May 23 02:22:27 symfony [info] {sfWebDebugLogger} Action "usuario/login" 65.44 ms (1)
-May 23 02:22:27 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 56.89 ms (1)
-May 23 02:22:27 symfony [info] {sfWebResponse} Send content (28809 o)
-May 23 02:22:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:22:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:22:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:22:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
-May 23 02:22:27 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
-May 23 02:22:27 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
-May 23 02:22:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
-May 23 02:22:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
-May 23 02:22:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
-May 23 02:22:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
-May 23 02:22:27 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
-May 23 02:22:27 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
+May 22 16:03:57 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 16:03:57 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 16:03:57 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 16:03:57 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+May 22 16:03:57 symfony [info] {myUser} Automatic user logout due to timeout
+May 22 16:03:57 symfony [info] {myUser} User is not authenticated
+May 22 16:03:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 16:03:58 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 22 16:03:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 16:03:58 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+May 22 16:03:58 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 22 16:03:59 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 22 16:03:59 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
+May 22 16:03:59 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 22 16:03:59 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 22 16:04:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 16:04:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 16:04:00 symfony [info] {sfWebDebugLogger} Configuration 162.48 ms (9)
+May 22 16:04:00 symfony [info] {sfWebDebugLogger} Action "usuario/index" 1595.73 ms (1)
+May 22 16:04:00 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 364.39 ms (1)
+May 22 16:04:00 symfony [info] {sfWebResponse} Send content (28758 o)
+May 22 16:04:01 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 16:04:01 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 16:04:01 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 16:04:01 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 22 16:04:47 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 16:04:47 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 16:04:47 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 16:04:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
+May 22 16:04:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 16:04:47 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 22 16:04:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 16:04:47 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
+May 22 16:04:47 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 22 16:04:47 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 22 16:04:47 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
+May 22 16:04:47 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 22 16:04:47 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 22 16:04:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 16:04:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 16:04:47 symfony [info] {sfWebDebugLogger} Configuration 16.84 ms (9)
+May 22 16:04:47 symfony [info] {sfWebDebugLogger} Action "usuario/login" 34.73 ms (1)
+May 22 16:04:47 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 40.97 ms (1)
+May 22 16:04:47 symfony [info] {sfWebResponse} Send content (28669 o)
+May 22 16:04:48 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 16:04:48 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 16:04:48 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 16:04:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
+May 22 16:04:48 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
+May 22 16:04:48 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
+May 22 16:04:48 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 16:04:48 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 16:04:48 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 16:04:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
+May 22 16:04:48 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
+May 22 16:04:48 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
+May 22 16:55:46 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 16:55:46 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 16:55:46 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 16:55:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
+May 22 16:55:46 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
+May 22 16:55:46 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
+May 22 16:55:47 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 16:55:47 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 16:55:47 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 16:55:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
+May 22 16:55:47 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
+May 22 16:55:47 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
+May 22 17:43:32 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 17:43:32 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 17:43:32 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 17:43:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+May 22 17:43:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 17:43:33 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 22 17:43:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 17:43:33 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+May 22 17:43:33 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 22 17:43:33 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 22 17:43:33 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
+May 22 17:43:33 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 22 17:43:33 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 22 17:43:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 17:43:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 17:43:33 symfony [info] {sfWebDebugLogger} Configuration 15.99 ms (9)
+May 22 17:43:33 symfony [info] {sfWebDebugLogger} Action "usuario/index" 80.18 ms (1)
+May 22 17:43:33 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 65.95 ms (1)
+May 22 17:43:33 symfony [info] {sfWebResponse} Send content (28183 o)
+May 22 17:43:33 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 17:43:33 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 17:43:33 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 17:43:33 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 22 17:43:58 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 17:43:58 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 17:43:58 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 17:43:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
+May 22 17:43:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 17:43:59 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 22 17:43:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 17:43:59 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
+May 22 17:44:00 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 22 17:44:00 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 22 17:44:00 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
+May 22 17:44:00 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 22 17:44:01 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 22 17:44:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 17:44:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 17:44:01 symfony [info] {sfWebDebugLogger} Configuration 14.77 ms (9)
+May 22 17:44:01 symfony [info] {sfWebDebugLogger} Action "usuario/login" 802.60 ms (1)
+May 22 17:44:01 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 803.20 ms (1)
+May 22 17:44:01 symfony [info] {sfWebResponse} Send content (28672 o)
+May 22 17:44:01 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 22 17:44:01 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 22 17:44:01 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 22 17:44:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
+May 22 17:44:01 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
+May 22 17:44:02 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
+May 23 00:17:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 00:17:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 00:17:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 00:17:40 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+May 23 00:17:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 00:17:40 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 23 00:17:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 00:17:40 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+May 23 00:17:42 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 23 00:17:42 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 23 00:17:42 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
+May 23 00:17:42 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 00:17:42 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 00:17:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 00:17:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 00:17:42 symfony [info] {sfWebDebugLogger} Configuration 73.43 ms (9)
+May 23 00:17:42 symfony [info] {sfWebDebugLogger} Action "usuario/index" 2265.53 ms (1)
+May 23 00:17:42 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 75.21 ms (1)
+May 23 00:17:42 symfony [info] {sfWebResponse} Send content (28145 o)
+May 23 00:17:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 00:17:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 00:17:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 00:17:43 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 23 01:34:54 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 01:34:54 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 01:34:54 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 01:34:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
+May 23 01:34:54 symfony [info] {myUser} Automatic user logout due to timeout
+May 23 01:34:54 symfony [info] {myUser} User is not authenticated
+May 23 01:34:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 01:34:55 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 23 01:34:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 01:34:55 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
+May 23 01:34:57 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 23 01:34:58 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 23 01:34:59 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
+May 23 01:34:59 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 01:34:59 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 01:34:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 01:34:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 01:34:59 symfony [info] {sfWebDebugLogger} Configuration 117.25 ms (9)
+May 23 01:34:59 symfony [info] {sfWebDebugLogger} Action "usuario/login" 3766.64 ms (1)
+May 23 01:34:59 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 295.81 ms (1)
+May 23 01:34:59 symfony [info] {sfWebResponse} Send content (29245 o)
+May 23 01:35:00 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 01:35:00 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 01:35:00 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 01:35:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
+May 23 01:35:00 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
+May 23 01:35:00 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
+May 23 01:35:01 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 01:35:01 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 01:35:01 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 01:35:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
+May 23 01:35:01 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
+May 23 01:35:01 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
+May 23 02:25:40 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 02:25:40 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 02:25:40 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 02:25:40 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+May 23 02:25:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 02:25:40 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 23 02:25:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 02:25:40 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+May 23 02:25:41 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 23 02:25:41 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 23 02:25:41 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
+May 23 02:25:41 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 02:25:41 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 02:25:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 02:25:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 02:25:41 symfony [info] {sfWebDebugLogger} Configuration 46.04 ms (9)
+May 23 02:25:41 symfony [info] {sfWebDebugLogger} Action "usuario/index" 764.85 ms (1)
+May 23 02:25:41 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 273.43 ms (1)
+May 23 02:25:41 symfony [info] {sfWebResponse} Send content (27898 o)
+May 23 02:25:42 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 02:25:42 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 02:25:42 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 02:25:42 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 23 02:28:03 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 02:28:03 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 02:28:03 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 02:28:03 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 23 02:49:25 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 02:49:25 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 02:49:25 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 02:49:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
+May 23 02:49:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 02:49:25 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 23 02:49:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 02:49:25 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
+May 23 02:49:26 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 23 02:49:26 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 23 02:49:26 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
+May 23 02:49:26 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 02:49:26 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 02:49:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 02:49:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 02:49:26 symfony [info] {sfWebDebugLogger} Configuration 18.83 ms (9)
+May 23 02:49:26 symfony [info] {sfWebDebugLogger} Action "usuario/login" 991.30 ms (1)
+May 23 02:49:26 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 145.37 ms (1)
+May 23 02:49:27 symfony [info] {sfWebResponse} Send content (28704 o)
+May 23 02:49:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 02:49:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 02:49:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 02:49:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
+May 23 02:49:27 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
+May 23 02:49:27 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
+May 23 02:49:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 02:49:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 02:49:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 02:49:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
+May 23 02:49:27 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
+May 23 02:49:27 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
+May 23 03:08:12 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 03:08:12 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 03:08:12 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 03:08:12 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+May 23 03:08:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 03:08:12 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 23 03:08:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 03:08:12 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+May 23 03:08:12 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 23 03:08:12 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 23 03:08:12 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
+May 23 03:08:12 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 03:08:12 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 03:08:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 03:08:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 03:08:12 symfony [info] {sfWebDebugLogger} Configuration 28.02 ms (9)
+May 23 03:08:12 symfony [info] {sfWebDebugLogger} Action "usuario/index" 79.67 ms (1)
+May 23 03:08:12 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 37.36 ms (1)
+May 23 03:08:12 symfony [info] {sfWebResponse} Send content (28175 o)
+May 23 03:08:13 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 03:08:13 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 03:08:13 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 03:08:13 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 23 03:08:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 03:08:26 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 03:08:26 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 03:08:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
+May 23 03:08:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 03:08:26 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 23 03:08:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 03:08:26 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
+May 23 03:08:26 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 23 03:08:26 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 23 03:08:26 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
+May 23 03:08:26 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 03:08:26 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 03:08:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 03:08:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 03:08:26 symfony [info] {sfWebDebugLogger} Configuration 31.16 ms (9)
+May 23 03:08:26 symfony [info] {sfWebDebugLogger} Action "usuario/login" 61.91 ms (1)
+May 23 03:08:26 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 70.47 ms (1)
+May 23 03:08:26 symfony [info] {sfWebResponse} Send content (28702 o)
+May 23 03:08:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 03:08:26 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 03:08:26 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 03:08:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
+May 23 03:08:26 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
+May 23 03:08:26 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
+May 23 03:08:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 03:08:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 03:08:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 03:08:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
+May 23 03:08:27 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
+May 23 03:08:27 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
+May 23 06:42:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 06:42:26 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 06:42:26 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 06:42:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+May 23 06:42:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 06:42:26 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 23 06:42:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 06:42:26 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+May 23 06:42:26 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 23 06:42:26 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 23 06:42:26 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
+May 23 06:42:26 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 06:42:26 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 06:42:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 06:42:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 06:42:26 symfony [info] {sfWebDebugLogger} Configuration 17.93 ms (9)
+May 23 06:42:26 symfony [info] {sfWebDebugLogger} Action "usuario/index" 29.82 ms (1)
+May 23 06:42:26 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 73.39 ms (1)
+May 23 06:42:26 symfony [info] {sfWebResponse} Send content (28174 o)
+May 23 06:42:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 06:42:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 06:42:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 06:42:27 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 23 06:42:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 06:42:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 06:42:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 06:42:27 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
+May 23 06:42:36 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 06:42:36 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 06:42:36 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 06:42:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/login with parameters array (  'module' => 'usuario',  'action' => 'login',)
+May 23 06:42:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 06:42:36 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 23 06:42:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 06:42:36 symfony [info] {usuarioActions} Call "usuarioActions->executeLogin()"
+May 23 06:42:36 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 23 06:42:36 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 23 06:42:36 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/loginSuccess.php"
+May 23 06:42:36 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 06:42:36 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 23 06:42:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 06:42:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 06:42:36 symfony [info] {sfWebDebugLogger} Configuration 12.84 ms (9)
+May 23 06:42:36 symfony [info] {sfWebDebugLogger} Action "usuario/login" 62.86 ms (1)
+May 23 06:42:36 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/login" 29.99 ms (1)
+May 23 06:42:36 symfony [info] {sfWebResponse} Send content (28702 o)
+May 23 06:42:37 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 06:42:37 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 06:42:37 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 06:42:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style.css with parameters array (  'style.css' => true,  'module' => 'usuario',  'action' => 'files',)
+May 23 06:42:37 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
+May 23 06:42:37 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
+May 23 06:42:37 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 06:42:37 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 06:42:37 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 06:42:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/files/style_ie.css with parameters array (  'style_ie.css' => true,  'module' => 'usuario',  'action' => 'files',)
+May 23 06:42:37 symfony [info] {sfFrontWebController} Action "usuario/files" does not exist
+May 23 06:42:37 symfony [err] {sfError404Exception} Action "usuario/files" does not exist.
+May 23 06:42:37 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 23 06:42:37 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 23 06:42:37 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 23 06:42:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
+May 23 06:42:37 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
+May 23 06:42:37 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
