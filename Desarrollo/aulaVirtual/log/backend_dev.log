@@ -1,0 +1,166 @@
+May 19 16:00:02 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:00:02 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:00:02 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:00:02 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /sesion with parameters array (  'module' => 'sesion',  'action' => 'index',)
+May 19 16:00:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 19 16:00:02 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 19 16:00:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 19 16:00:02 symfony [info] {sesionActions} Call "sesionActions->executeIndex()"
+May 19 16:00:02 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\modules/sesion/templates/indexSuccess.php"
+May 19 16:00:02 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:00:02 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:00:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 19 16:00:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 19 16:00:03 symfony [info] {sfWebDebugLogger} Configuration 856.19 ms (9)
+May 19 16:00:03 symfony [info] {sfWebDebugLogger} Action "sesion/index" 0.15 ms (1)
+May 19 16:00:03 symfony [info] {sfWebDebugLogger} View "Success" for "sesion/index" 52.82 ms (1)
+May 19 16:00:03 symfony [info] {sfWebResponse} Send content (28506 o)
+May 19 16:00:03 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:00:03 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:00:03 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:00:03 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 19 16:00:53 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:00:53 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:00:53 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:00:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /sesion with parameters array (  'module' => 'sesion',  'action' => 'index',)
+May 19 16:00:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 19 16:00:53 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 19 16:00:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 19 16:00:53 symfony [info] {sesionActions} Call "sesionActions->executeIndex()"
+May 19 16:00:53 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\modules/sesion/templates/indexSuccess.php"
+May 19 16:00:53 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:00:53 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:00:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 19 16:00:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 19 16:00:53 symfony [info] {sfWebDebugLogger} Configuration 16.58 ms (9)
+May 19 16:00:53 symfony [info] {sfWebDebugLogger} Action "sesion/index" 0.15 ms (1)
+May 19 16:00:53 symfony [info] {sfWebDebugLogger} View "Success" for "sesion/index" 20.33 ms (1)
+May 19 16:00:53 symfony [info] {sfWebResponse} Send content (28362 o)
+May 19 16:00:53 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:00:53 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:00:53 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:00:53 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 19 16:02:32 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:02:32 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:02:32 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:02:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /sesion with parameters array (  'module' => 'sesion',  'action' => 'index',)
+May 19 16:02:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 19 16:02:32 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 19 16:02:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 19 16:02:32 symfony [info] {sesionActions} Call "sesionActions->executeIndex()"
+May 19 16:02:32 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\modules/sesion/templates/indexSuccess.php"
+May 19 16:02:32 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:02:32 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:02:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 19 16:02:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 19 16:02:32 symfony [info] {sfWebDebugLogger} Configuration 12.98 ms (9)
+May 19 16:02:32 symfony [info] {sfWebDebugLogger} Action "sesion/index" 0.16 ms (1)
+May 19 16:02:32 symfony [info] {sfWebDebugLogger} View "Success" for "sesion/index" 25.52 ms (1)
+May 19 16:02:32 symfony [info] {sfWebResponse} Send content (26464 o)
+May 19 16:02:32 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:02:32 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:02:32 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:02:32 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 19 16:02:39 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:02:39 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:02:39 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:02:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /sesion/logout with parameters array (  'module' => 'sesion',  'action' => 'logout',)
+May 19 16:02:39 symfony [info] {sfFrontWebController} Action "sesion/logout" does not exist
+May 19 16:02:39 symfony [err] {sfError404Exception} Action "sesion/logout" does not exist.
+May 19 16:12:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:12:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:12:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:12:49 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /sesion with parameters array (  'module' => 'sesion',  'action' => 'index',)
+May 19 16:12:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 19 16:12:49 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 19 16:12:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 19 16:12:49 symfony [info] {sesionActions} Call "sesionActions->executeIndex()"
+May 19 16:12:49 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\modules/sesion/templates/indexSuccess.php"
+May 19 16:12:49 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:12:49 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:12:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 19 16:12:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 19 16:12:49 symfony [info] {sfWebDebugLogger} Configuration 19.27 ms (9)
+May 19 16:12:49 symfony [info] {sfWebDebugLogger} Action "sesion/index" 0.15 ms (1)
+May 19 16:12:49 symfony [info] {sfWebDebugLogger} View "Success" for "sesion/index" 25.15 ms (1)
+May 19 16:12:49 symfony [info] {sfWebResponse} Send content (26607 o)
+May 19 16:12:50 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:12:50 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:12:50 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:12:50 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 19 16:12:52 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:12:52 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:12:52 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:12:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /sesion/logout with parameters array (  'module' => 'sesion',  'action' => 'logout',)
+May 19 16:12:52 symfony [info] {sfFrontWebController} Action "sesion/logout" does not exist
+May 19 16:12:52 symfony [err] {sfError404Exception} Action "sesion/logout" does not exist.
+May 19 16:13:02 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:13:02 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:13:02 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:13:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /sesion/logout with parameters array (  'module' => 'sesion',  'action' => 'logout',)
+May 19 16:13:02 symfony [info] {sfFrontWebController} Action "sesion/logout" does not exist
+May 19 16:13:02 symfony [err] {sfError404Exception} Action "sesion/logout" does not exist.
+May 19 16:13:29 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:13:29 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:13:29 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:13:29 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 19 16:13:32 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:13:32 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:13:32 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:13:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /sesion/logout with parameters array (  'module' => 'sesion',  'action' => 'logout',)
+May 19 16:13:32 symfony [info] {sfFrontWebController} Action "sesion/logout" does not exist
+May 19 16:13:32 symfony [err] {sfError404Exception} Action "sesion/logout" does not exist.
+May 19 16:13:37 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:13:37 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:13:37 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:13:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /sesion/logout with parameters array (  'module' => 'sesion',  'action' => 'logout',)
+May 19 16:13:37 symfony [info] {sfFrontWebController} Action "sesion/logout" does not exist
+May 19 16:13:37 symfony [err] {sfError404Exception} Action "sesion/logout" does not exist.
+May 19 16:14:50 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:14:50 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:14:50 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:14:50 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+May 19 16:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:14:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /sesion/logout with parameters array (  'module' => 'sesion',  'action' => 'logout',)
+May 19 16:14:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 19 16:14:52 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 19 16:14:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 19 16:14:52 symfony [info] {sesionActions} Call "sesionActions->executeLogout()"
+May 19 16:14:52 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\modules/sesion/templates/logoutSuccess.php"
+May 19 16:14:52 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:14:52 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:14:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 19 16:14:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 19 16:14:52 symfony [info] {sfWebDebugLogger} Configuration 10.13 ms (9)
+May 19 16:14:52 symfony [info] {sfWebDebugLogger} Action "sesion/logout" 0.16 ms (1)
+May 19 16:14:52 symfony [info] {sfWebDebugLogger} View "Success" for "sesion/logout" 45.72 ms (1)
+May 19 16:14:52 symfony [info] {sfWebResponse} Send content (26811 o)
+May 19 16:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:14:52 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:14:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /sesion/files/style.css with parameters array (  'style.css' => true,  'module' => 'sesion',  'action' => 'files',)
+May 19 16:14:52 symfony [info] {sfFrontWebController} Action "sesion/files" does not exist
+May 19 16:14:52 symfony [err] {sfError404Exception} Action "sesion/files" does not exist.
+May 19 16:15:34 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:15:34 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:15:34 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:15:34 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /sesion with parameters array (  'module' => 'sesion',  'action' => 'index',)
+May 19 16:15:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 19 16:15:34 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 19 16:15:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 19 16:15:34 symfony [info] {sesionActions} Call "sesionActions->executeIndex()"
+May 19 16:15:34 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\modules/sesion/templates/indexSuccess.php"
+May 19 16:15:34 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:15:34 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\backend\templates/layout.php"
+May 19 16:15:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 19 16:15:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 19 16:15:34 symfony [info] {sfWebDebugLogger} Configuration 70.66 ms (9)
+May 19 16:15:34 symfony [info] {sfWebDebugLogger} Action "sesion/index" 0.15 ms (1)
+May 19 16:15:34 symfony [info] {sfWebDebugLogger} View "Success" for "sesion/index" 25.68 ms (1)
+May 19 16:15:34 symfony [info] {sfWebResponse} Send content (26607 o)
+May 19 16:15:34 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 19 16:15:34 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 19 16:15:34 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 19 16:15:34 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
