@@ -75,7 +75,7 @@ if ($_SESSION["privilegio"]=="ADMIN"){
           <ul>
             <li><a href="">&nbsp;&nbsp;Agregar Alumnos</a> </li>
             <li><a href="">&nbsp;&nbsp;Modificar Alumno</a> </li>
-            <li><a href="personas/seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
             <li><a href="">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
           </ul>
         </li>
@@ -99,8 +99,8 @@ if ($_SESSION["privilegio"]=="ADMIN"){
       </div>
       <div class="linkstext">
       <ul>
-    	   <li><a href="">&nbsp;&nbsp;Ver Foro</a></li>
-    	   <li><a href="">&nbsp;&nbsp;Crear un tema</a></li>
+    	   <li><a href="<?php echo url_for('temas/index') ?>">&nbsp;&nbsp;Ver Foro</a></li>
+    	   <li><a href="<?php echo url_for('temas/new') ?>">&nbsp;&nbsp;Crear un tema</a></li>
            <li><a href="">&nbsp;&nbsp;Borrar Foro</a></li>
       </ul>
       </div>
