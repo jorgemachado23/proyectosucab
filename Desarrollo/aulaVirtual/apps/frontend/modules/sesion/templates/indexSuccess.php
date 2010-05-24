@@ -26,7 +26,8 @@ if ($_SESSION["privilegio"]=="ADMIN"){
     traspaso de las mismas debido a la gran cantidad de estudiantes que usted<br /><br />
     lleva manualmente.<br /><br /><br /><br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disfrute de SAVI, cualquier información o duda debe consultar con<br /><br />
-    los administradores del sistema.</p> <?php
+    los administradores del sistema.
+    </p> <?php
 
 }
     else{

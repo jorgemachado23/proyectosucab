@@ -36,7 +36,7 @@
     </div>
   </div>
   <div id="container">
-    <div id="contentPagPpal">
+    <div id="content">
       <div id="content_top">
         <div class="post">
             <?php echo $sf_content ?>
