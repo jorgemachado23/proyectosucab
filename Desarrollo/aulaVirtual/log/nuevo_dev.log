@@ -10254,3 +10254,63 @@ May 24 18:25:23 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:m
 May 24 18:25:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
 May 24 18:25:23 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
 May 24 18:25:23 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
+May 25 19:41:42 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 25 19:41:42 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 25 19:41:42 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 25 19:41:42 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+May 25 19:41:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 25 19:41:42 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 25 19:41:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 25 19:41:42 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+May 25 19:41:42 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)]
+May 25 19:43:05 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 25 19:43:05 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 25 19:43:05 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 25 19:43:05 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+May 25 19:43:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 25 19:43:05 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 25 19:43:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 25 19:43:05 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+May 25 19:43:05 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 25 19:43:05 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDDERSONA, persona.NOMBRE, persona.SEGUNDONOMBRE, persona.APELLIDO, persona.SEGUNDOAPELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO FROM `persona`
+May 25 19:43:06 symfony [err] {sfPropelLogger} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'persona.IDDERSONA' in 'field list'
+May 25 19:43:06 symfony [err] {PropelException}  [wrapped: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'persona.IDDERSONA' in 'field list']
+May 25 19:43:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 25 19:43:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 25 19:43:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 25 19:43:09 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+May 25 19:43:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 25 19:43:09 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 25 19:43:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 25 19:43:09 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+May 25 19:43:09 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 25 19:43:09 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDDERSONA, persona.NOMBRE, persona.SEGUNDONOMBRE, persona.APELLIDO, persona.SEGUNDOAPELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO FROM `persona`
+May 25 19:43:09 symfony [err] {sfPropelLogger} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'persona.IDDERSONA' in 'field list'
+May 25 19:43:09 symfony [err] {PropelException}  [wrapped: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'persona.IDDERSONA' in 'field list']
+May 25 19:51:34 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 25 19:51:34 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 25 19:51:34 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 25 19:51:34 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+May 25 19:51:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 25 19:51:34 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 25 19:51:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 25 19:51:34 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+May 25 19:51:34 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+May 25 19:51:34 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+May 25 19:51:35 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
+May 25 19:51:35 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 25 19:51:35 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+May 25 19:51:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 25 19:51:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 25 19:51:35 symfony [info] {sfWebDebugLogger} Configuration 21.45 ms (9)
+May 25 19:51:35 symfony [info] {sfWebDebugLogger} Action "usuario/index" 66.18 ms (1)
+May 25 19:51:35 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 285.75 ms (1)
+May 25 19:51:35 symfony [info] {sfWebResponse} Send content (28468 o)
+May 25 19:51:35 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 25 19:51:35 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 25 19:51:35 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 25 19:51:35 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 25 19:51:35 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 25 19:51:35 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 25 19:51:35 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
+May 25 19:51:35 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
