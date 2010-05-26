@@ -21,17 +21,53 @@ class Persona extends BasePersona
         $segundoapellidoA=strtoupper($this->getSegundoapellido());
         $this->setSegundoapellido($segundoapellidoA);
 
-        $cuenta=strtoupper($this->getCuenta());
-        $this->setCuenta($cuenta);
+        
 
         $correo=strtoupper($this->getCorreo());
         $this->setCorreo($correo);
 
-        if (($this->isNew()) && (!$this->getTipo()))
+        if ($this->isNew())
         {
-             $this->setTipo("ALUM");
+             if (!$this->getTipo()){
+                $this->setTipo("ALUM");
+             }
+
+             $cuenta=strtoupper($this->generarNombre());
+             $this->setCuenta($cuenta);
+
+             $clave=$this->generarClave();
+             $this->setClave($clave);
+             
         }
         
         return parent::save($con);
+    }
+
+    public function generarNombre(){
+
+        $contador = 0;
+        $nombreAlumno = $this->getNombre();
+        $apellidoAlumno = $this->getApellido();
+        $cuentaAlumno = $nombreAlumno."_". $apellidoAlumno;
+
+        foreach ($persona_list as $persona) {
+            $contador=8;
+        }
+       
+
+           // if(($nombreAlumno == $persona->getNombre()) && ($apellidoAlumno == $persona->getApellido())){
+
+       
+
+            $cuentaAlumno = $contador;
+       
+        return $cuentaAlumno;
+    }
+
+    public function generarClave(){
+
+        $clave = rand(111111, 999999);
+
+        return $clave;
     }
 }

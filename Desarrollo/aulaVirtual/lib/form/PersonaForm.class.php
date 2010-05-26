@@ -25,7 +25,10 @@ class PersonaForm extends BasePersonaForm
         ));
 
       unset(
-         $this['tipo']
+         $this['tipo'],
+         $this['cuenta'],
+         $this['clave'],
+         $this['estado']
         );
 
       $this->widgetSchema->setLabels(array(
@@ -33,7 +36,19 @@ class PersonaForm extends BasePersonaForm
        'segundoapellido' => 'Segundo Apellido',
       ));
 
-      
+      //    Validadores de tipo de requerimiento//
+        $this->validatorSchema['nombre']->addMessage('required',
+                'Debes indicar el Nombre');
+        $this->validatorSchema['segundonombre']->addMessage('required',
+                'Debes indicar el Segundo Nombre');
+        $this->validatorSchema['apellido']->addMessage('required',
+                'Debes indicar el Apellido');
+        $this->validatorSchema['correo']->addMessage('required',
+                'Debes indicar el Correo');
+        $this->validatorSchema['segundoapellido']->addMessage('required',
+                'Debes indicar el Segundo Apellido');
+        
+
 
   }
 }

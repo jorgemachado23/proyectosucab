@@ -77,7 +77,7 @@ else $seccion = $_SESSION["seccion"];
             <!-- -->
           </h2>
           <ul>
-            <li><a href="">&nbsp;&nbsp;Agregar Alumnos</a> </li>
+            <li><a href="personas/new">&nbsp;&nbsp;Agregar Alumnos</a> </li>
             <li><a href="">&nbsp;&nbsp;Modificar Alumno</a> </li>
             <li><a href="seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
             <li><a href="">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
