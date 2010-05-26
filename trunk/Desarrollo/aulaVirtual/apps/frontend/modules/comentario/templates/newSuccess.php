@@ -1,8 +1,18 @@
-<h1>New Comentario</h1>
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1>Agregar un Comentario</h1>
+<br />
+<br />
+<br />
+<br />
+<br />
 
 <?php include_partial('form', array('form' => $form)) ?>
 
-  <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
+<!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
 
 <?php slot('menuSidebarAlumno')
       ?>
@@ -11,7 +21,7 @@
 		<p></p>
 		<p></p>
                 <br />
-		<a href="">Ver Temas</a>
+		<a href="<?php echo url_for('temas/index') ?>">Ver Temas</a>
         </ul>
       </div>
       <div class="linkstext">
@@ -36,7 +46,7 @@
           <ul>
             <li><a href="">&nbsp;&nbsp;Agregar Alumnos</a> </li>
             <li><a href="">&nbsp;&nbsp;Modificar Alumno</a> </li>
-            <li><a href="personas/seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
             <li><a href="">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
           </ul>
         </li>
@@ -60,8 +70,8 @@
       </div>
       <div class="linkstext">
       <ul>
-    	   <li><a href="">&nbsp;&nbsp;Ver Foro</a></li>
-    	   <li><a href="">&nbsp;&nbsp;Crear un tema</a></li>
+    	   <li><a href="<?php echo url_for('temas/index') ?>">&nbsp;&nbsp;Ver Foro</a></li>
+    	   <li><a href="<?php echo url_for('temas/new') ?>">&nbsp;&nbsp;Crear un tema</a></li>
            <li><a href="">&nbsp;&nbsp;Borrar Foro</a></li>
       </ul>
       </div>
