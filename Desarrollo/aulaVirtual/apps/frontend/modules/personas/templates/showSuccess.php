@@ -1,3 +1,4 @@
+<br /><br /><br />
 <table>
   <tbody>
     <tr>
@@ -8,9 +9,17 @@
       <th>Nombre:</th>
       <td><?php echo $persona->getNombre() ?></td>
     </tr>
+     <tr>
+      <th>Segundo Nombre:</th>
+      <td><?php echo $persona->getSegundonombre() ?></td>
+    </tr>
     <tr>
       <th>Apellido:</th>
       <td><?php echo $persona->getApellido() ?></td>
+    </tr>
+    <tr>
+      <th>Segundo Apellido:</th>
+      <td><?php echo $persona->getSegundoapellido() ?></td>
     </tr>
     <tr>
       <th>Tipo:</th>
@@ -36,19 +45,11 @@
       <th>Correo:</th>
       <td><?php echo $persona->getCorreo() ?></td>
     </tr>
-    <tr>
-      <th>Segundonombre:</th>
-      <td><?php echo $persona->getSegundonombre() ?></td>
-    </tr>
-    <tr>
-      <th>Segundoapellido:</th>
-      <td><?php echo $persona->getSegundoapellido() ?></td>
-    </tr>
   </tbody>
 </table>
 
 <hr />
 
-<a href="<?php echo url_for('personas/edit?idpersona='.$persona->getIdpersona()) ?>">Edit</a>
+<a href="<?php echo url_for('personas/edit?idpersona='.$persona->getIdpersona()) ?>" style="text-decoration: underline; color: gray">Edit</a>
 &nbsp;
 <a href="<?php echo url_for('personas/index') ?>">List</a>

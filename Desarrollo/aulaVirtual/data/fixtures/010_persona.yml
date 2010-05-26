@@ -4,7 +4,7 @@ Persona:
     nombre: Ana
     apellido: Pardo
     tipo: ADMIN
-    cuenta: ana_pardo
+    cuenta: ANA_PARDO
     clave: 1234
     correo: anampardo@gmail.com
     segundoNombre: Mercedes

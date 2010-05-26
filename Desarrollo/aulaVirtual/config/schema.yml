@@ -52,15 +52,15 @@ propel:
     _attributes: { phpName: Persona }
     idpersona: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
     nombre: { type: VARCHAR, size: '45', required: true }
+    segundonombre: { type: VARCHAR, size: '45', required: true }
     apellido: { type: VARCHAR, size: '45', required: true }
+    segundoapellido: { type: VARCHAR, size: '45', required: true }
     tipo: { type: VARCHAR, size: '45', required: true }
     cuenta: { type: VARCHAR, size: '45', required: true }
     clave: { type: VARCHAR, size: '45', required: true }
     seccion: { type: VARCHAR, size: '2', required: false }
     estado: { type: VARCHAR, size: '45', required: true, defaultValue: Activo }
     correo: { type: VARCHAR, size: '80', required: false }
-    segundonombre: { type: VARCHAR, size: '45', required: true }
-    segundoapellido: { type: VARCHAR, size: '45', required: true }
   res_dada:
     _attributes: { phpName: ResDada }
     num_pregunta: { type: INTEGER, size: '11', primaryKey: true, required: true }

@@ -1,5 +1,12 @@
 <?php
-$seccion = "A";
+if ($_SESSION["seccion"]==null){
+
+$seccion = $_POST["seccion"];
+$_SESSION["seccion"]=$seccion;
+
+}
+
+else $seccion = $_SESSION["seccion"];
 ?>
 
 <br /><br />
@@ -14,9 +21,9 @@ $seccion = "A";
     <tr>
       
       <th>Nombre</th>
+      <th>Segundo Nombre</th>
       <th>Apellido</th>
-      <th>Segundonombre</th>
-      <th>Segundoapellido</th>
+      <th>Segundo Apellido</th>
      
       
     </tr>
@@ -26,17 +33,17 @@ $seccion = "A";
     <?php foreach ($persona_list as $persona): ?>
       <?php if ((($persona->getTipo())=="ALUM")&&(($persona->getSeccion())==$seccion)){?>
     <tr>
-      <td><a href="<?php echo url_for('personas/show?idpersona='.$persona->getIdpersona()) ?>"><?php echo $persona->getNombre() ?></td>
-      <td><?php echo $persona->getApellido() ?></td>
-      <td><?php echo $persona->getSegundonombre() ?></td>
-      <td><?php echo $persona->getSegundoapellido() ?></td>
+        <td width="150"><a href="<?php echo url_for('personas/show?idpersona='.$persona->getIdpersona()) ?>" style="text-decoration:underline;color: gray"><?php echo $persona->getNombre() ?></td>
+      <td width="150"><?php echo $persona->getSegundonombre() ?></td>
+      <td width="150"><?php echo $persona->getApellido() ?></td>
+      <td width="150"><?php echo $persona->getSegundoapellido() ?></td>
     </tr>
     <?php }?>
     <?php endforeach; ?>
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('personas/new') ?>">New</a>
+ <!--<a href="<?php //echo url_for('personas/new') ?>">New</a>-->
 
   <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
 
