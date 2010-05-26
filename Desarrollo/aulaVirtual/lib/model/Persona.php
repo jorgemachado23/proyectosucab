@@ -32,7 +32,8 @@ class Persona extends BasePersona
                 $this->setTipo("ALUM");
              }
 
-             $cuenta=strtoupper($this->generarNombre());
+             $contador = 0;
+             $cuenta=strtoupper($this->generarNombre($contador));
              $this->setCuenta($cuenta);
 
              $clave=$this->generarClave();
@@ -43,24 +44,24 @@ class Persona extends BasePersona
         return parent::save($con);
     }
 
-    public function generarNombre(){
+    public function generarNombre($contador){
 
-        $contador = 0;
+
+
         $nombreAlumno = $this->getNombre();
         $apellidoAlumno = $this->getApellido();
         $cuentaAlumno = $nombreAlumno."_". $apellidoAlumno;
 
-        foreach ($persona_list as $persona) {
-            $contador=8;
+        $personas = PersonaPeer::getActiveEstudiantes();
+        foreach ($personas as $persona) {
+            if(($nombreAlumno == $persona->getNombre()) && ($apellidoAlumno == $persona->getApellido())){
+                ++$contador;
+
+            }
         }
-       
-
-           // if(($nombreAlumno == $persona->getNombre()) && ($apellidoAlumno == $persona->getApellido())){
-
-       
-
-            $cuentaAlumno = $contador;
-       
+        if($contador > 0){
+        $cuentaAlumno = $cuentaAlumno."_".$contador;
+        }
         return $cuentaAlumno;
     }
 

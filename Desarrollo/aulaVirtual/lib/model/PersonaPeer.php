@@ -22,4 +22,11 @@ class PersonaPeer extends BasePersonaPeer
         $criteria->addAscendingOrderByColumn(self::APELLIDO);
         return self::doSelect($criteria);
     }
+
+    static public function getCantidadEstudiantes(){
+
+        $criteria = new Criteria();
+        $criteria->add(self::ESTADO, 'Activo', Criteria::EQUAL);
+        return self::doSelect($criteria);
+    }
 }
