@@ -11,16 +11,11 @@
 class temasActions extends sfActions
 {
 
-  public function executeDeleteForo(sfWebRequest $request)
+  public function executeBorrarForo(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
-
-    $this->forward404Unless($tema = ComentariosPeer::doSelect(new Criteria()));
-    $tema->delete();
-
+    $this->tema_list = TemaPeer::doSelect(new Criteria());
     $this->redirect('temas/index');
   }
-
 
   public function executeDeleteComen(sfWebRequest $request)
   {
@@ -60,6 +55,7 @@ class temasActions extends sfActions
     $this->processForm($request, $this->form);
 
     $this->setTemplate('new');
+    
   }
 
   public function executeEdit(sfWebRequest $request)
@@ -88,7 +84,17 @@ class temasActions extends sfActions
 
     $this->redirect('temas/index');
   }
-
+  
+    public function executeDeleteForo(sfWebRequest $request)
+  {
+    $request->checkCSRFProtection();
+    foreach ($tema_list as $tema) {
+        $this->forward404Unless($tema = TemaPeer::retrieveByPk($tema->getIdtema(), sprintf('Object tema does not exist (%s).', $tema->getIdtema())));
+        $tema->delete();
+    }
+    $this->redirect('temas/index');
+  }
+  
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));

@@ -11,8 +11,10 @@ $_SESSION["usuario"];
 <br />
 <br />
 
+
+<table width="500">
+<hr />
 <?php foreach ($tema_list as $tema): ?>
-<table width="400">
       <br />
       <tr>Tema: <?php echo $tema->getNombre() ?></tr>
       <br />
@@ -22,9 +24,10 @@ $_SESSION["usuario"];
       <br /><br />
       <tr><a href="<?php echo url_for('temas/show?idtema='.$tema->getIdtema()) ?>">Ver Tema</a></tr>
       <br /><br />
-      
+	  <hr />
+<?php endforeach; ?>      
 </table>
-<?php endforeach; ?>
+
 
 <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
 
@@ -35,7 +38,7 @@ $_SESSION["usuario"];
 		<p></p>
 		<p></p>
                 <br />
-		<a href="">Ver Temas</a>
+		<a href="<?php echo url_for('temas/index') ?>">Ver Temas</a>
         </ul>
       </div>
       <div class="linkstext">
@@ -86,7 +89,7 @@ $_SESSION["usuario"];
       <ul>
     	   <li><a href="<?php echo url_for('temas/index') ?>">&nbsp;&nbsp;Ver Foro</a></li>
     	   <li><a href="<?php echo url_for('temas/new') ?>">&nbsp;&nbsp;Crear un tema</a></li>
-           <li><a href="">&nbsp;&nbsp;Borrar Foro</a></li>
+           <li><a href="<?php echo url_for('temas/deleteForo') ?>">&nbsp;&nbsp;Borrar Foro</a></li>
       </ul>
       </div>
 <?php end_slot(); ?>

@@ -2,30 +2,41 @@
 $_SESSION["usuario"];
 ?>
 
+ <?php
+ foreach ($persona_list as $persona):
+            if ($persona->getCuenta() == $_SESSION["usuario"] ){
+                $id = $persona->getIdpersona();
+}endforeach;
+?>
+
 <br />
 <br />
 <br />
-<h1>Tema: <?php echo $tema->getNombre() ?></h1>
+<br />
+<br />
+<br />
+<h1 align="center">Tema: <?php echo $tema->getNombre() ?></h1>
 <br />
 <br />
 
 <table width="400">
   <tbody>
     <tr>
-      <th>Nombre:</th>
-      <td><?php echo $tema->getNombre() ?></td>
+      <td>Nombre: <?php echo $tema->getNombre() ?></td>
     </tr>
     <tr></tr>
     <tr>
-      <th>Descripción:</th>
-      <td><?php echo $tema->getDescripcion() ?></td>
+      <td>Descripción: <?php echo $tema->getDescripcion() ?></td>
     </tr>
   </tbody>
 </table>
 
 <br />
 <br />
-<a href="<?php echo url_for('temas/edit?idtema='.$tema->getIdtema()) ?>">Modificar Tema</a>
+    <?php if ($_SESSION["privilegio"]=="ADMIN"){
+    ?>
+    <a href="<?php echo url_for('temas/edit?idtema='.$tema->getIdtema()) ?>">Modificar Tema</a><?php
+    }?>
 &nbsp;
 <a href="<?php echo url_for('temas/index') ?>">Volver</a>
 <br />
@@ -37,7 +48,6 @@ $_SESSION["usuario"];
 <br />
 <h1 align="center">Comentarios:</h1>
 <br />
-
         <form id="form1" name="form1" action="" method="POST">
           <table width="477" border="0" align="center">
             <tr>
@@ -77,9 +87,17 @@ $_SESSION["usuario"];
             ?>
       </tr>
       <tr><br /></tr>
-      <tr><?php echo link_to('Delete', 'temas/deleteComen?idcomentarios='.$comentarios->getIdcomentarios(), array('method' => 'delete', 'confirm' => '¿Está seguro de que desea eliminar el comentario?')) ?></tr>
+      <tr><?php
+            if ($_SESSION["privilegio"]=="ADMIN"){
+                 echo link_to('Borrar', 'temas/deleteComen?idcomentarios='.$comentarios->getIdcomentarios(), array('method' => 'delete', 'confirm' => '¿Está seguro de que desea eliminar el comentario?')) ?>
+          <?php }
+          else{
+                if($comentarios->getIdpersona()==$id){
+                    echo link_to('Borrar', 'temas/deleteComen?idcomentarios='.$comentarios->getIdcomentarios(), array('method' => 'delete', 'confirm' => '¿Está seguro de que desea eliminar el comentario?')) ?>
+           <?php     }
+            }?>
+      </tr>
       <tr><br /></tr>
-      <hr />
     </tbody>
 </table>
   

@@ -12,5 +12,9 @@ class TemaForm extends BaseTemaForm
 {
   public function configure()
   {
+         $cuenta=1;
+         unset ($this['created_at']);
+         unset ($this['updated_at']);
+         $this->setDefault('idpersona',$cuenta);
   }
 }
