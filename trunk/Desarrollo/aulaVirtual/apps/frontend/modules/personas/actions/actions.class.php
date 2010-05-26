@@ -12,7 +12,10 @@ class personasActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->persona_list = PersonaPeer::doSelect(new Criteria());
+//    $criteria = new Criteria();
+//    $criteria->add(PersonaPeer::ESTADO, 'Activo',Criteria::EQUAL);
+
+    $this->persona_list = PersonaPeer::getActiveEstudiantes();
   }
 
   public function executeSeccion(sfWebRequest $request)

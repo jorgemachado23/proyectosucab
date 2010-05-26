@@ -123,15 +123,15 @@ CREATE TABLE `persona`
 (
 	`idpersona` INTEGER(11)  NOT NULL AUTO_INCREMENT,
 	`nombre` VARCHAR(45)  NOT NULL,
+	`segundonombre` VARCHAR(45)  NOT NULL,
 	`apellido` VARCHAR(45)  NOT NULL,
+	`segundoapellido` VARCHAR(45)  NOT NULL,
 	`tipo` VARCHAR(45)  NOT NULL,
 	`cuenta` VARCHAR(45)  NOT NULL,
 	`clave` VARCHAR(45)  NOT NULL,
 	`seccion` VARCHAR(2),
 	`estado` VARCHAR(45) default 'Activo' NOT NULL,
 	`correo` VARCHAR(80),
-	`segundonombre` VARCHAR(45)  NOT NULL,
-	`segundoapellido` VARCHAR(45)  NOT NULL,
 	PRIMARY KEY (`idpersona`)
 )Type=InnoDB;
 
