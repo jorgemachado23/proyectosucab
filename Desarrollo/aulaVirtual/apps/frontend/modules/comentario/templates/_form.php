@@ -9,7 +9,7 @@
     <tfoot>
       <tr>
         <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('comentario/index') ?>">Cancel</a>
+          &nbsp;<a href="<?php echo url_for('temas/index') ?>">Cancel</a>
           <?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php echo link_to('Delete', 'comentario/delete?idcomentarios='.$form->getObject()->getIdcomentarios(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
           <?php endif; ?>

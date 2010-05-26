@@ -12,5 +12,9 @@ class ComentariosForm extends BaseComentariosForm
 {
   public function configure()
   {
+         unset ($this['created_at']);
+         unset ($this['updated_at']);
+         unset ($this['idpersona']);
+         unset ($this['idtema']);
   }
 }

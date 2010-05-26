@@ -71,7 +71,7 @@ class comentarioActions extends sfActions
     {
       $comentarios = $form->save();
 
-      $this->redirect('comentario/edit?idcomentarios='.$comentarios->getIdcomentarios());
+      $this->redirect('temas/index');
     }
   }
 }

@@ -8,6 +8,7 @@ foreach ($persona_list as $persona)
     {
         $_SESSION["usuario"] = strtoupper($_POST["usuario"]);
         $_SESSION["privilegio"] = $persona->getTipo();
+        $_SESSION["id"]=$persona->getIdpersona();
         $exist_user = true;
         echo "<script language='JavaScript'>document.location.href='/frontend_dev.php/sesion'</script>";
     }

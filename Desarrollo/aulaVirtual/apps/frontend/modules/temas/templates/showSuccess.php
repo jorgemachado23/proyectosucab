@@ -1,11 +1,10 @@
 <?php
 $_SESSION["usuario"];
-?>
 
- <?php
  foreach ($persona_list as $persona):
             if ($persona->getCuenta() == $_SESSION["usuario"] ){
                 $id = $persona->getIdpersona();
+                $_SESSION["id"]=$id;
 }endforeach;
 ?>
 
@@ -31,6 +30,8 @@ $_SESSION["usuario"];
   </tbody>
 </table>
 
+<?php $_SESSION["idtema"]=$tema->getIdtema();  ?>
+
 <br />
 <br />
     <?php if ($_SESSION["privilegio"]=="ADMIN"){
@@ -48,15 +49,9 @@ $_SESSION["usuario"];
 <br />
 <h1 align="center">Comentarios:</h1>
 <br />
-        <form id="form1" name="form1" action="" method="POST">
-          <table width="477" border="0" align="center">
-            <tr>
-              <td height="82">Agregar Comentario: </td>
-              <td><textarea name="comentario" cols="50" rows="4" id="comentario"></textarea></td>
-            </tr>
-          </table>
+        <form id="form1" name="form1" action="<?php echo url_for('comentario/new') ?>" method="POST">
           <div align="center"><br />
-              <input type="submit" name="agregar" id="agregar" value="Agregar" style="font-family:Verdana, Arial, Helvetica, sans-serif" />
+              <input type="submit" name="agregar" id="agregar" value="Agregar comentario" style="font-family:Verdana, Arial, Helvetica, sans-serif" />
           </div>
         </form>
 <br />
@@ -67,7 +62,7 @@ $_SESSION["usuario"];
 <?php foreach ($comentarios_list as $comentarios):
     if ($comentarios->getIdtema()== $tema->getIdtema()){
     ?>
-<table width="400">
+<table width="500">
     <tbody>
       <hr />
       <tr><br /></tr>
@@ -100,7 +95,7 @@ $_SESSION["usuario"];
       <tr><br /></tr>
     </tbody>
 </table>
-  
+
     <?php }endforeach; ?>
 
 <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
@@ -137,7 +132,7 @@ $_SESSION["usuario"];
           <ul>
             <li><a href="">&nbsp;&nbsp;Agregar Alumnos</a> </li>
             <li><a href="">&nbsp;&nbsp;Modificar Alumno</a> </li>
-            <li><a href="personas/seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
             <li><a href="">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
           </ul>
         </li>
@@ -162,7 +157,7 @@ $_SESSION["usuario"];
       <div class="linkstext">
       <ul>
     	   <li><a href="<?php echo url_for('temas/index') ?>">&nbsp;&nbsp;Ver Foro</a></li>
-    	   <li><a href="">&nbsp;&nbsp;Crear un tema</a></li>
+    	   <li><a href="<?php echo url_for('temas/new') ?>">&nbsp;&nbsp;Crear un tema</a></li>
            <li><a href="">&nbsp;&nbsp;Borrar Foro</a></li>
       </ul>
       </div>

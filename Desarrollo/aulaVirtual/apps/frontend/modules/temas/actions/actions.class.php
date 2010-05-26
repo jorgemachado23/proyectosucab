@@ -1,74 +1,53 @@
 <?php
 
 /**
- * temas actions.
+ * comentario actions.
  *
  * @package    aulaVirtual
- * @subpackage temas
+ * @subpackage comentario
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 12474 2008-10-31 10:41:27Z fabien $
  */
-class temasActions extends sfActions
+class comentarioActions extends sfActions
 {
-
-  public function executeBorrarForo(sfWebRequest $request)
-  {
-    $this->tema_list = TemaPeer::doSelect(new Criteria());
-    $this->redirect('temas/index');
-  }
-
-  public function executeDeleteComen(sfWebRequest $request)
-  {
-    $request->checkCSRFProtection();
-
-    $this->forward404Unless($comentarios = ComentariosPeer::retrieveByPk($request->getParameter('idcomentarios')), sprintf('Object comentarios does not exist (%s).', $request->getParameter('idcomentarios')));
-    $comentarios->delete();
-
-    $this->redirect('temas/index');
-  }
-
   public function executeIndex(sfWebRequest $request)
   {
-    $this->tema_list = TemaPeer::doSelect(new Criteria());
+    $this->comentarios_list = ComentariosPeer::doSelect(new Criteria());
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->tema = TemaPeer::retrieveByPk($request->getParameter('idtema'));
-    $this->forward404Unless($this->tema);
-    $this->comentarios_list = ComentariosPeer::doSelect(new Criteria());
-    $this->persona_list = PersonaPeer::doSelect(new Criteria());
-    $this->persona = PersonaPeer::retrieveByPk($request->getParameter('idpersona'));
+    $this->comentarios = ComentariosPeer::retrieveByPk($request->getParameter('idcomentarios'));
+    $this->forward404Unless($this->comentarios);
   }
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new TemaForm();
+    $this->form = new ComentariosForm();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod('post'));
 
-    $this->form = new TemaForm();
+    $this->form = new ComentariosForm();
 
     $this->processForm($request, $this->form);
 
     $this->setTemplate('new');
-    
   }
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($tema = TemaPeer::retrieveByPk($request->getParameter('idtema')), sprintf('Object tema does not exist (%s).', $request->getParameter('idtema')));
-    $this->form = new TemaForm($tema);
+    $this->forward404Unless($comentarios = ComentariosPeer::retrieveByPk($request->getParameter('idcomentarios')), sprintf('Object comentarios does not exist (%s).', $request->getParameter('idcomentarios')));
+    $this->form = new ComentariosForm($comentarios);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod('post') || $request->isMethod('put'));
-    $this->forward404Unless($tema = TemaPeer::retrieveByPk($request->getParameter('idtema')), sprintf('Object tema does not exist (%s).', $request->getParameter('idtema')));
-    $this->form = new TemaForm($tema);
+    $this->forward404Unless($comentarios = ComentariosPeer::retrieveByPk($request->getParameter('idcomentarios')), sprintf('Object comentarios does not exist (%s).', $request->getParameter('idcomentarios')));
+    $this->form = new ComentariosForm($comentarios);
 
     $this->processForm($request, $this->form);
 
@@ -79,30 +58,20 @@ class temasActions extends sfActions
   {
     $request->checkCSRFProtection();
 
-    $this->forward404Unless($tema = TemaPeer::retrieveByPk($request->getParameter('idtema')), sprintf('Object tema does not exist (%s).', $request->getParameter('idtema')));
-    $tema->delete();
+    $this->forward404Unless($comentarios = ComentariosPeer::retrieveByPk($request->getParameter('idcomentarios')), sprintf('Object comentarios does not exist (%s).', $request->getParameter('idcomentarios')));
+    $comentarios->delete();
 
-    $this->redirect('temas/index');
+    $this->redirect('comentario/index');
   }
-  
-    public function executeDeleteForo(sfWebRequest $request)
-  {
-    $request->checkCSRFProtection();
-    foreach ($tema_list as $tema) {
-        $this->forward404Unless($tema = TemaPeer::retrieveByPk($tema->getIdtema(), sprintf('Object tema does not exist (%s).', $tema->getIdtema())));
-        $tema->delete();
-    }
-    $this->redirect('temas/index');
-  }
-  
+
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
-      $tema = $form->save();
+      $comentarios = $form->save();
 
-      $this->redirect('temas/edit?idtema='.$tema->getIdtema());
+      $this->redirect('temas/index');
     }
   }
 }
