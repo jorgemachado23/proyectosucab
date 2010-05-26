@@ -1,5 +1,6 @@
-<h1>New Personas</h1>
 <br /><br />
+<h1>Agregar Alumnos</h1>
+
 <?php include_partial('form', array('form' => $form)) ?>
 
   <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->

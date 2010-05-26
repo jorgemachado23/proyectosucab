@@ -1,5 +1,6 @@
-<h1>Edit Personas</h1>
 <br /><br />
+<h1>Editar Alumno</h1>
+
 <?php include_partial('form', array('form' => $form)) ?>
 
   <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
