@@ -6,7 +6,7 @@ foreach ($persona_list as $persona)
 
     if ( ($cuenta == $persona->getCuenta()) and ($_POST["clave"] ==  $persona->getClave()) )
     {
-        $_SESSION["usuario"] = $_POST["usuario"];
+        $_SESSION["usuario"] = strtoupper($_POST["usuario"]);
         $_SESSION["privilegio"] = $persona->getTipo();
         $exist_user = true;
         echo "<script language='JavaScript'>document.location.href='/frontend_dev.php/sesion'</script>";

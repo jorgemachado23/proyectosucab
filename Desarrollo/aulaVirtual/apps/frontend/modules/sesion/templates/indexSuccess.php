@@ -51,7 +51,7 @@ if ($_SESSION["privilegio"]=="ADMIN"){
 		<p></p>
 		<p></p>
                 <br />
-		<a href="">Ver Temas</a>
+		<a href="<?php echo url_for('temas/index') ?>">Ver Temas</a>
         </ul>
       </div>
       <div class="linkstext">
@@ -74,7 +74,7 @@ if ($_SESSION["privilegio"]=="ADMIN"){
             <!-- -->
           </h2>
           <ul>
-            <li><a href="">&nbsp;&nbsp;Agregar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/new') ?>">&nbsp;&nbsp;Agregar Alumnos</a> </li>
             <li><a href="">&nbsp;&nbsp;Modificar Alumno</a> </li>
             <li><a href="">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
             <li><a href="">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
