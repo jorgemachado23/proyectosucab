@@ -76,7 +76,7 @@ if ($_SESSION["privilegio"]=="ADMIN"){
           <ul>
             <li><a href="<?php echo url_for('personas/new') ?>">&nbsp;&nbsp;Agregar Alumnos</a> </li>
             <li><a href="">&nbsp;&nbsp;Modificar Alumno</a> </li>
-            <li><a href="">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
+            <li><a href="personas/seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
             <li><a href="">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
           </ul>
         </li>
