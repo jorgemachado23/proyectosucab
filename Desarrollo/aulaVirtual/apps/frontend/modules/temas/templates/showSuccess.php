@@ -158,7 +158,7 @@ $_SESSION["usuario"];
       <ul>
     	   <li><a href="<?php echo url_for('temas/index') ?>">&nbsp;&nbsp;Ver Foro</a></li>
     	   <li><a href="<?php echo url_for('temas/new') ?>">&nbsp;&nbsp;Crear un tema</a></li>
-           <li><a href="">&nbsp;&nbsp;Borrar Foro</a></li>
+           <li><a href="<?php echo url_for('temas/deleteForo') ?>">&nbsp;&nbsp;Vaciar Foro</a></li>
       </ul>
       </div>
 <?php end_slot(); ?>
