@@ -15,6 +15,14 @@ class PersonaPeer extends BasePersonaPeer
 
    );
 
+   static public function getEstudiantes()
+    {
+        $criteria = new Criteria();
+        $criteria->add(self::TIPO, 'ALUM', Criteria::EQUAL);
+        return self::doSelect($criteria);
+        
+    }
+
    static public function getActiveEstudiantes()
     {
         $criteria = new Criteria();

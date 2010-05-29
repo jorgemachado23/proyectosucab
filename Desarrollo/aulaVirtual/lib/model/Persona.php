@@ -1,14 +1,25 @@
 <?php
 
+
+
 class Persona extends BasePersona
 {
+    
+    
     public function __toString()
     {
         return $this->getName();
     }
 
+    public function inhabilitar(){
+
+        $this->setEstado("Inactivo");
+
+    }
+
     public function save(PropelPDO $con = null)
     {
+      
         $nombreA=strtoupper($this->getNombre());
         $this->setNombre($nombreA);
 
@@ -39,6 +50,11 @@ class Persona extends BasePersona
              $clave=$this->generarClave();
              $this->setClave($clave);
              
+        }
+        else if($_SESSION["flag"] == 1){
+            $this->setEstado("Inactivo");
+            $_SESSION["flag"]=0;
+
         }
         
         return parent::save($con);

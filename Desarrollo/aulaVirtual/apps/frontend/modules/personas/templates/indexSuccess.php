@@ -43,7 +43,7 @@ else $seccion = $_SESSION["seccion"];
   </tbody>
 </table>
 
- <!--<a href="<?php //echo url_for('personas/new') ?>">New</a>-->
+
 
   <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
 
@@ -78,9 +78,9 @@ else $seccion = $_SESSION["seccion"];
           </h2>
           <ul>
             <li><a href="personas/new">&nbsp;&nbsp;Agregar Alumnos</a> </li>
-            <li><a href="">&nbsp;&nbsp;Modificar Alumno</a> </li>
-            <li><a href="seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
-            <li><a href="">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a href="personas/inhabilitar">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
+            <li><a href="personas/seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="personas/eliminar">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
           </ul>
         </li>
       </ul>

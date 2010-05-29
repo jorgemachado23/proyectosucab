@@ -1,5 +1,5 @@
 <?php
-
+$_SESSION["flag"];
 /**
  * personas actions.
  *
@@ -23,7 +23,27 @@ class personasActions extends sfActions
     $this->persona_list = PersonaPeer::doSelect(new Criteria());
   }
 
+  public function executeInhabilitar(sfWebRequest $request)
+  {
+    $this->persona_list = PersonaPeer::doSelect(new Criteria());
+ 
+  }
 
+   public function executeInhabilitar2(sfWebRequest $request)
+  {
+    $_SESSION["flag"]=1;
+    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+    if ($form->isValid())
+    {
+      $persona = $form->save();
+
+    }
+  }
+   public function executeEliminar(sfWebRequest $request)
+  {
+
+  }
+  
   public function executeShow(sfWebRequest $request)
   {
     $this->persona = PersonaPeer::retrieveByPk($request->getParameter('idpersona'));
@@ -75,12 +95,13 @@ class personasActions extends sfActions
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
+
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
       $persona = $form->save();
 
-      $this->redirect('personas/edit?idpersona='.$persona->getIdpersona());
+      $this->redirect('personas/index');
     }
   }
 }
