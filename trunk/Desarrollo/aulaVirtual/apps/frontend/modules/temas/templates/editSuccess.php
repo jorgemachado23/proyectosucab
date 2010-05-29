@@ -16,7 +16,7 @@
 		<p></p>
 		<p></p>
                 <br />
-		<a href="">Ver Temas</a>
+		<a href="<?php echo url_for('temas/index') ?>">Ver Temas</a>
         </ul>
       </div>
       <div class="linkstext">
