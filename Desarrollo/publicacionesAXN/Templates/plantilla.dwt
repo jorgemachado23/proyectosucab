@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Documento sin título</title>
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+.cuerpo{
+	padding-left:180px;
+}
+.titulo {
+	color:#FFF;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;}
+.autor {
+	color:#CCC;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	}
+.linkTitulo {
+	color:#FF9933;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	font-weight:bold;
+}
+.autor {
+	color:#FFF;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	padding-left: 30px;
+	}
+-->
+</style>
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+
+
+<div align="center">
+  <table width="80%" border="0" align="center">
+    <tr>
+      <td height="274" valign="top"><img src="../images/Banner-Publicacion.png" width="832" height="257" /><br />
+</td>
+    </tr>
+    <tr>
+      <td background="../images/Menu_buscar_Publicacion.png" style="background-repeat:no-repeat" width="832" height="67">
+      	<form id="form1" name="form1" method="post" action="">
+        	<table width="100%" border="0">
+        		<tr>
+          			<td width="17%">&nbsp;</td>
+          			<td width="29%">
+            			<select name="select" id="select" >
+            			  <option value="0">Todos</option>
+            			  <option value="1" selected="selected">Estrategia</option>
+                          <option value="2">Gerencia</option>
+                          <option value="3">Mercadeo</option>
+            			  <option value="4">Creatividad e Innovacion</option>
+                          <option value="5">Liderazgo</option>
+                          <option value="6">Comunicación</option>
+            			  <option value="7">Desarrollo Humano</option>
+                          <option value="8">Legal</option>
+                          <option value="9">Arte</option>
+                          <option value="10">Filosofía</option>
+                          <option value="11">Negociación</option>
+            			</select>
+          			</td>
+          			<td width="54%"><label>
+          			  <input type="submit" name="button" id="button" value="Buscar" />
+       			    </label></td>
+        		</tr>
+      		</table>
+       	</form>
+       </td>
+    </tr>
+    <tr>
+      <td class="cuerpo">
+      
+      <!-- TemplateBeginEditable name="articulos" -->articulos<!-- TemplateEndEditable -->
+     
+      </td>
+    </tr>
+  </table>
+
+
+</div>
+</body>
+</html>
