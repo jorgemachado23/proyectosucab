@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Los objetos de esta clase representan un registro de la tabla Comentarios
+ */
+
 class Comentarios extends BaseComentarios
 {
     public function __toString()
