@@ -9,3 +9,93 @@ Persona:
     correo: anampardo@gmail.com
     segundoNombre: Mercedes
     segundoApellido: Duarte
+  persona2:
+    nombre: Dory
+    apellido: Vazquez
+    tipo: ALUM
+    cuenta: DORY_VAZQUEZ
+    clave: 1234
+    seccion: A
+    correo: doryvazquez@gmail.com
+    segundoNombre: Majoly
+    segundoApellido: Guevara
+  persona3:
+    nombre: Gianfranco
+    apellido: Guglielmin
+    tipo: ALUM
+    cuenta: GIANFRANCO_GUGLIELMIN
+    clave: 1234
+    seccion: A
+    correo: giacra@hotmail.com
+    segundoNombre: Jose
+    segundoApellido: Briceno
+  persona4:
+    nombre: Mervy
+    apellido: Vazquez
+    tipo: ALUM
+    cuenta: MERVY_VAZQUEZ
+    clave: 1234
+    seccion: A
+    correo: mervy_v@hotmail.com
+    segundoNombre: Nandy
+    segundoApellido: Guevara
+  persona5:
+    nombre: Claudia
+    apellido: Afonso
+    tipo: ALUM
+    cuenta: CLAUDIA_AFONSO
+    clave: 1234
+    seccion: B
+    correo: clau@hotmail.com
+    segundoNombre: Fabiola
+    segundoApellido: Portillo
+  persona6:
+    nombre: Maria
+    apellido: Guglielmin
+    tipo: ALUM
+    cuenta: MARIA_GUGLIELMIN
+    clave: 1234
+    seccion: B
+    correo: dani_gugli@yahoo.com
+    segundoNombre: Daniela
+    segundoApellido: Briceno
+  persona7:
+    nombre: Alejandro
+    apellido: Diaz
+    tipo: ALUM
+    cuenta: ALEJANDRO_DIAZ
+    clave: 1234
+    seccion: B
+    correo: alekfu@hotmail.com
+    segundoNombre: Alejandro
+    segundoApellido: Montero
+  persona8:
+    nombre: Jorge
+    apellido: Machado
+    tipo: ALUM
+    cuenta: JORGE_MACHADO
+    clave: 1234
+    seccion: C
+    correo: el_negro@hotmail.com
+    segundoNombre: Luis
+    segundoApellido: Perez
+  persona9:
+    nombre: Karina
+    apellido: Kasr
+    tipo: ALUM
+    cuenta: KARINA_KASR
+    clave: 1234
+    seccion: C
+    correo: kirikari8@hotmail.com
+    segundoNombre: Susana
+    segundoApellido: Haddad
+  persona10:
+    nombre: Vanessa
+    apellido: Parada
+    tipo: ALUM
+    cuenta: VANESSA_PARADA
+    clave: 1234
+    seccion: C
+    correo: vane_parada@yahoo.com
+    segundoNombre: Silvia
+    segundoApellido: Betancourt
