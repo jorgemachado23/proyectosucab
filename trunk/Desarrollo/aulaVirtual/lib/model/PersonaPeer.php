@@ -37,4 +37,5 @@ class PersonaPeer extends BasePersonaPeer
         $criteria->add(self::ESTADO, 'Activo', Criteria::EQUAL);
         return self::doSelect($criteria);
     }
+    
 }

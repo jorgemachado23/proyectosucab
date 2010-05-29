@@ -1,5 +1,5 @@
 <?php
-$_SESSION["flag"];
+
 /**
  * personas actions.
  *
@@ -12,8 +12,6 @@ class personasActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-//    $criteria = new Criteria();
-//    $criteria->add(PersonaPeer::ESTADO, 'Activo',Criteria::EQUAL);
 
     $this->persona_list = PersonaPeer::getActiveEstudiantes();
   }
@@ -25,23 +23,26 @@ class personasActions extends sfActions
 
   public function executeInhabilitar(sfWebRequest $request)
   {
-    $this->persona_list = PersonaPeer::doSelect(new Criteria());
- 
+        $this->persona_list = PersonaPeer::doSelect(new Criteria());
   }
 
-   public function executeInhabilitar2(sfWebRequest $request)
+    public function executeInhabilitar2(sfWebRequest $request)
   {
-    $_SESSION["flag"]=1;
-    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
-    if ($form->isValid())
-    {
-      $persona = $form->save();
-
-    }
+       $alumno = $_SESSION["inhabilitarA"];
+     
+       
+       $this->persona_list = PersonaPeer::doDelete($alumno);
   }
+  
    public function executeEliminar(sfWebRequest $request)
   {
 
+  }
+
+  public function executeEliminar2(sfWebRequest $request)
+  {
+        $this->persona = PersonaPeer::doDeleteAll();
+        $this->redirect('personas/index');
   }
   
   public function executeShow(sfWebRequest $request)

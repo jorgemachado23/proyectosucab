@@ -17,6 +17,7 @@ class Persona extends BasePersona
 
     }
 
+ 
     public function save(PropelPDO $con = null)
     {
       
