@@ -1,0 +1,11 @@
+## YAML Template.
+Persona:
+  persona1:
+    nombre: Ana
+    apellido: Pardo
+    tipo: ADMIN
+    cuenta: ANA_PARDO
+    clave: 1234
+    correo: anampardo@gmail.com
+    segundoNombre: Mercedes
+    segundoApellido: Duarte
