@@ -1,6 +1,8 @@
 <?php
 
-
+/*
+ * Los objetos de esta clase representan un registro de la tabla Persona
+ */
 
 class Persona extends BasePersona
 {

@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Los objetos de esta clase representan un registro de la tabla Tema
+ */
+
 class Tema extends BaseTema
 {
     public function __toString()
