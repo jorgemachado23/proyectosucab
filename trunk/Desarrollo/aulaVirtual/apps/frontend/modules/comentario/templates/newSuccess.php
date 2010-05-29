@@ -44,10 +44,10 @@
             <!-- -->
           </h2>
           <ul>
-            <li><a href="">&nbsp;&nbsp;Agregar Alumnos</a> </li>
-            <li><a href="">&nbsp;&nbsp;Modificar Alumno</a> </li>
-            <li><a href="">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
-            <li><a href="">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a href="new">&nbsp;&nbsp;Agregar Alumnos</a> </li>
+            <li><a href="inhabilitar">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
+            <li><a href="seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="eliminar">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
           </ul>
         </li>
       </ul>
