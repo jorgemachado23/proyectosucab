@@ -9,7 +9,7 @@ test:
       classname: DebugPDO
       dsn: 'mysql:host=localhost;dbname=aulavirtual_test'
       username: root
-      password: null
+      password: 
 all:
   propel:
     class: sfPropelDatabase
@@ -17,7 +17,7 @@ all:
       classname: PropelPDO
       dsn: 'mysql:host=localhost;dbname=aulavirtual'
       username: root
-      password: null
+      password: 
       encoding: utf8
       persistent: true
       pooling: true
