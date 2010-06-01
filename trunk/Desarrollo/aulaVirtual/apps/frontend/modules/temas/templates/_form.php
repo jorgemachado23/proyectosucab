@@ -1,3 +1,12 @@
+<?php
+
+/**
+ * Este archivo contiene el esquema del formulario que ejecutara el crear, modi-
+ * ficar y eliminar tema.
+ *
+ */
+
+?>
 <?php include_stylesheets_for_form($form) ?>
 <?php include_javascripts_for_form($form) ?>
 

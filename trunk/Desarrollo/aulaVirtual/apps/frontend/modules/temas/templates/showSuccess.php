@@ -6,6 +6,12 @@ $_SESSION["usuario"];
                 $id = $persona->getIdpersona();
                 $_SESSION["id"]=$id;
 }endforeach;
+
+/**
+ *
+ * En este archivo se muestra la informacion referente a un tema, el cual puede
+ * ser modificado. Ademas se muestran todos los comentarios asociados a el.
+ */
 ?>
 
 <br />
