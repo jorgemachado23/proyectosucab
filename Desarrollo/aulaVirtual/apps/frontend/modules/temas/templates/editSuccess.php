@@ -5,6 +5,14 @@
 <br />
 <br />
 
+<?php
+/**
+ *
+ * En este archivo se instancia el formulario que se encuentra en el archivo
+ * _form, mediante la accion include_partial
+ */
+?>
+
 <?php include_partial('form', array('form' => $form)) ?>
 
 <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->

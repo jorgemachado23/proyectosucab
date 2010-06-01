@@ -1,7 +1,7 @@
 <?php
 /* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * En este archivo se hace instancia a un pop up para confirmar el borrado del
+ * foro, luego se redirige a la pagina borrarForo para realizar dicha accion
  */
 ?>
 

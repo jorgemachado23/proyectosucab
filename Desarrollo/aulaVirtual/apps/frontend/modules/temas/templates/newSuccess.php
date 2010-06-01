@@ -1,6 +1,12 @@
 <?php
 $_SESSION["usuario"];
 $_SESSION["id"];
+
+/**
+ *
+ * En este archivo se instancia el formulario que se encuentra en el archivo
+ * _form, mediante la accion include_partial
+ */
 ?>
 
 

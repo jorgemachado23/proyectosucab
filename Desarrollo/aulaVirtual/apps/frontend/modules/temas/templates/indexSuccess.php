@@ -1,6 +1,14 @@
 <?php
 $_SESSION["usuario"];
+
+/**
+ *En este archivo se listan todos los temas disponibles en el sistema, los cuales
+ *se pueden detallar para ser modificados o eliminados.
+ *
+ */
 ?>
+
+
 
 <br />
 <br />
