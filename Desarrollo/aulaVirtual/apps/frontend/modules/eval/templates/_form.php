@@ -7,13 +7,21 @@
 <?php endif; ?>
   <table>
     <tfoot>
-      <tr>
-        <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('eval/index') ?>">Cancel</a>
+        <tr>
+         <td colspan="2">
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;<?php echo button_to('Volver', 'eval/index') ?>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'eval/delete?idevaluacion='.$form->getObject()->getIdevaluacion(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
-          <?php endif; ?>
-          <input type="submit" value="Save" />
+            &nbsp;
+            <?php echo button_to('Borrar', 'eval/delete?idevaluacion='.$form->getObject()->getIdevaluacion(), 'confirm=¿Está seguro de que desea borrar la Evaluación?') ?>
+             <?php endif; ?>
+            &nbsp;
+          <input type="submit" value="Aceptar" />
         </td>
       </tr>
     </tfoot>
@@ -22,3 +30,4 @@
     </tbody>
   </table>
 </form>
+

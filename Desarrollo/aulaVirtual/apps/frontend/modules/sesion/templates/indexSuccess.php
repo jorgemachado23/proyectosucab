@@ -83,15 +83,15 @@ if ($_SESSION["privilegio"]=="ADMIN"){
       </ul>
       <div class="newcomments">
         <ul>
-           <li><a href="">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
-        	<li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
-        	<li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
+            <li><a href="">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
+            <li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
+            <li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
         </ul>
       </div>
       <div class="linkstext">
         <ul>
-		<li><a href="">&nbsp;&nbsp;Agregar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Modificar Evaluación</a></li>
+          <li><a href=<?php echo url_for('eval/new') ?>"">&nbsp;&nbsp;Agregar Evaluación</a></li>
+          <li><a href="<?php echo url_for('eval/index') ?>">&nbsp;&nbsp;Modificar Evaluación</a></li>
           <li><a href="">&nbsp;&nbsp;Eliminar Evaluación</a></li>
           <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>

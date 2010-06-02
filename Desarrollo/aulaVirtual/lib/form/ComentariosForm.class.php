@@ -16,5 +16,10 @@ class ComentariosForm extends BaseComentariosForm
          unset ($this['updated_at']);
          unset ($this['idpersona']);
          unset ($this['idtema']);
+     //    $this->widgetSchema['comentario']->setAttribute('size', '80');
+         $this->widgetSchema['comentario']->setAttributes(array('style'=>"height:150px;width:350px"));
+
+        $this->validatorSchema['comentario']->addMessage('max_length',
+        'El comentario no debe exceder de 3000 caracteres');
   }
 }

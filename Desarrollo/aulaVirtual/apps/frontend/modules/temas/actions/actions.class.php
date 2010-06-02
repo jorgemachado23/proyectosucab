@@ -23,7 +23,7 @@ class temasActions extends sfActions
      */
   public function executeDeleteComen(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
+    //$request->checkCSRFProtection();
     $this->forward404Unless($comentarios = ComentariosPeer::retrieveByPk($request->getParameter('idcomentarios')), sprintf('Object comentarios does not exist (%s).', $request->getParameter('idcomentarios')));
     $comentarios->delete();
     $this->redirect('temas/index');
@@ -129,7 +129,7 @@ class temasActions extends sfActions
    */
   public function executeDelete(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
+  //  $request->checkCSRFProtection();
 
     $this->forward404Unless($tema = TemaPeer::retrieveByPk($request->getParameter('idtema')), sprintf('Object tema does not exist (%s).', $request->getParameter('idtema')));
     $tema->delete();
@@ -161,7 +161,7 @@ class temasActions extends sfActions
     {
       $tema = $form->save();
 
-      $this->redirect('temas/edit?idtema='.$tema->getIdtema());
+      $this->redirect('temas/index');
     }
   }
 }

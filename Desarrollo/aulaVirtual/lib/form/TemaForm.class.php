@@ -14,6 +14,14 @@ class TemaForm extends BaseTemaForm
   {
          unset ($this['created_at']);
          unset ($this['updated_at']); 
-         unset ($this['idpersona']);  
+         unset ($this['idpersona']);
+         $this->widgetSchema['nombre']->setAttribute('size', '72');
+         $this->widgetSchema['descripcion']->setAttributes(array('style'=>"height:80px;width:370px"));
+
+         $this->validatorSchema['nombre']->addMessage('max_length',
+        'El nombre del Tema no debe exceder de 45 caracteres');
+         $this->validatorSchema['descripcion']->addMessage('max_length',
+        'El nombre de la Evaluación no debe exceder de 100 caracteres');
+
   }
 }

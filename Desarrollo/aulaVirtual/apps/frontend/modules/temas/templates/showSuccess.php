@@ -42,10 +42,10 @@ $_SESSION["usuario"];
 <br />
     <?php if ($_SESSION["privilegio"]=="ADMIN"){
     ?>
-    <a href="<?php echo url_for('temas/edit?idtema='.$tema->getIdtema()) ?>">Modificar Tema</a><?php
+    <?php echo button_to('Modificar','temas/edit?idtema='.$tema->getIdtema()) ?><?php
     }?>
 &nbsp;
-<a href="<?php echo url_for('temas/index') ?>">Volver</a>
+<?php echo button_to('Volver','temas/index') ?>
 <br />
 <br />
 <br />
@@ -90,11 +90,12 @@ $_SESSION["usuario"];
       <tr><br /></tr>
       <tr><?php
             if ($_SESSION["privilegio"]=="ADMIN"){
-                 echo link_to('Borrar', 'temas/deleteComen?idcomentarios='.$comentarios->getIdcomentarios(), array('method' => 'delete', 'confirm' => '¿Está seguro de que desea eliminar el comentario?')) ?>
-          <?php }
+                 echo button_to('Borrar', 'temas/deleteComen?idcomentarios='.$comentarios->getIdcomentarios(), 'confirm=¿Está seguro de que desea borrar el comentario?')  ?>
+        <?php }
           else{
                 if($comentarios->getIdpersona()==$id){
-                    echo link_to('Borrar', 'temas/deleteComen?idcomentarios='.$comentarios->getIdcomentarios(), array('method' => 'delete', 'confirm' => '¿Está seguro de que desea eliminar el comentario?')) ?>
+                 echo button_to('Borrar', 'temas/deleteComen?idcomentarios='.$comentarios->getIdcomentarios(), 'confirm=¿Está seguro de que desea borrar el comentario?')  ?>
+                }
            <?php     }
             }?>
       </tr>
@@ -136,25 +137,25 @@ $_SESSION["usuario"];
             <!-- -->
           </h2>
           <ul>
-            <li><a href="">&nbsp;&nbsp;Agregar Alumnos</a> </li>
-            <li><a href="">&nbsp;&nbsp;Modificar Alumno</a> </li>
-            <li><a href="">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
-            <li><a href="">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/new') ?>">&nbsp;&nbsp;Agregar Alumnos</a> </li>
+            <li><a href="personas/inhabilitar">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
+            <li><a href="personas/seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="personas/eliminar">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
           </ul>
         </li>
       </ul>
       <div class="newcomments">
         <ul>
-           <li><a href="">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
-        	<li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
-        	<li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
+            <li><a href="">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
+            <li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
+            <li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
         </ul>
       </div>
       <div class="linkstext">
         <ul>
-		<li><a href="">&nbsp;&nbsp;Agregar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Modificar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Eliminar Evaluación</a></li>
+          <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
+          <li><a href="<?php echo url_for('eval/index') ?>">&nbsp;&nbsp;Ver Evaluaciones</a></li>
+          <li><a href="<?php echo url_for('eval/borrar') ?>">&nbsp;&nbsp;Eliminar Evaluación</a></li>
           <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Modificar Notas</a></li>
@@ -164,7 +165,7 @@ $_SESSION["usuario"];
       <ul>
     	   <li><a href="<?php echo url_for('temas/index') ?>">&nbsp;&nbsp;Ver Foro</a></li>
     	   <li><a href="<?php echo url_for('temas/new') ?>">&nbsp;&nbsp;Crear un tema</a></li>
-           <li><a href="<?php echo url_for('temas/deleteForo') ?>">&nbsp;&nbsp;Vaciar Foro</a></li>
+           <li><a href="">&nbsp;&nbsp;Borrar Foro</a></li>
       </ul>
       </div>
 <?php end_slot(); ?>

@@ -15,6 +15,11 @@ class evalActions extends sfActions
     $this->evaluacion_list = EvaluacionPeer::doSelect(new Criteria());
   }
 
+    public function executeBorrar(sfWebRequest $request)
+  {
+    $this->evaluacion_list = EvaluacionPeer::doSelect(new Criteria());
+  }
+
   public function executeShow(sfWebRequest $request)
   {
     $this->evaluacion = EvaluacionPeer::retrieveByPk($request->getParameter('idevaluacion'));
@@ -56,7 +61,7 @@ class evalActions extends sfActions
 
   public function executeDelete(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
+    //$request->checkCSRFProtection();
 
     $this->forward404Unless($evaluacion = EvaluacionPeer::retrieveByPk($request->getParameter('idevaluacion')), sprintf('Object evaluacion does not exist (%s).', $request->getParameter('idevaluacion')));
     $evaluacion->delete();
