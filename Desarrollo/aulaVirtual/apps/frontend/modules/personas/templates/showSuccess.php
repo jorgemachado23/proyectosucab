@@ -1,3 +1,10 @@
+<?php
+/*
+ * En este archivo se muestran todos los datos de una persona seleccionada con
+ * anterioridad.
+ */
+
+?>
 <br /><br /><br />
 <table>
   <tbody>

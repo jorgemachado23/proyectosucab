@@ -19,7 +19,12 @@ class Persona extends BasePersona
 
     }
 
- 
+ /*
+  * Se modifico la funcion save que se crea por defecto para que capture los
+  * datos del formulario y los convierta en mayuscula antes de ingresarlos en la
+  * base de datos. Si se esta ingresando un registro nuevo se asigna por defecto
+  * el tipo Alumno y se crea el nombre de usuario y clave.
+  */
     public function save(PropelPDO $con = null)
     {
       
@@ -54,14 +59,13 @@ class Persona extends BasePersona
              $this->setClave($clave);
              
         }
-        else if($_SESSION["flag"] == 1){
-            $this->setEstado("Inactivo");
-            $_SESSION["flag"]=0;
-
-        }
         
         return parent::save($con);
     }
+
+    /*
+     * Funcion que genera el nombre de sesion de un alumno nuevo.
+     */
 
     public function generarNombre($contador){
 
@@ -84,6 +88,9 @@ class Persona extends BasePersona
         return $cuentaAlumno;
     }
 
+    /*
+     * funcion que genera una clave aleatoria cuando se ingresa un nuevo alumno.
+     */
     public function generarClave(){
 
         $clave = rand(111111, 999999);

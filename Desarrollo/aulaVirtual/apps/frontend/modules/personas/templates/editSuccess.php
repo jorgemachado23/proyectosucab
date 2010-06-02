@@ -1,3 +1,10 @@
+<?php
+/*
+ * En este archivo se instancia el formulario que se encuentra en el archivo
+ * _form mediante la accion include_partial.
+ */
+
+?>
 <br /><br />
 <h1>Editar Alumno</h1>
 

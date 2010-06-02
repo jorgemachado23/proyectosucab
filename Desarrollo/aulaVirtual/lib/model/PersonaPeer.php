@@ -50,4 +50,15 @@ class PersonaPeer extends BasePersonaPeer
     }
 
 
+    static public function validateNumeros($cadena){
+
+        $result = preg_replace("/[^0-9]/","", $cadena);
+        if($result){
+            return(FALSE);
+        }else{
+            return (true);
+        }
+
+
+    }
 }

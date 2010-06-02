@@ -1,4 +1,11 @@
+<?php
+/*
+ * En este archivo se confirma que el administrador desee borrar a todos los
+ * alumnos de la base de datos. En caso de presionar aceptar se ejecuta la accion,
+ * en caso contrario se redirecciona al index.
+ */
 
+?>
 
 <?php
 
