@@ -10,6 +10,7 @@
  */
 class personasActions extends sfActions
 {
+
   public function executeIndex(sfWebRequest $request)
   {
 
@@ -65,6 +66,8 @@ class personasActions extends sfActions
     $this->processForm($request, $this->form);
 
     $this->setTemplate('new');
+
+    
   }
 
   public function executeEdit(sfWebRequest $request)
@@ -93,6 +96,8 @@ class personasActions extends sfActions
 
     $this->redirect('personas/index');
   }
+
+  
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {

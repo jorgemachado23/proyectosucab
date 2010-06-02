@@ -1,4 +1,9 @@
 <?php
+/*
+ * En este archivo se muestra la lista de los alumnos pertenecientes a la 
+ * seccion seleccionada con anterioridad.
+ */
+
 if ($_SESSION["seccion"]==null){
 
 $seccion = $_POST["seccion"];

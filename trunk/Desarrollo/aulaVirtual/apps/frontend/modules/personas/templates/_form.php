@@ -9,7 +9,8 @@
     <tfoot>
       <tr>
         <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('personas/index') ?>">Cancel</a>
+          &nbsp;<?php echo link_to('Delete', 'personas/delete?idpersona='.$form->getObject()->getIdpersona(), array('method' => 'delete', 'confirm' => '¿Está seguro de que desea Eliminar al Alumno?')) ?>
+            &nbsp;<a href="<?php echo url_for('personas/index') ?>">Cancel</a>
      
           <input type="submit" value="Save" />
         </td>
