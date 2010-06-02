@@ -9,11 +9,18 @@
     <tfoot>
       <tr>
         <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('temas/index') ?>">Cancel</a>
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;<?php echo button_to('Volver','temas/index') ?>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'comentario/delete?idcomentarios='.$form->getObject()->getIdcomentarios(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
-          <?php endif; ?>
-          <input type="submit" value="Save" />
+            &nbsp;
+            <?php echo button_to('Borrar', 'comentario/delete?idcomentarios='.$form->getObject()->getIdcomentarios(), 'confirm=¿Está seguro de que desea borrar el comentario?') ?>
+            <?php endif; ?>
+          <input type="submit" value="Aceptar" />
         </td>
       </tr>
     </tfoot>

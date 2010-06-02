@@ -18,11 +18,19 @@
     <tfoot>
       <tr>
         <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('temas/index') ?>">Cancel</a>
+            <br />
+          <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;
+          &nbsp;<?php echo button_to('Volver','temas/index') ?>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'temas/delete?idtema='.$form->getObject()->getIdtema(), array('method' => 'delete', 'confirm' => '¿Está seguro de que desea Eliminar el Tema?, Se eliminarán todos los comentarios asociados a el')) ?>
+            &nbsp;
+            <?php echo button_to('Borrar','temas/delete?idtema='.$form->getObject()->getIdtema(), 'confirm=¿Está seguro de que desea borrar el Tema?, se eliminarán también todos los comentarios asociados') ?>
           <?php endif; ?>
-          <input type="submit" value="Save" />
+            &nbsp;
+          <input type="submit" value="Aceptar" />
         </td>
       </tr>
     </tfoot>
