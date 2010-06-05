@@ -1,6 +1,0 @@
-# data/fixtures/010_categories.yml
-JobeetCategory:
-    design: { name: Design }
-    programming: { name: Programming }
-    manager: { name: Manager }
-    administrator: { name: Administrator }
