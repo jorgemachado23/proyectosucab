@@ -55,11 +55,11 @@ $_SESSION["usuario"];
 <br />
 <h1 align="center">Comentarios:</h1>
 <br />
-        <form id="form1" name="form1" action="<?php echo url_for('comentario/new') ?>" method="POST">
-          <div align="center"><br />
-              <input type="submit" name="agregar" id="agregar" value="Agregar comentario" style="font-family:Verdana, Arial, Helvetica, sans-serif" />
-          </div>
-        </form>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<?php echo button_to('Agregar Comentario', 'comentario/new?idtema='.$tema->getIdtema()) ?>
+
 <br />
 <br />
 <br />
