@@ -12,6 +12,10 @@ class EvaluacionForm extends BaseEvaluacionForm
 {
   public function configure()
   {
+      $this->widgetSchema['tipo'] = new sfWidgetFormChoice(array(
+        'choices' => array('CLASE', 'VIRTUAL'),
+      ));
+
       $this->widgetSchema->setLabels(array(
        'porcentaje' => 'Porcentaje (%)',
        'duracion' => 'Duración (min)',
@@ -20,9 +24,7 @@ class EvaluacionForm extends BaseEvaluacionForm
       $this->widgetSchema['porcentaje']->setAttribute('size', '10');
       $this->widgetSchema['descripcion']->setAttributes(array('style'=>"height:40px;width:370px"));
       $this->widgetSchema['duracion']->setAttribute('size', '10');
-      $this->widgetSchema['tipo'] = new sfWidgetFormChoice(array(
-        'choices' => array('CLASE', 'VIRTUAL'),
-        ));
+//      $this->widgetSchema['fecha_fin'] = new sfWidgetFormDateJQuery();
       $this->widgetSchema['estado'] = new sfWidgetFormChoice(array(
         'choices' => array('ACTIVA', 'INACTIVA'),
         ));

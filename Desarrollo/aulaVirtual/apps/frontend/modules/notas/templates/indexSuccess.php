@@ -3,7 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>Idnota</th>
       <th>Created at</th>
       <th>Updated at</th>
       <th>Nota</th>
