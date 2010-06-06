@@ -21,6 +21,7 @@ class BaseEvaluacionForm extends BaseFormPropel
       'descripcion'  => new sfWidgetFormInput(),
       'estado'       => new sfWidgetFormInput(),
       'duracion'     => new sfWidgetFormInput(),
+      'idlapso'      => new sfWidgetFormInput(),
     ));
 
     $this->setValidators(array(
@@ -32,6 +33,7 @@ class BaseEvaluacionForm extends BaseFormPropel
       'descripcion'  => new sfValidatorString(array('max_length' => 100, 'required' => false)),
       'estado'       => new sfValidatorString(array('max_length' => 45, 'required' => false)),
       'duracion'     => new sfValidatorInteger(array('required' => false)),
+      'idlapso'      => new sfValidatorInteger(),
     ));
 
     $this->widgetSchema->setNameFormat('evaluacion[%s]');

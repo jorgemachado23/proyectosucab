@@ -22,6 +22,7 @@ class BaseEvaluacionFormFilter extends BaseFormFilterPropel
       'descripcion'  => new sfWidgetFormFilterInput(),
       'estado'       => new sfWidgetFormFilterInput(),
       'duracion'     => new sfWidgetFormFilterInput(),
+      'idlapso'      => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -32,6 +33,7 @@ class BaseEvaluacionFormFilter extends BaseFormFilterPropel
       'descripcion'  => new sfValidatorPass(array('required' => false)),
       'estado'       => new sfValidatorPass(array('required' => false)),
       'duracion'     => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'idlapso'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
 
     $this->widgetSchema->setNameFormat('evaluacion_filters[%s]');
@@ -57,6 +59,7 @@ class BaseEvaluacionFormFilter extends BaseFormFilterPropel
       'descripcion'  => 'Text',
       'estado'       => 'Text',
       'duracion'     => 'Number',
+      'idlapso'      => 'Number',
     );
   }
 }

@@ -35,6 +35,8 @@ propel:
     descripcion: { type: VARCHAR, size: '100', required: false }
     estado: { type: VARCHAR, size: '45', required: false }
     duracion: { type: INTEGER, size: '11', required: false }
+    idlapso: { type: INTEGER, size: '11', required: true }
+    _indexes: { fk_evaluacion_lapso: [idlapso] }
   lapso:
     _attributes: { phpName: Lapso }
     idlapso: { type: INTEGER, size: '11', primaryKey: true, required: true }
@@ -46,21 +48,20 @@ propel:
     nota: { type: INTEGER, size: '11', required: false }
     idpersona: { type: INTEGER, size: '11', primaryKey: true, required: true }
     idevaluacion: { type: INTEGER, size: '11', primaryKey: true, required: true }
-    idlapso: { type: INTEGER, size: '11', required: true }
-    _indexes: { fk_nota_evaluacion: [idevaluacion], fk_nota_persona: [idpersona], fk_nota_lapso: [idlapso] }
+    _indexes: { fk_nota_evaluacion: [idevaluacion], fk_nota_persona: [idpersona] }
   persona:
     _attributes: { phpName: Persona }
     idpersona: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
     nombre: { type: VARCHAR, size: '45', required: true }
-    segundonombre: { type: VARCHAR, size: '45', required: true }
     apellido: { type: VARCHAR, size: '45', required: true }
-    segundoapellido: { type: VARCHAR, size: '45', required: true }
     tipo: { type: VARCHAR, size: '45', required: true }
     cuenta: { type: VARCHAR, size: '45', required: true }
     clave: { type: VARCHAR, size: '45', required: true }
     seccion: { type: VARCHAR, size: '2', required: false }
     estado: { type: VARCHAR, size: '45', required: true, defaultValue: Activo }
     correo: { type: VARCHAR, size: '80', required: false }
+    segundonombre: { type: VARCHAR, size: '45', required: true }
+    segundoapellido: { type: VARCHAR, size: '45', required: true }
   res_dada:
     _attributes: { phpName: ResDada }
     num_pregunta: { type: INTEGER, size: '11', primaryKey: true, required: true }

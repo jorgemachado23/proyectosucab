@@ -19,6 +19,7 @@ class personasActions extends sfActions
 
   public function executeSeccion(sfWebRequest $request)
   {
+      $_SESSION["seccion"]=null;
     $this->persona_list = PersonaPeer::doSelect(new Criteria());
   }
 
