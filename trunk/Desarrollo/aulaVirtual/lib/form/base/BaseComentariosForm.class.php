@@ -14,7 +14,7 @@ class BaseComentariosForm extends BaseFormPropel
   {
     $this->setWidgets(array(
       'idcomentarios' => new sfWidgetFormInputHidden(),
-      'comentario'    => new sfWidgetFormTextarea(),
+      'comentario'    => new sfWidgetFormInput(),
       'created_at'    => new sfWidgetFormDate(),
       'updated_at'    => new sfWidgetFormDate(),
       'idpersona'     => new sfWidgetFormInput(),

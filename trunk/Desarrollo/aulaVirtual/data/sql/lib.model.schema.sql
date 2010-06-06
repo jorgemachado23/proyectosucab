@@ -74,7 +74,9 @@ CREATE TABLE `evaluacion`
 	`descripcion` VARCHAR(100),
 	`estado` VARCHAR(45),
 	`duracion` INTEGER(11),
-	PRIMARY KEY (`idevaluacion`)
+	`idlapso` INTEGER(11)  NOT NULL,
+	PRIMARY KEY (`idevaluacion`),
+	KEY `fk_evaluacion_lapso`(`idlapso`)
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
@@ -105,11 +107,9 @@ CREATE TABLE `nota`
 	`nota` INTEGER(11),
 	`idpersona` INTEGER(11)  NOT NULL,
 	`idevaluacion` INTEGER(11)  NOT NULL,
-	`idlapso` INTEGER(11)  NOT NULL,
 	PRIMARY KEY (`idnota`,`idpersona`,`idevaluacion`),
 	KEY `fk_nota_evaluacion`(`idevaluacion`),
-	KEY `fk_nota_persona`(`idpersona`),
-	KEY `fk_nota_lapso`(`idlapso`)
+	KEY `fk_nota_persona`(`idpersona`)
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
@@ -123,15 +123,15 @@ CREATE TABLE `persona`
 (
 	`idpersona` INTEGER(11)  NOT NULL AUTO_INCREMENT,
 	`nombre` VARCHAR(45)  NOT NULL,
-	`segundonombre` VARCHAR(45)  NOT NULL,
 	`apellido` VARCHAR(45)  NOT NULL,
-	`segundoapellido` VARCHAR(45)  NOT NULL,
 	`tipo` VARCHAR(45)  NOT NULL,
 	`cuenta` VARCHAR(45)  NOT NULL,
 	`clave` VARCHAR(45)  NOT NULL,
 	`seccion` VARCHAR(2),
 	`estado` VARCHAR(45) default 'Activo' NOT NULL,
 	`correo` VARCHAR(80),
+	`segundonombre` VARCHAR(45)  NOT NULL,
+	`segundoapellido` VARCHAR(45)  NOT NULL,
 	PRIMARY KEY (`idpersona`)
 )Type=InnoDB;
 

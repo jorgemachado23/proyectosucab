@@ -19,7 +19,6 @@ class BaseNotaForm extends BaseFormPropel
       'nota'         => new sfWidgetFormInput(),
       'idpersona'    => new sfWidgetFormInputHidden(),
       'idevaluacion' => new sfWidgetFormInputHidden(),
-      'idlapso'      => new sfWidgetFormInput(),
     ));
 
     $this->setValidators(array(
@@ -29,7 +28,6 @@ class BaseNotaForm extends BaseFormPropel
       'nota'         => new sfValidatorInteger(array('required' => false)),
       'idpersona'    => new sfValidatorPropelChoice(array('model' => 'Nota', 'column' => 'idpersona', 'required' => false)),
       'idevaluacion' => new sfValidatorPropelChoice(array('model' => 'Nota', 'column' => 'idevaluacion', 'required' => false)),
-      'idlapso'      => new sfValidatorInteger(),
     ));
 
     $this->widgetSchema->setNameFormat('nota[%s]');
