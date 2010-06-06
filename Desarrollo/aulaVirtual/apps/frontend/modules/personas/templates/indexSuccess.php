@@ -14,21 +14,24 @@ $_SESSION["seccion"]=$seccion;
 else $seccion = $_SESSION["seccion"];
 ?>
 
-<br /><br />
-<h1>Lista de Alumnos</h1>
-<br /><br />
-
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1 align="center">Lista de Alumnos</h1>
+<br />
+<br />
 
 
 <table>
   <thead>
     <tr>
       
-      <th>Nombre</th>
-      <th>Segundo Nombre</th>
-      <th>Apellido</th>
-      <th>Segundo Apellido</th>
+      <th align="left">Nombre</th>
+      <th align="left">Segundo Nombre</th>
+      <th align="left">Apellido</th>
+      <th align="left">Segundo Apellido</th>
      
       
     </tr>
@@ -82,10 +85,10 @@ else $seccion = $_SESSION["seccion"];
             <!-- -->
           </h2>
           <ul>
-            <li><a href="personas/new">&nbsp;&nbsp;Agregar Alumnos</a> </li>
-            <li><a href="personas/inhabilitar">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
-            <li><a href="personas/seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
-            <li><a href="personas/eliminar">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/new') ?>">&nbsp;&nbsp;Agregar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/seccion') ?>">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/eliminar') ?>">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a>&nbsp;&nbsp;</a></li>
           </ul>
         </li>
       </ul>
@@ -98,9 +101,9 @@ else $seccion = $_SESSION["seccion"];
       </div>
       <div class="linkstext">
         <ul>
-		<li><a href="">&nbsp;&nbsp;Agregar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Modificar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Eliminar Evaluación</a></li>
+	  <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
+          <li><a href="<?php echo url_for('eval/index') ?>">&nbsp;&nbsp;Ver Evaluaciones</a></li>
+          <li><a href="<?php echo url_for('eval/borrar') ?>">&nbsp;&nbsp;Eliminar Evaluación</a></li>
           <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Modificar Notas</a></li>
@@ -108,8 +111,8 @@ else $seccion = $_SESSION["seccion"];
       </div>
       <div class="linkstext">
       <ul>
-    	   <li><a href="">&nbsp;&nbsp;Ver Foro</a></li>
-    	   <li><a href="">&nbsp;&nbsp;Crear un tema</a></li>
+    	   <li><a href="<?php echo url_for('temas/index') ?>">&nbsp;&nbsp;Ver Foro</a></li>
+    	   <li><a href="<?php echo url_for('temas/new') ?>">&nbsp;&nbsp;Crear un tema</a></li>
            <li><a href="">&nbsp;&nbsp;Borrar Foro</a></li>
       </ul>
       </div>

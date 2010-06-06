@@ -90,8 +90,6 @@ class personasActions extends sfActions
 
   public function executeDelete(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
-
     $this->forward404Unless($persona = PersonaPeer::retrieveByPk($request->getParameter('idpersona')), sprintf('Object persona does not exist (%s).', $request->getParameter('idpersona')));
     $persona->delete();
 

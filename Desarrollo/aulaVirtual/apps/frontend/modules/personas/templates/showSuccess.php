@@ -5,62 +5,76 @@
  */
 
 ?>
-<br /><br /><br />
-<table>
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1 align="center">Alumno</h1>
+<br />
+<br />
+
+<table align="center">
   <tbody>
     <tr>
-      <th>Idpersona:</th>
-      <td><?php echo $persona->getIdpersona() ?></td>
-    </tr>
-    <tr>
-      <th>Nombre:</th>
+      <th align="left">Nombre:&nbsp;</th>
       <td><?php echo $persona->getNombre() ?></td>
     </tr>
      <tr>
-      <th>Segundo Nombre:</th>
+      <th align="left">Segundo Nombre:&nbsp;</th>
       <td><?php echo $persona->getSegundonombre() ?></td>
     </tr>
     <tr>
-      <th>Apellido:</th>
+      <th align="left">Apellido:&nbsp;</th>
       <td><?php echo $persona->getApellido() ?></td>
     </tr>
     <tr>
-      <th>Segundo Apellido:</th>
+      <th align="left">Segundo Apellido:&nbsp;</th>
       <td><?php echo $persona->getSegundoapellido() ?></td>
     </tr>
     <tr>
-      <th>Tipo:</th>
+      <th align="left">Tipo:&nbsp;</th>
       <td><?php echo $persona->getTipo() ?></td>
     </tr>
     <tr>
-      <th>Cuenta:</th>
+      <th align="left">Cuenta:&nbsp;</th>
       <td><?php echo $persona->getCuenta() ?></td>
     </tr>
     <tr>
-      <th>Clave:</th>
+      <th align="left">Clave:&nbsp;</th>
       <td><?php echo $persona->getClave() ?></td>
     </tr>
     <tr>
-      <th>Seccion:</th>
+      <th align="left">Seccion:&nbsp;</th>
       <td><?php echo $persona->getSeccion() ?></td>
     </tr>
     <tr>
-      <th>Estado:</th>
+      <th align="left">Estado:&nbsp;</th>
       <td><?php echo $persona->getEstado() ?></td>
     </tr>
     <tr>
-      <th>Correo:</th>
+      <th align="left">Correo:&nbsp;</th>
       <td><?php echo $persona->getCorreo() ?></td>
     </tr>
   </tbody>
 </table>
 
 <hr />
+<br />
 
-<a href="<?php echo url_for('personas/edit?idpersona='.$persona->getIdpersona()) ?>" style="text-decoration: underline; color: gray">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('personas/index') ?>">List</a>
-
+<table>
+  <tbody>
+    <tr>
+      <th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <td>&nbsp;<?php echo button_to('Borrar', 'personas/delete?idpersona='.$persona->getIdpersona(), 'confirm=¿Está seguro de que desea borrar este alumno?') ?>
+          &nbsp;<?php echo button_to('Editar', 'personas/edit?idpersona='.$persona->getIdpersona()) ?>
+          &nbsp;<a href="<?php echo url_for('personas/index') ?>">Listar</a></td>
+    </tr>
+  </tbody>
+</table>
+  
   <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
 
 <?php slot('menuSidebarAlumno')
@@ -93,10 +107,10 @@
             <!-- -->
           </h2>
           <ul>
-           <li><a href="new">&nbsp;&nbsp;Agregar Alumnos</a> </li>
-            <li><a href="inhabilitar">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
-            <li><a href="seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
-            <li><a href="eliminar">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/new') ?>">&nbsp;&nbsp;Agregar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/seccion') ?>">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/eliminar') ?>">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a>&nbsp;&nbsp;</a></li>
           </ul>
         </li>
       </ul>
@@ -109,9 +123,9 @@
       </div>
       <div class="linkstext">
         <ul>
-		<li><a href="">&nbsp;&nbsp;Agregar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Modificar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Eliminar Evaluación</a></li>
+          <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
+          <li><a href="<?php echo url_for('eval/index') ?>">&nbsp;&nbsp;Ver Evaluaciones</a></li>
+          <li><a href="<?php echo url_for('eval/borrar') ?>">&nbsp;&nbsp;Eliminar Evaluación</a></li>
           <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Modificar Notas</a></li>
@@ -119,8 +133,8 @@
       </div>
       <div class="linkstext">
       <ul>
-    	   <li><a href="">&nbsp;&nbsp;Ver Foro</a></li>
-    	   <li><a href="">&nbsp;&nbsp;Crear un tema</a></li>
+    	   <li><a href="<?php echo url_for('temas/index') ?>">&nbsp;&nbsp;Ver Foro</a></li>
+    	   <li><a href="<?php echo url_for('temas/new') ?>">&nbsp;&nbsp;Crear un tema</a></li>
            <li><a href="">&nbsp;&nbsp;Borrar Foro</a></li>
       </ul>
       </div>
