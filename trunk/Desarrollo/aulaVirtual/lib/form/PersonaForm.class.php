@@ -52,9 +52,7 @@ class PersonaForm extends BasePersonaForm
          $this['estado']
         );
 
-     
-
-      //    Validadores de tipo de requerimiento. Los campos no pueden estar vacios//
+      // Validadores de tipo de requerimiento. Los campos no pueden estar vacios //
         $this->validatorSchema['nombre']->addMessage('required',
                 'Debes indicar el Nombre');
         $this->validatorSchema['segundonombre']->addMessage('required',
@@ -66,7 +64,23 @@ class PersonaForm extends BasePersonaForm
         $this->validatorSchema['segundoapellido']->addMessage('required',
                 'Debes indicar el Segundo Apellido');
         
+      // Validadores del máximo de campo. Los campos no pueden exceder de un límite //
+        $this->validatorSchema['nombre']->addMessage('max_length',
+                'El nombre del Alumno no debe exceder de 45 caracteres');
+        $this->validatorSchema['segundonombre']->addMessage('max_length',
+                'El segundo nombre del Alumno no debe exceder de 45 caracteres');
+        $this->validatorSchema['apellido']->addMessage('max_length',
+                'El apellido del Alumno no debe exceder de 45 caracteres');
+        $this->validatorSchema['segundoapellido']->addMessage('max_length',
+                'El segundo apellido del Alumno no debe exceder de 45 caracteres');
+        $this->validatorSchema['correo']->addMessage('max_length',
+                'El correo del Alumno no debe exceder de 80 caracteres');
 
-
+       // Validadores del máximo de campo. Los campos no pueden exceder de un límite //
+        $this->widgetSchema['nombre']->setAttribute('size', '50');
+        $this->widgetSchema['segundonombre']->setAttribute('size', '50');
+        $this->widgetSchema['apellido']->setAttribute('size', '50');
+        $this->widgetSchema['segundoapellido']->setAttribute('size', '50');
+        $this->widgetSchema['correo']->setAttribute('size', '50');
   }
 }

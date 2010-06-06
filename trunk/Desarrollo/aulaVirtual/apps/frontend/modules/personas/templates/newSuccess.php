@@ -5,8 +5,14 @@
  */
 
 ?>
-<br /><br />
-<h1>Agregar Alumnos</h1>
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1 align="center">Agregar Alumnos</h1>
+<br />
+<br />
 
 <?php include_partial('form', array('form' => $form)) ?>
 
@@ -42,10 +48,10 @@
             <!-- -->
           </h2>
           <ul>
-            <li><a href="new">&nbsp;&nbsp;Agregar Alumnos</a> </li>
-            <li><a href="inhabilitar">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
-            <li><a href="seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
-            <li><a href="eliminar">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/new') ?>">&nbsp;&nbsp;Agregar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/seccion') ?>">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/eliminar') ?>">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a>&nbsp;&nbsp;</a></li>
           </ul>
         </li>
       </ul>
@@ -58,9 +64,9 @@
       </div>
       <div class="linkstext">
         <ul>
-		<li><a href="">&nbsp;&nbsp;Agregar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Modificar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Eliminar Evaluación</a></li>
+          <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
+          <li><a href="<?php echo url_for('eval/index') ?>">&nbsp;&nbsp;Ver Evaluaciones</a></li>
+          <li><a href="<?php echo url_for('eval/borrar') ?>">&nbsp;&nbsp;Eliminar Evaluación</a></li>
           <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Modificar Notas</a></li>
@@ -68,8 +74,8 @@
       </div>
       <div class="linkstext">
       <ul>
-    	   <li><a href="">&nbsp;&nbsp;Ver Foro</a></li>
-    	   <li><a href="">&nbsp;&nbsp;Crear un tema</a></li>
+    	   <li><a href="<?php echo url_for('temas/index') ?>">&nbsp;&nbsp;Ver Foro</a></li>
+    	   <li><a href="<?php echo url_for('temas/new') ?>">&nbsp;&nbsp;Crear un tema</a></li>
            <li><a href="">&nbsp;&nbsp;Borrar Foro</a></li>
       </ul>
       </div>

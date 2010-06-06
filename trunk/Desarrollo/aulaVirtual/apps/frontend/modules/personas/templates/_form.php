@@ -5,14 +5,14 @@
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="PUT" />
 <?php endif; ?>
-  <table>
+  <table align="center">
     <tfoot>
       <tr>
-        <td colspan="2">
-          &nbsp;<?php echo link_to('Delete', 'personas/delete?idpersona='.$form->getObject()->getIdpersona(), array('method' => 'delete', 'confirm' => '¿Está seguro de que desea Eliminar al Alumno?')) ?>
-            &nbsp;<a href="<?php echo url_for('personas/index') ?>">Cancel</a>
+        <td colspan="2" align="center">
+            <br />
+            <?php echo button_to('Cancelar','personas/seccion') ?>
      
-          <input type="submit" value="Save" />
+          <input type="submit" value="Aceptar" />
         </td>
       </tr>
     </tfoot>
