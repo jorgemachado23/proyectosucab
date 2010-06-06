@@ -7,8 +7,7 @@
 <h1>Agregar un Comentario</h1>
 <br />
 <br />
-<?php $tema = $this->getParameter('idtema')?>
-<h1 align="center">Tema: <?php $tema ?> </h1>
+<h1 align="center">Tema: <?php echo $tema->getNombre(); ?> </h1>
 <br />
 <br />
 <br />

@@ -24,6 +24,7 @@ class comentarioActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new ComentariosForm();
+    $this->tema = TemaPeer::retrieveByPk($request->getParameter('idtema'));
   }
 
   public function executeCreate(sfWebRequest $request)
