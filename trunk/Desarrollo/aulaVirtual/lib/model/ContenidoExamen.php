@@ -6,4 +6,13 @@ class ContenidoExamen extends BaseContenidoExamen
     {
         return $this->getName();
     }
+
+     public function save(PropelPDO $con = null)
+    {
+        
+            $eval = $_SESSION["evaluacion"];
+            $this->setIdevaluacion($eval);
+        
+        return parent::save($con);
+    }
 }
