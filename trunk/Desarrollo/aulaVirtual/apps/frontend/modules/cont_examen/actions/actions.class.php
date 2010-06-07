@@ -27,6 +27,12 @@ class cont_examenActions extends sfActions
     $this->form = new ContenidoExamenForm();
   }
 
+  public function executeEvaluacion(sfWebRequest $request)
+  {
+      $_SESSION["evaluacion"]=null;
+    $this->evaluacion_list = EvaluacionPeer::getExamenVirtual();
+  }
+
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod('post'));

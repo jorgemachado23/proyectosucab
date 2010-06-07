@@ -77,7 +77,7 @@
       </ul>
       <div class="newcomments">
         <ul>
-           <li><a href="">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
+          <li><a href="<?php echo url_for('cont_examen/evaluacion') ?>">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
         	<li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
         	<li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
         </ul>
