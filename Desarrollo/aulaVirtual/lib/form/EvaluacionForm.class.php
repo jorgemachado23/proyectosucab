@@ -20,6 +20,7 @@ class EvaluacionForm extends BaseEvaluacionForm
        'porcentaje' => 'Porcentaje (%)',
        'duracion' => 'Duración (min)',
       ));
+
       $this->widgetSchema['nombre']->setAttribute('size', '72');
       $this->widgetSchema['porcentaje']->setAttribute('size', '10');
       $this->widgetSchema['descripcion']->setAttributes(array('style'=>"height:40px;width:370px"));

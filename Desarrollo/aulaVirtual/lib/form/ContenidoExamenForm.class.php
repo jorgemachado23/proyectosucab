@@ -12,5 +12,12 @@ class ContenidoExamenForm extends BaseContenidoExamenForm
 {
   public function configure()
   {
+      $this->widgetSchema['pregunta']->setAttribute('size', '70');
+
+      $this->validatorSchema['pregunta']->addMessage('max_length',
+                'La pregunta no puede exceder de 100 caracteres.');
+
+      $this->validatorSchema['pregunta']->addMessage('required',
+                'Debe indicar la pregunta.');
   }
 }
