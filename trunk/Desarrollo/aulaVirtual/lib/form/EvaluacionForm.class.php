@@ -13,12 +13,21 @@ class EvaluacionForm extends BaseEvaluacionForm
   public function configure()
   {
       $this->widgetSchema['tipo'] = new sfWidgetFormChoice(array(
-        'choices' => array('CLASE', 'VIRTUAL'),
-      ));
+        'choices' => EvaluacionPeer::$tipo,
+        'multiple' => false,
+        'expanded' => false,
+        ));
+
+     $this->widgetSchema['idlapso'] = new sfWidgetFormChoice(array(
+    'choices' => EvaluacionPeer::$idlapso,
+    'multiple' => false,
+    'expanded' => false,
+    ));
 
       $this->widgetSchema->setLabels(array(
        'porcentaje' => 'Porcentaje (%)',
        'duracion' => 'Duración (min)',
+       'idlapso' => 'Lapso',
       ));
 
       $this->widgetSchema['nombre']->setAttribute('size', '72');
