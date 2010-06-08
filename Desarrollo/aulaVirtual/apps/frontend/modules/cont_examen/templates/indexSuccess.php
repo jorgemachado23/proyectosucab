@@ -1,4 +1,11 @@
-<h1>Cont examen List</h1>
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1 align="center">Contenido del examen</h1>
+<br />
+<br />
 
 <table>
   <thead>
@@ -11,9 +18,9 @@
   <tbody>
     <?php foreach ($contenido_examen_list as $contenido_examen): ?>
     <tr>
-      <td><a href="<?php echo url_for('cont_examen/show?idpregunta='.$contenido_examen->getIdpregunta().'&idevaluacion='.$contenido_examen->getIdevaluacion()) ?>"><?php echo $contenido_examen->getIdpregunta() ?></a></td>
+      <td><a href="<?php echo url_for('cont_examen/edit?idpregunta='.$contenido_examen->getIdpregunta().'&idevaluacion='.$contenido_examen->getIdevaluacion()) ?>"><?php echo $contenido_examen->getIdpregunta() ?></a></td>
       <td><?php echo $contenido_examen->getPregunta() ?></td>
-      <td><a href="<?php echo url_for('cont_examen/show?idpregunta='.$contenido_examen->getIdpregunta().'&idevaluacion='.$contenido_examen->getIdevaluacion()) ?>"><?php echo $contenido_examen->getIdevaluacion() ?></a></td>
+      <td><a href="<?php echo url_for('cont_examen/edit?idpregunta='.$contenido_examen->getIdpregunta().'&idevaluacion='.$contenido_examen->getIdevaluacion()) ?>"><?php echo $contenido_examen->getIdevaluacion() ?></a></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
@@ -21,7 +28,7 @@
 
   <a href="<?php echo url_for('cont_examen/new') ?>">New</a>
 
-    <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
+   <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
 
 <?php slot('menuSidebarAlumno')
       ?>
@@ -62,7 +69,7 @@
       </ul>
       <div class="newcomments">
         <ul>
-           <li><a href="">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
+          <li><a href="<?php echo url_for('cont_examen/evaluacion') ?>">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
         	<li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
         	<li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
         </ul>

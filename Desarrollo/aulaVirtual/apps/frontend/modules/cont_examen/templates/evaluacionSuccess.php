@@ -3,9 +3,10 @@
 <br />
 <br />
 <br />
-<h1 align="center">Seleccione la evaluación que desea cargar</h1>
+<h1 align="center">Seleccione el examen virtual</h1>
 <br />
 <br />
+
 
 <form id="form1" name="form1" method="post" action="new">
 
@@ -16,18 +17,19 @@
     <tr align="center">
         <td>
             <select name="evaluacion" id="evaluacion">
-                <?php foreach ($evaluacion_list as $evaluacion): ?>
-                <?php if (($evaluacion->getTipo())=="1"){?>
-                    <option value="<?php echo $evaluacion->getIdevaluacion(); ?>"><?php echo $evaluacion->getNombre(); ?></option>
-                <?php }?>
-                <?php endforeach; ?>
+                <?php foreach($evaluacion_list as $evaluacion):
+                    if(($evaluacion->getTipo())==1){
+                    ?>
+                <option value="<?php echo $evaluacion->getIdevaluacion() ?>"><?php echo $evaluacion->getNombre() ?></option>
+                <?php }
+                endforeach;?>
             </select>
         </td>
     </tr>
     <tr>
         <td>
-            <br />
-          <input type="submit" name="button" id="button" value="Enviar" />
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="submit" name="button" id="button" value="Enviar" align="center" />
         </td>
 
     </tr>
@@ -78,9 +80,9 @@
       </ul>
       <div class="newcomments">
         <ul>
-           <li><a href="<?php echo url_for('cont_examen/evaluacion') ?>">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
-           <li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
-           <li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
+          <li><a href="<?php echo url_for('cont_examen/evaluacion') ?>">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
+        	<li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
+        	<li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
         </ul>
       </div>
       <div class="linkstext">
@@ -101,3 +103,5 @@
       </ul>
       </div>
 <?php end_slot(); ?>
+
+
