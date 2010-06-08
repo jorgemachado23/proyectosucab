@@ -15,13 +15,6 @@ class cont_examenActions extends sfActions
     $this->contenido_examen_list = ContenidoExamenPeer::doSelect(new Criteria());
   }
 
-  public function executeShow(sfWebRequest $request)
-  {
-    $this->contenido_examen = ContenidoExamenPeer::retrieveByPk($request->getParameter('idpregunta'),
-                  $request->getParameter('idevaluacion'));
-    $this->forward404Unless($this->contenido_examen);
-  }
-
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new ContenidoExamenForm();
@@ -29,10 +22,10 @@ class cont_examenActions extends sfActions
 
   public function executeEvaluacion(sfWebRequest $request)
   {
-      $_SESSION["evaluacion"]=null;
+    $_SESSION["evaluacion"]=null;
     $this->evaluacion_list = EvaluacionPeer::getExamenVirtual();
   }
-
+  
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod('post'));

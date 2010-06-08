@@ -1,22 +1,21 @@
 <br />
 <br />
-<h1>Preguntas del Examen</h1>
 <br />
 <br />
+<br />
+<h1 align="center">Preguntas del examen</h1>
+<br />
+<br />
+
 <?php
-if ($_SESSION["evaluacion"]==null){
-
     $evaluacion = $_POST["evaluacion"];
-    $_SESSION["evaluacion"]=$evaluacion;
-    echo "entro";
-
- }
- 
+    $_SESSION["evaluacion"] = $evaluacion;
+    echo $evaluacion;
 
 
 include_partial('form', array('form' => $form)) ?>
 
-  <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
+ <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
 
 <?php slot('menuSidebarAlumno')
       ?>
@@ -57,7 +56,7 @@ include_partial('form', array('form' => $form)) ?>
       </ul>
       <div class="newcomments">
         <ul>
-           <li><a href="">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
+          <li><a href="<?php echo url_for('cont_examen/evaluacion') ?>">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
         	<li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
         	<li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
         </ul>
