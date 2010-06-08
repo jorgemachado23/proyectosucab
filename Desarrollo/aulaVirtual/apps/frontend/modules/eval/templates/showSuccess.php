@@ -18,6 +18,10 @@
       <td><?php echo $evaluacion->getPorcentaje() ?><br /></td>
     </tr>
     <tr>
+      <th>Lapso:</th>
+      <td><?php echo $evaluacion->getIdlapso() ?></td>
+    </tr>
+    <tr>
       <th>Tipo:</th>
       <td><?php echo $evaluacion->getTipo() ?></td>
     </tr>

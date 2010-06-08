@@ -15547,3 +15547,27 @@ Jun 08 01:16:02 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:m
 Jun 08 01:16:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /wp-content/themes/DeskSpace/iepngfix.htc with parameters array (  'DeskSpace' => 'iepngfix.htc',  'module' => 'wp-content',  'action' => 'themes',)
 Jun 08 01:16:02 symfony [info] {sfFrontWebController} Action "wpcontent/themes" does not exist
 Jun 08 01:16:02 symfony [err] {sfError404Exception} Action "wpcontent/themes" does not exist.
+Jun 08 16:30:04 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 08 16:30:04 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 08 16:30:04 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 08 16:30:04 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',)
+Jun 08 16:30:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 08 16:30:05 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 08 16:30:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 08 16:30:05 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Jun 08 16:30:05 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jun 08 16:30:06 symfony [debug] {sfPropelLogger} prepare: SELECT persona.IDPERSONA, persona.NOMBRE, persona.APELLIDO, persona.TIPO, persona.CUENTA, persona.CLAVE, persona.SECCION, persona.ESTADO, persona.CORREO, persona.SEGUNDONOMBRE, persona.SEGUNDOAPELLIDO FROM `persona`
+Jun 08 16:30:07 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\modules/usuario/templates/indexSuccess.php"
+Jun 08 16:30:08 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+Jun 08 16:30:08 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\nuevo\templates/layout.php"
+Jun 08 16:30:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 08 16:30:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 08 16:30:09 symfony [info] {sfWebResponse} Send content (3082 o)
+Jun 08 16:30:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 08 16:30:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 08 16:30:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 08 16:30:09 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style.css" (/).
+Jun 08 16:30:10 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 08 16:30:10 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 08 16:30:10 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 08 16:30:10 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/files/style_ie.css" (/).
