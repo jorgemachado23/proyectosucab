@@ -9,9 +9,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [style.css,style_.css,style_ie.css,style_ie6.css]
+  stylesheets:    [style.css,style_.css,style_ie.css,style_ie6.css, ui-lightness/jquery-ui-1.8.custom.css]
 
-  javascripts:    []
+  javascripts:    [jquery-1.4.2.min.js, jquery-ui-1.8.custom.min.js, datepicker.js]
 
   has_layout:     on
   layout:         layout

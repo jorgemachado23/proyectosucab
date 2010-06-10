@@ -10,9 +10,23 @@
  */
 class notasActions extends sfActions
 {
+
+   public function executeEval(sfWebRequest $request)
+  {
+    $this->evaluacion_list = EvaluacionPeer::doSelect(new Criteria());
+    $this->persona_list = PersonaPeer::doSelect(new Criteria());
+    $this->persona_list = PersonaPeer::doSelect(new Criteria());
+  }
+  public function executeSeccion(sfWebRequest $request)
+  {
+    $_SESSION["seccion"]=null;
+    $this->persona_list = PersonaPeer::doSelect(new Criteria());
+    $this->persona_list = PersonaPeer::doSelect(new Criteria());
+  }
   public function executeIndex(sfWebRequest $request)
   {
     $this->nota_list = NotaPeer::doSelect(new Criteria());
+    $this->persona_list = PersonaPeer::doSelect(new Criteria());
   }
 
   public function executeShow(sfWebRequest $request)
@@ -26,6 +40,8 @@ class notasActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new NotaForm();
+    $this->persona_list = PersonaPeer::doSelect(new Criteria());
+    $this->evaluacion = EvaluacionPeer::retrieveByPk($request->getParameter('idevaluacion'));
   }
 
   public function executeCreate(sfWebRequest $request)

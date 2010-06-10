@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Nota form.
  *
@@ -12,5 +11,16 @@ class NotaForm extends BaseNotaForm
 {
   public function configure()
   {
+ 
+          $this->widgetSchema['nota']->setAttribute('size', '10');
+
+          $this->validatorSchema['nota']->addMessage('max_length',
+            'Solo puede introducir una letra para la nota');
+
+          unset ($this['created_at']);
+          unset ($this['updated_at']);
+
+
+
   }
 }

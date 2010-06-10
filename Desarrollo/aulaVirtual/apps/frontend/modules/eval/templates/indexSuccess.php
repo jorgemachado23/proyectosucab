@@ -2,11 +2,10 @@
 <br />
 <br />
 <br />
-<h1>Evaluaciones:</h1>
+<h1 align="center">Evaluaciones:</h1>
 <br />
 <br />
 <br />
-
 <table border="1" align="center" width="510">
   <thead>
     <tr>
@@ -79,7 +78,7 @@
           <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
           <li><a href="<?php echo url_for('eval/index') ?>">&nbsp;&nbsp;Ver Evaluaciones</a></li>
           <li><a href="<?php echo url_for('eval/borrar') ?>">&nbsp;&nbsp;Eliminar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
+          <li><a href="<?php echo url_for('notas/seccion') ?>">&nbsp;&nbsp;Cargar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Modificar Notas</a></li>
         </ul>

@@ -34,7 +34,15 @@ class EvaluacionForm extends BaseEvaluacionForm
       $this->widgetSchema['porcentaje']->setAttribute('size', '10');
       $this->widgetSchema['descripcion']->setAttributes(array('style'=>"height:40px;width:370px"));
       $this->widgetSchema['duracion']->setAttribute('size', '10');
-//      $this->widgetSchema['fecha_fin'] = new sfWidgetFormDateJQuery();
+
+      $years = range (2010,2020);
+    $this->widgetSchema['fecha_fin'] = new sfWidgetFormJQueryDate(array(
+        'image'=> '/images/calendar.png',
+        'format' => '%day% / %month% / %year%',
+        'years' => array_combine($years, $years),
+        'label'=>'Fecha fin',
+        'empty_values' => array('day'=>'día','month'=>'mes','year'=>'año')));
+
       $this->widgetSchema['estado'] = new sfWidgetFormChoice(array(
         'choices' => array('ACTIVA', 'INACTIVA'),
         ));
@@ -44,5 +52,7 @@ class EvaluacionForm extends BaseEvaluacionForm
       $this->validatorSchema['descripcion']->addMessage('max_length',
                 'La descripción de la Evaluación no debe exceder de 100 caracteres');
       $this->validatorSchema['duracion']->addMessage('invalid','La duración debe contener solo números para indicar la cantidad de minutos que durará la evaluación');
+
+
   }
 }
