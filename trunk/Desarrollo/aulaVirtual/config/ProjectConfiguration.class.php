@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\symfony-1.2.0\lib/autoload/sfCoreAutoload.class.php';
+require_once 'C:\symfony-1.2.9\lib/autoload/sfCoreAutoload.class.php';
 sfCoreAutoload::register();
 
 class ProjectConfiguration extends sfProjectConfiguration
@@ -9,5 +9,6 @@ class ProjectConfiguration extends sfProjectConfiguration
   {
     // for compatibility / remove and enable only the plugins you want
     $this->enableAllPluginsExcept(array('sfDoctrinePlugin', 'sfCompat10Plugin'));
+    $this-> enablePlugins (array('sfFormExtraPlugin'));
   }
 }

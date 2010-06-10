@@ -76,7 +76,7 @@ class evalActions extends sfActions
     {
       $evaluacion = $form->save();
 
-      $this->redirect('eval/edit?idevaluacion='.$evaluacion->getIdevaluacion());
+      $this->redirect('eval/index');
     }
   }
 }
