@@ -17,17 +17,17 @@ class BaseNotaForm extends BaseFormPropel
       'created_at'   => new sfWidgetFormDate(),
       'updated_at'   => new sfWidgetFormDate(),
       'nota'         => new sfWidgetFormInput(),
-      'idpersona'    => new sfWidgetFormInputHidden(),
-      'idevaluacion' => new sfWidgetFormInputHidden(),
+      'idpersona'    => new sfWidgetFormInput(),
+      'idevaluacion' => new sfWidgetFormInput(),
     ));
 
     $this->setValidators(array(
       'idnota'       => new sfValidatorPropelChoice(array('model' => 'Nota', 'column' => 'idnota', 'required' => false)),
       'created_at'   => new sfValidatorDate(),
       'updated_at'   => new sfValidatorDate(array('required' => false)),
-      'nota'         => new sfValidatorString(array('max_length' => 1)),
-      'idpersona'    => new sfValidatorPropelChoice(array('model' => 'Nota', 'column' => 'idpersona', 'required' => false)),
-      'idevaluacion' => new sfValidatorPropelChoice(array('model' => 'Nota', 'column' => 'idevaluacion', 'required' => false)),
+      'nota'         => new sfValidatorString(array('max_length' => 45)),
+      'idpersona'    => new sfValidatorInteger(),
+      'idevaluacion' => new sfValidatorInteger(),
     ));
 
     $this->widgetSchema->setNameFormat('nota[%s]');

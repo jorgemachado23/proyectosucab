@@ -16,6 +16,7 @@ class notasActions extends sfActions
     $this->evaluacion_list = EvaluacionPeer::doSelect(new Criteria());
     $this->persona_list = PersonaPeer::doSelect(new Criteria());
     $this->persona_list = PersonaPeer::doSelect(new Criteria());
+    $this->evaluacion = EvaluacionPeer::retrieveByPk($request->getParameter('idevaluacion'));
   }
   public function executeSeccion(sfWebRequest $request)
   {
@@ -46,6 +47,8 @@ class notasActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
+    $this->evaluacion = EvaluacionPeer::retrieveByPk($request->getParameter('idevaluacion'));
+
     $this->forward404Unless($request->isMethod('post'));
 
     $this->form = new NotaForm();
@@ -100,8 +103,7 @@ class notasActions extends sfActions
     if ($form->isValid())
     {
       $nota = $form->save();
-
       $this->redirect('notas/edit?idnota='.$nota->getIdnota().'&idpersona='.$nota->getIdpersona().'&idevaluacion='.$nota->getIdevaluacion());
-    }
+      }
   }
 }

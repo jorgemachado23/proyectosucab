@@ -1,20 +1,21 @@
 <?php
-$seccion1 = $_SESSION['seccion'];?>
-<br />
-<br />
-<br />
-<br />
-<h1 align="center">Evaluación: <?php echo $evaluacion->getNombre();?> </h1>
-<br />
-<br />
-<br />
-<h1 align="center">Sección: <?php echo $seccion1 ?></h1>
-<br />
-<br />
-<br />
-<?php
+$seccion1 = $_SESSION['seccion'];
 
-include_partial('form', array('form' => $form)) ?>
+?>
+<br />
+<br />
+<br />
+<br />
+<h1 align="center">Evaluación:<?php ?></h1>
+<br />
+<br />
+<br />
+<h1 align="center">Sección: <?php ?></h1>
+<br />
+<br />
+<br />
+
+<?php include_partial('form', array('form' => $form)) ?>
 
 <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
 

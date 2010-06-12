@@ -13,7 +13,7 @@ $seccion = $_POST["seccion"];
 $_SESSION["seccion"]=$seccion;
 
 }?>
-
+<form id="form1" name="form1" method="post" action="<?php echo url_for('notas/new') ?>">
 <table border="1" align="center" width="510">
   <thead>
     <tr>
@@ -26,7 +26,7 @@ $_SESSION["seccion"]=$seccion;
   <tbody>
     <?php foreach ($evaluacion_list as $evaluacion): ?>
     <tr>
-        <td><a href="<?php echo url_for('notas/new?idevaluacion='.$evaluacion->getIdevaluacion()) ?>">Cargar Notas</a></td>
+      <td><?php echo link_to('Cargar Notas','notas/new?idevaluacion='.$evaluacion->getIdevaluacion()) ?></td>
       <td><?php echo $evaluacion->getNombre() ?></td>
       <td><?php echo $evaluacion->getIdlapso() ?></td>
       <td><?php echo $evaluacion->getTipo() ?></td>
@@ -34,6 +34,7 @@ $_SESSION["seccion"]=$seccion;
     <?php endforeach; ?>
   </tbody>
 </table>
+</form>
 
 <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
 
