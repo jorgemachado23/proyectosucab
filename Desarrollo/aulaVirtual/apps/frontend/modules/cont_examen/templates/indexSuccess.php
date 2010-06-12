@@ -4,27 +4,52 @@
 <br />
 <br />
 <h1 align="center">Contenido del examen</h1>
-<br />
-<br />
 
+
+<br /><br />
+    <?php
+    echo "<h2 align='center'>".$evaluacion->getNombre()."</h2>";
+
+    ?>
+<br />
+<?php
+    foreach ($contenido_examen_list as $contenido_examen):
+        if($contenido_examen->getIdevaluacion()==$evaluacion->getIdevaluacion()){?>
+ <br />
 <table>
-  <thead>
-    <tr>
-      <th>Idpregunta</th>
-      <th>Pregunta</th>
-      <th>Idevaluacion</th>
+  <tr>
+      <td><a style="text-decoration:none; color:#333; font-weight: bold" href="
+            <?php echo url_for('cont_examen/edit?idpregunta='.$contenido_examen->getIdpregunta().'&idevaluacion='.$contenido_examen->getIdevaluacion()) ?>">
+              <?php echo $contenido_examen->getPregunta() ?></a></td>
     </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($contenido_examen_list as $contenido_examen): ?>
+  </table>
+
+  <br />
+
+  <table style="margin-left:30px">
+    <?php foreach ($respuesta_list as $respuesta):
+        if($respuesta->getIdpregunta()==$contenido_examen->getIdpregunta()){?>
     <tr>
-      <td><a href="<?php echo url_for('cont_examen/edit?idpregunta='.$contenido_examen->getIdpregunta().'&idevaluacion='.$contenido_examen->getIdevaluacion()) ?>"><?php echo $contenido_examen->getIdpregunta() ?></a></td>
-      <td><?php echo $contenido_examen->getPregunta() ?></td>
-      <td><a href="<?php echo url_for('cont_examen/edit?idpregunta='.$contenido_examen->getIdpregunta().'&idevaluacion='.$contenido_examen->getIdevaluacion()) ?>"><?php echo $contenido_examen->getIdevaluacion() ?></a></td>
+
+
+
+
+      <td>  <a style="text-decoration:none; color:#666; font-weight: bold" href="
+            <?php echo url_for('resp/edit?idrespuesta='.$respuesta->getIdrespuesta().'&idpregunta='.$contenido_examen->getIdpregunta()) ?>">
+              <?php echo $respuesta->getRespuesta() ?></a> </td>
+      <td>
+          &nbsp;-->&nbsp;
+      </td>
+      <td><?php echo $respuesta->getTipo() ?></td>
+    
     </tr>
-    <?php endforeach; ?>
-  </tbody>
-</table>
+    <?php }
+    endforeach; ?>
+    </table>
+
+    <?php }
+    endforeach; ?>
+
 
   <a href="<?php echo url_for('cont_examen/new') ?>">New</a>
 

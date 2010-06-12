@@ -24,6 +24,7 @@ class respActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
+    
     $this->form = new RespuestaForm();
   }
 
@@ -39,11 +40,12 @@ class respActions extends sfActions
   }
 
   public function executeEdit(sfWebRequest $request)
-  {
+  {$_SESSION["pregunta"]=null;
     $this->forward404Unless($respuesta = RespuestaPeer::retrieveByPk($request->getParameter('idrespuesta'),
                          $request->getParameter('idpregunta')), sprintf('Object respuesta does not exist (%s).', $request->getParameter('idrespuesta'),
                          $request->getParameter('idpregunta')));
     $this->form = new RespuestaForm($respuesta);
+    $this->respuesta = RespuestaPeer::retrieveByPk($request->getParameter('idrespuesta'),$request->getParameter('idpregunta'));
   }
 
   public function executeUpdate(sfWebRequest $request)
@@ -76,9 +78,11 @@ class respActions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
+      $_SESSION["flag"]=null;
       $respuesta = $form->save();
-
-      $this->redirect('resp/edit?idrespuesta='.$respuesta->getIdrespuesta().'&idpregunta='.$respuesta->getIdpregunta());
+      
+      $this->redirect('resp/new');
+      
     }
   }
 }

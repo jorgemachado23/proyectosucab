@@ -8,9 +8,25 @@
 <br />
 
 <?php
-    $evaluacion = $_POST["evaluacion"];
-    $_SESSION["evaluacion"] = $evaluacion;
-    echo $evaluacion;
+
+    
+
+    if ($_POST["evaluacion"]=!null){
+        
+        $evaluacion = $_POST["evaluacion"];
+        $_SESSION["evaluacion"] = $evaluacion;
+        echo $evaluacion;
+        
+    }else if($_SESSION["evaluacion"]==null){
+
+        $evaluacion = $_SESSION["eval2"];
+        echo $evaluacion;
+    }else
+        {
+        $evaluacion = $_SESSION["evaluacion"];
+        echo $evaluacion;
+        }
+    //echo $evaluacion->getNombre();
 
 
 include_partial('form', array('form' => $form)) ?>

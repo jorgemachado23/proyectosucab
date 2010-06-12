@@ -20,14 +20,25 @@ class RespuestaForm extends BaseRespuestaForm
       $this->widgetSchema['tipo'] = new sfWidgetFormChoice(array(
         'choices' => RespuestaPeer::$tipo,
         'multiple' => false,
-        'expanded' => true,
+        'expanded' => false,
         ));
 
       /*
        * Se valida que el tipo seleccionado este dentro del rango aceptado.
        */
-      $this->validatorSchema['seccion'] = new sfValidatorChoice(array(
-        'choices' => array_keys(PersonaPeer::$seccion),
+      $this->validatorSchema['tipo'] = new sfValidatorChoice(array(
+        'choices' => array_keys(RespuestaPeer::$tipo),
         ));
+
+
+      $this->widgetSchema['respuesta']->setAttribute('size', '70');
+
+      $this->validatorSchema['respuesta']->addMessage('max_length',
+                'La respuesta no puede exceder de 100 caracteres.');
+
+      $this->validatorSchema['respuesta']->addMessage('required',
+                'Debe indicar la respuesta.');
+      $this->validatorSchema['tipo']->addMessage('required',
+                'Debe indicar si la respuesta es correcta o incorrecta.');
   }
 }

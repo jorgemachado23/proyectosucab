@@ -2,7 +2,8 @@
 
 class EvaluacionPeer extends BaseEvaluacionPeer
 {
-        static public $tipo = array(
+
+    static public $tipo = array(
         'CLASE' => 'Clase',
         'VIRTUAL' => 'Virtual',
     );
@@ -12,10 +13,12 @@ class EvaluacionPeer extends BaseEvaluacionPeer
        '2' => '2do Lapso',
        '3' => '3er Lapso',
    );
+
     static public function getExamenVirtual()
     {
         $criteria = new Criteria();
-        $criteria->add(self::TIPO, '1', Criteria::EQUAL);
+        $criteria->add(self::TIPO, 'VIRTUAL', Criteria::EQUAL);
         return self::doSelect($criteria);
     }
+
 }
