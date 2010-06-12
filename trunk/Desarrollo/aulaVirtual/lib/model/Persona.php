@@ -10,13 +10,12 @@ class Persona extends BasePersona
     
     public function __toString()
     {
-        return $this->getName();
+        return $this->getIdpersona();
     }
 
     public function inhabilitar(){
 
         $this->setEstado("Inactivo");
-
     }
 
  /*

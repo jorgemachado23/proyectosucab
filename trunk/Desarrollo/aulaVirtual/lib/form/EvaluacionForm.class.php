@@ -48,6 +48,10 @@ class EvaluacionForm extends BaseEvaluacionForm
         ));
       $this->validatorSchema['nombre']->addMessage('max_length',
                 'El nombre de la Evaluación no debe exceder de 45 caracteres');
+      $this->validatorSchema['nombre']->addMessage('required',
+                'Debe agregar el nombre de la Evaluación');
+      $this->validatorSchema['porcentaje']->addMessage('required',
+                'Debe agregar el porcentaje de la Evaluación');
       $this->validatorSchema['porcentaje']->addMessage('invalid','El porcentaje de la Evaluación debe contener solo números');
       $this->validatorSchema['descripcion']->addMessage('max_length',
                 'La descripción de la Evaluación no debe exceder de 100 caracteres');
