@@ -7,7 +7,7 @@
 <h1>Agregar un Comentario</h1>
 <br />
 <br />
-<h1 align="center">Tema: <?php echo $tema->getNombre(); ?> </h1>
+<h1 align="center">Tema: <?php echo $evaluacion->getNombre(); ?> </h1>
 <br />
 <br />
 <br />

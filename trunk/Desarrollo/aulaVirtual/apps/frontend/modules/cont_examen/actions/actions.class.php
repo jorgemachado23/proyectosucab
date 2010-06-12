@@ -12,20 +12,34 @@ class cont_examenActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+
     $this->contenido_examen_list = ContenidoExamenPeer::doSelect(new Criteria());
+    $this->respuesta_list= RespuestaPeer::doSelect(new Criteria());
+    $this->evaluacion = EvaluacionPeer::retrieveByPk($request->getParameter('idevaluacion'));
   }
 
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new ContenidoExamenForm();
+    $this->evaluacion = EvaluacionPeer::retrieveByPk($request->getParameter('idevaluacion'));
   }
 
   public function executeEvaluacion(sfWebRequest $request)
   {
     $_SESSION["evaluacion"]=null;
+    $_SESSION["pregunta"]=null;
+    $_SESSION["flag"]=null;
     $this->evaluacion_list = EvaluacionPeer::getExamenVirtual();
   }
-  
+
+//    public function executeShow(sfWebRequest $request)
+//  {
+//    $this->contenido_examen_list = ContenidoExamenPeer::getPreguntasSegunExamen($request->getParameter('idevaluacion'));
+//
+//    $this->forward404Unless($this->contenido_examen);
+//  }
+
+
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod('post'));
@@ -43,6 +57,7 @@ class cont_examenActions extends sfActions
             $request->getParameter('idevaluacion')), sprintf('Object contenido_examen does not exist (%s).', $request->getParameter('idpregunta'),
             $request->getParameter('idevaluacion')));
     $this->form = new ContenidoExamenForm($contenido_examen);
+    $this->evaluacion = EvaluacionPeer::retrieveByPk($request->getParameter('idevaluacion'));
   }
 
   public function executeUpdate(sfWebRequest $request)
@@ -76,8 +91,8 @@ class cont_examenActions extends sfActions
     if ($form->isValid())
     {
       $contenido_examen = $form->save();
-
-      $this->redirect('cont_examen/edit?idpregunta='.$contenido_examen->getIdpregunta().'&idevaluacion='.$contenido_examen->getIdevaluacion());
+      $_SESSION["pregunta"]=$contenido_examen->getIdpregunta();
+      $this->redirect('resp/new?idpregunta='.$contenido_examen->getIdpregunta());
     }
   }
 }

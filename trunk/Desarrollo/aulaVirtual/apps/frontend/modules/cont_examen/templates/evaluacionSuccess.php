@@ -18,7 +18,7 @@
         <td>
             <select name="evaluacion" id="evaluacion">
                 <?php foreach($evaluacion_list as $evaluacion):
-                    if(($evaluacion->getTipo())==1){
+                    if(($evaluacion->getTipo())=='VIRTUAL'){
                     ?>
                 <option value="<?php echo $evaluacion->getIdevaluacion() ?>"><?php echo $evaluacion->getNombre() ?></option>
                 <?php }

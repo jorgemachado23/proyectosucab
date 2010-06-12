@@ -1,4 +1,10 @@
+<br />
+<br />
 <h1>Edit Resp</h1>
+
+<?php $_SESSION["respuesta"]=$respuesta->getIdrespuesta();
+$_SESSION["pregunta"]=$respuesta->getIdpregunta();
+?>
 
 <?php include_partial('form', array('form' => $form)) ?>
 

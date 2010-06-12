@@ -1,5 +1,8 @@
-<h1>Resp List</h1>
-
+<br />
+<br />
+<br />
+<h1>Lista de Respuestas</h1>
+<br /><br />
 <table>
   <thead>
     <tr>
@@ -20,7 +23,7 @@
     <?php endforeach; ?>
   </tbody>
 </table>
-
+<br />
   <a href="<?php echo url_for('resp/new') ?>">New</a>
 
     <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->

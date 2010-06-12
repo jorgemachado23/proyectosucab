@@ -7,6 +7,10 @@
 <br />
 <br />
 
+
+<?php
+    $_SESSION["evaluacion"]=$evaluacion->getIdevaluacion();
+?>
 <?php include_partial('form', array('form' => $form)) ?>
 
  <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->

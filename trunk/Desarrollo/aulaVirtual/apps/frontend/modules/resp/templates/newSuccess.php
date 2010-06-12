@@ -2,7 +2,10 @@
 <br />
 <h1>New Resp</h1>
 
-<?php include_partial('form', array('form' => $form)) ?>
+<?php
+echo $_SESSION["flag"];
+
+include_partial('form', array('form' => $form)) ?>
 
     <!-- Aquí se define el slot que me devuelve el menú para el usuario ALUM -->
 
