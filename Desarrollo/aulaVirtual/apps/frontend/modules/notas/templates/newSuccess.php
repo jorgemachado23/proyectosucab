@@ -1,16 +1,15 @@
 <?php
 $seccion1 = $_SESSION['seccion'];
-
 ?>
 <br />
 <br />
 <br />
 <br />
-<h1 align="center">Evaluación:<?php ?></h1>
+<h1 align="center">Evaluación:<?php echo $evaluacion->getNombre(); ?></h1>
 <br />
 <br />
 <br />
-<h1 align="center">Sección: <?php ?></h1>
+<h1 align="center">Sección: <?php $seccion1 ?></h1>
 <br />
 <br />
 <br />

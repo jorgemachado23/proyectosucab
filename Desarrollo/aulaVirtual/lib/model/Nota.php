@@ -7,20 +7,26 @@ class Nota extends BaseNota
         return $this->getName();
     }
 
+
      public function save(PropelPDO $con = null)
     {
 
-        if ($this->isNew())
-        {  
-            if($this->getNota()==A){
-                $this->setNota(5);
-            }
-            if($this->getNota()==B){
-                $this->setNota(4);
-            }
+        $nota = comparar($this->getNota());
+        $this->setNota($nota);
+        return parent::save($con);
+    }
+
+       public function comparar($cad1){
+
+        if ($cad1=='A'){
+           $cade=5;
+
+        }else if($cad1=='B'){
+            $cade=4;
 
         }
-        return parent::save($con);
+        return $cade;
+
     }
 
 }
