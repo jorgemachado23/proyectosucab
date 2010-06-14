@@ -15,7 +15,7 @@ class TemaForm extends BaseTemaForm
          unset ($this['created_at']);
          unset ($this['updated_at']); 
          unset ($this['idpersona']);
-         $this->widgetSchema['nombre']->setAttribute('size', '50');
+         $this->widgetSchema['nombre']->setAttribute('size', '71');
          $this->widgetSchema['descripcion']->setAttributes(array('style'=>"height:80px;width:370px"));
 
          $this->validatorSchema['nombre']->addMessage('max_length',

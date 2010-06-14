@@ -2,7 +2,7 @@
 <br />
 <br />
 <br />
-<h1>Modificar Evaluación:</h1>
+<h1>Modificar Evaluación</h1>
 <br />
 <br />
 <br />

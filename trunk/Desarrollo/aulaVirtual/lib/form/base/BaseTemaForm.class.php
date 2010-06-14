@@ -17,7 +17,7 @@ class BaseTemaForm extends BaseFormPropel
       'nombre'      => new sfWidgetFormInput(),
       'created_at'  => new sfWidgetFormDate(),
       'updated_at'  => new sfWidgetFormDate(),
-      'descripcion' => new sfWidgetFormInput(),
+      'descripcion' => new sfWidgetFormTextarea(),
       'idpersona'   => new sfWidgetFormInput(),
     ));
 
