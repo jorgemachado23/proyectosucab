@@ -2,7 +2,7 @@
 <br />
 <br />
 <br />
-<h1>Nueva Evaluación</h1>
+<h1 align="center">Nueva Evaluación</h1>
 <br />
 <br />
 <br />

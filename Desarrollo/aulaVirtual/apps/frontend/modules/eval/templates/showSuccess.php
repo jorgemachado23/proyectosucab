@@ -2,7 +2,7 @@
 <br />
 <br />
 <br />
-<h1>Evaluación:</h1>
+<h1 align="center">Evaluación:</h1>
 <br />
 <br />
 <br />
@@ -87,22 +87,22 @@
           </h2>
           <ul>
             <li><a href="<?php echo url_for('personas/new') ?>">&nbsp;&nbsp;Agregar Alumnos</a> </li>
-            <li><a href="personas/inhabilitar">&nbsp;&nbsp;Inhabilitar Alumno</a> </li>
-            <li><a href="personas/seccion">&nbsp;&nbsp;Listar Alumnos</a> </li>
-            <li><a href="personas/eliminar">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/seccion') ?>">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="<?php echo url_for('personas/eliminar') ?>">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a>&nbsp;&nbsp;</a></li>
           </ul>
         </li>
       </ul>
       <div class="newcomments">
         <ul>
-            <li><a href="<?php echo url_for('cont_examen/evaluacion') ?>">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
-            <li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
-            <li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
+          <li><a href="<?php echo url_for('cont_examen/evaluacion') ?>">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
+        	<li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
+        	<li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
         </ul>
       </div>
       <div class="linkstext">
         <ul>
-          <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
+	  <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
           <li><a href="<?php echo url_for('eval/index') ?>">&nbsp;&nbsp;Ver Evaluaciones</a></li>
           <li><a href="<?php echo url_for('eval/borrar') ?>">&nbsp;&nbsp;Eliminar Evaluación</a></li>
           <li><a href="<?php echo url_for('notas/seccion') ?>">&nbsp;&nbsp;Cargar Notas</a></li>

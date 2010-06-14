@@ -4,10 +4,10 @@
 <br />
 <br />
 <br />
-<h1>Agregar un Comentario</h1>
+<h1 align="center">Agregar un Comentario</h1>
 <br />
 <br />
-<h1 align="center">Tema: <?php echo $evaluacion->getNombre(); ?> </h1>
+<h1 align="center">Tema: <?php echo $tema->getNombre(); ?> </h1>
 <br />
 <br />
 <br />
@@ -65,7 +65,7 @@
           <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
           <li><a href="<?php echo url_for('eval/index') ?>">&nbsp;&nbsp;Ver Evaluaciones</a></li>
           <li><a href="<?php echo url_for('eval/borrar') ?>">&nbsp;&nbsp;Eliminar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
+          <li><a href="<?php echo url_for('notas/seccion') ?>">&nbsp;&nbsp;Cargar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Modificar Notas</a></li>
         </ul>

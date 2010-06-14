@@ -9,7 +9,7 @@
     <tfoot>
       <tr>
         <td colspan="2">   
-            <input align="" type="submit" value="Save" />
+            <input align="" type="submit" value="Aceptar" />
           &nbsp;<?php echo button_to('Volver','notas/seccion');?>
           <?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php echo link_to('Delete', 'notas/delete?idnota='.$form->getObject()->getIdnota().'&idpersona='.$form->getObject()->getIdpersona().'&idevaluacion='.$form->getObject()->getIdevaluacion(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>

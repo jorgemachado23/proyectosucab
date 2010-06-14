@@ -114,7 +114,7 @@ $_SESSION["usuario"];
 		<p></p>
 		<p></p>
                 <br />
-		<a href="<?php echo url_for('temas/index') ?>">Ver Temas</a>
+		<a href="">Ver Temas</a>
         </ul>
       </div>
       <div class="linkstext">
@@ -146,17 +146,17 @@ $_SESSION["usuario"];
       </ul>
       <div class="newcomments">
         <ul>
-            <li><a href="<?php echo url_for('cont_examen/evaluacion') ?>">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
-            <li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
-            <li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
+          <li><a href="<?php echo url_for('cont_examen/evaluacion') ?>">&nbsp;&nbsp;Agregar Exámen Virtual</a></li>
+        	<li><a href="">&nbsp;&nbsp;Modificar Exámen Virtual</a></li>
+        	<li><a href="">&nbsp;&nbsp;Eliminar Exámen Virtual</a></li>
         </ul>
       </div>
       <div class="linkstext">
         <ul>
-          <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
+	  <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
           <li><a href="<?php echo url_for('eval/index') ?>">&nbsp;&nbsp;Ver Evaluaciones</a></li>
           <li><a href="<?php echo url_for('eval/borrar') ?>">&nbsp;&nbsp;Eliminar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
+          <li><a href="<?php echo url_for('notas/seccion') ?>">&nbsp;&nbsp;Cargar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Modificar Notas</a></li>
         </ul>

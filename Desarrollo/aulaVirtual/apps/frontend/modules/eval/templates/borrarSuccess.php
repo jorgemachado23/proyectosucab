@@ -2,7 +2,7 @@
 <br />
 <br />
 <br />
-<h1>Evaluaciones:</h1>
+<h1 align="center">Evaluaciones</h1>
 <br />
 <br />
 <br />
