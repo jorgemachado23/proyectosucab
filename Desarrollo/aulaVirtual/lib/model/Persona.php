@@ -51,7 +51,7 @@ class Persona extends BasePersona
              }
 
              $contador = 0;
-             $cuenta=strtoupper($this->generarNombre($contador));
+             $cuenta=strtoupper($this->generarNombre($contador,$this->getNombre(),$this->getApellido()));
              $this->setCuenta($cuenta);
 
              $clave=$this->generarClave();
@@ -66,12 +66,12 @@ class Persona extends BasePersona
      * Funcion que genera el nombre de sesion de un alumno nuevo.
      */
 
-    public function generarNombre($contador){
+    public function generarNombre($contador,$nombreAlumno,$apellidoAlumno){
 
 
 
-        $nombreAlumno = $this->getNombre();
-        $apellidoAlumno = $this->getApellido();
+        //$nombreAlumno = $this->getNombre();
+        //$apellidoAlumno = $this->getApellido();
         $cuentaAlumno = $nombreAlumno."_". $apellidoAlumno;
 
         $personas = PersonaPeer::getActiveEstudiantes();
