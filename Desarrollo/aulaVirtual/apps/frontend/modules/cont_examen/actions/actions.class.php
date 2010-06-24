@@ -12,10 +12,10 @@ class cont_examenActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-
+    $this->evaluacion = EvaluacionPeer::retrieveByPk($request->getParameter('idevaluacion'));
     $this->contenido_examen_list = ContenidoExamenPeer::doSelect(new Criteria());
     $this->respuesta_list= RespuestaPeer::doSelect(new Criteria());
-    $this->evaluacion = EvaluacionPeer::retrieveByPk($request->getParameter('idevaluacion'));
+    
   }
 
   public function executeNew(sfWebRequest $request)
