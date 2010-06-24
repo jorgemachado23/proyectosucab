@@ -84,6 +84,12 @@ class Persona extends BasePersona
         if($contador > 0){
         $cuentaAlumno = $cuentaAlumno."_".$contador;
         }
+
+        if (sfConfig::get('sf_logging_enabled'))
+{
+  sfContext::getInstance()->getLogger()->info($cuentaAlumno);
+}
+
         return $cuentaAlumno;
     }
 

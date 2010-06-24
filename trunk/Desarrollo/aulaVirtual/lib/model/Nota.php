@@ -24,9 +24,17 @@ class Nota extends BaseNota
         }else if($cad1=='B'){
             $cade=4;
 
+        }else if($cad1=='C'){
+            $cade=3;
+
+        }else if($cad1=='D'){
+            $cade=2;
+
+        }else if($cad1=='E'){
+            $cade=1;
         }
+        
         return $cade;
 
     }
-
 }

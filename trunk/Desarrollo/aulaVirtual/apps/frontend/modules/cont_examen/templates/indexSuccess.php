@@ -8,7 +8,7 @@
 
 <br /><br />
     <?php
-    echo "<h2 align='center'>".$evaluacion->getNombre()."</h2>";
+   // echo "<h2 align='center'>".$evaluacion->getIdevaluacion()."</h2>";
 
     ?>
 <br />

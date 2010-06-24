@@ -1,0 +1,183 @@
+Jun 22 22:20:14 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:14 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:14 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:14 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comentario/index with parameters array (  'module' => 'comentario',  'action' => 'index',)
+Jun 22 22:20:15 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:15 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:15 symfony [info] {comentarioActions} Call "comentarioActions->executeIndex()"
+Jun 22 22:20:15 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'aulavirtual_test']
+Jun 22 22:20:17 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:17 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:17 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:17 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:17 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:17 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:17 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /cont_examen/index with parameters array (  'module' => 'cont_examen',  'action' => 'index',)
+Jun 22 22:20:17 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:17 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:17 symfony [info] {cont_examenActions} Call "cont_examenActions->executeIndex()"
+Jun 22 22:20:17 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'aulavirtual_test']
+Jun 22 22:20:18 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:18 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:18 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:18 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:19 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:19 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:19 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /doc/index with parameters array (  'module' => 'doc',  'action' => 'index',)
+Jun 22 22:20:19 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:19 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:19 symfony [info] {docActions} Call "docActions->executeIndex()"
+Jun 22 22:20:19 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'aulavirtual_test']
+Jun 22 22:20:20 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:20 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:20 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:20 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:21 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:21 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:21 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /eval/index with parameters array (  'module' => 'eval',  'action' => 'index',)
+Jun 22 22:20:21 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:21 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:21 symfony [info] {evalActions} Call "evalActions->executeIndex()"
+Jun 22 22:20:21 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'aulavirtual_test']
+Jun 22 22:20:22 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:22 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:22 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:22 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:23 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:23 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:23 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /lapsos/index with parameters array (  'module' => 'lapsos',  'action' => 'index',)
+Jun 22 22:20:23 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:23 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:23 symfony [info] {lapsosActions} Call "lapsosActions->executeIndex()"
+Jun 22 22:20:23 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'aulavirtual_test']
+Jun 22 22:20:24 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:24 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:24 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:24 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:25 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:25 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:25 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notas/index with parameters array (  'module' => 'notas',  'action' => 'index',)
+Jun 22 22:20:25 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:25 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:25 symfony [info] {notasActions} Call "notasActions->executeIndex()"
+Jun 22 22:20:25 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'aulavirtual_test']
+Jun 22 22:20:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:26 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:26 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /pers/index with parameters array (  'module' => 'pers',  'action' => 'index',)
+Jun 22 22:20:27 symfony [info] {sfFrontWebController} Action "pers/index" does not exist
+Jun 22 22:20:27 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:27 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:27 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Jun 22 22:20:27 symfony [info] {sfPHPView} Render "C:\symfony-1.2.9\lib/controller/default/templates/error404Success.php"
+Jun 22 22:20:27 symfony [info] {sfPHPView} Decorate content with "C:\symfony-1.2.9\lib\controller\default\templates/defaultLayout.php"
+Jun 22 22:20:27 symfony [info] {sfPHPView} Render "C:\symfony-1.2.9\lib\controller\default\templates/defaultLayout.php"
+Jun 22 22:20:27 symfony [info] {sfWebResponse} Send content (2682 o)
+Jun 22 22:20:29 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:29 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:29 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:29 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:29 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:29 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:29 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:29 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /personas/index with parameters array (  'module' => 'personas',  'action' => 'index',)
+Jun 22 22:20:29 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:29 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:29 symfony [info] {personasActions} Call "personasActions->executeIndex()"
+Jun 22 22:20:29 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'aulavirtual_test']
+Jun 22 22:20:30 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:30 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:30 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:30 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:31 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:31 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:31 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /resp/index with parameters array (  'module' => 'resp',  'action' => 'index',)
+Jun 22 22:20:31 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:31 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:31 symfony [info] {respActions} Call "respActions->executeIndex()"
+Jun 22 22:20:31 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'aulavirtual_test']
+Jun 22 22:20:32 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:32 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:32 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:32 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:33 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:33 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:33 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /resp_dad/index with parameters array (  'module' => 'resp_dad',  'action' => 'index',)
+Jun 22 22:20:33 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:33 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:33 symfony [info] {resp_dadActions} Call "resp_dadActions->executeIndex()"
+Jun 22 22:20:33 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'aulavirtual_test']
+Jun 22 22:20:34 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:34 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:34 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:34 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:35 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:35 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:35 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:35 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /sesion/index with parameters array (  'module' => 'sesion',  'action' => 'index',)
+Jun 22 22:20:35 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:35 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:35 symfony [info] {sesionActions} Call "sesionActions->executeIndex()"
+Jun 22 22:20:35 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\frontend\modules/sesion/templates/indexSuccess.php"
+Jun 22 22:20:35 symfony [info] {main} Set slot "menuSidebarAlumno"
+Jun 22 22:20:35 symfony [info] {main} Set slot "menuSidebarAdmin"
+Jun 22 22:20:35 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\aulaVirtual\apps\frontend\templates/layout.php"
+Jun 22 22:20:35 symfony [info] {sfPHPView} Render "C:\wamp\www\aulaVirtual\apps\frontend\templates/layout.php"
+Jun 22 22:20:35 symfony [info] {main} Get slot "menuSidebarAlumno"
+Jun 22 22:20:35 symfony [info] {sfWebResponse} Send content (3755 o)
+Jun 22 22:20:36 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:36 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:36 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:36 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:37 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:37 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:37 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /temas/index with parameters array (  'module' => 'temas',  'action' => 'index',)
+Jun 22 22:20:37 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:37 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:37 symfony [info] {temasActions} Call "temasActions->executeIndex()"
+Jun 22 22:20:37 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'aulavirtual_test']
+Jun 22 22:20:38 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:38 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:38 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:38 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 22 22:20:39 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 22 22:20:39 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 22 22:20:39 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 22 22:20:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/index with parameters array (  'module' => 'usuario',  'action' => 'index',)
+Jun 22 22:20:39 symfony [info] {sfFrontWebController} Action "usuario/index" does not exist
+Jun 22 22:20:39 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jun 22 22:20:39 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 22 22:20:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 22 22:20:39 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Jun 22 22:20:39 symfony [info] {sfPHPView} Render "C:\symfony-1.2.9\lib/controller/default/templates/error404Success.php"
+Jun 22 22:20:39 symfony [info] {sfPHPView} Decorate content with "C:\symfony-1.2.9\lib\controller\default\templates/defaultLayout.php"
+Jun 22 22:20:39 symfony [info] {sfPHPView} Render "C:\symfony-1.2.9\lib\controller\default\templates/defaultLayout.php"
+Jun 22 22:20:39 symfony [info] {sfWebResponse} Send content (2682 o)
