@@ -18,7 +18,7 @@ class BaseTemaForm extends BaseFormPropel
       'created_at'  => new sfWidgetFormDate(),
       'updated_at'  => new sfWidgetFormDate(),
       'descripcion' => new sfWidgetFormTextarea(),
-      'idpersona'   => new sfWidgetFormInput(),
+      'idpersona'   => new sfWidgetFormTextarea(),
     ));
 
     $this->setValidators(array(
