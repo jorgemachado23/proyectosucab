@@ -93,7 +93,7 @@ if ($_SESSION["privilegio"]=="ADMIN"){
           <li><a href="<?php echo url_for('eval/new') ?>">&nbsp;&nbsp;Agregar Evaluación</a></li>
           <li><a href="<?php echo url_for('eval/index') ?>">&nbsp;&nbsp;Ver Evaluaciones</a></li>
           <li><a href="<?php echo url_for('eval/borrar') ?>">&nbsp;&nbsp;Eliminar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
+          <li><a href="http://localhost/cargarNotasAdmin.php?usuario=<?php echo $_SESSION["usuario"] ?>&privilegio=<?php echo $_SESSION["privilegio"] ?>">&nbsp;&nbsp;Cargar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>
           <li><a href="">&nbsp;&nbsp;Modificar Notas</a></li>
         </ul>
