@@ -1,195 +1,164 @@
-<?php 
+<?php
 session_start();
-
-$_SESSION["usuario"];
-$_SESSION["privilegio"];
+$_SESSION["usuario"] = $_GET["usuario"];
+$_SESSION["privilegio"] = $_GET["privilegio"];
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Aula Virtual</title>
+<title>Aula Virtual - Colegio Santiago de Leon de Caracas</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="files/style.css" type="text/css" media="screen" />
 <!--[if IE 7]>	<link rel="stylesheet" type="text/css" media="all" href="files/style_ie.css" /><![endif]-->
 <!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="all" href="files/style_ie6.css" /><![endif]-->
+<style type="text/css">
+<!--
+@import url("../../../web/css/style.css");
+-->
+</style>
 </head>
 <body>
 <div id="wrapper">
   <div class="header">
     <div class="inner">
       <ul class="nav">
-        <li><a href="" class="home" id="link_home">Home</a></li>
-        <li><a href="" class="about" id="link_about">About</a></li>
-        <li><a href="" class="contact" id="link_contact">Contact</a></li>
       </ul>
     </div>
-    <h1 class="logo"><a href="">YourSite - Slogan Here!</a></h1>
-   
+    <h1 class="logo"><a>CAD</a></h1>
     <div class="search">
-      <form method="get" id="searchform">
+        <form method="post" id="searchform">
         <div>
-		  <h2><a href="cerrarSesion.php" class="home" id="link_home" style="color:#666666; font-style:italic; font-size:18px; position:absolute; left: 249px; top: 243px;">Cerrar Sesi贸n >></a></h2>
+            <h2><a href="" class="home" id="link_home" style="color:#666666; 
+                font-style:italic; font-size:18px; position:absolute; left: 400px;
+                top: 250px;">Cerrar Sesion >></a></h2>
         </div>
-      </form>
+        </form>
     </div>
-   
-    <div class="paperclip"></div>
+    <div class="paperclip5"></div>
     <div class="paperclip2"></div>
-    <div class="paperclip3"></div>
-	
- <div style="position:absolute; left: 238px; top: 334px;"> 
-    <h2>Bienvenid@</h2></div>
-
-	
+    <div style="position:absolute; left:300px; top: 334px;">
+        <h2>Bienvenid@ <?php echo $_SESSION["usuario"] ?></h2>
+            <br />
+            <br />
+    </div>
   </div>
   <div id="container">
-    <div id="contentPagPpalforo">
+    <div id="content">
       <div id="content_top">
         <div class="post">
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <h1 align="center">Seleccione la evaluacion y la seccion</h1>
+               <br />
+               <br />
+               <br />
+              <form id="form1" name="form1" method="post" action="" style="font-family:Verdana, Arial, Helvetica, sans-serif">
 
-          <h2 style="position:absolute; left: 343px; top: 333px;"> 
-	  	    <?php 
-				echo $_SESSION["usuario"];
-				$usuario = $_SESSION["usuario"];
-			?>
-          </h2>		  
-		  
-		 <p>&nbsp;</p>
-		 <h2 align="center">Cargar Notas</h2>
-    
-         
-		  
-        </div>
-	
-        <div class="post">
-        
-        
-        <form id="form1" name="form1" method="post" action="" style="font-family:Verdana, Arial, Helvetica, sans-serif">
-       
-        <table width="297" border="0">
+              <table width="297" border="0">
               <tr>
                 <td width="87">Evaluacion:</td>
                 <td width="103"><select name="select" id="select" style="font-family:Verdana, Arial, Helvetica, sans-serif">
-                  <?php 
-		
-			$conexion = mysql_connect("127.0.0.1", "root", "12345");
-	mysql_select_db("metodologia", $conexion); 
-			
-			$queEmp = "SELECT e.`nombre` as nombre, e.`idEVALUACION` as idEvaluacion FROM metodologia.evaluacion e";
+                  <?php
+			$conexion = mysql_connect("127.0.0.1", "root", "");
+                        mysql_select_db("aulavirtual", $conexion);
+
+			$queEmp = "SELECT e.`nombre` as nombre, e.`idEVALUACION` as idEvaluacion FROM aulavirtual.evaluacion e";
 			$resEmp = mysql_query($queEmp, $conexion) or die(mysql_error());
 
-			$totEmp = mysql_num_rows($resEmp); 
-			
-			
+			$totEmp = mysql_num_rows($resEmp);
+
+
 			if ($totEmp> 0) {
    				while ($rowEmp = mysql_fetch_assoc($resEmp)) {
      				echo "
             <option value=".$rowEmp['idEvaluacion'].">".$rowEmp['nombre']."</option>
           ";
-					
 		}}
 		?>
                 </select></td>
               </tr>
               <tr>
-                <td>Secci贸n: </td>
-                <td><select name="select2" id="select2" style="font-family:Verdana, Arial, Helvetica, sans-serif">
-                  <option value="A">A</option>
-                  <option value="B">B</option>
-                  <option value="C">C</option>
-                  <option value="D">D</option>
+                <td>Seccion: </td>
+                <td width="103"><select name="select2" id="select2" style="font-family:Verdana, Arial, Helvetica, sans-serif">
+                  <option value="A">Seccion A</option>
+                  <option value="B">Seccion B</option>
+                  <option value="C">Seccion C</option>
+                  <option value="D">Seccion D</option>
                 </select></td>
               </tr>
             </table>
         <div align="center"><br />
-            <input type="submit" name="buscar" id="buscar" value="Buscar" style="font-family:Verdana, Arial, Helvetica, sans-serif" />
+            <input type="submit" name="buscar" id="buscar" value="Agregar" style="font-family:Verdana, Arial, Helvetica, sans-serif" />
           <br />
         </div>
-        </form>   
-        
-        
-        
-        <?php 
+        </form>
+        <?php
 		if (isset($_POST["buscar"]))
 		{
-			
 			$_SESSION["evaluacion"]=$_POST["select"];
 			$_SESSION["seccion"]=$_POST["select2"];
-			
-			
-			?>
+                ?>
 		<script language="javascript">
 			window.location = "cargarNotas2Admin.php";
 		</script>
-				
-	<?
+                <?php
 		}
-		
-		
-		?>
-        
-        
-        
-</div>
-       
+        ?>
+        </div>
       </div>
     </div>
-    <div id="sidebar">
-      <ul class="categorytext">
+      <div id="sidebar">
+          <ul class="categorytext">
         <li class="categories">
           <h2>
             <!-- -->
           </h2>
           <ul>
-            <li><a href="agregarAlumnoAdmin_1.php">Agregar Alumnos</a> </li>
-            <li><a href="modificarAlumnoAdmin_1.php">Modificar Alumno</a> </li>
-            <li><a href="inhabilitarAlumnoAdmin_1.php">Inhabilitar Alumno</a> </li>
-            <li><a href="eliminarAlumnoAdmin_1.php">Eliminar Alumnos</a> </li>
+            <li><a href="">&nbsp;&nbsp;Agregar Alumnos</a> </li>
+            <li><a href="">&nbsp;&nbsp;Listar Alumnos</a> </li>
+            <li><a href="">&nbsp;&nbsp;Eliminar Alumnos</a> </li>
+            <li><a>&nbsp;&nbsp;</a></li>
           </ul>
         </li>
       </ul>
       <div class="newcomments">
         <ul>
-           <li><a href="agregarExamenAdmin_1.php">Agregar Examen Virtual</a></li>
-        	<li><a href="modificarExamenAdmin_1.php">Modificar Examen Virtual</a></li>
-        	<li><a href="eliminarExamenAdmin_1.php">Eliminar Examen Virtual</a></li>
+            <li><a href="">&nbsp;&nbsp;Agregar Ex醡en Virtual</a></li>
+            <li><a href="">&nbsp;&nbsp;Modificar Ex醡en Virtual</a></li>
+            <li><a href="">&nbsp;&nbsp;Eliminar Ex醡en Virtual</a></li>
         </ul>
       </div>
       <div class="linkstext">
         <ul>
-		<li><a href="agregarEvaluacionAdmin.php">Agregar Evaluaci贸n</a></li>
-          <li><a href="modificarEvaluacionAdmin.php">Modificar Evaluaci贸n</a></li>
-          <li><a href="eliminarEvaluacionAdmin.php">Eliminar Evaluaci贸n</a></li>
-          <li><a href="cargarNotasAdmin.php">Cargar Notas</a></li>
-          <li><a href="consultarNotasAdmin.php">Consultar Notas</a></li>
-          <li><a href="modificarNotasAdmin.php">Modificar Notas</a></li>
+          <li><a href="">&nbsp;&nbsp;Agregar Evaluaci髇</a></li>
+          <li><a href="">&nbsp;&nbsp;Ver Evaluaciones</a></li>
+          <li><a href="">&nbsp;&nbsp;Eliminar Evaluaci髇</a></li>
+          <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
+          <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>
+          <li><a href="">&nbsp;&nbsp;Modificar Notas</a></li>
         </ul>
       </div>
       <div class="linkstext">
       <ul>
-    	   <li><a href="gestionarForo.php">Ver Foro</a></li>
-    	   <li><a href="crearTema.php">Crear un tema</a></li>
-           <li><a href="borrarContenidoForo.php">Borrar Foro</a></li>
+    	   <li><a href="">&nbsp;&nbsp;Ver Foro</a></li>
+    	   <li><a href="">&nbsp;&nbsp;Crear un tema</a></li>
+           <li><a href="">&nbsp;&nbsp;Borrar Foro</a></li>
       </ul>
       </div>
-	  
-    </div>
-	
-	
-	 <div id="footer" style="position:absolute">
+      </div>
+  </div>
+    <div id="footer">
     <div class="the-site">
       <ul>
-        <li><a>Derechos Reservados(C) CAD 2009</a></li>
+        <li><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;Derechos Reservados(C) CAD 2010</a></li>
       </ul>
     </div>
     <hr noshade size=1 />
   </div>
-	
-	
-  </div>
-  
-  
 </div>
 </body>
 </html>
