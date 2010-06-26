@@ -228,9 +228,9 @@ if ($totEmpN>0){
           <li><a href="">&nbsp;&nbsp;Agregar Evaluación</a></li>
           <li><a href="">&nbsp;&nbsp;Ver Evaluaciones</a></li>
           <li><a href="">&nbsp;&nbsp;Eliminar Evaluación</a></li>
-          <li><a href="">&nbsp;&nbsp;Cargar Notas</a></li>
-          <li><a href="">&nbsp;&nbsp;Consultar Notas</a></li>
-          <li><a href="">&nbsp;&nbsp;Modificar Notas</a></li>
+          <li><a href="cargarNotasAdmin.php">&nbsp;&nbsp;Cargar Notas</a></li>
+          <li><a href="consultarNotasAdmin.php">&nbsp;&nbsp;Consultar Notas</a></li>
+          <li><a href="modificarNotasAdmin.php">&nbsp;&nbsp;Modificar Notas</a></li>
         </ul>
       </div>
       <div class="linkstext">
