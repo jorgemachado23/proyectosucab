@@ -5,10 +5,10 @@ $_SESSION["seccion"];
  
 echo "<table border='0' align='center'>";
  
-$conexion = mysql_connect("127.0.0.1", "root", "12345");
-	mysql_select_db("metodologia", $conexion); 
+$conexion = mysql_connect("127.0.0.1", "root", "");
+	mysql_select_db("aulavirtual", $conexion);
 
-$queEmp = "SELECT e.`nombre` as nombreEval, e.`idEVALUACION` as evaluacion FROM metodologia.evaluacion e";
+$queEmp = "SELECT e.`nombre` as nombreEval, e.`idevaluacion` as evaluacion FROM aulavirtual.evaluacion e";
 $resEmp = mysql_query($queEmp, $conexion) or die(mysql_error());
 
 $totEmp = mysql_num_rows($resEmp);
@@ -29,7 +29,7 @@ while ($rowEmp = mysql_fetch_assoc($resEmp)) {
    	}	
 	echo  "</tr>";
 	
-$queEmp = "SELECT e.`nombre` as nombreEval, e.`idEVALUACION` as evaluacion FROM metodologia.evaluacion e";
+$queEmp = "SELECT e.`nombre` as nombreEval, e.`idevaluacion` as evaluacion FROM aulavirtual.evaluacion e";
 $resEmp = mysql_query($queEmp, $conexion) or die(mysql_error());
 
 $totEmp = mysql_num_rows($resEmp);
@@ -39,7 +39,7 @@ $totEmp = mysql_num_rows($resEmp);
 	
 	$seccion=$_SESSION["seccion"];
 	
-	$queEmp2 = "SELECT p.`nombre` as nombre, p.`apellido` as apellido, p.`segundoNombre` as nombre2, p.`segundoApellido` as apellido2, p.`idPERSONA` as ident FROM metodologia.persona p WHERE p.`seccion`='$seccion'";
+	$queEmp2 = "SELECT p.`nombre` as nombre, p.`apellido` as apellido, p.`segundoNombre` as nombre2, p.`segundoApellido` as apellido2, p.`idpersona` as ident FROM aulavirtual.persona p WHERE p.`seccion`='$seccion'";
 	$resEmp2 = mysql_query($queEmp2, $conexion) or die(mysql_error());
 
 	$totEmp2 = mysql_num_rows($resEmp2);
@@ -57,8 +57,8 @@ $totEmp = mysql_num_rows($resEmp);
    while ($cont <= $totEmp){
    $pers=$rowEmp2['ident'];
    $eval=$rowEmp['evaluacion'];
-   $queEmp3 = "SELECT n.`nota` as nota FROM metodologia.nota n
-WHERE n.`PERSONA_idPERSONA`=$pers AND n.`EVALUACION_idEVALUACION`=$cont";
+   $queEmp3 = "SELECT n.`nota` as nota FROM aulavirtual.nota n
+WHERE n.`idpersona`=$pers AND n.`idevaluacion`=$cont";
 	$resEmp3 = mysql_query($queEmp3, $conexion) or die(mysql_error());
 
 	$totEmp3 = mysql_num_rows($resEmp3);
@@ -97,4 +97,4 @@ WHERE n.`PERSONA_idPERSONA`=$pers AND n.`EVALUACION_idEVALUACION`=$cont";
     <td width="82">&nbsp;</td>
     <td width="42">&nbsp;</td>
   </tr>
-</table>
+<?php echo"</table>"?>
